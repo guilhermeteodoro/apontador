@@ -10,13 +10,15 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~>2.0'
-  gem 'factory_girl_rails', '~>4.0'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl_rails', '~> 4.0'
   gem 'ffaker'
   gem 'guard-rspec', '2.3.1'
   gem 'guard-bundler', '1.0.0'
   gem 'guard-spork', '1.4.0'
 end
 
+gem 'haml', '~> 4.0'
 gem 'jquery-rails'
 gem 'geocoder'
+gem 'devise'

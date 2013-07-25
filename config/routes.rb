@@ -1,4 +1,7 @@
 Apontador::Application.routes.draw do
+  devise_for :people
+
+  root to: "people#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

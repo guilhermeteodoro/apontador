@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130724195353) do
+ActiveRecord::Schema.define(:version => 20130725144105) do
+
+  create_table "hours", :force => true do |t|
+    t.datetime "checked_in_at"
+    t.datetime "checked_out_at"
+    t.decimal  "value",          :precision => 10, :scale => 2
+    t.integer  "person_id"
+  end
 
   create_table "people", :force => true do |t|
     t.string   "first_name"
@@ -22,11 +29,12 @@ ActiveRecord::Schema.define(:version => 20130724195353) do
     t.string   "city"
     t.string   "phone"
     t.boolean  "admin"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.string   "password"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "institution"
   end
 
 end
