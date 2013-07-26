@@ -2,10 +2,6 @@
 require "digest/sha1"
 
 class Person < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
-
   has_many :hours
 
   attr_accessible :address, :city, :cpf, :email, :first_name, :last_name, :phone, :plain_password, :latitude, :longitude, :admin, :institution
@@ -20,9 +16,6 @@ class Person < ActiveRecord::Base
   validates_numericality_of :longitude, greater_than: -85.0, less_than_or_equal_to: 85.0
   validates :institution, presence: true,
             if: :admin?
-
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
 
   def admin?
     return admin

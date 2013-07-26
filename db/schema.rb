@@ -24,17 +24,17 @@ ActiveRecord::Schema.define(:version => 20130725144105) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
+    t.string   "password"
     t.integer  "cpf"
+    t.string   "institution"
     t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
     t.string   "city"
     t.string   "phone"
     t.boolean  "admin"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.string   "password"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.string   "institution"
   end
 
 end

@@ -10778,3 +10778,482 @@ Connecting to database specified by database.yml
   [1m[35m (0.0ms)[0m  rollback transaction
   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Exists (10.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'hollis@thompson.biz' LIMIT 1[0m
+  [1m[35mPerson Exists (0.0ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'hollis@thompson.biz' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Exists (18.4ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'darren@anderson.ca' LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "people" ("address", "admin", "city", "cpf", "created_at", "email", "first_name", "institution", "last_name", "latitude", "longitude", "password", "phone", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "9320 Herzog Trace"], ["admin", false], ["city", "North Felicity"], ["cpf", 11234567891], ["created_at", Fri, 26 Jul 2013 15:12:31 UTC +00:00], ["email", "darren@anderson.ca"], ["first_name", "Cole"], ["institution", nil], ["last_name", "Pfannerstill"], ["latitude", -78.82103662030795], ["longitude", -41.03725701176502], ["password", "Aliza"], ["phone", "095-394-6349"], ["updated_at", Fri, 26 Jul 2013 15:12:31 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'daphney_mckenzie@swift.uk' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'lazaro@jaskolski.name' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("address", "admin", "city", "cpf", "created_at", "email", "first_name", "institution", "last_name", "latitude", "longitude", "password", "phone", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "17188 Sanford Walks"], ["admin", false], ["city", "Lake Stacey"], ["cpf", 11234567891], ["created_at", Fri, 26 Jul 2013 15:12:31 UTC +00:00], ["email", "lazaro@jaskolski.name"], ["first_name", "Mireille"], ["institution", nil], ["last_name", "Cruickshank"], ["latitude", 175.59405029697382], ["longitude", -61.23443714185994], ["password", nil], ["phone", "059-265-4815"], ["updated_at", Fri, 26 Jul 2013 15:12:31 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'cassandre@kutch.co.uk' LIMIT 1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'ronaldo_ebert@johnsonstiedemann.biz' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'hester.mills@hand.uk' LIMIT 1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'cristal@haley.co.uk' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'royal@kiehneffertz.biz' LIMIT 1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'corene.hudson@schummdach.name' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'email@e' LIMIT 1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'email@clickjogos.com.br' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'alf.koelpin@hesselbednar.info' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("address", "admin", "city", "cpf", "created_at", "email", "first_name", "institution", "last_name", "latitude", "longitude", "password", "phone", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "77671 Hintz Plaza"], ["admin", false], ["city", "Adamsside"], ["cpf", 11234567891], ["created_at", Fri, 26 Jul 2013 15:12:31 UTC +00:00], ["email", "alf.koelpin@hesselbednar.info"], ["first_name", "Kristian"], ["institution", nil], ["last_name", "Kulas"], ["latitude", 129.5027903550889], ["longitude", -75.91859795507108], ["password", "Monserrat"], ["phone", "677-723-0543"], ["updated_at", Fri, 26 Jul 2013 15:12:31 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE ("people"."email" = 'alf.koelpin@hesselbednar.info' AND "people"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'bo@cormierrath.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("address", "admin", "city", "cpf", "created_at", "email", "first_name", "institution", "last_name", "latitude", "longitude", "password", "phone", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "43320 Kihn Keys"], ["admin", true], ["city", "Glenhaven"], ["cpf", 11234567891], ["created_at", Fri, 26 Jul 2013 15:12:31 UTC +00:00], ["email", "bo@cormierrath.com"], ["first_name", "Alysson"], ["institution", "Hane"], ["last_name", "Hettinger"], ["latitude", -135.7189418929872], ["longitude", -36.018782837898385], ["password", "Garland"], ["phone", "158-564-8505"], ["updated_at", Fri, 26 Jul 2013 15:12:31 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE ("people"."email" = 'bo@cormierrath.com' AND "people"."id" != 2) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'miles.reilly@marquardt.com' LIMIT 1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'heloise@macejkovic.uk' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'ashleigh@roberts.info' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'shawn_schaden@hilpert.ca' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("address", "admin", "city", "cpf", "created_at", "email", "first_name", "institution", "last_name", "latitude", "longitude", "password", "phone", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "27426 Weimann Valley"], ["admin", false], ["city", "Cullenshire"], ["cpf", 11234567891], ["created_at", Fri, 26 Jul 2013 15:12:31 UTC +00:00], ["email", "shawn_schaden@hilpert.ca"], ["first_name", "Maurice"], ["institution", nil], ["last_name", "Maggio"], ["latitude", 141.19533706294578], ["longitude", -6.1290009542550905], ["password", "Olga"], ["phone", "478-306-8153"], ["updated_at", Fri, 26 Jul 2013 15:12:31 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'shawn_schaden@hilpert.ca' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'quinn@monahan.biz' LIMIT 1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'genoveva@turcotte.ca' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'clinton.romaguera@turner.us' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'kaylin@keeling.uk' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'adelia@brownfahey.biz' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'bernadette@harris.name' LIMIT 1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'kraig_dooley@harris.uk' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'jessie_welch@ferry.co.uk' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (1.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'justina_lueilwitz@batz.ca' LIMIT 1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'constantin_anderson@lemkehirthe.co.uk' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'ella_rodriguez@kozey.biz' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("address", "admin", "city", "cpf", "created_at", "email", "first_name", "institution", "last_name", "latitude", "longitude", "password", "phone", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "85380 Karianne Court"], ["admin", false], ["city", "Port Dominiquefurt"], ["cpf", 11234567891], ["created_at", Fri, 26 Jul 2013 15:13:16 UTC +00:00], ["email", "ella_rodriguez@kozey.biz"], ["first_name", "Florence"], ["institution", nil], ["last_name", "Gusikowski"], ["latitude", 113.48280486559497], ["longitude", -29.982624475429574], ["password", "Jay"], ["phone", "833-713-3681"], ["updated_at", Fri, 26 Jul 2013 15:13:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'ella_rodriguez@kozey.biz' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'gerda_welch@robelrohan.info' LIMIT 1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'jakob.greenfelder@fisher.biz' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'alyson@bashiriankshlerin.ca' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("address", "admin", "city", "cpf", "created_at", "email", "first_name", "institution", "last_name", "latitude", "longitude", "password", "phone", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "71954 Xander Burgs"], ["admin", false], ["city", "Emmerichport"], ["cpf", 11234567891], ["created_at", Fri, 26 Jul 2013 15:13:16 UTC +00:00], ["email", "alyson@bashiriankshlerin.ca"], ["first_name", "Lenna"], ["institution", nil], ["last_name", "Wyman"], ["latitude", -4.226178055151195], ["longitude", -66.1196625292875], ["password", nil], ["phone", "881-158-8463"], ["updated_at", Fri, 26 Jul 2013 15:13:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'hilbert@kuphal.name' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("address", "admin", "city", "cpf", "created_at", "email", "first_name", "institution", "last_name", "latitude", "longitude", "password", "phone", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "61293 King Locks"], ["admin", false], ["city", "Wisokystad"], ["cpf", 11234567891], ["created_at", Fri, 26 Jul 2013 15:13:16 UTC +00:00], ["email", "hilbert@kuphal.name"], ["first_name", "Gust"], ["institution", nil], ["last_name", "Lang"], ["latitude", 112.2171283872683], ["longitude", 6.484096792501774], ["password", "Clovis"], ["phone", "381-303-0432"], ["updated_at", Fri, 26 Jul 2013 15:13:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'email@e' LIMIT 1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'email@clickjogos.com.br' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'caitlyn@block.info' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'mallory.bradtke@ernser.name' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'alexandro@bernhardrunolfsdottir.info' LIMIT 1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'tre@rohan.info' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'dedric@haley.info' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("address", "admin", "city", "cpf", "created_at", "email", "first_name", "institution", "last_name", "latitude", "longitude", "password", "phone", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "24535 Lillie Fields"], ["admin", false], ["city", "East Tessieville"], ["cpf", 11234567891], ["created_at", Fri, 26 Jul 2013 15:13:16 UTC +00:00], ["email", "dedric@haley.info"], ["first_name", "D'angelo"], ["institution", nil], ["last_name", "Hudson"], ["latitude", -81.86313250919022], ["longitude", -0.4282411254672809], ["password", "Estefania"], ["phone", "008-504-9279"], ["updated_at", Fri, 26 Jul 2013 15:13:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE ("people"."email" = 'dedric@haley.info' AND "people"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'myron@mayer.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("address", "admin", "city", "cpf", "created_at", "email", "first_name", "institution", "last_name", "latitude", "longitude", "password", "phone", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "60484 Deanna Green"], ["admin", true], ["city", "Lindgrentown"], ["cpf", 11234567891], ["created_at", Fri, 26 Jul 2013 15:13:16 UTC +00:00], ["email", "myron@mayer.com"], ["first_name", "Deron"], ["institution", "DuBuque"], ["last_name", "Hagenes"], ["latitude", -98.60820665512054], ["longitude", 82.89134925704701], ["password", "Genoveva"], ["phone", "612-426-5560"], ["updated_at", Fri, 26 Jul 2013 15:13:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE ("people"."email" = 'myron@mayer.com' AND "people"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'maurice.bergnaum@rolfson.com' LIMIT 1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'easton.hills@morar.ca' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.2ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'annette_crooks@wolffbahringer.uk' LIMIT 1
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'andre.weissnat@turcotte.biz' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'lina@monahan.uk' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'florida@upton.biz' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'glenna@vandervort.info' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'rick.wunsch@schimmel.info' LIMIT 1[0m
+  [1m[35mPerson Exists (0.1ms)[0m  SELECT 1 AS one FROM "people" WHERE "people"."email" = 'ben@keebler.ca' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "people" WHERE "people"."email" = 'damaris@emmerich.biz' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
