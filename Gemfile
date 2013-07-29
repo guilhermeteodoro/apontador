@@ -11,13 +11,14 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
-  gem 'factory_girl_rails', '~> 4.0'
+  gem 'factory_girl_rails', '~> 4.2.1'
   gem 'ffaker'
   gem 'guard-rspec', '2.3.1'
   gem 'guard-bundler', '1.0.0'
   gem 'guard-spork', '1.4.0'
 end
 
+gem 'acts_as_relation', '~> 0.1'
 gem 'haml', '~> 4.0'
 gem 'jquery-rails'
 gem 'geocoder'

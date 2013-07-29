@@ -1,4 +1,6 @@
 Apontador::Application.routes.draw do
-  root to: "people#index"
+  match "home"  => "people#index"
+  match "login" => "login#login"
 
+  root to: "login#login"
 end
