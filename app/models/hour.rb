@@ -1,21 +1,14 @@
 class Hour < ActiveRecord::Base
-  belongs_to :person
+  belongs_to :user
 
-  attr_accessible :checked_in_at, :checked_out_at, :person_id, :value
-  validates :person_id, :checked_in_at, :checked_out_at, presence: true, allow_blank: false
+  attr_accessible :checked_in_at, :checked_out_at, :user_id, :value
+  validates :user_id, :checked_in_at, :checked_out_at, presence: true, allow_blank: false
 
   def weekday(checking)
-    wday = checking.wday
-    return "Sunday"     if wday == 0
-    return "Monday"     if wday == 1
-    return "Tuesday"    if wday == 2
-    return "Wednesday"  if wday == 3
-    return "Thursday"   if wday == 4
-    return "Friday"     if wday == 5
-    return "Saturday"   if wday == 6
+    checking.strftime("%A")
   end
   def date(checking)
-    "#{checking.day}/#{checking.month}/#{checking.year}"
+    checking.strftime("%d/%m/%Y")
   end
   def worktime
     hours = if (checked_out_at.hour - checked_in_at.hour).to_s.length < 2

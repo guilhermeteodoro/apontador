@@ -18,7 +18,7 @@ group :development, :test do
   gem 'guard-spork', '1.4.0'
 end
 
-gem 'acts_as_relation', '~> 0.1'
+gem 'heritage'
 gem 'haml', '~> 4.0'
 gem 'jquery-rails'
 gem 'geocoder'

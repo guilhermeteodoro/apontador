@@ -4,7 +4,7 @@ class CreateHours < ActiveRecord::Migration
       t.timestamp :checked_in_at
       t.timestamp :checked_out_at
       t.decimal :value, precision: 10, scale: 2
-      t.integer :person_id
+      t.integer :user_id
     end
   end
 end

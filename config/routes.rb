@@ -1,6 +1,8 @@
 Apontador::Application.routes.draw do
-  match "home"  => "people#index"
-  match "login" => "login#login"
+  match "home"    => "users#index"
+  match "login"   => "login#login"
+  match "logout"  => "login#logout"
 
-  root to: "login#login"
+  match "/"       => "login#adm", constraints: { subdomain: /.+/ }
+  root to: "login#user"
 end

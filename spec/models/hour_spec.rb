@@ -25,11 +25,11 @@ describe Hour do
     FactoryGirl.build(:hour, checked_out_at: "").should_not be_valid
   end
 
-  it "should not have a nil person id" do
-    FactoryGirl.build(:hour, person_id: nil).should_not be_valid
+  it "should not have a nil user id" do
+    FactoryGirl.build(:hour, user_id: nil).should_not be_valid
   end
-  it "should have a valid person id" do
-    FactoryGirl.build(:hour, person_id: 1).should be_valid
+  it "should have a valid user id" do
+    FactoryGirl.build(:hour, user_id: 1).should be_valid
   end
   it "should have a 'weekday' method" do
     FactoryGirl.build(:hour).should respond_to :weekday
