@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   attr_protected :password
 
   #validations
-  validates :first_name, :last_name, presence: true
+  validates :first_name, :last_name, :company_id, presence: true
   validates :address, presence: true,
             allow_blank: false
   validates :email, presence: true,

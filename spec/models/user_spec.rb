@@ -62,4 +62,10 @@ describe User do
   it "should have an authentication method" do
     User.should respond_to :authenticate
   end
+  it "should belong to a company" do
+    FactoryGirl.build(:user, company_id: 1).should be_valid
+  end
+  it "should not have a nil company_id" do
+    FactoryGirl.build(:user, company_id: nil).should_not be_valid
+  end
 end

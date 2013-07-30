@@ -25,7 +25,6 @@ class LoginController < ApplicationController
         return
       end
       user = User.authenticate(email, password)
-      p user
       if user.nil?
         flash[:notice] = "Invalid email or password"
         return

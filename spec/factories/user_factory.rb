@@ -13,5 +13,6 @@ FactoryGirl.define do
     phone           { Faker::PhoneNumber.short_phone_number }
     latitude        { rand(-179.999999..180) }
     longitude       { rand(-84.999999..85) }
+    company_id      { rand(1..10) }
   end
 end
