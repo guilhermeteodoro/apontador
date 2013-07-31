@@ -13,6 +13,13 @@
 
 ActiveRecord::Schema.define(:version => 20130730170921) do
 
+  create_table "checkings", :force => true do |t|
+    t.datetime "checked_in_at"
+    t.datetime "checked_out_at"
+    t.decimal  "hour_value",     :precision => 10, :scale => 2
+    t.integer  "user_id"
+  end
+
   create_table "companies", :force => true do |t|
     t.string   "name"
     t.integer  "cnpj"
@@ -21,13 +28,6 @@ ActiveRecord::Schema.define(:version => 20130730170921) do
   end
 
   add_index "companies", ["id"], :name => "index_companies_on_id"
-
-  create_table "hours", :force => true do |t|
-    t.datetime "checked_in_at"
-    t.datetime "checked_out_at"
-    t.decimal  "value",          :precision => 10, :scale => 2
-    t.integer  "user_id"
-  end
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false

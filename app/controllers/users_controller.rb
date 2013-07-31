@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   respond_to :html
 
   def index
+    #current user: @user
 
+    respond_with @user
   end
 end

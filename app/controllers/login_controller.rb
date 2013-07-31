@@ -27,7 +27,7 @@ class LoginController < ApplicationController
       if session[:manager]
         redirect_to "/manager"
       else
-        redirect_to "/login"
+        redirect_to "/home"
       end
     end
   end

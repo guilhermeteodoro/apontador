@@ -15757,3 +15757,1777 @@ Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-07-31 13:44:42 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-07-31 13:44:42 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (0.6ms)
+Compiled users.css  (67ms)  (pid 3171)
+Compiled application.css  (172ms)  (pid 3171)
+Completed 200 OK in 509ms (Views: 508.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 13:44:43 -0300
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 13:44:43 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 13:44:43 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 13:44:43 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 13:44:43 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 13:44:43 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 13:44:43 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 13:44:43 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-07-31 13:45:00 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QeS/WCJaw75Tp+4fb3bj71wB/J2Je48m7a8bUSCnfqI=", "email"=>"lucas@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='lucas@gmail.com' and password='d46e1a2334040014e0a49b4768fa6079a8058cc9') LIMIT 1[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 25ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-31 13:45:00 -0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 13:45:00 -0300
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 13:45:00 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 13:45:00 -0300
+Served asset /logins.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 13:45:00 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 13:45:00 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 13:45:00 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 13:45:00 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 13:45:00 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-07-31 13:47:08 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-07-31 13:47:08 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 13:47:08 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:08 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:08 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 13:47:08 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:08 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 13:47:08 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:08 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:08 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-07-31 13:47:10 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QeS/WCJaw75Tp+4fb3bj71wB/J2Je48m7a8bUSCnfqI=", "email"=>"gui.teo2@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='gui.teo2@gmail.com' and password='806003aa0ad2e884b7d148de2fea9373d0d13d62') LIMIT 1[0m
+Redirected to http://localhost:3000/manager
+Completed 302 Found in 29ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-07-31 13:47:10 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=2)[0m
+  Rendered manager/users/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 13:47:11 -0300
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 13:47:11 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:11 -0300
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 13:47:11 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:11 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:11 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:11 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:11 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-07-31 13:47:15 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-07-31 13:47:15 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 13:47:15 -0300
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:15 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 13:47:15 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:15 -0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:15 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 13:47:15 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:15 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 13:47:15 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-07-31 13:48:14 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 13:48:14 -0300
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 13:48:14 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:14 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:14 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 13:48:14 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:14 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:14 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:14 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-07-31 13:48:17 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M=", "email"=>"gui.teo2@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (email='gui.teo2@gmail.com' and password='806003aa0ad2e884b7d148de2fea9373d0d13d62') LIMIT 1
+Redirected to http://apontador.com:3000/manager
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-07-31 13:48:17 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (manager='f' and company_id=2)
+  Rendered manager/users/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 13:48:17 -0300
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 13:48:17 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:17 -0300
+Served asset /jquery.js - 304 Not Modified (37ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:17 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:18 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 13:48:18 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:18 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:18 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-07-31 13:48:27 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://apontador.com:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-07-31 13:48:27 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 13:48:27 -0300
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:27 -0300
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:27 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 13:48:27 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 13:48:27 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:27 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:27 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 13:48:27 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-07-31 13:56:24 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M=", "email"=>"gui.teo2@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='gui.teo2@gmail.com' and password='806003aa0ad2e884b7d148de2fea9373d0d13d62') LIMIT 1[0m
+Redirected to http://apontador.com:3000/manager
+Completed 302 Found in 28ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-07-31 13:56:25 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (manager='f' and company_id=2)
+  Rendered manager/users/index.html.haml within layouts/application (46.2ms)
+Completed 200 OK in 95ms (Views: 66.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 13:56:25 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 13:56:25 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 13:56:25 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 13:56:25 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 13:56:25 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 13:56:25 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 13:56:25 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 13:56:25 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-07-31 13:57:07 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1
+  Rendered manager/users/index.html.haml within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `captalize' for "bootcamp":String):
+    1: #content
+    2:   %h1 Welcome #{@user.name}!
+    3:   %p=@user.company.name.captalize
+    4: 
+    5: 
+    6:   -@employees.each do |employee|
+  app/views/manager/users/index.html.haml:3:in `_app_views_manager_users_index_html_haml___2924387741205207751_70243455925540'
+  app/controllers/manager/users_controller.rb:7:in `index'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.1ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-07-31 13:57:34 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=2)[0m
+  Rendered manager/users/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 13:57:34 -0300
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 13:57:34 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 13:57:34 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 13:57:34 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 13:57:34 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 13:57:34 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 13:57:34 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 13:57:34 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-07-31 13:57:45 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://apontador.com:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-07-31 13:57:45 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 13:57:45 -0300
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 13:57:45 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 13:57:45 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 13:57:45 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 13:57:45 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 13:57:45 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 13:57:45 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 13:57:45 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-07-31 13:58:20 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 13:58:20 -0300
+Served asset /logins.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 13:58:20 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 13:58:20 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 13:58:20 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 13:58:20 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 13:58:20 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 13:58:20 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 13:58:20 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-07-31 13:59:06 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M=", "email"=>"gui.teo2@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (email='gui.teo2@gmail.com' and password='806003aa0ad2e884b7d148de2fea9373d0d13d62') LIMIT 1
+Redirected to http://apontador.com:3000/manager
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-07-31 13:59:07 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=2)[0m
+  Rendered manager/users/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 13:59:07 -0300
+Served asset /users.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 13:59:07 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 13:59:07 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 13:59:07 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 13:59:07 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 13:59:07 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 13:59:07 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 13:59:07 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-07-31 14:03:02 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (manager='f' and company_id=2)
+  Rendered manager/users/index.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:03:02 -0300
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:02 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:03:02 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:03:02 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:02 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:02 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:03 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:03 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/manager/users/new" for 127.0.0.1 at 2013-07-31 14:03:05 -0300
+
+ActionController::RoutingError (No route matches [POST] "/manager/users/new"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/manager/users/edit?id=2" for 127.0.0.1 at 2013-07-31 14:03:08 -0300
+Processing by Manager::UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template manager/users/edit, application/edit with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/home/guilherme/projeto/apontador/app/views"
+):
+  actionpack (3.2.13) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.13) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.13) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.13) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:447:in `_run__1916789606130707574__process_action__3789309123657703474__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__2002054418179266420__call__2599718973674183158__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-07-31 14:03:58 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=2)[0m
+  Rendered manager/users/index.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:03:58 -0300
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:58 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:03:58 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:58 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:03:58 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:58 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:58 -0300
+Served asset /users.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:58 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-07-31 14:03:59 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (manager='f' and company_id=2)
+  Rendered manager/users/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:03:59 -0300
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:03:59 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:59 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:59 -0300
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:03:59 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:59 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:59 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:03:59 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager/users/edit.2" for 127.0.0.1 at 2013-07-31 14:04:00 -0300
+Processing by Manager::UsersController#edit as 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/manager/users_controller.rb:16:in `edit'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/manager/users/edit.2" for 127.0.0.1 at 2013-07-31 14:04:46 -0300
+Processing by Manager::UsersController#edit as 
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/manager/users_controller.rb:16:in `edit'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.5ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-07-31 14:05:30 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=2)[0m
+  Rendered manager/users/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:05:30 -0300
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:05:30 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:05:30 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:05:30 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:05:30 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:05:30 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:05:30 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:05:30 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/manager/users/new" for 127.0.0.1 at 2013-07-31 14:05:37 -0300
+
+ActionController::RoutingError (No route matches [POST] "/manager/users/new"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-07-31 14:14:21 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://apontador.com:3000/login
+Completed 302 Found in 28ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-07-31 14:14:21 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 25ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:14:22 -0300
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:14:22 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:14:22 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:14:22 -0300
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:14:22 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:14:22 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:14:22 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:14:22 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-07-31 14:52:38 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M=", "email"=>"lucas@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (email='lucas@gmail.com' and password='d46e1a2334040014e0a49b4768fa6079a8058cc9') LIMIT 1
+Redirected to http://apontador.com:3000/home
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-31 14:52:38 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:38 -0300
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:38 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:38 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:38 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:38 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:38 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:38 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:38 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /application.css - 304 Not Modified (41ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:41 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 46ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /logins.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:42 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:52:43 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:43 -0300
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:43 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:43 -0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:43 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:43 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:43 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:43 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:43 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:52:44 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:44 -0300
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:44 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:44 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:44 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:44 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:44 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:44 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:44 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:52:45 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:45 -0300
+Served asset /logins.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:45 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:45 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:45 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:45 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:45 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /logins.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:46 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /application.js - 304 Not Modified (26ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /logins.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:52:47 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:54:13 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:54:13 -0300
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:13 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:13 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:13 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:54:13 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:54:13 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:13 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:13 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/home" for 127.0.0.1 at 2013-07-31 14:54:24 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"x2AQe8SyBaE0puNFh4nL6ntLSuMkCKXTgtJmQZ3LE1M="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 14:54:24 -0300
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 14:54:24 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 14:54:24 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:24 -0300
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:24 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:24 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:24 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 14:54:24 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-07-31 15:00:29 -0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered users/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-07-31 15:00:29 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-31 15:00:29 -0300
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 15:00:29 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-31 15:00:29 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-07-31 15:00:29 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-31 15:00:29 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-31 15:00:29 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 15:00:29 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (144.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (111.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (3.6ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateUsers (20130724030956)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "address" varchar(255), "latitude" float, "longitude" float, "city" varchar(255), "phone" varchar(255), "type" varchar(255), "manager" boolean, "company_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mCREATE INDEX "index_users_on_id" ON "users" ("id")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130724030956')
+  [1m[36m (121.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateChecks (20130725144105)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "checks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "checked_in_at" datetime, "checked_out_at" datetime, "value" decimal(10,2), "user_id" integer) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130725144105')
+  [1m[36m (150.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddSessionsTable (20130726154324)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  CREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36m (0.4ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130726154324')
+  [1m[36m (109.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCompanies (20130730170921)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cnpj" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  CREATE INDEX "index_companies_on_id" ON "companies" ("id")
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130730170921')[0m
+  [1m[35m (132.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (132.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (111.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (3.8ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateUsers (20130724030956)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "address" varchar(255), "latitude" float, "longitude" float, "city" varchar(255), "phone" varchar(255), "type" varchar(255), "manager" boolean, "company_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_users_on_id" ON "users" ("id")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130724030956')
+  [1m[36m (131.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateChecks (20130725144105)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "checks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "checked_in_at" datetime, "checked_out_at" datetime, "hour_value" decimal(10,2), "user_id" integer) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130725144105')
+  [1m[36m (127.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddSessionsTable (20130726154324)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  CREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36m (0.4ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130726154324')
+  [1m[36m (136.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCompanies (20130730170921)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cnpj" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  CREATE INDEX "index_companies_on_id" ON "companies" ("id")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130730170921')[0m
+  [1m[35m (126.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (164.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (111.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (3.9ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateUsers (20130724030956)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "address" varchar(255), "latitude" float, "longitude" float, "city" varchar(255), "phone" varchar(255), "type" varchar(255), "manager" boolean, "company_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mCREATE INDEX "index_users_on_id" ON "users" ("id")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130724030956')
+  [1m[36m (106.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCheckings (20130725144105)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "checkings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "checked_in_at" datetime, "checked_out_at" datetime, "hour_value" decimal(10,2), "user_id" integer) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130725144105')
+  [1m[36m (107.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddSessionsTable (20130726154324)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  CREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36m (0.3ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130726154324')
+  [1m[36m (114.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCompanies (20130730170921)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cnpj" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  CREATE INDEX "index_companies_on_id" ON "companies" ("id")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130730170921')[0m
+  [1m[35m (106.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (141.4ms)[0m  [1mCREATE TABLE "checkings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "checked_in_at" datetime, "checked_out_at" datetime, "hour_value" decimal(10,2), "user_id" integer) [0m
+  [1m[35m (109.5ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cnpj" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (110.8ms)[0m  [1mCREATE INDEX "index_companies_on_id" ON "companies" ("id")[0m
+  [1m[35m (109.5ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (110.9ms)[0m  [1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [1m[35m (110.9ms)[0m  CREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")
+  [1m[36m (110.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "address" varchar(255), "latitude" float, "longitude" float, "city" varchar(255), "phone" varchar(255), "type" varchar(255), "manager" boolean, "company_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (111.0ms)[0m  CREATE INDEX "index_users_on_id" ON "users" ("id")
+  [1m[36m (110.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (111.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (110.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130730170921')
+  [1m[36m (112.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130726154324')[0m
+  [1m[35m (122.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130724030956')
+  [1m[36m (134.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130725144105')[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (161.1ms)[0m  [1mCREATE TABLE "checkings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "checked_in_at" datetime, "checked_out_at" datetime, "hour_value" decimal(10,2), "user_id" integer) [0m
+  [1m[35m (166.0ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cnpj" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (156.0ms)[0m  [1mCREATE INDEX "index_companies_on_id" ON "companies" ("id")[0m
+  [1m[35m (145.2ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (133.8ms)[0m  [1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [1m[35m (154.7ms)[0m  CREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")
+  [1m[36m (133.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "address" varchar(255), "latitude" float, "longitude" float, "city" varchar(255), "phone" varchar(255), "type" varchar(255), "manager" boolean, "company_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (143.9ms)[0m  CREATE INDEX "index_users_on_id" ON "users" ("id")
+  [1m[36m (166.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (144.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (132.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130730170921')
+  [1m[36m (135.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130726154324')[0m
+  [1m[35m (134.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130724030956')
+  [1m[36m (134.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130725144105')[0m

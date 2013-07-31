@@ -9,6 +9,7 @@ class Manager::UsersController < ApplicationController
 
   def show
     @employee = User.find(params[:id])
+    respond_with @user
   end
 
   def edit
