@@ -21,7 +21,13 @@ class User < ActiveRecord::Base
   validates_numericality_of :latitude, greater_than: -180.0, less_than_or_equal_to: 180.0
   validates_numericality_of :longitude, greater_than: -85.0, less_than_or_equal_to: 85.0
 
+  #scopes
+  scope :employees, ->(company_id) { where(["manager=? and company_id=?", false, company_id]) }
+
   #methods
+  def name
+    "#{first_name} #{last_name}"
+  end
   def plain_password=(password)
     return if password.nil?
     self.password = self.class.encrypt_password(password)

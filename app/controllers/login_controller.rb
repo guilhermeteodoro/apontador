@@ -1,12 +1,4 @@
 class LoginController < ApplicationController
-  layout "adm", except: [:user]
-
-  def adm
-    render "adm_login"
-  end
-  def user
-    render "login"
-  end
 
   def login
     if request.post?
@@ -30,8 +22,13 @@ class LoginController < ApplicationController
         return
       end
       session[:id] = user.id
-      session[:name] = "#{user.first_name} #{user.last_name}"
+      session[:name] = user.name
       session[:manager] = user.manager?
+      if session[:manager]
+        redirect_to "/manager"
+      else
+        redirect_to "/login"
+      end
     end
   end
 

@@ -1,2 +1,12 @@
-%h1 Seja Bem-vindo!
+%h1 Apontador
 %h2 Login
+
+= form_tag "/login" do
+  %p
+    %label{for: "email"} E-mail
+    %input#email{name: "email", type: "text"}/
+  %p
+    %label{for: "password"} Senha
+    %input#password{name: "password", type: "password"}/
+  %p
+    %input{:type => "submit", :value => "Submit"}/
