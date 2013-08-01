@@ -1,14 +1,17 @@
 Apontador::Application.routes.draw do
   resource :user
-  match "home"    => "users#index"
 
   namespace :manager do
     resource :users
   end
-  match "manager" => "manager/users#index"
+  match 'manager'   => 'manager/users#index'
 
-  match "login"   => "login#login"
-  match "logout"  => "login#logout"
+  match 'checking'  => 'checkings#create', via: :post
+  match 'checking'  => 'checkings#new', via: :get
+  match 'checking'  => 'checkings#update', via: :put
 
-  root to: "login#login"
+  match 'login'     => 'login#login'
+  match 'logout'    => 'login#logout'
+
+  root to: 'login#login'
 end

@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
   #associations
   belongs_to :company
-  has_many :checks
+  has_many :checkings
 
   #attributes
   attr_accessible :address, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude

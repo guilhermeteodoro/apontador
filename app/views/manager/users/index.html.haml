@@ -1,6 +1,6 @@
 #content
-  %h1 Welcome #{@user.name}!
-  %p from #{@user.company.name}
+  %h1 Welcome #{@current_user.name}!
+  %p from #{@current_user.company.name}
 
   = button_to 'New Employee', new_manager_users_path
   -@employees.each do |employee|

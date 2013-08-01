@@ -3,7 +3,7 @@ class Manager::UsersController < ApplicationController
   respond_to :html
 
   def index
-    @employees = User.employees(@user.company_id)
+    @employees = User.employees(@current_user.company_id)
     respond_with :html
   end
 

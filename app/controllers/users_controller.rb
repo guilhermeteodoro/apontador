@@ -5,6 +5,6 @@ class UsersController < ApplicationController
   def index
     #current user: @user
 
-    respond_with @user
+    respond_with @current_user
   end
 end

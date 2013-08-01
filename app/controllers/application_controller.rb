@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
     redirect_to "/login" if !session[:manager]
   end
   def current_user
-    @user = User.find(session[:id])
+    @current_user = User.find(session[:id])
   end
 end

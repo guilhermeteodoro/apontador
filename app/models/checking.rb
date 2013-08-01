@@ -2,12 +2,9 @@ class Checking < ActiveRecord::Base
   belongs_to :user
 
   attr_accessible :checked_in_at, :checked_out_at, :user_id, :hour_value
-  validates :user_id, :checked_in_at, :checked_out_at, presence: true, allow_blank: false
-  def initializer(options)
-    @checked_in_at    = options[:checked_in_at]
-    @checked_out_at   = options[:checked_out_at]
-    @user_id          = options[:user_id]
-  end
+  validates :user_id, presence: true, allow_blank: false
+  scope :last_check_in, ->(_user_id){ where(["user_id=? and checked_out_at=?"], _user_id, nil).last }
+
   def date(checked_at)
     checked_at.strftime("%d/%m/%Y")
   end
@@ -27,7 +24,4 @@ class Checking < ActiveRecord::Base
     end
     "#{hours}:#{minutes}"
   end
-  # def self.check_now
-  #   self.new
-  # end
 end

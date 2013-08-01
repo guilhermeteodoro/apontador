@@ -18,7 +18,7 @@ class LoginController < ApplicationController
       end
       user = User.authenticate(email, password)
       if user.nil?
-        flash[:notice] = "Invalid email or password"
+        flash[:notice] = "[User not found] Invalid email or password"
         return
       end
       session[:id] = user.id
@@ -27,7 +27,7 @@ class LoginController < ApplicationController
       if session[:manager]
         redirect_to "/manager"
       else
-        redirect_to "/home"
+        redirect_to "/checking"
       end
     end
   end
