@@ -3,7 +3,7 @@ class Checking < ActiveRecord::Base
 
   attr_accessible :checked_in_at, :checked_out_at, :user_id, :hour_value
   validates :user_id, presence: true, allow_blank: false
-  scope :last_check_in, ->(_user_id){ where(["user_id=? and checked_out_at=?"], _user_id, nil).last }
+  # scope :last_check_in, ->(user_id) { where(["user_id=? and checked_out_at=?", user_id, nil]).last }
 
   def date(checked_at)
     checked_at.strftime("%d/%m/%Y")
@@ -23,5 +23,8 @@ class Checking < ActiveRecord::Base
       (checked_out_at.min - checked_in_at.min).to_s
     end
     "#{hours}:#{minutes}"
+  end
+  def self.last_check_in(current_user_id)
+    where(user_id: current_user_id, checked_out_at: nil).last
   end
 end

@@ -28629,3 +28629,1094 @@ NoMethodError (undefined method `%' for ["user_id=? and checked_out_at=?"]:Array
   Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
   Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
   Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-08-01 17:16:52 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://apontador.com:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-01 17:16:52 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:16:52 -0300
+Served asset /users.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:16:52 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:52 -0300
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:52 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:16:52 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:16:52 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:52 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:52 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:52 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:52 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-01 17:16:55 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c=", "email"=>"lucas@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE (email='lucas@gmail.com' and password='d46e1a2334040014e0a49b4768fa6079a8058cc9') LIMIT 1
+Redirected to http://apontador.com:3000/checking
+Completed 302 Found in 33ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-01 17:16:56 -0300
+Processing by CheckingsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered checkings/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:16:56 -0300
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:16:56 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:16:56 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:16:56 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:56 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:56 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:56 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:56 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:56 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:56 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-01 17:16:57 -0300
+Processing by CheckingsController#create as HTML
+  Parameters: {"authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "checkings" ("checked_in_at", "checked_out_at", "hour_value", "user_id") VALUES (?, ?, ?, ?)  [["checked_in_at", Thu, 01 Aug 2013 20:16:57 UTC +00:00], ["checked_out_at", nil], ["hour_value", nil], ["user_id", 2]]
+  [1m[36m (195.6ms)[0m  [1mcommit transaction[0m
+  Rendered checkings/checked.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 239ms (Views: 33.4ms | ActiveRecord: 196.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:16:58 -0300
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:58 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:16:58 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:16:58 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:16:58 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:58 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:58 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:58 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:58 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:16:58 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/checking" for 127.0.0.1 at 2013-08-01 17:17:00 -0300
+Processing by CheckingsController#update as HTML
+  Parameters: {"authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.1ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE (user_id=2 and checked_out_at=NULL) ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "checkings" 
+  [1m[36mChecking Load (0.1ms)[0m  [1mSELECT "checkings".* FROM "checkings" [0m
+Completed 500 Internal Server Error in 26ms
+
+NoMethodError (undefined method `stringify_keys' for #<ActiveRecord::Relation:0x007fa614096020>):
+  app/controllers/checkings_controller.rb:19:in `new'
+  app/controllers/checkings_controller.rb:19:in `update'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-08-01 17:18:17 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://apontador.com:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-01 17:18:18 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:18:18 -0300
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:18:18 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:18 -0300
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:18:18 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:18:18 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:18 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:18 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:18 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:18 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:18 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-01 17:18:20 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c=", "email"=>"lucas@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (email='lucas@gmail.com' and password='d46e1a2334040014e0a49b4768fa6079a8058cc9') LIMIT 1
+Redirected to http://apontador.com:3000/checking
+Completed 302 Found in 48ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-01 17:18:20 -0300
+Processing by CheckingsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered checkings/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:18:20 -0300
+Served asset /logins.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:18:20 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:18:20 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:20 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:20 -0300
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:18:20 -0300
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:20 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:20 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:20 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:20 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-01 17:18:21 -0300
+Processing by CheckingsController#create as HTML
+  Parameters: {"authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "checkings" ("checked_in_at", "checked_out_at", "hour_value", "user_id") VALUES (?, ?, ?, ?)  [["checked_in_at", Thu, 01 Aug 2013 20:18:21 UTC +00:00], ["checked_out_at", nil], ["hour_value", nil], ["user_id", 2]]
+  [1m[36m (200.8ms)[0m  [1mcommit transaction[0m
+  Rendered checkings/checked.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 227ms (Views: 17.5ms | ActiveRecord: 201.5ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:18:21 -0300
+Served asset /checks.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:18:21 -0300
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:18:21 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:18:21 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:21 -0300
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:21 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:21 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:21 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:21 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:18:21 -0300
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started PUT "/checking" for 127.0.0.1 at 2013-08-01 17:18:22 -0300
+Processing by CheckingsController#update as HTML
+  Parameters: {"authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.4ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE (user_id=2 and checked_out_at=NULL) ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "checkings" 
+  [1m[36mChecking Load (0.4ms)[0m  [1mSELECT "checkings".* FROM "checkings" [0m
+Completed 500 Internal Server Error in 11ms
+
+NoMethodError (undefined method `stringify_keys' for #<ActiveRecord::Relation:0x000000024b3988>):
+  app/controllers/checkings_controller.rb:19:in `new'
+  app/controllers/checkings_controller.rb:19:in `update'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-08-01 17:19:34 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://apontador.com:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-01 17:19:35 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:19:35 -0300
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:35 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:35 -0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:19:35 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:19:35 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:19:35 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:35 -0300
+Served asset /checks.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:35 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:35 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:35 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-01 17:19:37 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c=", "email"=>"lucas@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE (email='lucas@gmail.com' and password='d46e1a2334040014e0a49b4768fa6079a8058cc9') LIMIT 1
+Redirected to http://apontador.com:3000/checking
+Completed 302 Found in 47ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-01 17:19:38 -0300
+Processing by CheckingsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered checkings/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:19:38 -0300
+Served asset /checks.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:19:38 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:19:38 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:19:38 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:38 -0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:38 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:38 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:38 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:38 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:38 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-01 17:19:39 -0300
+Processing by CheckingsController#create as HTML
+  Parameters: {"authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "checkings" ("checked_in_at", "checked_out_at", "hour_value", "user_id") VALUES (?, ?, ?, ?)  [["checked_in_at", Thu, 01 Aug 2013 20:19:39 UTC +00:00], ["checked_out_at", nil], ["hour_value", nil], ["user_id", 2]]
+  [1m[36m (171.2ms)[0m  [1mcommit transaction[0m
+  Rendered checkings/checked.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 214ms (Views: 34.3ms | ActiveRecord: 171.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:19:39 -0300
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:39 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:19:39 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:39 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:19:39 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:19:39 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:39 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:39 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:39 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:19:39 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/checking" for 127.0.0.1 at 2013-08-01 17:19:40 -0300
+Processing by CheckingsController#update as HTML
+  Parameters: {"authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.3ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE (user_id=2 and checked_out_at=NULL) ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mChecking Load (0.4ms)[0m  SELECT "checkings".* FROM "checkings" 
+Completed 500 Internal Server Error in 12ms
+
+TypeError (Cannot visit Checking):
+  app/controllers/checkings_controller.rb:19:in `update'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-08-01 17:20:14 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://apontador.com:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-01 17:20:14 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:20:14 -0300
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:14 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:20:14 -0300
+Served asset /users.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:20:14 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:20:14 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:14 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:14 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:14 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:14 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:14 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-01 17:20:18 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c=", "email"=>"lucas@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='lucas@gmail.com' and password='d46e1a2334040014e0a49b4768fa6079a8058cc9') LIMIT 1[0m
+Redirected to http://apontador.com:3000/checking
+Completed 302 Found in 49ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-01 17:20:18 -0300
+Processing by CheckingsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered checkings/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:20:18 -0300
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:20:18 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:20:18 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:20:18 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:18 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:18 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:18 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:18 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:18 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:18 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-01 17:20:20 -0300
+Processing by CheckingsController#create as HTML
+  Parameters: {"authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "checkings" ("checked_in_at", "checked_out_at", "hour_value", "user_id") VALUES (?, ?, ?, ?)[0m  [["checked_in_at", Thu, 01 Aug 2013 20:20:20 UTC +00:00], ["checked_out_at", nil], ["hour_value", nil], ["user_id", 2]]
+  [1m[35m (189.7ms)[0m  commit transaction
+  Rendered checkings/checked.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 226ms (Views: 27.0ms | ActiveRecord: 190.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:20:20 -0300
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:20:20 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:20 -0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:20 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:20:20 -0300
+Served asset /users.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:20:20 -0300
+Served asset /logins.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:20 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:20 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:20 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:20:20 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/checking" for 127.0.0.1 at 2013-08-01 17:20:21 -0300
+Processing by CheckingsController#update as HTML
+  Parameters: {"authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.3ms)[0m  SELECT "checkings".* FROM "checkings" WHERE (user_id=2 and checked_out_at=NULL) ORDER BY "checkings"."id" DESC LIMIT 1
+  [1m[36mChecking Load (0.4ms)[0m  [1mSELECT "checkings".* FROM "checkings" [0m
+Completed 500 Internal Server Error in 12ms
+
+NoMethodError (undefined method `checked_out_at=' for #<ActiveRecord::Relation:0x0000000315c928>):
+  app/controllers/checkings_controller.rb:20:in `update'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-08-01 17:32:12 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://apontador.com:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-01 17:32:12 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:32:12 -0300
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:32:12 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:32:12 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:32:12 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:12 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:12 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:12 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:12 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:12 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:12 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-01 17:32:14 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c=", "email"=>"lucas@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE (email='lucas@gmail.com' and password='d46e1a2334040014e0a49b4768fa6079a8058cc9') LIMIT 1
+Redirected to http://apontador.com:3000/checking
+Completed 302 Found in 50ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-01 17:32:15 -0300
+Processing by CheckingsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered checkings/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:15 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:32:15 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:32:15 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:32:15 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:15 -0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:32:15 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:15 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:15 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:15 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:15 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-01 17:32:15 -0300
+Processing by CheckingsController#create as HTML
+  Parameters: {"authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "checkings" ("checked_in_at", "checked_out_at", "hour_value", "user_id") VALUES (?, ?, ?, ?)  [["checked_in_at", Thu, 01 Aug 2013 20:32:15 UTC +00:00], ["checked_out_at", nil], ["hour_value", nil], ["user_id", 2]]
+  [1m[36m (163.1ms)[0m  [1mcommit transaction[0m
+  Rendered checkings/checked.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 211ms (Views: 30.3ms | ActiveRecord: 164.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:32:16 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:32:16 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:32:16 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:32:16 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:16 -0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:16 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:16 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:16 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:16 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:32:16 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/checking" for 127.0.0.1 at 2013-08-01 17:32:17 -0300
+Processing by CheckingsController#update as HTML
+  Parameters: {"authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.4ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 AND "checkings"."checked_out_at" IS NULL ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `stringify_keys' for #<Checking:0x0000000319a778>):
+  app/controllers/checkings_controller.rb:22:in `update'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-08-01 17:36:34 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://apontador.com:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-01 17:36:34 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:34 -0300
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:34 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:34 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:34 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:34 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:34 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:34 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:34 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:34 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:34 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-01 17:36:36 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c=", "email"=>"lucas@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE (email='lucas@gmail.com' and password='d46e1a2334040014e0a49b4768fa6079a8058cc9') LIMIT 1
+Redirected to http://apontador.com:3000/checking
+Completed 302 Found in 52ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-01 17:36:36 -0300
+Processing by CheckingsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered checkings/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:36 -0300
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:36 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:36 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:36 -0300
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:36 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:36 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:36 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:36 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:36 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:36 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-01 17:36:37 -0300
+Processing by CheckingsController#create as HTML
+  Parameters: {"authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "checkings" ("checked_in_at", "checked_out_at", "hour_value", "user_id") VALUES (?, ?, ?, ?)  [["checked_in_at", Thu, 01 Aug 2013 20:36:37 UTC +00:00], ["checked_out_at", nil], ["hour_value", nil], ["user_id", 2]]
+  [1m[36m (169.8ms)[0m  [1mcommit transaction[0m
+  Rendered checkings/checked.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 207ms (Views: 27.6ms | ActiveRecord: 170.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:37 -0300
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:37 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:37 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:37 -0300
+Served asset /checks.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:37 -0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:37 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:37 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:37 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:37 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:37 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/checking" for 127.0.0.1 at 2013-08-01 17:36:38 -0300
+Processing by CheckingsController#update as HTML
+  Parameters: {"authenticity_token"=>"CCEL/gPi3hEOEaa+lICoKcSMBzEbMC49JonYhK3S++c="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.1ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 AND "checkings"."checked_out_at" IS NULL ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mUPDATE "checkings" SET "checked_out_at" = '2013-08-01 20:36:38.848190' WHERE "checkings"."id" = 17[0m
+  [1m[35m (160.3ms)[0m  commit transaction
+  Rendered checkings/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 205ms (Views: 39.7ms | ActiveRecord: 160.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:39 -0300
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:39 -0300
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:39 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:39 -0300
+Served asset /logins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:39 -0300
+Served asset /checks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-01 17:36:39 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checks.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:39 -0300
+Served asset /checks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logins.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:39 -0300
+Served asset /logins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:39 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 17:36:39 -0300
+Served asset /application.js - 304 Not Modified (0ms)

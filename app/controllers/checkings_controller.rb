@@ -16,10 +16,9 @@ class CheckingsController < ApplicationController
     end
   end
   def update
-    @checking = Checking.new(Checking.last_check_in(@current_user.id))
-    @checking.checked_out_at = Time.now
+    @checking = Checking.last_check_in(@current_user.id)
 
-    if @checking.update_attributes(params[:checking])
+    if @checking.update_attributes(checked_out_at: Time.now)
       flash[:notice] = "Checked-out successfully"
       render 'index'
     else
