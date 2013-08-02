@@ -13,5 +13,6 @@ Apontador::Application.routes.draw do
   match 'login'     => 'login#login'
   match 'logout'    => 'login#logout'
 
-  root to: 'login#login'
+  match '/'         => 'login#redirecter'
+  root to: 'login#redirecter'
 end

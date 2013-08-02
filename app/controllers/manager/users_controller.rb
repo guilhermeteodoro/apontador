@@ -4,7 +4,6 @@ class Manager::UsersController < ApplicationController
 
   def index
     @employees = User.employees(@current_user.company_id)
-    respond_with :html
   end
 
   def show

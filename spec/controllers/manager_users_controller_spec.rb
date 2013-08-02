@@ -21,7 +21,7 @@ describe Manager::UsersController do
       response.should be_successful
     end
     it "with all info from the current user" do
-      assigns(:user).should eql @manager
+      assigns(:current_user).should eql @manager
     end
   end
 end

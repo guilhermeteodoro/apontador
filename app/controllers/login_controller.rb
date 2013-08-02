@@ -1,4 +1,15 @@
 class LoginController < ApplicationController
+  def redirecter
+    if session[:id].present?
+      if session[:manager]
+        redirect_to '/manager'
+      else
+        redirect_to '/checking'
+      end
+    else
+      redirect_to action: :login
+    end
+  end
 
   def login
     if request.post?
@@ -18,7 +29,7 @@ class LoginController < ApplicationController
       end
       user = User.authenticate(email, password)
       if user.nil?
-        flash[:notice] = "[User not found] Invalid email or password"
+        flash[:notice] = "Invalid email or password"
         return
       end
       session[:id] = user.id

@@ -2,8 +2,9 @@ class Checking < ActiveRecord::Base
   belongs_to :user
 
   attr_accessible :checked_in_at, :checked_out_at, :user_id, :hour_value
-  validates :user_id, presence: true, allow_blank: false
-  # scope :last_check_in, ->(user_id) { where(["user_id=? and checked_out_at=?", user_id, nil]).last }
+
+  validates :user_id, presence: true
+  # validates :checked_in_at, :checked_out_at, :user_id, allow_blank: false
 
   def date(checked_at)
     checked_at.strftime("%d/%m/%Y")

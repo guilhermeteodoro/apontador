@@ -42,6 +42,7 @@ describe LoginController do
       session[:id].should eql user.id
       session[:name].should eql "#{user.first_name} #{user.last_name}"
       session[:manager].should eql user.manager?
+      response.should redirect_to '/checking'
     end
   end
   it "should logout" do
