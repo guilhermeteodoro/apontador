@@ -1,14 +1,17 @@
 class CheckingsController < ApplicationController
   before_filter :logged?, :current_user
-  layout 'checking'
 
   def new
     @checking = Checking.new(user_id: @current_user.id)
+    @checking.save
     render 'index'
   end
+
   def create
     @checking = @current_user.checkings.last
     @checking.checked_in_at = Time.now
+    @checking.lat, @checking.lng = params[:lat], params[:lng]
+
 
     if @checking.save
       flash[:notice] = "Checked-in successfully"
@@ -18,6 +21,7 @@ class CheckingsController < ApplicationController
       redirect_to action: :new
     end
   end
+
   def update
     @checking = Checking.last_check_in(@current_user.id)
 

@@ -30,8 +30,8 @@
 #   document.getElementById("status").innerHTML = message
 
 position_ok = (position) ->
-  $("#checking_lat").val position.coords.latitude
-  $("#checking_lng").val position.coords.longitude
+  $("#lat").val position.coords.latitude
+  $("#lng").val position.coords.longitude
 
 position_error = (error) ->
   alert "erro: " + error

@@ -32,19 +32,24 @@ class User < ActiveRecord::Base
   def location_ok?(x,y)
     ((@latitude-0.001..@latitude).include?(x) || (@latitude..@latitude+0.001).include?(x)) && ((@longitude-0.001..@longitude).include?(y) || (@longitude..@longitude+0.001).include?(y)) ? true : false
   end
+
   def name
     "#{first_name} #{last_name}"
   end
+
   def plain_password=(password)
     return if password.nil?
     self.password = self.class.encrypt_password(password)
   end
+
   def plain_password
     ""
   end
+
   def self.authenticate(email, password)
     where("email=? and password=?", email, encrypt_password(password)).first
   end
+
   def self.encrypt_password(password)
     Digest::SHA1.hexdigest("a1#{password}2b")
   end

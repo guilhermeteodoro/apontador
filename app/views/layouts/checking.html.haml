@@ -6,5 +6,5 @@
     = javascript_include_tag "application"
     %script{:src => "http://maps.googleapis.com/maps/api/js?sensor=false"}
     = csrf_meta_tags
-  %body{:onload => "init_geolocation()"}
+  %body
     = yield
