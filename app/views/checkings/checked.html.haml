@@ -2,6 +2,7 @@
 %h2 #{@current_user.name}
 -if @checking.checked_in_at.present?
   %h4 Checked-in at: #{@checking.date(@checking.checked_in_at)}
+  %h4 Latitude: #{@checking.lat} - Longitude: #{@checking.lng}
 %h1 00:00
 %p= button_to 'Check-out', '/checking', method: :put
 %p= link_to 'logout', '/logout'

@@ -6,7 +6,7 @@ Apontador::Application.routes.draw do
   end
   match 'manager'   => 'manager/users#index'
 
-  match 'checking'  => 'checkings#create', via: :post
+  match 'checking'  => 'checkings#create', via: :post, as: 'checkings'
   match 'checking'  => 'checkings#new', via: :get
   match 'checking'  => 'checkings#update', via: :put
 

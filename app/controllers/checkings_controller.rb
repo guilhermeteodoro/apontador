@@ -3,10 +3,12 @@ class CheckingsController < ApplicationController
   layout 'checking'
 
   def new
+    @checking = Checking.new(user_id: @current_user.id)
     render 'index'
   end
   def create
-    @checking = Checking.new(user_id: @current_user.id, checked_in_at: Time.now)
+    @checking = @current_user.checkings.last
+    @checking.checked_in_at = Time.now
 
     if @checking.save
       flash[:notice] = "Checked-in successfully"

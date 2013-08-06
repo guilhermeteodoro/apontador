@@ -11,13 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730170921) do
+ActiveRecord::Schema.define(:version => 20130806185800) do
 
   create_table "checkings", :force => true do |t|
     t.datetime "checked_in_at"
     t.datetime "checked_out_at"
     t.decimal  "hour_value",     :precision => 10, :scale => 2
     t.integer  "user_id"
+    t.float    "lat"
+    t.float    "lng"
   end
 
   create_table "companies", :force => true do |t|

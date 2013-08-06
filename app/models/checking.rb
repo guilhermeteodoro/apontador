@@ -1,7 +1,7 @@
 class Checking < ActiveRecord::Base
   belongs_to :user
 
-  attr_accessible :checked_in_at, :checked_out_at, :user_id, :hour_value
+  attr_accessible :checked_in_at, :checked_out_at, :user_id, :hour_value, :lat, :lng
 
   validates :user_id, presence: true
   # validates :checked_in_at, :checked_out_at, :user_id, allow_blank: false
@@ -27,5 +27,8 @@ class Checking < ActiveRecord::Base
   end
   def self.last_check_in(current_user_id)
     where(user_id: current_user_id, checked_out_at: nil).last
+  end
+  def self.last_valid(current_user_id)
+    where(user_id: current_user_id).last
   end
 end

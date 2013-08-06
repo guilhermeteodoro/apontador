@@ -29,12 +29,6 @@ class User < ActiveRecord::Base
   scope :employees, ->(company_id) { where(["manager=? and company_id=?", false, company_id]) }
 
   #methods
-  def coordinates=(coordinates)
-    @coordinates = coordinates.gsub(',','.')
-  end
-  def coordinates
-    @coordinates
-  end
   def location_ok?(x,y)
     ((@latitude-0.001..@latitude).include?(x) || (@latitude..@latitude+0.001).include?(x)) && ((@longitude-0.001..@longitude).include?(y) || (@longitude..@longitude+0.001).include?(y)) ? true : false
   end
