@@ -1,5 +1,6 @@
 class CheckingsController < ApplicationController
   before_filter :logged?, :current_user
+  layout 'checking'
 
   def new
     render 'index'

@@ -8,8 +8,12 @@ class User < ActiveRecord::Base
   has_many :checkings
 
   #attributes
-  attr_accessible :address, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude
+  attr_accessible :address, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :coordinates
   attr_protected :password
+
+  #geocode
+  geocoded_by :address
+  after_validation :geocode
 
   #validations
   validates :first_name, :last_name, :company_id, presence: true
@@ -25,6 +29,15 @@ class User < ActiveRecord::Base
   scope :employees, ->(company_id) { where(["manager=? and company_id=?", false, company_id]) }
 
   #methods
+  def coordinates=(coordinates)
+    @coordinates = coordinates.gsub(',','.')
+  end
+  def coordinates
+    @coordinates
+  end
+  def location_ok?(x,y)
+    ((@latitude-0.001..@latitude).include?(x) || (@latitude..@latitude+0.001).include?(x)) && ((@longitude-0.001..@longitude).include?(y) || (@longitude..@longitude+0.001).include?(y)) ? true : false
+  end
   def name
     "#{first_name} #{last_name}"
   end
@@ -35,10 +48,10 @@ class User < ActiveRecord::Base
   def plain_password
     ""
   end
-  def self.encrypt_password(password)
-    Digest::SHA1.hexdigest("a1#{password}2b")
-  end
   def self.authenticate(email, password)
     where("email=? and password=?", email, encrypt_password(password)).first
+  end
+  def self.encrypt_password(password)
+    Digest::SHA1.hexdigest("a1#{password}2b")
   end
 end

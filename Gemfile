@@ -18,7 +18,7 @@ group :development, :test do
   gem 'guard-spork', '1.4.0'
 end
 
-gem 'heritage'
 gem 'haml', '~> 4.0'
 gem 'jquery-rails'
 gem 'geocoder'
+gem 'therubyracer'

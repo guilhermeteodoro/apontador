@@ -1,5 +1,18 @@
 %p#notice= notice
 %h2 Welcome, #{@current_user.name}
 %h1 00:00
-%p= button_to 'Check-in', '/checking', method: :post
+= form_for(@current_user,:html=>{:multipart=>true}) do |f|
+  - if @current_user.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@current_user.errors.count, "error")
+        prohibited this current_user from being saved:
+      %ul
+        - @current_user.errors.full_messages.each do |msg|
+          %li= msg
+  #coordinates.field
+    = f.label :coordinates
+  .actions
+    = f.submit 'Check-in'
+/ %p= button_to 'Check-in', '/checking', method: :post
 %p= link_to 'logout', '/logout'
