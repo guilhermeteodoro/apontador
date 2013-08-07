@@ -10,6 +10,10 @@ class Checking < ActiveRecord::Base
     checked_at.strftime("%d/%m/%Y")
   end
 
+  def hour(checked_at)
+    checked_at.strftime("%H:%M")
+  end
+
   def weekday(checked_at)
     checked_at.strftime("%A")
   end
@@ -26,13 +30,5 @@ class Checking < ActiveRecord::Base
       (checked_out_at.min - checked_in_at.min).to_s
     end
     "#{hours}:#{minutes}"
-  end
-
-  def self.last_check_in(current_user_id)
-    where(user_id: current_user_id, checked_out_at: nil).last
-  end
-
-  def self.last_valid(current_user_id)
-    where(user_id: current_user_id).last
   end
 end

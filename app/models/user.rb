@@ -11,11 +11,7 @@ class User < ActiveRecord::Base
   attr_accessible :address, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :coordinates
   attr_protected :password
 
-  #geocode
-  geocoded_by :address
-  after_validation :geocode
-
-  #validations
+  # validations
   validates :first_name, :last_name, :company_id, presence: true
   validates :address, presence: true,
             allow_blank: false
@@ -23,14 +19,14 @@ class User < ActiveRecord::Base
             uniqueness: true,
             format: { with: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9_ -]+\.)+[a-zA-Z]{2,4}$/ }
   validates_numericality_of :latitude, greater_than: -180.0, less_than_or_equal_to: 180.0
-  validates_numericality_of :longitude, greater_than: -85.0, less_than_or_equal_to: 85.0
+  validates_numericality_of :longitude, greater_than: -180.0, less_than_or_equal_to: 180.0
 
   #scopes
   scope :employees, ->(company_id) { where(["manager=? and company_id=?", false, company_id]) }
 
   #methods
   def location_ok?(x,y)
-    ((@latitude-0.001..@latitude).include?(x) || (@latitude..@latitude+0.001).include?(x)) && ((@longitude-0.001..@longitude).include?(y) || (@longitude..@longitude+0.001).include?(y)) ? true : false
+    ((latitude-0.001..latitude).include?(x) || (latitude..latitude+0.001).include?(x)) && ((longitude-0.001..longitude).include?(y) || (longitude..longitude+0.001).include?(y)) ? true : false
   end
 
   def name

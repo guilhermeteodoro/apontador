@@ -49,4 +49,8 @@ class LoginController < ApplicationController
     session[:manager] = nil
     redirect_to action: :login
   end
+
+  def signup
+    @user = User.new(manager: true)
+  end
 end

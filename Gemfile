@@ -20,5 +20,4 @@ end
 
 gem 'haml', '~> 4.0'
 gem 'jquery-rails'
-gem 'geocoder'
 gem 'therubyracer'

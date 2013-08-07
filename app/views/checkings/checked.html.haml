@@ -1,8 +1,14 @@
 %p#notice= notice
 %h2 #{@current_user.name}
 -if @checking.checked_in_at.present?
-  %h4 Checked-in at: #{@checking.date(@checking.checked_in_at)}
+  %h4 Checked-in at: #{@checking.date @checking.checked_in_at} - #{@checking.hour @checking.checked_in_at}
   %h4 Latitude: #{@checking.lat} - Longitude: #{@checking.lng}
 %h1 00:00
-%p= button_to 'Check-out', '/checking', method: :put
+= form_for update_checking_path, method: :put do
+  %p
+    %input#lat{name: "lat", type: "text"}/
+  %p
+    %input#lng{name: "lng", type: "text"}/
+  %p
+    %input#sub{type: "submit", value: "Check-out"}/
 %p= link_to 'logout', '/logout'
