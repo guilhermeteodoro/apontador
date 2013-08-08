@@ -8,18 +8,25 @@ class User < ActiveRecord::Base
   has_many :checkings
 
   #attributes
-  attr_accessible :address, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :coordinates
+  attr_accessible :address, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :coordinates, :number
   attr_protected :password
 
+  #geolocation
+
+
   # validations
-  validates :first_name, :last_name, :company_id, presence: true
+  validates :first_name, :last_name, presence: true
   validates :address, presence: true,
-            allow_blank: false
+    allow_blank: false
   validates :email, presence: true,
-            uniqueness: true,
-            format: { with: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9_ -]+\.)+[a-zA-Z]{2,4}$/ }
-  validates_numericality_of :latitude, greater_than: -180.0, less_than_or_equal_to: 180.0
-  validates_numericality_of :longitude, greater_than: -180.0, less_than_or_equal_to: 180.0
+    uniqueness: true,
+    format: { with: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9_ -]+\.)+[a-zA-Z]{2,4}$/ }
+  validates_numericality_of :latitude, greater_than: -180.0,
+    less_than_or_equal_to: 180.0,
+    allow_nil: true
+  validates_numericality_of :longitude, greater_than: -180.0,
+    less_than_or_equal_to: 180.0,
+    allow_nil: true
 
   #scopes
   scope :employees, ->(company_id) { where(["manager=? and company_id=?", false, company_id]) }

@@ -3,11 +3,12 @@
   %p from #{@current_user.company.name}
 
   = button_to 'New Employee', new_manager_users_path
-  -@employees.each do |employee|
-    %div.block
-      %ul
-        %h3= employee.name
-        %li= employee.email
-        %li #{employee.address}, #{employee.city}
-        %li= link_to 'edit info', edit_manager_users_path(employee.id)
+  -if @employee.present?
+    -@employees.each do |employee|
+      %div.block
+        %ul
+          %h3= employee.name
+          %li= employee.email
+          %li #{employee.address}, #{employee.city}
+          %li= link_to 'edit info', edit_manager_users_path(employee.id)
 

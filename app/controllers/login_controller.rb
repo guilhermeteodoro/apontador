@@ -32,7 +32,7 @@ class LoginController < ApplicationController
         flash[:notice] = "Invalid email or password"
         return
       end
-      session[:id] = user.id
+      p session[:id] = user.id
       session[:name] = user.name
       session[:manager] = user.manager?
       if session[:manager]
@@ -48,9 +48,5 @@ class LoginController < ApplicationController
     session[:name] = nil
     session[:manager] = nil
     redirect_to action: :login
-  end
-
-  def signup
-    @user = User.new(manager: true)
   end
 end
