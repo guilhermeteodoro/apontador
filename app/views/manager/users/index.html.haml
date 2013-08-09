@@ -1,14 +1,20 @@
+= link_to 'logout', '/logout'
 #content
-  %h1 Welcome #{@current_user.name}!
-  %p from #{@current_user.company.name}
+  %h1 Welcome #{@current_user.name}! (id: #{@current_user.id})
 
-  = button_to 'New Employee', new_manager_users_path
-  -if @employee.present?
-    -@employees.each do |employee|
-      %div.block
-        %ul
-          %h3= employee.name
-          %li= employee.email
-          %li #{employee.address}, #{employee.city}
-          %li= link_to 'edit info', edit_manager_users_path(employee.id)
+  -if @current_user.company_id.nil?
+    %h3 You don't have a company yet
+    %h2 Please, create one
+    = button_to 'New Company', new_company_path
+  -else
+    %h2 from #{@current_user.company.name}
+    = link_to 'New Employee', new_employee_path
+    -if @employees.present?
+      -@employees.each do |employee|
+        %div.block
+          %ul
+            %h3= employee.name
+            %li= employee.email
+            %li #{employee.number} #{employee.address}, #{employee.city}
+            %li= link_to 'edit info'
 

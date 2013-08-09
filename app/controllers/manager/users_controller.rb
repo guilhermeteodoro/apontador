@@ -1,5 +1,5 @@
 class Manager::UsersController < ApplicationController
-  before_filter :logged?, :manager?, :current_user, except: [:new, :create]
+  before_filter :logged?, :current_user, :manager?, except: [:new, :create]
   respond_to :html
 
   def index
@@ -21,9 +21,9 @@ class Manager::UsersController < ApplicationController
     @manager.manager = true
 
     if @manager.save
-      p session[:id] = @manager.id
-      p session[:name] = @manager.name
-      p session[:manager] = @manager.manager?
+      session[:id] = @manager.id
+      session[:name] = @manager.name
+      session[:manager] = @manager.manager?
       redirect_to action: :index
     else
       flash[:notice] = @manager.errors.full_messages

@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     redirect_to "/login" if session[:id].nil?
   end
   def manager?
-    redirect_to "/login" if !session[:manager]
+    redirect_to "/login" if session[:manager] == false
   end
   def current_user
     @current_user = User.find(session[:id])

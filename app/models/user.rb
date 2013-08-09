@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :checkings
 
   #attributes
-  attr_accessible :address, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :coordinates, :number
+  attr_accessible :address, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :coordinates, :number, :company_id
   attr_protected :password
 
   #geolocation
