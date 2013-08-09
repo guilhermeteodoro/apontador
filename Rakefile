@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Apontador::Application.load_tasks
+Checker::Application.load_tasks

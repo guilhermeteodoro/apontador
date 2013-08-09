@@ -1,4 +1,4 @@
-Apontador::Application.routes.draw do
+Checker::Application.routes.draw do
 
   match 'manager' => 'manager/users#index'
   match 'signup'  => 'manager/users#new'
