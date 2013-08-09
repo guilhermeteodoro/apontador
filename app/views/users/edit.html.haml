@@ -1,8 +1,8 @@
 %p#notice= notice
 
-%h1 New Employee
+%h1 Edit Employee
 
-=form_for @employee, url: new_employee_path do |f|
+=form_for @employee, url: employee_path do |f|
   -if @employee.errors.any?
     #error_explanation
       %h2
@@ -31,4 +31,4 @@
     =f.label :password
     =f.password_field :plain_password
   .button
-    =f.submit :Save
+    =f.submit

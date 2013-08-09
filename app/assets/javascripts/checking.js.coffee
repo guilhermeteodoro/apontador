@@ -36,12 +36,12 @@ class window.Geolocation
     @longitude  = $('#lng')
     @submit     = $('#submit')
 
-    @submit.click =>
+    @form.submit =>
       navigator.geolocation.getCurrentPosition @position_ok, @position_error, enableHighAccuracy: true
 
       $.ajax
         type: 'POST',
-        url: '/checking',
+        url: '/checking'
         @form.bind "ajax:success", (xhr, data, status) =>
           console.log data
         @form.bind "ajax:error", (event, response, erro) =>

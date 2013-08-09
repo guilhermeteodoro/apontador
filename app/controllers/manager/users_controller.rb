@@ -12,8 +12,7 @@ class Manager::UsersController < ApplicationController
   end
 
   def new
-    @manager = User.new(manager: true)
-    render 'signup'
+    @manager = User.new
   end
 
   def create

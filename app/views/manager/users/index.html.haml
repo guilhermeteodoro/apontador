@@ -16,5 +16,5 @@
             %h3= employee.name
             %li= employee.email
             %li #{employee.number} #{employee.address}, #{employee.city}
-            %li= link_to 'edit info'
+            %li= link_to 'edit info', edit_employee_path(employee.id)
 
