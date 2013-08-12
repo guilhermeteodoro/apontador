@@ -1,0 +1,8 @@
+%h2 #{@employee.name}
+
+- @checkings.each do |c|
+  %tr
+    %td= c.checked_in_at
+    %td= c.checked_out_at
+    %td= c.worktime
+    %td= c.hour_value

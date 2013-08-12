@@ -2,33 +2,6 @@
 
 %h1 New Employee
 
-=form_for @employee, url: new_employee_path do |f|
-  -if @employee.errors.any?
-    #error_explanation
-      %h2
-        =pluralize(@employee.errors.count, "error")
-        prohibited this user from being saved:
-      %ul
-        - @employee.errors.full_messages.each do |msg|
-          %li= msg
+= render 'form'
 
-  .field
-    =f.label :first_name
-    =f.text_field :first_name
-    =f.label :last_name
-    =f.text_field :last_name
-  .field
-    =f.label :street
-    =f.text_field :address
-    =f.label :number
-    =f.text_field :number
-    =f.label :city
-    =f.text_field :city
-  .field
-    =f.label :email
-    =f.text_field :email
-  .field
-    =f.label :password
-    =f.password_field :plain_password
-  .button
-    =f.submit :Save
+= link_to 'back', manager_users_path

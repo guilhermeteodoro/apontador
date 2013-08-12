@@ -32,11 +32,11 @@ class LoginController < ApplicationController
         flash[:notice] = "Invalid email or password"
         return
       end
-      p session[:id] = user.id
+      session[:id] = user.id
       session[:name] = user.name
       session[:manager] = user.manager?
       if session[:manager]
-        redirect_to "/manager"
+        redirect_to manager_users_path
       else
         redirect_to "/checking"
       end

@@ -8,7 +8,7 @@
     = button_to 'New Company', new_company_path
   -else
     %h2 from #{@current_user.company.name}
-    = link_to 'New Employee', new_employee_path
+    = link_to 'New Employee', new_user_path
     -if @employees.present?
       -@employees.each do |employee|
         %div.block
@@ -16,5 +16,5 @@
             %h3= employee.name
             %li= employee.email
             %li #{employee.number} #{employee.address}, #{employee.city}
-            %li= link_to 'edit info', edit_employee_path(employee.id)
+            %li= link_to 'edit info', edit_user_path(employee.id)
 

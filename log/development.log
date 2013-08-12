@@ -73215,3 +73215,3601 @@ Served asset /jquery.js - 304 Not Modified (2ms)
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-09 17:03:10 -0300
 Served asset /application.js - 304 Not Modified (3ms)
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-11 13:37:13 -0300
+Processing by LoginController#redirecter as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 13:37:13 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (28.4ms)
+Compiled users.css  (46ms)  (pid 3654)
+Compiled application.css  (51ms)  (pid 3654)
+Compiled jquery.js  (1ms)  (pid 3654)
+Compiled jquery_ujs.js  (0ms)  (pid 3654)
+Compiled checking.js  (284ms)  (pid 3654)
+Compiled application.js  (404ms)  (pid 3654)
+Completed 200 OK in 601ms (Views: 600.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:14 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:14 -0300
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:14 -0300
+Served asset /checking.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-11 13:37:14 -0300
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:14 -0300
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-11 13:37:14 -0300
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-11 13:37:33 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "email"=>"gui@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='gui@gmail.com' and password='3ff1b6626f29009b3d4036f4071ef848221e448d') LIMIT 1[0m
+Redirected to http://localhost:3000/manager
+Completed 302 Found in 33ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-11 13:37:33 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 14 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=14)
+  Rendered manager/users/index.html.haml within layouts/application (57.8ms)
+Completed 200 OK in 68ms (Views: 63.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-11 13:37:34 -0300
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:34 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:34 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-11 13:37:34 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:34 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:34 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-08-11 13:37:38 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 13:37:39 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-11 13:37:39 -0300
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:39 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:39 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-11 13:37:39 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:39 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:39 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-11 13:37:49 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "email"=>"lucas@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='lucas@gmail.com' and password='d46e1a2334040014e0a49b4768fa6079a8058cc9') LIMIT 1[0m
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 13:37:50 -0300
+Processing by CheckingsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.1ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 37ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-11 13:37:50 -0300
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-11 13:37:50 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:50 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:50 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:50 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-11 13:37:50 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-11 13:37:56 -0300
+Processing by CheckingsController#create as */*
+  Parameters: {"undefined"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.1ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-11 13:37:56 -0300
+Processing by CheckingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "lat"=>"", "lng"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.3ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 13:37:56 -0300
+Processing by CheckingsController#new as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.1ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  Rendered checkings/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 13:37:56 -0300
+Processing by CheckingsController#new as JS
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.4ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-11 13:38:52 -0300
+Processing by CheckingsController#create as */*
+  Parameters: {"undefined"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.1ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-11 13:38:52 -0300
+Processing by CheckingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "lat"=>"-20.9042517", "lng"=>"-51.3694127"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.4ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 13:38:52 -0300
+Processing by CheckingsController#new as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.3ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  Rendered checkings/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 20ms (Views: 13.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 13:38:53 -0300
+Processing by CheckingsController#new as JS
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.3ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-11 13:38:53 -0300
+Processing by CheckingsController#create as */*
+  Parameters: {"undefined"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.1ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-11 13:38:53 -0300
+Processing by CheckingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "lat"=>"-20.9042517", "lng"=>"-51.3694127"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.2ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 13:38:53 -0300
+Processing by CheckingsController#new as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.1ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  Rendered checkings/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-11 13:38:54 -0300
+Processing by CheckingsController#create as */*
+  Parameters: {"undefined"=>""}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.1ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-11 13:38:54 -0300
+Processing by CheckingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "lat"=>"-20.9042517", "lng"=>"-51.3694127"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.3ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 13:38:54 -0300
+Processing by CheckingsController#new as JS
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.1ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 24ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-11 13:38:54 -0300
+Processing by CheckingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "lat"=>"-20.9042517", "lng"=>"-51.3694127"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.1ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-11 13:38:54 -0300
+Processing by CheckingsController#create as */*
+  Parameters: {"undefined"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.4ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 11ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 13:38:54 -0300
+Processing by CheckingsController#new as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.3ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  Rendered checkings/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 9.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-11 13:38:54 -0300
+Processing by CheckingsController#create as */*
+  Parameters: {"undefined"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.1ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started POST "/checking" for 127.0.0.1 at 2013-08-11 13:38:54 -0300
+Processing by CheckingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "lat"=>"-20.9042517", "lng"=>"-51.3694127"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.3ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 13:38:54 -0300
+Processing by CheckingsController#new as JS
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.1ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 13:38:55 -0300
+Processing by CheckingsController#new as JS
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.1ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  Rendered checkings/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 13:38:55 -0300
+Processing by CheckingsController#new as */*
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.1ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 13:38:55 -0300
+Processing by CheckingsController#new as */*
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.1ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  Rendered checkings/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 13:38:55 -0300
+Processing by CheckingsController#new as JS
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.3ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 57ms (Views: 32.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-11 13:56:00 -0300
+Processing by LoginController#redirecter as HTML
+Redirected to http://apontador.com:3000/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 13:56:00 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 7ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-11 13:56:00 -0300
+Served asset /checking.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-11 13:56:00 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-11 13:56:00 -0300
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-11 13:56:00 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-11 13:56:00 -0300
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-11 13:56:00 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-11 23:37:11 -0300
+Processing by LoginController#redirecter as HTML
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 23:37:11 -0300
+Processing by CheckingsController#new as HTML
+  [1m[36mUser Load (19.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.1ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  Rendered checkings/index.html.haml within layouts/application (20.2ms)
+Completed 500 Internal Server Error in 225ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+  app/controllers/checkings_controller.rb:14:in `new'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 23:37:44 -0300
+Processing by CheckingsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.1ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+  app/controllers/checkings_controller.rb:14:in `new'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 23:37:45 -0300
+Processing by CheckingsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.4ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  Rendered checkings/index.html.haml within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 43ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+  app/controllers/checkings_controller.rb:14:in `new'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 23:37:45 -0300
+Processing by CheckingsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.1ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+  app/controllers/checkings_controller.rb:14:in `new'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 23:37:45 -0300
+Processing by CheckingsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.1ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  Rendered checkings/index.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+  app/controllers/checkings_controller.rb:14:in `new'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 23:37:45 -0300
+Processing by CheckingsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.1ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+  app/controllers/checkings_controller.rb:14:in `new'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 23:37:45 -0300
+Processing by CheckingsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.4ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  Rendered checkings/index.html.haml within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+  app/controllers/checkings_controller.rb:14:in `new'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 23:37:45 -0300
+Processing by CheckingsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.4ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+  app/controllers/checkings_controller.rb:14:in `new'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 23:37:46 -0300
+Processing by CheckingsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.2ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  Rendered checkings/index.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+  app/controllers/checkings_controller.rb:14:in `new'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 23:37:46 -0300
+Processing by CheckingsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.3ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+  app/controllers/checkings_controller.rb:14:in `new'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 23:37:46 -0300
+Processing by CheckingsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChecking Load (0.1ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  Rendered checkings/index.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+  app/controllers/checkings_controller.rb:14:in `new'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 23:37:46 -0300
+Processing by CheckingsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.1ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+  app/controllers/checkings_controller.rb:14:in `new'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-08-11 23:38:01 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:02 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:25 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:26 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (19.4ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:26 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:26 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:26 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:27 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:27 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:27 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:57 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:57 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:57 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:58 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:58 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 39ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:58 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:38:58 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (SyntaxError: unmatched )
+  (in /home/guilherme/projeto/checker/app/assets/javascripts/checking.js.coffee)):
+    3:   %head
+    4:     %title Checker
+    5:     = stylesheet_link_tag    "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+    9:     = yield
+  app/views/layouts/application.html.haml:6:in `_app_views_layouts_application_html_haml___2362145465595461755_33678860'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:40:50 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.1ms)
+Compiled checking.js  (19ms)  (pid 8551)
+Compiled application.js  (2ms)  (pid 8551)
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-11 23:40:50 -0300
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-11 23:40:50 -0300
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-11 23:40:50 -0300
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-11 23:40:50 -0300
+Served asset /checking.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-11 23:40:50 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-11 23:40:50 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-11 23:40:57 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "email"=>"gui.teo2@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='gui.teo2@gmail.com' and password='da397a6f39ff835fcd027d2c69b7cea6e91515e0') LIMIT 1[0m
+Redirected to http://localhost:3000/manager
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-11 23:40:57 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (16.1ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-11 23:40:57 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-11 23:40:57 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-11 23:40:57 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-11 23:40:57 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-11 23:40:57 -0300
+Served asset /application.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-11 23:40:57 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager/employee/new" for 127.0.0.1 at 2013-08-11 23:41:03 -0300
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/new.html.haml within layouts/application (74.4ms)
+Completed 200 OK in 86ms (Views: 83.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-11 23:41:04 -0300
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-11 23:41:04 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-11 23:41:04 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-11 23:41:04 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-11 23:41:04 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-11 23:41:04 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-11 23:46:29 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 14ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-11 23:46:34 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "email"=>"lucas@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='lucas@gmail.com' and password='d46e1a2334040014e0a49b4768fa6079a8058cc9') LIMIT 1[0m
+Redirected to http://localhost:3000/checking
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/checking" for 127.0.0.1 at 2013-08-11 23:46:34 -0300
+Processing by CheckingsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChecking Load (0.3ms)[0m  [1mSELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "checkings".* FROM "checkings" WHERE "checkings"."user_id" = 2 ORDER BY "checkings"."id" DESC LIMIT 1
+  Rendered checkings/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-11 23:46:35 -0300
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-11 23:46:35 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-11 23:46:35 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-11 23:46:35 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-11 23:46:35 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-11 23:46:35 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-08-12 00:00:48 -0300
+Processing by LoginController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:00:48 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x00000003f03018>:0x000000040c16e8>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:37 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x007fd09845bee0>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:37 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x007fd0988a2a08>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:37 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x000000041ad6b0>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:37 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x007fd0981ebea8>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:38 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x007fd09837ebd0>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:38 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x007fd0988175c0>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:38 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x007fd0a8066870>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:38 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x000000028e3058>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:38 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x00000004f6ad98>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:38 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x007fd0982414c0>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:39 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x007fd09845a428>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:39 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x007fd0988a2cb0>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:39 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x007fd09403c778>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (27.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:01:40 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd0983c4338>:0x00000004115ef0>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:02:01 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x007fd09839c860>:0x007fd0983a2b48>):
+    9:     %label{for: "password"} Password
+    10:     %input#password{name: "password", type: "password"}/
+    11:   %p
+    12:     = link_to 'signup', signup_path
+    13:   %p
+    14:     %input{:type => "submit", :value => "Login"}/
+  app/views/login/login.html.haml:12:in `block in _app_views_login_login_html_haml__151835729618722468_70266941936800'
+  app/views/login/login.html.haml:4:in `_app_views_login_login_html_haml__151835729618722468_70266941936800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:02:45 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:02:45 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:02:45 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:02:45 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:02:45 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:02:45 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:02:45 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager/signup" for 127.0.0.1 at 2013-08-12 00:02:48 -0300
+Processing by Manager::UsersController#new as HTML
+  Rendered manager/users/_form.html.haml (37.7ms)
+  Rendered manager/users/new.html.haml within layouts/application (70.2ms)
+Completed 500 Internal Server Error in 83ms
+
+ActionView::Template::Error (undefined method `manager_users_path' for #<#<Class:0x007fd0a83c9418>:0x007fd0a83c6600>):
+    1: = form_for [:manager, @manager] do |f|
+    2:   -if @manager.errors.any?
+    3:     #error_explanation
+    4:       %h2
+  app/views/manager/users/_form.html.haml:1:in `_app_views_manager_users__form_html_haml__2608373115534861883_70266940245940'
+  app/views/manager/users/new.html.haml:4:in `_app_views_manager_users_new_html_haml__48223178523960443_70267077946020'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/manager/signup" for 127.0.0.1 at 2013-08-12 00:05:16 -0300
+
+ActionController::RoutingError (No route matches [GET] "/manager/signup"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/manager/signup" for 127.0.0.1 at 2013-08-12 00:05:18 -0300
+
+ActionController::RoutingError (No route matches [GET] "/manager/signup"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/manager/signup" for 127.0.0.1 at 2013-08-12 00:05:22 -0300
+
+ActionController::RoutingError (No route matches [GET] "/manager/signup"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:05:25 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:05:25 -0300
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:05:25 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:05:25 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:05:25 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:05:25 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:05:25 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2013-08-12 00:05:26 -0300
+Processing by Manager::UsersController#new as HTML
+  Rendered manager/users/_form.html.haml (5.5ms)
+  Rendered manager/users/new.html.haml within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined method `manager_users_path' for #<#<Class:0x0000000412d528>:0x000000041322f8>):
+    1: = form_for [:manager, @manager] do |f|
+    2:   -if @manager.errors.any?
+    3:     #error_explanation
+    4:       %h2
+  app/views/manager/users/_form.html.haml:1:in `_app_views_manager_users__form_html_haml__2608373115534861883_70266940245940'
+  app/views/manager/users/new.html.haml:4:in `_app_views_manager_users_new_html_haml__48223178523960443_70267077946020'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/signup" for 127.0.0.1 at 2013-08-12 00:07:45 -0300
+Processing by Manager::UsersController#new as HTML
+  Rendered manager/users/_form.html.haml (3.4ms)
+  Rendered manager/users/new.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 48ms (Views: 17.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:07:45 -0300
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:07:45 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:07:45 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:07:45 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:07:45 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:07:45 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-12 00:08:13 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "email"=>"gui.teo2@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='gui.teo2@gmail.com' and password='da397a6f39ff835fcd027d2c69b7cea6e91515e0') LIMIT 1[0m
+Redirected to http://localhost:3000/manager
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:08:13 -0300
+Processing by Manager::UsersController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Redirected to http://localhost:3000/manager/users/new
+Completed 302 Found in 69ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/manager/users/new" for 127.0.0.1 at 2013-08-12 00:08:14 -0300
+Processing by Manager::UsersController#new as HTML
+  Rendered manager/users/_form.html.haml (3.3ms)
+  Rendered manager/users/new.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:08:14 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:14 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:14 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:14 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:14 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:08:14 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:08:17 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-12 00:08:19 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "email"=>"gui.teo2@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='gui.teo2@gmail.com' and password='da397a6f39ff835fcd027d2c69b7cea6e91515e0') LIMIT 1[0m
+Redirected to http://localhost:3000/manager
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:08:19 -0300
+Processing by Manager::UsersController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Redirected to http://localhost:3000/manager/users/new
+Completed 302 Found in 15ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/manager/users/new" for 127.0.0.1 at 2013-08-12 00:08:19 -0300
+Processing by Manager::UsersController#new as HTML
+  Rendered manager/users/_form.html.haml (5.7ms)
+  Rendered manager/users/new.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:08:19 -0300
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:20 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:20 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:08:20 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:20 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:20 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:08:23 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:08:36 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:08:36 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:08:36 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:36 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:36 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:36 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:36 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:08:37 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:08:37 -0300
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:37 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:37 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:08:37 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:37 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:37 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-12 00:08:37 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "email"=>"gui.teo2@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='gui.teo2@gmail.com' and password='da397a6f39ff835fcd027d2c69b7cea6e91515e0') LIMIT 1[0m
+Redirected to http://localhost:3000/manager
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:08:37 -0300
+Processing by Manager::UsersController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Redirected to http://localhost:3000/manager/users/new
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/manager/users/new" for 127.0.0.1 at 2013-08-12 00:08:37 -0300
+Processing by Manager::UsersController#new as HTML
+  Rendered manager/users/_form.html.haml (3.6ms)
+  Rendered manager/users/new.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:08:38 -0300
+Served asset /users.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:38 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:38 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:38 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:08:38 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:08:38 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:08:42 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:13:02 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:13:02 -0300
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:13:02 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:13:02 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:13:02 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:13:02 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:13:02 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-12 00:13:03 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "email"=>"gui.teo2@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='gui.teo2@gmail.com' and password='da397a6f39ff835fcd027d2c69b7cea6e91515e0') LIMIT 1[0m
+Redirected to http://localhost:3000/manager/users
+Completed 302 Found in 25ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/manager/users" for 127.0.0.1 at 2013-08-12 00:13:03 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (11.8ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:13:03 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:13:04 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:13:04 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:13:04 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:13:04 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:13:04 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/manager/users" for 127.0.0.1 at 2013-08-12 00:13:55 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)
+  Rendered manager/users/index.html.haml within layouts/application (16.1ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined local variable or method `new_employee_path' for #<#<Class:0x007fd0981b4340>:0x007fd0981bb820>):
+    8:     = button_to 'New Company', new_company_path
+    9:   -else
+    10:     %h2 from #{@current_user.company.name}
+    11:     = link_to 'New Employee', new_employee_path
+    12:     -if @employees.present?
+    13:       -@employees.each do |employee|
+    14:         %div.block
+  app/views/manager/users/index.html.haml:11:in `_app_views_manager_users_index_html_haml___3916075522271760762_29825560'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:13:56 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (21.0ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-12 00:13:58 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "email"=>"gui.teo2@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='gui.teo2@gmail.com' and password='da397a6f39ff835fcd027d2c69b7cea6e91515e0') LIMIT 1[0m
+Redirected to http://localhost:3000/manager
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:13:58 -0300
+Processing by Manager::UsersController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Redirected to http://localhost:3000/manager/users/new
+Completed 302 Found in 14ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/manager/users/new" for 127.0.0.1 at 2013-08-12 00:13:58 -0300
+Processing by Manager::UsersController#new as HTML
+  Rendered manager/users/_form.html.haml (2.9ms)
+  Rendered manager/users/new.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:13:58 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:13:58 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:13:58 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:13:58 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:13:58 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:13:58 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:14:01 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-08-12 00:15:12 -0300
+Processing by LoginController#login as HTML
+  Rendered login/login.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:15:12 -0300
+Served asset /users.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:15:12 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:15:12 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:15:12 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:15:12 -0300
+Served asset /checking.js - 304 Not Modified (37ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:15:12 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-08-12 00:15:12 -0300
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "email"=>"gui.teo2@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email='gui.teo2@gmail.com' and password='da397a6f39ff835fcd027d2c69b7cea6e91515e0') LIMIT 1[0m
+Redirected to http://localhost:3000/manager
+Completed 302 Found in 19ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:15:12 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)
+  Rendered manager/users/index.html.haml within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined local variable or method `new_employee_path' for #<#<Class:0x007fd098053c30>:0x007fd098068568>):
+    8:     = button_to 'New Company', new_company_path
+    9:   -else
+    10:     %h2 from #{@current_user.company.name}
+    11:     = link_to 'New Employee', new_employee_path
+    12:     -if @employees.present?
+    13:       -@employees.each do |employee|
+    14:         %div.block
+  app/views/manager/users/index.html.haml:11:in `_app_views_manager_users_index_html_haml___3916075522271760762_29825560'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:16:35 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined local variable or method `new_manager_users_path' for #<#<Class:0x007fd098053c30>:0x007fd098786520>):
+    8:     = button_to 'New Company', new_company_path
+    9:   -else
+    10:     %h2 from #{@current_user.company.name}
+    11:     = link_to 'New Employee', new_manager_users_path
+    12:     -if @employees.present?
+    13:       -@employees.each do |employee|
+    14:         %div.block
+  app/views/manager/users/index.html.haml:11:in `_app_views_manager_users_index_html_haml___3916075522271760762_70266943995800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.5ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:16:36 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)
+  Rendered manager/users/index.html.haml within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined local variable or method `new_manager_users_path' for #<#<Class:0x007fd098053c30>:0x00000003a87728>):
+    8:     = button_to 'New Company', new_company_path
+    9:   -else
+    10:     %h2 from #{@current_user.company.name}
+    11:     = link_to 'New Employee', new_manager_users_path
+    12:     -if @employees.present?
+    13:       -@employees.each do |employee|
+    14:         %div.block
+  app/views/manager/users/index.html.haml:11:in `_app_views_manager_users_index_html_haml___3916075522271760762_70266943995800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:16:36 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.3ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined local variable or method `new_manager_users_path' for #<#<Class:0x007fd098053c30>:0x007fd098053ac8>):
+    8:     = button_to 'New Company', new_company_path
+    9:   -else
+    10:     %h2 from #{@current_user.company.name}
+    11:     = link_to 'New Employee', new_manager_users_path
+    12:     -if @employees.present?
+    13:       -@employees.each do |employee|
+    14:         %div.block
+  app/views/manager/users/index.html.haml:11:in `_app_views_manager_users_index_html_haml___3916075522271760762_70266943995800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:16:37 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)
+  Rendered manager/users/index.html.haml within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined local variable or method `new_manager_users_path' for #<#<Class:0x007fd098053c30>:0x007fd09834a0b0>):
+    8:     = button_to 'New Company', new_company_path
+    9:   -else
+    10:     %h2 from #{@current_user.company.name}
+    11:     = link_to 'New Employee', new_manager_users_path
+    12:     -if @employees.present?
+    13:       -@employees.each do |employee|
+    14:         %div.block
+  app/views/manager/users/index.html.haml:11:in `_app_views_manager_users_index_html_haml___3916075522271760762_70266943995800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:16:37 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined local variable or method `new_manager_users_path' for #<#<Class:0x007fd098053c30>:0x007fd0988420b8>):
+    8:     = button_to 'New Company', new_company_path
+    9:   -else
+    10:     %h2 from #{@current_user.company.name}
+    11:     = link_to 'New Employee', new_manager_users_path
+    12:     -if @employees.present?
+    13:       -@employees.each do |employee|
+    14:         %div.block
+  app/views/manager/users/index.html.haml:11:in `_app_views_manager_users_index_html_haml___3916075522271760762_70266943995800'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:16:54 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (16.3ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (undefined method `edit_employee_path' for #<#<Class:0x007fd098053c30>:0x007fd0985572e0>):
+    16:             %h3= employee.name
+    17:             %li= employee.email
+    18:             %li #{employee.number} #{employee.address}, #{employee.city}
+    19:             %li= link_to 'edit info', edit_employee_path(employee.id)
+  app/views/manager/users/index.html.haml:19:in `block in _app_views_manager_users_index_html_haml___3916075522271760762_70266942828620'
+  app/views/manager/users/index.html.haml:13:in `_app_views_manager_users_index_html_haml___3916075522271760762_70266942828620'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (23.2ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.1ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:17:11 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:17:11 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:17:11 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:17:11 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:17:11 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:17:11 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:17:11 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager/users/2/edit" for 127.0.0.1 at 2013-08-12 00:17:15 -0300
+Processing by Manager::UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Completed 500 Internal Server Error in 2ms
+
+ActionView::MissingTemplate (Missing template manager/users/edit, application/edit with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/home/guilherme/projeto/checker/app/views"
+):
+  actionpack (3.2.13) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.13) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.13) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.13) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:447:in `_run__3350753791761629821__process_action__2154637428477499070__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__2860553629563067267__call__914458809781617320__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:21:47 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:21:47 -0300
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:21:47 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:21:47 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:21:47 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:21:47 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:21:47 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/manager/users/new" for 127.0.0.1 at 2013-08-12 00:21:49 -0300
+Processing by Manager::UsersController#new as HTML
+  Rendered manager/users/_form.html.haml (6.3ms)
+  Rendered manager/users/new.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:21:49 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:21:49 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:21:49 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:21:49 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:21:49 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:21:49 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:22:06 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)
+  Rendered manager/users/index.html.haml within layouts/application (18.2ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined local variable or method `new_user_path' for #<#<Class:0x007fd098053c30>:0x007fd09c3fe700>):
+    8:     = button_to 'New Company', new_company_path
+    9:   -else
+    10:     %h2 from #{@current_user.company.name}
+    11:     = link_to 'New Employee', new_user_path
+    12:     -if @employees.present?
+    13:       -@employees.each do |employee|
+    14:         %div.block
+  app/views/manager/users/index.html.haml:11:in `_app_views_manager_users_index_html_haml___3916075522271760762_70266975676980'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:22:39 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)
+  Rendered manager/users/index.html.haml within layouts/application (11.1ms)
+Completed 200 OK in 53ms (Views: 40.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:22:39 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:22:39 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:22:39 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:22:39 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:22:39 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:22:39 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-08-12 00:22:40 -0300
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_form.html.haml (5.9ms)
+  Rendered users/new.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:22:40 -0300
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:22:40 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:22:40 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:22:40 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:22:40 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:22:40 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-08-12 00:24:24 -0300
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.haml (3.6ms)
+  Rendered users/new.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 24ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:24:24 -0300
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:24:24 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:24 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:24 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:24 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:24 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-08-12 00:24:25 -0300
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_form.html.haml (2.9ms)
+  Rendered users/new.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:24:25 -0300
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:24:25 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:25 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:25 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:25 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:25 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:24:28 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (12.0ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:24:28 -0300
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:28 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:24:28 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:28 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:28 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:28 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/manager/employee" for 127.0.0.1 at 2013-08-12 00:24:29 -0300
+
+ActionController::RoutingError (No route matches [GET] "/manager/employee"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:24:45 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (33.6ms)
+Completed 200 OK in 53ms (Views: 40.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:24:46 -0300
+Served asset /users.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:46 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:24:46 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:46 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:46 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:46 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:24:46 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:24:46 -0300
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:46 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:24:46 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:46 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:46 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:46 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager/employee" for 127.0.0.1 at 2013-08-12 00:24:47 -0300
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.haml (3.2ms)
+  Rendered users/new.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:47 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:24:47 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:47 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:47 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:24:47 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:24:47 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/manager/employee" for 127.0.0.1 at 2013-08-12 00:26:31 -0300
+
+ActionController::RoutingError (No route matches [GET] "/manager/employee"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/manager/employee" for 127.0.0.1 at 2013-08-12 00:26:34 -0300
+
+ActionController::RoutingError (No route matches [GET] "/manager/employee"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/manager/employee" for 127.0.0.1 at 2013-08-12 00:26:35 -0300
+
+ActionController::RoutingError (No route matches [GET] "/manager/employee"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/manager/employee" for 127.0.0.1 at 2013-08-12 00:26:35 -0300
+
+ActionController::RoutingError (No route matches [GET] "/manager/employee"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/manager/employee" for 127.0.0.1 at 2013-08-12 00:26:35 -0300
+
+ActionController::RoutingError (No route matches [GET] "/manager/employee"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/manager/employee" for 127.0.0.1 at 2013-08-12 00:26:35 -0300
+
+ActionController::RoutingError (No route matches [GET] "/manager/employee"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/manager/employee" for 127.0.0.1 at 2013-08-12 00:26:35 -0300
+
+ActionController::RoutingError (No route matches [GET] "/manager/employee"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/guilherme/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:26:37 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)
+  Rendered manager/users/index.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 30ms (Views: 17.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:26:37 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:37 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:37 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:26:37 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:37 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:37 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/manager/employee/new" for 127.0.0.1 at 2013-08-12 00:26:38 -0300
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_form.html.haml (3.1ms)
+  Rendered users/new.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:26:38 -0300
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:26:38 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:38 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:38 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:38 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:38 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:26:40 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (10.1ms)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:26:40 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:26:40 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:40 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:40 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:40 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:40 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager/employee/new" for 127.0.0.1 at 2013-08-12 00:26:41 -0300
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.haml (2.9ms)
+  Rendered users/new.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:26:41 -0300
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:41 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:26:41 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:41 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:41 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:41 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:26:44 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)
+  Rendered manager/users/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:26:44 -0300
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:44 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:26:44 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:44 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:44 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:44 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager/employee/new" for 127.0.0.1 at 2013-08-12 00:26:52 -0300
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_form.html.haml (2.8ms)
+  Rendered users/new.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:26:52 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:52 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:26:52 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:52 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:52 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:26:52 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:27:01 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:27:01 -0300
+Served asset /jquery.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:27:01 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:27:01 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:27:01 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:27:01 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:27:01 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/manager/users/2/edit" for 127.0.0.1 at 2013-08-12 00:27:02 -0300
+Processing by Manager::UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered manager/users/_form.html.haml (0.5ms)
+  Rendered manager/users/edit.html.haml within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: = form_for [:manager, @manager] do |f|
+    2:   -if @manager.errors.any?
+    3:     #error_explanation
+    4:       %h2
+  app/views/manager/users/_form.html.haml:1:in `_app_views_manager_users__form_html_haml__2608373115534861883_70266940245940'
+  app/views/manager/users/edit.html.haml:4:in `_app_views_manager_users_edit_html_haml___1864038197680389215_70266944438340'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:27:49 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:27:49 -0300
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:27:49 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:27:49 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:27:49 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:27:49 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:27:49 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2013-08-12 00:27:49 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered users/_form.html.haml (2.9ms)
+  Rendered users/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:27:50 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:27:50 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:27:50 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:27:50 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:27:50 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:27:50 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:29:13 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (42.7ms)
+Completed 200 OK in 62ms (Views: 48.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:29:13 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:29:13 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:29:13 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:29:13 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:29:13 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:29:13 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/manager" for 127.0.0.1 at 2013-08-12 00:29:14 -0300
+Processing by Manager::UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE (manager='f' and company_id=1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (manager='f' and company_id=1)[0m
+  Rendered manager/users/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:29:14 -0300
+Served asset /users.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:29:14 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:29:14 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:29:14 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:29:14 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:29:14 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/manager/employee/2/edit" for 127.0.0.1 at 2013-08-12 00:29:15 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered users/_form.html.haml (3.5ms)
+  Rendered users/edit.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-12 00:29:15 -0300
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/checking.js?body=1" for 127.0.0.1 at 2013-08-12 00:29:15 -0300
+Served asset /checking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-12 00:29:16 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-08-12 00:29:16 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-12 00:29:16 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-12 00:29:16 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/users/2" for 127.0.0.1 at 2013-08-12 00:30:15 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "user"=>{"first_name"=>"Lucas", "last_name"=>"Torquato", "address"=>"Santa Maria", "number"=>"222", "city"=>"Andradina", "email"=>"lucas@gmail.com", "plain_password"=>"[FILTERED]"}, "commit"=>"Save", "id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'lucas@gmail.com' AND "users"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "address" = 'Santa Maria', "number" = 222, "city" = 'Andradina', "updated_at" = '2013-08-12 03:30:15.587687' WHERE "users"."id" = 2
+  [1m[36m (474.5ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 597ms
+
+NameError (undefined local variable or method `manager_index_path' for #<UsersController:0x007fd0982a4110>):
+  app/controllers/users_controller.rb:31:in `update'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started PUT "/users/2" for 127.0.0.1 at 2013-08-12 00:33:49 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "user"=>{"first_name"=>"Lucas", "last_name"=>"Torquato", "address"=>"Santa Maria", "number"=>"222", "city"=>"Andradina", "email"=>"lucas@gmail.com", "plain_password"=>"[FILTERED]"}, "commit"=>"Save", "id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'lucas@gmail.com' AND "users"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 500 Internal Server Error in 39ms
+
+NameError (undefined local variable or method `manager_index_path' for #<UsersController:0x007fd0987464c0>):
+  app/controllers/users_controller.rb:31:in `update'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started PUT "/users/2" for 127.0.0.1 at 2013-08-12 00:54:14 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB0ppXdq2UpzD/GpIVDZrq44j1lvl+kfmqY6prgsAD8=", "user"=>{"first_name"=>"Lucas", "last_name"=>"Torquato", "address"=>"Santa Maria", "number"=>"222", "city"=>"Andradina", "email"=>"lucas@gmail.com", "plain_password"=>"[FILTERED]"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'lucas@gmail.com' AND "users"."id" != 2) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/manager/employee/2
+Completed 302 Found in 16ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/manager/employee/2" for 127.0.0.1 at 2013-08-12 00:54:14 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (Unknown key: user_id):
+  app/controllers/users_controller.rb:12:in `show'
+
+
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.5ms)
