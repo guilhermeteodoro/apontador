@@ -7,11 +7,11 @@ class Checking < ActiveRecord::Base
   # validates :checked_in_at, :checked_out_at, :user_id, allow_blank: false
 
   def date(checked_at)
-    checked_at.strftime("%d/%m/%Y")
+    checked_at.strftime("%d/%m/%Y") if checked_at.present?
   end
 
-  def hour(checked_at)
-    checked_at.strftime("%H:%M")
+  def time(checked_at)
+    checked_at.strftime("%H:%M") if checked_at.present?
   end
 
   def weekday(checked_at)

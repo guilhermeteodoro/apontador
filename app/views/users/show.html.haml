@@ -1,8 +1,12 @@
 %h2 #{@employee.name}
 
-- @checkings.each do |c|
-  %tr
-    %td= c.checked_in_at
-    %td= c.checked_out_at
-    %td= c.worktime
-    %td= c.hour_value
+- if @checkings.present?
+  - @checkings.each do |c|
+    %tr
+      %td= c.time(c.checked_in_at)
+      %td= c.time(c.checked_out_at)
+      %td= c.hour_value
+%br
+
+= link_to 'edit', edit_user_path
+= link_to 'home', manager_users_path

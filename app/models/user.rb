@@ -8,25 +8,19 @@ class User < ActiveRecord::Base
   has_many :checkings
 
   #attributes
-  attr_accessible :address, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :coordinates, :number, :company_id
+  attr_accessible :address, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :coordinates, :number, :company_id, :username
   attr_protected :password
 
   #geolocation
 
 
   # validations
-  validates :first_name, :last_name, presence: true
-  validates :address, presence: true,
-    allow_blank: false
-  validates :email, presence: true,
-    uniqueness: true,
-    format: { with: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9_ -]+\.)+[a-zA-Z]{2,4}$/ }
-  validates_numericality_of :latitude, greater_than: -180.0,
-    less_than_or_equal_to: 180.0,
-    allow_nil: true
-  validates_numericality_of :longitude, greater_than: -180.0,
-    less_than_or_equal_to: 180.0,
-    allow_nil: true
+  validates :first_name, :last_name, :username, presence: true
+  validates :username, uniqueness: true
+  validates :address, presence: true, allow_blank: false
+  validates :email, presence: true, uniqueness: true, format: { with: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9_ -]+\.)+[a-zA-Z]{2,4}$/ }
+  validates_numericality_of :latitude, greater_than: -180.0, less_than_or_equal_to: 180.0, allow_nil: true
+  validates_numericality_of :longitude, greater_than: -180.0, less_than_or_equal_to: 180.0, allow_nil: true
 
   #scopes
   scope :employees, ->(company_id) { where(["manager=? and company_id=?", false, company_id]) }
@@ -49,8 +43,10 @@ class User < ActiveRecord::Base
     ""
   end
 
-  def self.authenticate(email, password)
-    where("email=? and password=?", email, encrypt_password(password)).first
+  def self.authenticate(options)
+    password = options[:password]
+    username = options[:username]
+    where("(email=? and password=?) or (username=? and password=?)", username, encrypt_password(password), username, encrypt_password(password)).first
   end
 
   def self.encrypt_password(password)

@@ -20,4 +20,5 @@ class CompaniesController < ApplicationController
   private
   def set_company_to_current_user
     @current_user.update_attributes(company_id: @company.id)
+  end
 end

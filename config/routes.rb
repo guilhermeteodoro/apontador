@@ -9,7 +9,7 @@ Checker::Application.routes.draw do
   end
 
   match 'manager' => 'manager/users#create', via: :post, as: 'manager_users'
-  match 'manager' => 'manager/users#index', as: 'manager_users'
+  match 'manager' => 'manager/users#index', via: :get, as: 'manager_users'
   match 'signup'  => 'manager/users#new', as: 'signup'
 
 
@@ -25,8 +25,8 @@ Checker::Application.routes.draw do
   match 'manager/company' => 'companies#create', via: :post, as: 'companies'
   match 'manager/company' => 'companies#new', as: 'new_company'
 
-  match 'login'  => 'login#login'
-  match 'logout' => 'login#logout'
+  match 'login'  => 'login#login', as: 'login'
+  match 'logout' => 'login#logout', as: 'logout'
 
   match '/' => 'login#redirecter'
   root to: 'login#redirecter'

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :logged?, :current_user
-  before_filter :manager?, except: [:edit, :show]
+  before_filter :manager?, except: [:edit, :update]
   respond_to :html
 
   def new
@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @employee = User.find(params[:id])
-    @checkings = Checking.find(user_id: @employee.id)
+    @checkings = @employee.checkings
   end
 
   def create
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @employee.company_id = @current_user.company_id
 
     if @employee.save
-      redirect_to manager_index_path
+      redirect_to manager_users_path
     else
       flash[:notice] = @employee.errors.full_messages
       redirect_to action: :new
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
     if @employee.update_attributes(params[:user])
       redirect_to user_path
     else
-      flash[:notice] = "It's been an error, try again"
+      flash[:notice] = @employee.errors.full_messages
       redirect_to action: :edit
     end
   end

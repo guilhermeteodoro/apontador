@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130808150512) do
+ActiveRecord::Schema.define(:version => 20130812120526) do
 
   create_table "checkings", :force => true do |t|
     t.datetime "checked_in_at"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20130808150512) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "number"
+    t.string   "username"
   end
 
   add_index "users", ["id"], :name => "index_users_on_id"
