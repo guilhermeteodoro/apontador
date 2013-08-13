@@ -13,8 +13,8 @@
       -@employees.each do |employee|
         %div.block
           %ul
-            %h3= link_to employee.name, user_path(employee.id)
+            %h3= link_to employee.name, user_path(employee.username)
             %li= employee.email
             %li #{employee.number} #{employee.address}, #{employee.city}
-            %li= link_to 'edit info', edit_user_path(employee.id)
+            %li= link_to 'edit info', edit_user_path(employee.username)
 

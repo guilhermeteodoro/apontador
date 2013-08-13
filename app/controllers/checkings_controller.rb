@@ -11,6 +11,7 @@ class CheckingsController < ApplicationController
       render 'checked'
     else
       @checking = Checking.new(user_id: @current_user.id)
+      @checking.save
       render 'index'
     end
   end

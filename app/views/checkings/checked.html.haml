@@ -1,7 +1,7 @@
 %p#notice= notice
 %h2 #{@current_user.name}
 -if @checking.checked_in_at.present?
-  %h4 Checked-in at: #{@checking.date @checking.checked_in_at} - #{@checking.hour @checking.checked_in_at}
+  %h4 Checked-in at: #{@checking.date @checking.checked_in_at} - #{@checking.time @checking.checked_in_at}
   %h4 Latitude: #{@checking.lat} - Longitude: #{@checking.lng}
 %h1 00:00
 = form_for update_checking_path, method: :put do

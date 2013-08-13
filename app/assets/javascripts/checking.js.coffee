@@ -29,50 +29,50 @@
 #       message = "The browser timed out before retrieving the position."
 #   document.getElementById("status").innerHTML = message
 
-class window.Geolocation
-  constructor: ->
-    @form       = $('form')
-    @latitude   = $('#lat')
-    @longitude  = $('#lng')
-    @submit     = $('#submit')
+# class window.Geolocation
+#   constructor: ->
+#     @form       = $('form')
+#     @latitude   = $('#lat')
+#     @longitude  = $('#lng')
+#     @submit     = $('#submit')
 
-    @form.submit =>
-      navigator.geolocation.getCurrentPosition @position_ok, @position_error, enableHighAccuracy: true
+#     @form.submit =>
+#       navigator.geolocation.getCurrentPosition @position_ok, @position_error, enableHighAccuracy: true
 
-      $.ajax
-        type: "POST",
-        url: $(this).attr("action"),
-        @form.bind "ajax:success", (xhr, data, status) =>
-          console.log data
-        @form.bind "ajax:error", (event, response, erro) =>
-          console.log erro
+#       $.ajax
+#         type: "POST",
+#         url: $(this).attr("action"),
+#         @form.bind "ajax:success", (xhr, data, status) =>
+#           console.log data
+#         @form.bind "ajax:error", (event, response, erro) =>
+#           console.log erro
 
-      # $.ajax
-      #   type: 'POST',
-      #   url: '/checking',
-      #   success: (data) ->
-      #     console.log data
-  #       before: ->
-  #         navigator.geolocation.getCurrentPosition @position_ok(), @position_error(), enableHighAccuracy: true
+#       # $.ajax
+#       #   type: 'POST',
+#       #   url: '/checking',
+#       #   success: (data) ->
+#       #     console.log data
+#   #       before: ->
+#   #         navigator.geolocation.getCurrentPosition @position_ok(), @position_error(), enableHighAccuracy: true
 
-  #   # @latitude = $('#lat').val
-  #   # @longitude = $('#lng').val
+#   #   # @latitude = $('#lat').val
+#   #   # @longitude = $('#lng').val
 
-  position_ok: (position) =>
-    $("#lat").val position.coords.latitude
-    $("#lng").val position.coords.longitude
+#   position_ok: (position) =>
+#     $("#lat").val position.coords.latitude
+#     $("#lng").val position.coords.longitude
 
-  position_error: (error) ->
-    alert "erro: " + error
+#   position_error: (error) ->
+#     alert "erro: " + error
 
 
-# position_ok = (position) ->
-#   $("#lat").val position.coords.latitude
-#   $("#lng").val position.coords.longitude
+position_ok = (position) ->
+  $("#lat").val position.coords.latitude
+  $("#lng").val position.coords.longitude
 
-# position_error = (error) ->
-#   alert "erro: " + error
+position_error = (error) ->
+  alert "erro: " + error
 
-# $(document).ready ->
-#   return  unless navigator.geolocation
-#   navigator.geolocation.getCurrentPosition position_ok, position_error, enableHighAccuracy: true
+$(document).ready ->
+  return  unless navigator.geolocation
+  navigator.geolocation.getCurrentPosition position_ok, position_error, enableHighAccuracy: true

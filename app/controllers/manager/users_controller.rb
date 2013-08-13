@@ -6,11 +6,6 @@ class Manager::UsersController < ApplicationController
     @employees = User.employees(@current_user.company_id) if @current_user.company_id.present?
   end
 
-  def show
-    @employee = User.find(params[:id])
-    respond_with @employee
-  end
-
   def new
     @manager = User.new
   end
@@ -31,6 +26,18 @@ class Manager::UsersController < ApplicationController
   end
 
   def edit
-    @employee = User.find(params[:id])
+    @manager = User.find(params[:username])
   end
+
+  def update
+    @manager = User.find_by_username(params[:username])
+
+    if @manager.update_attributes(params[:user])
+      redirect_to manager_user_path
+    else
+      flash[:notice] = @manager.errors.full_messages
+      redirect_to action: :edit
+    end
+  end
+
 end

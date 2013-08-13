@@ -2,7 +2,7 @@
 %h2 Welcome, #{@current_user.name}
 %h1 00:00
 %h3 Latitude: #{@current_user.latitude} - Longitude #{@current_user.longitude}
-= form_for create_checking_path, html: {remote: true, multipart: true} do
+= form_for create_checking_path do
   %input#lat{name: "lat", type: "text"}
   %input#lng{name: "lng", type: "text"}
   %input#submit{type: "submit", value: "Check-in"}

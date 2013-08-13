@@ -1,22 +1,15 @@
 Checker::Application.routes.draw do
-  resources :users
-  match 'manager/employee/new'      => 'users#new', as: 'new_user'
-  match 'manager/employee/:id/edit' => 'users#edit', as: 'edit_user'
-  match 'manager/employee/:id'      => 'users#show', as: 'user'
+  # resources :users
+  match 'manager/employee/new'            => 'users#new', via: :get, as: 'new_user'
+  match 'manager/employee'                => 'users#create', via: :post, as: 'users'
+  match 'manager/employee/:username'      => 'users#show', via: :get, as: 'user'
+  match 'manager/employee/:username'      => 'users#update', via: :put, as: 'user'
+  match 'manager/employee/:username/edit' => 'users#edit', via: :get, as: 'edit_user'
 
-  namespace :manager do
-    resources :users
-  end
 
   match 'manager' => 'manager/users#create', via: :post, as: 'manager_users'
   match 'manager' => 'manager/users#index', via: :get, as: 'manager_users'
   match 'signup'  => 'manager/users#new', as: 'signup'
-
-
-  # match 'manager/employee/new'      => 'users#create', via: :post, as: 'employee'
-  # match 'manager/employee/new'      => 'users#new', as: 'new_employee'
-  # match 'manager/employee/:id/edit' => 'users#edit', as: 'edit_employee'
-  # match 'manager/employee/:id'      => 'users#update', via: :put, as: 'employee'
 
   match 'checking'  => 'checkings#create', via: :post, as: 'create_checking'
   match 'checking'  => 'checkings#new', via: :get

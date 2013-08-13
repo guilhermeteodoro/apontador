@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 
   # validations
   validates :first_name, :last_name, :username, presence: true
-  validates :username, uniqueness: true
+  validates :username, uniqueness: true, format: { with: /^[a-z0-9_-]{3,25}$/ }
   validates :address, presence: true, allow_blank: false
   validates :email, presence: true, uniqueness: true, format: { with: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9_ -]+\.)+[a-zA-Z]{2,4}$/ }
   validates_numericality_of :latitude, greater_than: -180.0, less_than_or_equal_to: 180.0, allow_nil: true

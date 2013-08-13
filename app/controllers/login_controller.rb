@@ -36,7 +36,7 @@ class LoginController < ApplicationController
       session[:name] = user.name
       session[:manager] = user.manager?
       if session[:manager]
-        redirect_to manager_users_path
+        redirect_to "/manager"
       else
         redirect_to "/checking"
       end

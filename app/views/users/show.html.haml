@@ -8,5 +8,5 @@
       %td= c.hour_value
 %br
 
-= link_to 'edit', edit_user_path
+= link_to 'edit', edit_user_path(@employee.username)
 = link_to 'home', manager_users_path

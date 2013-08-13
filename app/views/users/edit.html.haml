@@ -2,6 +2,7 @@
 
 %h1 Edit Employee
 
-= render 'form'
+= form_for @employee, url: user_path(@employee.username) do |f|
+  = render partial: 'form', locals: { f: f }
 
 = link_to 'back', manager_users_path
