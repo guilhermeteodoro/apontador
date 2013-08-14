@@ -5,19 +5,21 @@ class User < ActiveRecord::Base
 
   #associations
   belongs_to :company
-  has_many :checkings
+  has_many :checkings, dependent: :destroy
+  accepts_nested_attributes_for :checkings
 
   #attributes
-  attr_accessible :address, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :coordinates, :number, :company_id, :username
+  attr_accessible :street, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :coordinates, :number, :company_id, :username
   attr_protected :password
 
   #geolocation
-
+  # geocoded_by :full_address
+  # after_validation :geocode
 
   # validations
   validates :first_name, :last_name, :username, presence: true
   validates :username, uniqueness: true, format: { with: /^[a-z0-9_-]{3,25}$/ }
-  validates :address, presence: true, allow_blank: false
+  validates :street, presence: true, allow_blank: false
   validates :email, presence: true, uniqueness: true, format: { with: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9_ -]+\.)+[a-zA-Z]{2,4}$/ }
   validates_numericality_of :latitude, greater_than: -180.0, less_than_or_equal_to: 180.0, allow_nil: true
   validates_numericality_of :longitude, greater_than: -180.0, less_than_or_equal_to: 180.0, allow_nil: true
@@ -28,6 +30,10 @@ class User < ActiveRecord::Base
   #methods
   def location_ok?(x,y)
     ((latitude-0.001..latitude).include?(x) || (latitude..latitude+0.001).include?(x)) && ((longitude-0.001..longitude).include?(y) || (longitude..longitude+0.001).include?(y)) ? true : false
+  end
+
+  def full_address
+    "#{number}, #{street}, #{city}"
   end
 
   def name

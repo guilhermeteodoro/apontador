@@ -11,7 +11,4 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user = User.find(session[:id])
   end
-  def same_company?
-    render root_path unless @current_user.company_id == @employee.company_id
-  end
 end

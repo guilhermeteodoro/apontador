@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
   before_filter :logged?, :current_user
   before_filter :manager?, except: [:edit, :update]
-  after_filter :same_company?, except: [:new, :create]
-  respond_to :html
+  before_filter :user_found?, except: [:new, :create]
 
   def show
     @employee = User.find_by_username(params[:username])
@@ -42,7 +41,29 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @employee = User.find_by_username(params[:username])
+    if @employee.destroy
+      flash[:notice] = "Employee successfully removed"
+      redirect_to '/manager'
+    else
+      flash[:notice] = "It's been a problem in removing this employee"
+      redirect_to action: :show
+    end
+  end
 
+  protected
+  def user_found?
+    user = User.find_by_username(params[:username])
+    if user.nil? || not_same_company?(user)
+      flash[:notice] = "Sorry! User not found."
+      redirect_to '/manager'
+    end
+  end
+
+  private
+  def not_same_company?(user)
+    return if user.nil?
+    @current_user.company_id != user.company_id ? true : false
   end
 
 end

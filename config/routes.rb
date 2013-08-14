@@ -1,9 +1,9 @@
 Checker::Application.routes.draw do
-  # resources :users
   match 'manager/employee/new'            => 'users#new', via: :get, as: 'new_user'
   match 'manager/employee'                => 'users#create', via: :post, as: 'users'
   match 'manager/employee/:username'      => 'users#show', via: :get, as: 'user'
   match 'manager/employee/:username'      => 'users#update', via: :put, as: 'user'
+  match 'manager/employee/:username'      => 'users#destroy', via: :delete, as: 'user'
   match 'manager/employee/:username/edit' => 'users#edit', via: :get, as: 'edit_user'
 
 

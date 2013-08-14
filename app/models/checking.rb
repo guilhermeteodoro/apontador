@@ -1,7 +1,7 @@
 class Checking < ActiveRecord::Base
   belongs_to :user
 
-  attr_accessible :checked_in_at, :checked_out_at, :user_id, :hour_value, :lat, :lng
+  attr_accessible :checked_in_at, :checked_out_at, :user_id, :hour_value, :lat, :lng, :value, :approved
 
   validates :user_id, presence: true
   # validates :checked_in_at, :checked_out_at, :user_id, allow_blank: false

@@ -1,6 +1,7 @@
-= link_to 'logout', '/logout'
+= link_to 'logout', logout_path
+#notice= notice
 #content
-  %h1 Welcome #{@current_user.name}! (id: #{@current_user.id})
+  %h1 Welcome #{@current_user.name}!
 
   -if @current_user.company_id.nil?
     %h3 You don't have a company yet
@@ -15,6 +16,6 @@
           %ul
             %h3= link_to employee.name, user_path(employee.username)
             %li= employee.email
-            %li #{employee.number} #{employee.address}, #{employee.city}
+            %li= employee.full_address
             %li= link_to 'edit info', edit_user_path(employee.username)
 
