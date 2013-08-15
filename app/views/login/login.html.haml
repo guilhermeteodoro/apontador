@@ -1,14 +1,14 @@
-%h1 Checker
-%h2 Login
-%p#notice= notice
-= form_tag "/login" do
-  %p
-    %label{for: "username"} Email
-    %input#email{name: "username", type: "text"}/
-  %p
-    %label{for: "password"} Password
-    %input#password{name: "password", type: "password"}/
-  %p
-    = link_to 'signup', signup_path
-  %p
-    %input{:type => "submit", :value => "Login"}/
+#container.container-fluid
+  %h1 Checker
+  %h3 Login
+  %p#notice.alert= notice
+  = form_tag "/login" do
+    .field
+      %label{for: "username"} Email
+      %input#email.imput-large{name: "username", type: "text"}/
+    .field
+      %label{for: "password"} Password
+      %input#password{name: "password", type: "password"}/
+    .field
+      = link_to 'sign up', signup_path
+    %input.btn{:type => "submit", :value => "Login"}/
