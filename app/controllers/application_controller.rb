@@ -11,4 +11,7 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user = User.find(session[:id])
   end
+  def current_company
+    @current_company = User.find(session[:id]).company
+  end
 end

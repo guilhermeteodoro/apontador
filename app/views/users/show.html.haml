@@ -27,5 +27,5 @@
 %br
 
 = link_to 'edit', edit_user_path(@employee.username) \
-= link_to 'exclude', user_path, method: :delete, data: { confirm: 'Are you sure?' }
+= link_to 'delete this user', user_path, method: :delete, data: { confirm: 'Are you sure?' }
 = link_to 'home', manager_users_path

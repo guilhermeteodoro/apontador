@@ -1,4 +1,5 @@
 %p#notice= notice
 %h1 Sign Up!
 
-= render partial: 'form'
+= form_for [:manager, @manager], url: manager_user_path do |f|
+  = render partial: 'form', locals: { f: f }

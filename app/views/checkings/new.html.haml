@@ -1,0 +1,12 @@
+%p#notice= notice
+%h2 Welcome, #{@current_user.name}
+%h1 00:00
+%h3 Latitude: #{@current_user.latitude} - Longitude #{@current_user.longitude}
+
+= form_for @checking, html: {remote: true} do |f|
+  - render partial: 'form', locals: { f: f, button_name: "Check-in" }
+
+= link_to 'logout', logout_path
+
+:javascript
+  new Geolocation()

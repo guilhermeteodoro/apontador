@@ -1,4 +1,9 @@
+= link_to 'edit', edit_manager_user_path
+|
+= link_to 'destroy', manager_user_path, method: :delete, data: { confirm: "This action will also erase your employees and your company. Are you sure?" }
+|
 = link_to 'logout', logout_path
+
 #notice= notice
 #content
   %h1 Welcome #{@current_user.name}!

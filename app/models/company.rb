@@ -1,5 +1,5 @@
 class Company < ActiveRecord::Base
-  has_many :users
+  has_many :users, dependent: :destroy
 
   attr_accessible :cnpj, :name
   validates :name, presence: true, allow_blank: false

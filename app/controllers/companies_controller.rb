@@ -12,7 +12,7 @@ class CompaniesController < ApplicationController
     if @company.save
       redirect_to '/manager'
     else
-      flash[:notice] = "It's been an error, try again"
+      flash[:notice] = @company.errors.full_messages
       redirect_to action: :new
     end
   end
@@ -20,5 +20,6 @@ class CompaniesController < ApplicationController
   private
   def set_company_to_current_user
     @current_user.update_attributes(company_id: @company.id)
+    current_company
   end
 end

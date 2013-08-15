@@ -1,6 +1,7 @@
 class Manager::UsersController < ApplicationController
   before_filter :logged?, :current_user, :manager?, except: [:new, :create]
-  respond_to :html
+  after_filter :destroy_company, only: [:destroy]
+  after_filter :current_company, only: [:index]
 
   def index
     @employees = User.employees(@current_user.company_id) if @current_user.company_id.present?
@@ -26,12 +27,11 @@ class Manager::UsersController < ApplicationController
   end
 
   def edit
-    @manager = User.find(params[:username])
+    @manager = @current_user
   end
 
   def update
-    @manager = User.find_by_username(params[:username])
-
+    @manager = @current_user
     if @manager.update_attributes(params[:user])
       redirect_to manager_user_path
     else
@@ -40,4 +40,13 @@ class Manager::UsersController < ApplicationController
     end
   end
 
+  def destroy
+    if @current_user.destroy
+      @current_company.destroy
+      redirect_to logout_path
+    else
+      flash[:notice] = @current_user.errors.full_messages
+      redirect_to action: :index
+    end
+  end
 end

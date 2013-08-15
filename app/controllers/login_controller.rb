@@ -4,7 +4,7 @@ class LoginController < ApplicationController
       if session[:manager]
         redirect_to '/manager'
       else
-        redirect_to '/checking'
+        redirect_to check_in_path
       end
     else
       redirect_to action: :login
@@ -38,7 +38,7 @@ class LoginController < ApplicationController
       if session[:manager]
         redirect_to "/manager"
       else
-        redirect_to "/checking"
+        redirect_to check_in_path
       end
     end
   end
