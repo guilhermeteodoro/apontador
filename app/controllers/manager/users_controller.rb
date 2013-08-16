@@ -3,6 +3,8 @@ class Manager::UsersController < ApplicationController
   after_filter :destroy_company, only: [:destroy]
   after_filter :current_company, only: [:index]
 
+  layout "manager", except: [:new, :create]
+
   def index
     @employees = User.employees(@current_user.company_id) if @current_user.company_id.present?
   end

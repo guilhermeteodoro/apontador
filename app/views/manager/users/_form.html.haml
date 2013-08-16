@@ -7,29 +7,33 @@
       - @manager.errors.full_messages.each do |msg|
         %li= msg
 
+
 .field
   =f.label :first_name
-  =f.text_field :first_name
+  =f.text_field :first_name, class: "input-block-level"
 .field
   =f.label :last_name
-  =f.text_field :last_name
-.field
-  =f.label :username
-  =f.text_field :username
-.field
-  =f.label :street
-  =f.text_field :street
-.field
-  =f.label :number
-  =f.text_field :number
-.field
-  =f.label :city
-  =f.text_field :city
+  =f.text_field :last_name, class: "input-block-level"
 .field
   =f.label :email
-  =f.text_field :email
+  =f.text_field :email, class: "input-block-level"
+.field
+  =f.label :username
+  =f.text_field :username, class: "input-block-level"
 .field
   =f.label :password
-  =f.password_field :plain_password
+  =f.password_field :plain_password, class: "input-block-level"
+%h4
+  Address
+.field
+  =f.label :street
+  =f.text_field :street, class: "input-block-level"
+.field
+  =f.label :number
+  =f.text_field :number, class: "input-block-level"
+.field
+  =f.label :city
+  =f.text_field :city, class: "input-block-level"
+%br
 .button
-  =f.submit :Save
+  =f.submit :Save, class: "btn btn-info btn-block"

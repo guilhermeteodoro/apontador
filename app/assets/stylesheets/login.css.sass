@@ -1,0 +1,19 @@
+h1
+  text-align: center
+
+
+.blocker
+  text-align: center
+
+/* The ghost, nudged to maintain perfect centering */
+.blocker:before
+  content: ''
+  display: inline-block
+  height: 100%
+  vertical-align: middle
+  margin-right: -0.25em /* Adjusts for spacing */
+
+.centered
+  display: inline-block
+  vertical-align: middle
+  width: 280px

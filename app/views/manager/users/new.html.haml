@@ -1,5 +1,11 @@
-%p#notice= notice
-%h1 Sign Up!
+.container
+  %h1 Checker
+  .wrapper
+    = render partial: 'notice', locals: {notice: notice}
 
-= form_for [:manager, @manager], url: manager_user_path do |f|
-  = render partial: 'form', locals: { f: f }
+    = form_for [:manager, @manager], url: manager_user_path, html: {:class => "form-horizontal"} do |f|
+      .heading
+        %h3.form-heading Sign Up!
+      = render partial: 'form', locals: { f: f }
+
+    = link_to 'Login', login_path

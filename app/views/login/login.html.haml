@@ -1,14 +1,22 @@
 #container.container-fluid
+
   %h1 Checker
-  %h3 Login
-  %p#notice.alert= notice
-  = form_tag "/login" do
-    .field
-      %label{for: "username"} Email
-      %input#email.imput-large{name: "username", type: "text"}/
-    .field
-      %label{for: "password"} Password
-      %input#password{name: "password", type: "password"}/
-    .field
-      = link_to 'sign up', signup_path
-    %input.btn{:type => "submit", :value => "Login"}/
+
+  .row-fluid
+    .blocker
+      .centered
+        %legend Sign in
+        = form_tag "/login" do
+          - if notice.present?
+            #notice.alert.alert-error
+              %a.close{"data-dismiss" => "alert", :href => "#"}> x
+              = notice
+
+          %input#username.input-block-level{name: "username", type: "text", placeholder: "Username"}/
+          %input#password.input-block-level{name: "password", type: "password", placeholder: "Password"}/
+
+          %input.btn.btn-info.btn-block{:type => "submit", :value => "Login"}/
+          %p
+            .visible-desktop
+              or
+              = link_to 'Sign up', signup_path, class: ''
