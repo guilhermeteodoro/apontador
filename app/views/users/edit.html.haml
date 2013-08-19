@@ -1,8 +1,9 @@
 %p#notice= notice
 
-%h1 Edit Employee
+- presenter = UserPresenter.new(manager: @current_user, employee: @employee)
+%h1 Edit #{presenter.edit_employee_title}
 
-= form_for @employee, url: user_path(@employee.username) do |f|
+= form_for @employee, url: presenter.edit_employee_form do |f|
   = render partial: 'form', locals: { f: f }
 
 = link_to 'back', manager_users_path

@@ -13,7 +13,11 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @employee = User.find_by_username(params[:username])
+    @employee = if @current_user.manager?
+      User.find_by_username(params[:username])
+    else
+      @current_user
+    end
   end
 
   def create

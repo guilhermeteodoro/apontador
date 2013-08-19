@@ -13,15 +13,18 @@ Checker::Application.routes.draw do
   match 'manager'       => 'manager/users#destroy', via: :delete, as: 'manager_user'
   match 'manager/edit'  => 'manager/users#edit', via: :get, as: 'edit_manager_user'
 
-  match 'check-in'  => 'checkings#create', via: :post, as: 'checkings'
-  match 'check-in'  => 'checkings#new', via: :get, as: 'check_in'
-  match 'check-out'  => 'checkings#edit', via: :get, as: 'check_out'
-  match 'check-out'  => 'checkings#update', via: :put, as: 'checking'
+  match 'check-in'    => 'checkings#create', via: :post, as: 'checkings'
+  match 'check-in'    => 'checkings#new', via: :get, as: 'check_in'
+  match 'check-out'   => 'checkings#edit', via: :get, as: 'check_out'
+  match 'check-out'   => 'checkings#update', via: :put, as: 'checking'
+
+  match 'edit' => 'users#edit', via: :get, as: 'edit_employee_user'
+  match 'edit' => 'user#update', via: :put, as: 'edit_employee_user'
 
   match 'manager/company/new' => 'companies#new', as: 'new_company'
-  match 'manager/company' => 'companies#create', via: :post, as: 'company'
-  match 'manager/company' => 'companies#update', via: :put, as: 'company'
-  match 'manager/company' => 'companies#destroy', via: :delete, as: 'company'
+  match 'manager/company'     => 'companies#create', via: :post, as: 'company'
+  match 'manager/company'     => 'companies#update', via: :put, as: 'company'
+  match 'manager/company'     => 'companies#destroy', via: :delete, as: 'company'
 
   match 'login'  => 'login#login', as: 'login'
   match 'logout' => 'login#logout', as: 'logout'

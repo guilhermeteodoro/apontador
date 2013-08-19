@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
   #associations
   belongs_to :company
   has_many :checkings, dependent: :destroy
-  accepts_nested_attributes_for :checkings
 
   #attributes
   attr_accessible :street, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :coordinates, :number, :company_id, :username
@@ -14,7 +13,7 @@ class User < ActiveRecord::Base
 
   #geolocation
   # geocoded_by :full_address
-  # after_validation :geocode
+  # after_save :geocode
 
   # validations
   validates :first_name, :last_name, :username, presence: true
