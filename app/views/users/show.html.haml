@@ -27,17 +27,17 @@
             %h5 Value
           %td
             %h5 Approved?
-          - @checkings.each do |c|
+          = f.fields_for :checkings, @employee.checkings.not_approveds do |c, d|
             %tr
               %td
-                %p= c.time(c.checked_in_at)
-                %p= c.date(c.checked_in_at)
+                %p= c.object.time(c.object.checked_in_at)
+                %p= c.object.date(c.object.checked_in_at)
               %td
-                %p= c.time(c.checked_out_at)
-                %p= c.date(c.checked_out_at)
+                %p= c.object.time(c.object.checked_out_at)
+                %p= c.object.date(c.object.checked_out_at)
               %td
-                = c.value
+                = c.object.value
               %td
-                / = c.check_box :approved
+                = c.check_box :approved
 
     = f.submit 'Approve', class: 'btn btn-info pull-right'

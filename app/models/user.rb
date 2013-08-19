@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   #associations
   belongs_to :company
   has_many :checkings, dependent: :destroy
+  accepts_nested_attributes_for :checkings
 
   #attributes
   attr_accessible :street, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :coordinates, :number, :company_id, :username
