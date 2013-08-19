@@ -46,7 +46,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Employee successfully removed"
       redirect_to '/manager'
     else
-      flash[:notice] = "It's been a problem in removing this employee"
+      flash[:notice] = @employee.errors.full_messages
       redirect_to action: :show
     end
   end

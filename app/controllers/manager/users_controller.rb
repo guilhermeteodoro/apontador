@@ -1,7 +1,5 @@
 class Manager::UsersController < ApplicationController
-  before_filter :logged?, :current_user, :manager?, except: [:new, :create]
-  after_filter :destroy_company, only: [:destroy]
-  after_filter :current_company, only: [:index]
+  before_filter :logged?, :current_user, :manager?, :current_company, except: [:new, :create]
 
   layout "manager", except: [:new, :create]
 
