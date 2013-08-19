@@ -10,13 +10,14 @@ class UserPresenter
   end
 
   def edit_employee_title
-    @current_user.manager? ? "Employee" : "Information"
+    @user.manager? ? "Employee" : "Information"
   end
 
-  def edit_employee_form
+  def edit_employee_url
     if @user.manager?
-      user_path(@user.username)
+      "user_path(@employee.username)"
     else
-      edit_employee_user_path
+      "edit_employee_user_path"
+    end
   end
 end

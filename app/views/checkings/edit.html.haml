@@ -9,6 +9,8 @@
   - render partial: 'form', locals: { f: f, button_name: "Check-out" }
 
 = link_to 'logout', logout_path
+|
+= link_to 'edit', edit_employee_user_path
 
 :javascript
   new Geolocation()
