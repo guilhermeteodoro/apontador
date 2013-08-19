@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   before_filter :manager?, except: [:edit, :update]
   before_filter :user_found?, except: [:new, :create]
 
+  layout "manager"
+
   def show
     @employee = User.find_by_username(params[:username])
     @checkings = @employee.checkings if @employee.checkings.present?
@@ -57,10 +59,14 @@ class UsersController < ApplicationController
 
   protected
   def user_found?
-    user = User.find_by_username(params[:username])
+    user = if @current_user.manager?
+      User.find_by_username(params[:username])
+    else
+      @current_user
+    end
+
     if user.nil? || not_same_company?(user)
-      flash[:notice] = "Sorry! User not found."
-      redirect_to '/manager'
+      redirect_to root_path, notice: "Sorry! User not found."
     end
   end
 

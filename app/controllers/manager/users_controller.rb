@@ -1,7 +1,7 @@
 class Manager::UsersController < ApplicationController
   before_filter :logged?, :current_user, :manager?, :current_company, except: [:new, :create]
 
-  layout "manager", except: [:new, :create]
+  layout "manager", except: [:new]
 
   def index
     @employees = User.employees(@current_user.company_id) if @current_user.company_id.present?

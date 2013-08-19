@@ -6,4 +6,32 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    .navbar
+      .navbar-inverse
+        .navbar-static-top
+          .navbar-inner
+            .container
+              %ul
+                = link_to 'Checker', root_path, class: 'brand'
+                .nav.pull-right
+                  %li#accountmenu.dropdown
+                    %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                      Settings
+                      .caret
+                    %ul.dropdown-menu
+                      %li
+                        = link_to 'Edit Account', edit_manager_user_path
+                      %li
+                        = link_to 'Delete Account', manager_user_path, method: :delete, data: { confirm: "This action will also erase your employees and your company. Are you sure?" }
+                  %li
+                    = link_to 'Logout', logout_path
+
+    .container
+      = yield
+
+    %footer
+      .footer
+        .modal-footer
+          .container
+            %p.label.label-inverse Developed by Guilherme Teodoro
+            %p.label.label-inverse at #{link_to 'ClickJogos', 'http://www.clickjogos.com.br'} Bootcamp

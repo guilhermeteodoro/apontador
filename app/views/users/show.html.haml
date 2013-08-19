@@ -1,15 +1,33 @@
-%h2 #{@employee.name}
+.modal-header.clearfix
+  .block
+    .pull-left
+      %h3= @employee.name
+      = @employee.full_address
+      %br
+      = @employee.email
+  .block
+    .pull-right
+      .btn-toolbar
+        = link_to 'Edit', edit_user_path(@employee.username), class: 'btn btn-small btn-inverse'
+        = link_to 'Delete this user', user_path, method: :delete, data: { confirm: 'Do you really want to delete this employee?' }, class: 'btn btn-small btn-inverse'
+
+%br
 
 - if @employee.checkings.present?
   = form_for @employee, url: user_path(@employee.username) do |f|
-    %table
-      %tr
-        %td Checked In
-        %td Checked Out
-        %td Value
-        %td Approved?
-        - @checkings.each do |c|
-          = f.fields_for :checkings do |builder|
+    %h4 Unseen Checkings
+    .container
+      %table.table.table-bordered
+        %tr
+          %td
+            %h5 Checked In
+          %td
+            %h5 Checked Out
+          %td
+            %h5 Value
+          %td
+            %h5 Approved?
+          - @checkings.each do |c|
             %tr
               %td
                 %p= c.time(c.checked_in_at)
@@ -20,12 +38,6 @@
               %td
                 = c.value
               %td
-                = builder.check_box :approved
-    = f.submit :save
+                / = c.check_box :approved
 
-
-%br
-
-= link_to 'edit', edit_user_path(@employee.username) \
-= link_to 'delete this user', user_path, method: :delete, data: { confirm: 'Are you sure?' }
-= link_to 'home', manager_users_path
+    = f.submit 'Approve', class: 'btn btn-info pull-right'

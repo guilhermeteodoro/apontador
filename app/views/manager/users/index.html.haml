@@ -1,26 +1,30 @@
-= link_to 'edit', edit_manager_user_path
-|
-= link_to 'destroy', manager_user_path, method: :delete, data: { confirm: "This action will also erase your employees and your company. Are you sure?" }
-|
-= link_to 'logout', logout_path
+%header
+  .modal-header
+    %h1 #{@current_user.name}, welcome!
+    - if @current_user.company.present?
+      %h4= @current_user.company.name
 
-#notice= notice
-#content
-  %h1 Welcome #{@current_user.name}!
+#notice.danger= notice
 
-  -if @current_user.company_id.nil?
-    %h3 You don't have a company yet
-    %h2 Please, create one
-    = button_to 'New Company', new_company_path
-  -else
-    %h2 from #{@current_user.company.name}
-    = link_to 'New Employee', new_user_path
-    -if @employees.present?
-      -@employees.each do |employee|
-        %div.block
-          %ul
-            %h3= link_to employee.name, user_path(employee.username)
-            %li= employee.email
-            %li= employee.full_address
-            %li= link_to 'edit info', edit_user_path(employee.username)
+%br
 
+-if @current_user.company_id.nil?
+  %h3 You don't have a company yet
+  %h2 Please, create one
+  = button_to 'New Company', new_company_path, class: 'btn btn-success spacing btn-large'
+-else
+  = link_to 'New Employee', new_user_path, class: 'btn btn-success spacing btn-medium'
+  -if @employees.present?
+    -@employees.each do |employee|
+      .well
+        .row
+          .block-left
+            %ul.unstyled
+              %h3= link_to employee.name, user_path(employee.username)
+              %blockquote
+                %li= employee.email
+                %li= employee.full_address
+              %li= link_to 'Edit Info', edit_user_path(employee.username), class: 'btn btn-inverse btn-mini'
+          .block
+            .pull-right
+              = link_to 'See More', user_path(employee.username), class: 'btn btn-info btn-mini'
