@@ -30,28 +30,23 @@
 #   document.getElementById("status").innerHTML = message
 
 class window.Geolocation
-  constructor: ->
+  constructor: (obj) ->
+
+    @obj = obj
+
+  get_info: ->
     navigator.geolocation.getCurrentPosition @position_ok, @position_error, enableHighAccuracy: true
-
-    @form       = $('form')
-    @latitude   = $('#lat')
-    @longitude  = $('#lng')
-    @submit     = $('#submit')
-
-    $('form').submit ->
-
-      $('form').bind "ajax:success", (xhr, data, status) =>
-        console.log xhr
-      $('form').bind "ajax:error", (event, response, erro) =>
-        console.log erro
 
   position_ok: (position) =>
     $("#checking_lat").val(position.coords.latitude)
     $("#checking_lng").val(position.coords.longitude)
+    @obj.submit() if @obj
 
   position_error: (error) ->
     alert "erro: " + error
 
+window.get_check_info = ->
+  (new Geolocation($('form'))).get_info()
 
 # position_ok = (position) ->
 #   $("#lat").val position.coords.latitude

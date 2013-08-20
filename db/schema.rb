@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130814174857) do
+ActiveRecord::Schema.define(:version => 20130820123449) do
 
   create_table "checkings", :force => true do |t|
     t.datetime "checked_in_at"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20130814174857) do
     t.float    "lng"
     t.decimal  "value",          :precision => 10, :scale => 2
     t.boolean  "approved"
+    t.boolean  "paid",                                          :default => false
   end
 
   create_table "companies", :force => true do |t|
@@ -56,10 +57,11 @@ ActiveRecord::Schema.define(:version => 20130814174857) do
     t.string   "type"
     t.boolean  "manager"
     t.integer  "company_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
     t.integer  "number"
     t.string   "username"
+    t.decimal  "hour_value", :precision => 10, :scale => 2
   end
 
   add_index "users", ["id"], :name => "index_users_on_id"

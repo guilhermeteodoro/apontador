@@ -15,29 +15,11 @@
 
 - if @employee.checkings.present?
   = form_for @employee, url: user_path(@employee.username) do |f|
-    %h4 Unseen Checkings
-    .container
-      %table.table.table-bordered
-        %tr
-          %td
-            %h5 Checked In
-          %td
-            %h5 Checked Out
-          %td
-            %h5 Value
-          %td
-            %h5 Approved?
-          = f.fields_for :checkings, @employee.checkings.not_approveds do |c, d|
-            %tr
-              %td
-                %p= c.object.time(c.object.checked_in_at)
-                %p= c.object.date(c.object.checked_in_at)
-              %td
-                %p= c.object.time(c.object.checked_out_at)
-                %p= c.object.date(c.object.checked_out_at)
-              %td
-                = c.object.value
-              %td
-                = c.check_box :approved
-
+    %h4 Unseen / Disapproved Checkings
+    = render partial: 'show_table', locals: { f: f, group: @employee.checkings.not_approveds }
     = f.submit 'Approve', class: 'btn btn-info pull-right'
+
+  = form_for @employee, url: user_path(@employee.username) do |f|
+    %h4 Approved Checkings
+    = render partial: 'show_table', locals: { f: f, group: @employee.checkings.approveds }
+    = f.submit 'Disapprove', class: 'btn btn-warning pull-right'

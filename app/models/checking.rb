@@ -1,11 +1,14 @@
 class Checking < ActiveRecord::Base
   belongs_to :user
 
-  attr_accessible :checked_in_at, :checked_out_at, :user_id, :hour_value, :lat, :lng, :value, :approved
+  attr_accessible :checked_in_at, :checked_out_at, :user_id, :hour_value, :lat, :lng, :value, :approved, :paid
 
   validates :user_id, presence: true
   # validates :checked_in_at, :checked_out_at, :user_id, allow_blank: false
-  scope :not_approveds, conditions: {approved: false}
+
+  scope :approveds, conditions: { approved: true, paid: false }
+  scope :not_approveds, conditions: { approved: false, paid: false }
+  scope :paids, conditions: { paid: true }
 
   def date(checked_at)
     checked_at.strftime("%d/%m/%Y") if checked_at.present?
@@ -19,17 +22,47 @@ class Checking < ActiveRecord::Base
     checked_at.strftime("%A")
   end
 
-  def worktime
-    hours = if (checked_out_at.hour - checked_in_at.hour).to_s.length < 2
-      "0#{(checked_out_at.hour - checked_in_at.hour)}"
-    else
-      (checked_out_at.hour - checked_in_at.hour).to_s
+  def working_time(clock_style=false)
+    if checked_in_at.present? && checked_out_at.present?
+      h, m = ((checked_out_at - checked_in_at) / 1.hour).to_s.split('.')
+      m = ((m.to_f / (10 ** m.length.to_i)) * 60).round
+
+      if clock_style
+        hours = if h.to_s.length < 2
+          "0#{h}"
+        else
+          "#{h}"
+        end
+
+        minutes = if m.to_s.length < 2
+          "0#{m}"
+        else
+          "#{m}"
+        end
+
+        "#{hours}:#{minutes}"
+
+      else
+        if h.to_i < 1
+          "#{m}m"
+        elsif m < 1
+          "#{h}h"
+        else
+          "#{h}h #{m}m"
+        end
+      end
+
     end
-    minutes = if (checked_out_at.min - checked_in_at.min).to_s.length < 2
-      "0#{(checked_out_at.min - checked_in_at.min)}"
-    else
-      (checked_out_at.min - checked_in_at.min).to_s
-    end
-    "#{hours}:#{minutes}"
   end
+
+  def set_value(value=nil)
+    if checked_in_at.present? && checked_out_at.present?
+      if value.nil? || hour_value.present?
+        self.value = ((checked_out_at-checked_in_at)/1.hour*hour_value)
+      else
+        self.value = ((checked_out_at-checked_in_at)/1.hour*value)
+      end
+    end
+  end
+
 end

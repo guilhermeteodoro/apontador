@@ -1,0 +1,27 @@
+.container
+  %table.table.table-bordered
+    %tr
+      %td
+        %h5 Checked In
+      %td
+        %h5 Checked Out
+      %td
+        %h5 Working Time
+      %td
+        %h5 Value
+      %td
+        %h5 Approved?
+      = f.fields_for :checkings, group do |c|
+        %tr
+          %td
+            %h5= c.object.time(c.object.checked_in_at)
+            %p= c.object.date(c.object.checked_in_at)
+          %td
+            %h5= c.object.time(c.object.checked_out_at)
+            %p= c.object.date(c.object.checked_out_at)
+          %td
+            %p= c.object.working_time
+          %td
+            %p= number_to_currency(c.object.value)
+          %td
+            = c.check_box :approved
