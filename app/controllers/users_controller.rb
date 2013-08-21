@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_filter :logged?, :current_user
-  before_filter :manager?, except: [:edit, :update]
-  before_filter :user_found?, except: [:new, :create]
+  before_filter :manager?, except: [:edit, :update, :report]
+  before_filter :user_found?, except: [:new, :create, :report]
   before_filter :employee?, only: [:edit, :update]
 
   layout "manager"
@@ -16,6 +16,10 @@ class UsersController < ApplicationController
   end
 
   def edit
+  end
+
+  def report
+    @employee = @current_user
   end
 
   def create

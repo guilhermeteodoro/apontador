@@ -19,8 +19,9 @@ Checker::Application.routes.draw do
   match 'check-out'   => 'checkings#edit', via: :get, as: 'check_out'
   match 'check-out'   => 'checkings#update', via: :put, as: 'checking'
 
-  match 'edit' => 'users#edit', via: :get, as: 'edit_employee_user'
-  match 'edit' => 'users#update', via: :put, as: 'edit_employee_user'
+  match 'edit'    => 'users#edit', via: :get, as: 'edit_employee_user'
+  match 'edit'    => 'users#update', via: :put, as: 'edit_employee_user'
+  match 'report'  => 'users#report', via: :get, as: 'report_employee'
 
   match 'manager/company/new' => 'companies#new', as: 'new_company'
   match 'manager/company'     => 'companies#create', via: :post, as: 'company'

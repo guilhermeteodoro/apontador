@@ -1,16 +1,12 @@
-.container
-  %table.table.table-bordered.clearfix
+%table.table.table-striped
+  %thead
     %tr
-      %td
-        %h5 Entrada
-      %td
-        %h5 Saída
-      %td
-        %h5 Horas Trabalhadas
-      %td
-        %h5 Valor
-      %td
-        %h5 Status
+      %th Entrada
+      %th Saída
+      %th Horas Trabalhadas
+      %th Valor
+      %th Status
+    %tbody
       = f.fields_for :checkings, group do |c|
         %tr
           %td

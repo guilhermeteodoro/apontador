@@ -1,0 +1,45 @@
+%h2 Relatório
+
+%h4 Checkagens Não Aprovadas
+%table
+  %tr
+    %td Entrada
+    %td Saída
+    %td Horas Trabalhadas
+    %td Valor
+    %td Aprovada?
+
+  - @employee.checkings.not_approveds.each do |c|
+    %tr
+      %td
+        = c.time(checked_in_at)
+        = c.date(checked_in_at)
+      %td
+        = c.time(checked_out_at)
+        = c.date(checked_out_at)
+      %td
+        = c.value
+      %td
+        = c.approved?
+
+%h4 Checkagens Aprovadas
+%table
+  %tr
+    %td Entrada
+    %td Saída
+    %td Horas Trabalhadas
+    %td Valor
+    %td Aprovada?
+
+  - @employee.checkings.approveds.each do |c|
+    %tr
+      %td
+        = c.time(checked_in_at)
+        = c.date(checked_in_at)
+      %td
+        = c.time(checked_out_at)
+        = c.date(checked_out_at)
+      %td
+        = c.value
+      %td
+        = c.approved?

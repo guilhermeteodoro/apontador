@@ -11,7 +11,7 @@
         .navbar-inner
           .container
             %ul
-              %a.brand{:href => "#"} Checker
+              = link_to 'Checker', root_path, class: "brand"
               .nav.pull-right
                 %li#accountmenu.dropdown
                   %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}

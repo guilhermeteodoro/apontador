@@ -9,6 +9,8 @@
 = form_for @checking, url: checking_path do |f|
   - render partial: 'form', locals: { f: f, button_name: "Check-out" }
 
-= link_to 'logout', logout_path
+= link_to 'Relatório', report_employee_path
 |
-= link_to 'edit', edit_employee_user_path
+= link_to 'Editar', edit_employee_user_path
+|
+= link_to 'Logout', logout_path
