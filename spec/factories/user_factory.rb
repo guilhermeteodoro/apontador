@@ -3,7 +3,9 @@ require 'ffaker'
 require "digest/sha1"
 
 FactoryGirl.define do
+
   factory :user, class: User do
+
     first_name      { Faker::Name.first_name }
     last_name       { Faker::Name.last_name }
     email           { Faker::Internet.email }
@@ -15,9 +17,11 @@ FactoryGirl.define do
     longitude       { rand(-84.999999..85) }
     company_id      { rand(1..10) }
     manager         { false }
+
   end
 
   factory :manager, class: User do
+
     first_name      { Faker::Name.first_name }
     last_name       { Faker::Name.last_name }
     email           { Faker::Internet.email }
@@ -29,5 +33,7 @@ FactoryGirl.define do
     longitude       { rand(-84.999999..85) }
     company_id      { rand(1..10) }
     manager         { true }
+
   end
+
 end

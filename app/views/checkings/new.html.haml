@@ -1,5 +1,5 @@
-%p#notice= notice
 %h2 Welcome, #{@current_user.name}
+%p#notice= notice
 %h1 00:00
 %h3 Latitude: #{@current_user.latitude} - Longitude #{@current_user.longitude}
 
@@ -8,4 +8,3 @@
 
 = link_to 'logout', logout_path
 = link_to 'edit', edit_employee_user_path
-

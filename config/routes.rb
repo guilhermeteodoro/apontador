@@ -1,4 +1,5 @@
 Checker::Application.routes.draw do
+
   match 'manager/employee/new'            => 'users#new', via: :get, as: 'new_user'
   match 'manager/employee'                => 'users#create', via: :post, as: 'users'
   match 'manager/employee/:username'      => 'users#show', via: :get, as: 'user'
@@ -19,7 +20,7 @@ Checker::Application.routes.draw do
   match 'check-out'   => 'checkings#update', via: :put, as: 'checking'
 
   match 'edit' => 'users#edit', via: :get, as: 'edit_employee_user'
-  match 'edit' => 'user#update', via: :put, as: 'edit_employee_user'
+  match 'edit' => 'users#update', via: :put, as: 'edit_employee_user'
 
   match 'manager/company/new' => 'companies#new', as: 'new_company'
   match 'manager/company'     => 'companies#create', via: :post, as: 'company'
@@ -31,4 +32,5 @@ Checker::Application.routes.draw do
 
   match '/' => 'login#redirecter'
   root to: 'login#redirecter'
+
 end

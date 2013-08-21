@@ -1,7 +1,11 @@
 #encoding: UTF-8
 
 class UserPresenter
+
+  #attributes
   attr_reader :user
+
+  #delegates
   delegate :id, :name, :username, :email, :manager, to: :user
 
   def initialize(params)

@@ -1,11 +1,16 @@
 class Checking < ActiveRecord::Base
+
+  #associations
   belongs_to :user
 
+  #attributes
   attr_accessible :checked_in_at, :checked_out_at, :user_id, :hour_value, :lat, :lng, :value, :approved, :paid
 
+  #validations
   validates :user_id, presence: true
   # validates :checked_in_at, :checked_out_at, :user_id, allow_blank: false
 
+  #scopes
   scope :approveds, conditions: { approved: true, paid: false }
   scope :not_approveds, conditions: { approved: false, paid: false }
   scope :paids, conditions: { paid: true }

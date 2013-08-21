@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   # geocoded_by :full_address
   # after_save :geocode
 
-  # validations
+  #validations
   validates :first_name, :last_name, :username, presence: true
   validates :username, uniqueness: true, format: { with: /^[a-z0-9_-]{3,25}$/ }
   validates :street, presence: true, allow_blank: false
@@ -29,7 +29,6 @@ class User < ActiveRecord::Base
   #scopes
   scope :employees, ->(company_id) { where(["manager=? and company_id=?", false, company_id]) }
 
-  #methods
   def location_ok?(x,y)
     ((latitude-0.001..latitude).include?(x) || (latitude..latitude+0.001).include?(x)) && ((longitude-0.001..longitude).include?(y) || (longitude..longitude+0.001).include?(y))
   end
@@ -60,4 +59,5 @@ class User < ActiveRecord::Base
   def self.encrypt_password(password)
     Digest::SHA1.hexdigest("a1#{password}2b")
   end
+
 end

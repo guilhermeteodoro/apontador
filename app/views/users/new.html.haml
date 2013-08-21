@@ -1,6 +1,6 @@
-%p#notice= notice
-
 %h1 New Employee
+
+%p#notice= notice
 
 = form_for @employee, url: users_path do |f|
   = render partial: 'form', locals: { f: f }

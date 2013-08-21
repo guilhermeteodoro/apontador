@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_filter :logged?, :current_user
   before_filter :manager?, except: [:edit, :update]
   before_filter :user_found?, except: [:new, :create]
+  before_filter :employee?, only: [:edit, :update]
 
   layout "manager"
 
@@ -15,11 +16,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @employee = if @current_user.manager?
-      User.find_by_username(params[:username])
-    else
-      @current_user
-    end
   end
 
   def create
@@ -36,10 +32,12 @@ class UsersController < ApplicationController
   end
 
   def update
-    @employee = User.find_by_username(params[:username])
-
     if @employee.update_attributes(params[:user])
-      redirect_to user_path(@employee.username)
+      if @employee.manager?
+        redirect_to user_path(@employee.username)
+      else
+        redirect_to check_in_path
+      end
     else
       flash[:notice] = @employee.errors.full_messages
       redirect_to action: :edit
@@ -74,6 +72,14 @@ class UsersController < ApplicationController
   def not_same_company?(user)
     return if user.nil?
     @current_user.company_id != user.company_id ? true : false
+  end
+
+  def employee?
+    @employee = if @current_user.manager?
+      User.find_by_username(params[:username])
+    else
+      @current_user
+    end
   end
 
 end

@@ -47,14 +47,3 @@ class window.Geolocation
 
 window.get_check_info = ->
   (new Geolocation($('form'))).get_info()
-
-# position_ok = (position) ->
-#   $("#lat").val position.coords.latitude
-#   $("#lng").val position.coords.longitude
-
-# position_error = (error) ->
-#   alert "erro: " + error
-
-# $(document).ready ->
-#   return  unless navigator.geolocation
-#   navigator.geolocation.getCurrentPosition position_ok, position_error, enableHighAccuracy: true
