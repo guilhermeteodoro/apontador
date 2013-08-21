@@ -1,27 +1,24 @@
 .container
-  %table.table.table-bordered
+  %table.table.table-bordered.clearfix
     %tr
       %td
-        %h5 Checked In
+        %h5 Entrada
       %td
-        %h5 Checked Out
+        %h5 Saída
       %td
-        %h5 Working Time
+        %h5 Horas Trabalhadas
       %td
-        %h5 Value
+        %h5 Valor
       %td
-        %h5 Approved?
+        %h5 Status
       = f.fields_for :checkings, group do |c|
         %tr
           %td
-            %h5= c.object.time(c.object.checked_in_at)
-            %p= c.object.date(c.object.checked_in_at)
+            %b= c.object.time(c.object.checked_in_at)
+            (#{c.object.date(c.object.checked_in_at)})
           %td
-            %h5= c.object.time(c.object.checked_out_at)
-            %p= c.object.date(c.object.checked_out_at)
-          %td
-            %p= c.object.working_time
-          %td
-            %p= number_to_currency(c.object.value)
-          %td
-            = c.check_box :approved
+            %b= c.object.time(c.object.checked_out_at)
+            (#{c.object.date(c.object.checked_out_at)})
+          %td= c.object.working_time
+          %td= number_to_currency(c.object.value)
+          %td= c.check_box :approved

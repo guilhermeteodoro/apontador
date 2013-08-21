@@ -14,7 +14,7 @@ class UserPresenter
   end
 
   def edit_employee_title
-    @user.manager? ? "Employee" : "Information"
+    @user.manager? ? "Funcionário" : "Informações"
   end
 
   def edit_employee_form_url

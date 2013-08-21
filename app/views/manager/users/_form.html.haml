@@ -9,10 +9,10 @@
 
 
 .field
-  =f.label :first_name
+  =f.label :nome
   =f.text_field :first_name, class: "input-block-level"
 .field
-  =f.label :last_name
+  =f.label :sobrenome
   =f.text_field :last_name, class: "input-block-level"
 .field
   =f.label :email
@@ -26,14 +26,14 @@
 %h4
   Address
 .field
-  =f.label :street
+  =f.label :rua
   =f.text_field :street, class: "input-block-level"
 .field
-  =f.label :number
+  =f.label "Número"
   =f.text_field :number, class: "input-block-level"
 .field
-  =f.label :city
+  =f.label :cidade
   =f.text_field :city, class: "input-block-level"
 %br
 .button
-  =f.submit :Save, class: "btn btn-info btn-block"
+  =f.submit :Salvar, class: "btn btn-info btn-block"

@@ -1,30 +1,28 @@
-%header
-  .modal-header
-    %h1 #{@current_user.name}, welcome!
-    - if @current_user.company.present?
-      %h4= @current_user.company.name
+.row
+  %h1 #{@current_user.name}, bem-vindo!
+  - if @current_user.company.present?
+    %h4= @current_user.company.name
 
-#notice.danger= notice
 
-%br
+-if notice.present?
+  .row
+    #notice.danger= notice
 
--if @current_user.company_id.nil?
-  %h3 You don't have a company yet
-  %h2 Please, create one
-  = button_to 'New Company', new_company_path, class: 'btn btn-success spacing btn-large'
--else
-  = link_to 'New Employee', new_user_path, class: 'btn btn-success spacing btn-medium'
-  -if @employees.present?
-    -@employees.each do |employee|
-      .well
-        .row
+.row
+  -if @current_user.company_id.nil?
+    %h3 Você ainda não possui uma empresa cadastrada
+    %h2 Por favor, crie uma
+    = button_to 'Nova Empresa', new_company_path, class: 'btn btn-success spacing btn-large'
+  -else
+    = link_to 'Novo Funcionário', new_user_path, class: 'btn btn-success spacing btn-medium'
+    -if @employees.present?
+      -@employees.each do |employee|
+        .row.well
           .block-left
             %ul.unstyled
               %h3= link_to employee.name, user_path(employee.username)
-              %blockquote
-                %li= employee.email
-                %li= employee.full_address
-              %li= link_to 'Edit Info', edit_user_path(employee.username), class: 'btn btn-inverse btn-mini'
-          .block
-            .pull-right
-              = link_to 'See More', user_path(employee.username), class: 'btn btn-info btn-mini'
+              %li= employee.email
+              %li= employee.full_address
+              %li= link_to 'Editar Informações', edit_user_path(employee.username), class: 'btn btn-inverse btn-mini'
+          .block-right
+            = link_to 'Veja mais', user_path(employee.username), class: 'btn btn-info btn-mini'

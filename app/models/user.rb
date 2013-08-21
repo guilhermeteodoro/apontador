@@ -12,9 +12,9 @@ class User < ActiveRecord::Base
   attr_accessible :street, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :number, :company_id, :username, :hour_value
   attr_protected :password
 
-  #geolocation
-  # geocoded_by :full_address
-  # after_save :geocode
+  #address geolocation
+  geocoded_by :full_address
+  after_validation :geocode
 
   #validations
   validates :first_name, :last_name, :username, presence: true

@@ -1,25 +1,26 @@
-.modal-header.clearfix
-  .block
-    .pull-left
-      %h3= @employee.name
-      = @employee.full_address
-      %br
-      = @employee.email
-  .block
-    .pull-right
-      .btn-toolbar
-        = link_to 'Edit', edit_user_path(@employee.username), class: 'btn btn-small btn-inverse'
-        = link_to 'Delete this user', user_path, method: :delete, data: { confirm: 'Do you really want to delete this employee?' }, class: 'btn btn-small btn-inverse'
+
+.block
+  .pull-left
+    %h3= @employee.name
+    = @employee.full_address
+    %br
+    = @employee.email
+.block
+  .pull-right
+    .btn-toolbar
+      = link_to 'Editar', edit_user_path(@employee.username), class: 'btn btn-small btn-inverse'
+      = link_to 'Deletar funcionário', user_path, method: :delete, data: { confirm: 'Você tem certeza de que deseja deletar esse funcionário?' }, class: 'btn btn-small btn-inverse'
+.page-header.clearfix
 
 %br
 
 - if @employee.checkings.present?
   = form_for @employee, url: user_path(@employee.username) do |f|
-    %h4 Unseen / Disapproved Checkings
+    %h4 Checkagens Desaprovadas / Não visualizadas
     = render partial: 'show_table', locals: { f: f, group: @employee.checkings.not_approveds }
-    = f.submit 'Approve', class: 'btn btn-info pull-right'
+    = f.submit 'Aprovar', class: 'btn btn-info pull-right'
 
   = form_for @employee, url: user_path(@employee.username) do |f|
-    %h4 Approved Checkings
+    %h4 Checkagens Aprovadas
     = render partial: 'show_table', locals: { f: f, group: @employee.checkings.approveds }
-    = f.submit 'Disapprove', class: 'btn btn-warning pull-right'
+    = f.submit 'Desaprovar', class: 'btn btn-warning pull-right'

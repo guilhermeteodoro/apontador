@@ -1,5 +1,5 @@
 %p#notice= notice
-%h1 Edit Info
+%h1 Editar Informações
 
 = form_for [:manager, @manager], url: manager_user_path(@manager) do |f|
   = render partial: 'form', locals: { f: f }
