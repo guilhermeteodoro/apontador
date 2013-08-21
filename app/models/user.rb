@@ -31,9 +31,7 @@ class User < ActiveRecord::Base
 
   #methods
   def location_ok?(x,y)
-    p x
-    p y
-    p ((latitude-0.001..latitude).include?(x) || (latitude..latitude+0.001).include?(x)) && ((longitude-0.001..longitude).include?(y) || (longitude..longitude+0.001).include?(y)) ? true : false
+    ((latitude-0.001..latitude).include?(x) || (latitude..latitude+0.001).include?(x)) && ((longitude-0.001..longitude).include?(y) || (longitude..longitude+0.001).include?(y))
   end
 
   def full_address

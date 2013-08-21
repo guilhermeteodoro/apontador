@@ -3,20 +3,19 @@
   %h1.text-center Checker
 
   .row-fluid
-    .blocker
-      .centered
-        %legend Sign in
-        = form_tag "/login" do
-          - if notice.present?
-            #notice.alert.alert-error
-              %a.close{"data-dismiss" => "alert", :href => "#"}> x
-              = notice
+    %legend Sign in
+    = form_tag "/login" do
+      - if notice.present?
+        #notice.alert.alert-error
+          %a.close{"data-dismiss" => "alert", :href => "#"}> x
+          = notice
 
-          %input#username.input-block-level{name: "username", type: "text", placeholder: "Username"}/
-          %input#password.input-block-level{name: "password", type: "password", placeholder: "Password"}/
+      %input#username.input-block-level{name: "username", type: "text", placeholder: "Username", imput_html: {size: 2}}/
+      %input#password.input-block-level{name: "password", type: "password", placeholder: "Password"}/
 
-          %input.btn.btn-info.btn-block{:type => "submit", :value => "Login"}/
-          %p
-            .visible-desktop
-              or
-              = link_to 'Sign up', signup_path
+      %input.btn.btn-info.btn-block{:type => "submit", :value => "Login"}/
+      %p
+        .visible-desktop
+          .text-center
+            or
+            = link_to 'Sign up', signup_path

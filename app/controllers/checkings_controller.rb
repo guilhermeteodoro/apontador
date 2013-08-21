@@ -13,15 +13,20 @@ class CheckingsController < ApplicationController
   end
 
   def create
-    @checking = Checking.new(params[:checking])
-    @checking.user_id = @current_user.id
-    @checking.checked_in_at = Time.now
+    if @current_user.location_ok?(params[:checking][:lat].to_f, params[:checking][:lng].to_f)
+      @checking = Checking.new(params[:checking])
+      @checking.user_id = @current_user.id
+      @checking.checked_in_at = Time.now
 
-    if @checking.save
-      flash[:notice] = "Checked-in successfully"
-      redirect_to action: :edit
+      if @checking.save
+        flash[:notice] = "Checked-in successfully"
+        redirect_to action: :edit
+      else
+        flash[:notice] = @checking.errors.full_messages
+        redirect_to action: :new
+      end
     else
-      flash[:notice] = @checking.errors.full_messages
+      flash[:notice] = "You're out of the checking area"
       redirect_to action: :new
     end
   end
@@ -38,7 +43,7 @@ class CheckingsController < ApplicationController
 
   def update
 
-    if @current_user.location_ok?(params[:checking][:lat], params[:checking][:lng])
+    if @current_user.location_ok?(params[:checking][:lat].to_f, params[:checking][:lng].to_f)
       @checking = @current_user.checkings.last
 
       if @checking.update_attributes(checked_out_at: Time.now)
