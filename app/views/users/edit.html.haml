@@ -1,9 +1,10 @@
 - presenter = UserPresenter.new(manager: @current_user, employee: @employee)
-%h1 Editar #{presenter.edit_employee_title}
+
+.page-header
+  %h1 Editar #{presenter.edit_employee_title}
 
 %p#notice= notice
 
 = form_for @employee, url: eval(presenter.edit_employee_form_url) do |f|
   = render partial: 'form', locals: { f: f, edit: true }
 
-= link_to 'Voltar', root_path

@@ -1,13 +1,17 @@
-%h2 Welcome, #{@current_user.name}
-%p#notice= notice
-%h1 00:00
-%h3 Latitude: #{@current_user.latitude} - Longitude #{@current_user.longitude}
+.row-fluid
+  %h4.text-center #{@current_user.name}, bem-vindo!
+  - if notice.present?
+    #notice.alert.alert-danger= notice
+  %br
+  #clock.clearfix
+  %br
 
-= form_for @checking do |f|
-  - render partial: 'form', locals: { f: f, button_name: "Check-in" }
+  .text-center
+    = form_for @checking do |f|
+      - render partial: 'form', locals: { f: f, button_name: "Check-in" }
 
-= link_to 'Relatório', report_employee_path
-|
-= link_to 'Editar', edit_employee_user_path
-|
-= link_to 'Logout', logout_path
+/ = link_to 'Relatório', report_employee_path
+/ |
+/ = link_to 'Editar', edit_employee_user_path
+/ |
+/ = link_to 'Logout', logout_path

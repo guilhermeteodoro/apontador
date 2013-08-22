@@ -1,45 +1,49 @@
 %h2 Relatório
 
 %h4 Checkagens Não Aprovadas
-%table
+%table.table.table-striped
   %tr
     %td Entrada
     %td Saída
-    %td Horas Trabalhadas
+    %td Tempo Trabalhado
     %td Valor
     %td Aprovada?
 
   - @employee.checkings.not_approveds.each do |c|
     %tr
       %td
-        = c.time(checked_in_at)
-        = c.date(checked_in_at)
+        = c.time(c.checked_in_at)
+        = c.date(c.checked_in_at)
       %td
-        = c.time(checked_out_at)
-        = c.date(checked_out_at)
+        = c.time(c.checked_out_at)
+        = c.date(c.checked_out_at)
       %td
-        = c.value
+        = c.working_time
+      %td
+        = number_to_currency(c.value)
       %td
         = c.approved?
 
 %h4 Checkagens Aprovadas
-%table
+%table.table.table-striped
   %tr
     %td Entrada
     %td Saída
-    %td Horas Trabalhadas
+    %td Tempo Trabalhado
     %td Valor
     %td Aprovada?
 
   - @employee.checkings.approveds.each do |c|
     %tr
       %td
-        = c.time(checked_in_at)
-        = c.date(checked_in_at)
+        = c.time(c.checked_in_at)
+        = c.date(c.checked_in_at)
       %td
-        = c.time(checked_out_at)
-        = c.date(checked_out_at)
+        = c.time(c.checked_out_at)
+        = c.date(c.checked_out_at)
       %td
-        = c.value
+        = c.working_time
+      %td
+        = number_to_currency(c.value)
       %td
         = c.approved?

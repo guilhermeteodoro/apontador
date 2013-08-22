@@ -1,7 +1,7 @@
--if @manager.errors.any?
+- if @manager.errors.any?
   #error_explanation
     %h2
-      =pluralize(@manager.errors.count, "error")
+      = pluralize(@manager.errors.count, "error")
       prohibited this user from being saved:
     %ul
       - @manager.errors.full_messages.each do |msg|
@@ -9,31 +9,31 @@
 
 
 .field
-  =f.label :nome
-  =f.text_field :first_name, class: "input-block-level"
+  = f.label :nome
+  = f.text_field :first_name
 .field
-  =f.label :sobrenome
-  =f.text_field :last_name, class: "input-block-level"
+  = f.label :sobrenome
+  = f.text_field :last_name
 .field
-  =f.label :email
-  =f.text_field :email, class: "input-block-level"
+  = f.label :email
+  = f.text_field :email
 .field
-  =f.label :username
-  =f.text_field :username, class: "input-block-level"
+  = f.label :username
+  = f.text_field :username
 .field
-  =f.label :password
-  =f.password_field :plain_password, class: "input-block-level"
+  = f.label :password
+  = f.password_field :plain_password
 %h4
   Address
 .field
-  =f.label :rua
-  =f.text_field :street, class: "input-block-level"
+  = f.label :rua
+  = f.text_field :street
 .field
-  =f.label "Número"
-  =f.text_field :number, class: "input-block-level"
+  = f.label "Número"
+  = f.text_field :number
 .field
-  =f.label :cidade
-  =f.text_field :city, class: "input-block-level"
-%br
+  = f.label :cidade
+  = f.text_field :city
 .button
-  =f.submit :Salvar, class: "btn btn-info btn-block"
+  = f.submit :Salvar, class: "btn btn-info"
+  = link_to 'Voltar', root_path, class: 'btn btn-inverse'

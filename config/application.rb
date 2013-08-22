@@ -18,6 +18,9 @@ module Checker
     config.active_record.whitelist_attributes = true
     config.assets.enabled = true
     config.assets.version = '1.0'
+    config.time_zone = 'Brasilia'
+    config.active_record.default_timezone = 'Brasilia'
+
   end
 
 end

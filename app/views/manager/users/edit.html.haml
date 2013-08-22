@@ -1,5 +1,7 @@
-%p#notice= notice
-%h1 Editar Informações
+.page-header
+  %h1 Editar Informações
+
+= render partial: 'notice'
 
 = form_for [:manager, @manager], url: manager_user_path(@manager) do |f|
   = render partial: 'form', locals: { f: f }

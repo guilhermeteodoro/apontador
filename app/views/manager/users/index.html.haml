@@ -1,28 +1,28 @@
-.row
-  %h1 #{@current_user.name}, bem-vindo!
-  - if @current_user.company.present?
-    %h4= @current_user.company.name
+%h1 #{@current_user.name}, bem-vindo!
+- if @current_user.company.present?
+  %p.lead= @current_user.company.name
 
 
--if notice.present?
-  .row
-    #notice.danger= notice
+- if notice.present?
+  #notice.danger= notice
 
-.row
-  -if @current_user.company_id.nil?
-    %h3 Você ainda não possui uma empresa cadastrada
-    %h2 Por favor, crie uma
-    = button_to 'Nova Empresa', new_company_path, class: 'btn btn-success spacing btn-large'
-  -else
-    = link_to 'Novo Funcionário', new_user_path, class: 'btn btn-success spacing btn-medium'
-    -if @employees.present?
-      -@employees.each do |employee|
-        .row.well
-          .block-left
-            %ul.unstyled
-              %h3= link_to employee.name, user_path(employee.username)
-              %li= employee.email
-              %li= employee.full_address
-              %li= link_to 'Editar Informações', edit_user_path(employee.username), class: 'btn btn-inverse btn-mini'
-          .block-right
-            = link_to 'Veja mais', user_path(employee.username), class: 'btn btn-info btn-mini'
+- if @current_user.company_id.nil?
+  %h3 Você ainda não possui uma empresa cadastrada
+  %h2 Por favor, crie uma
+  = button_to 'Nova Empresa', new_company_path, class: 'btn btn-success spacing btn-large'
+-else
+  = link_to 'Novo Funcionário', new_user_path, class: 'btn btn-success spacing btn-medium'
+  - if @employees.present?
+    - @employees.each do |employee|
+      .well.clearfix
+        .block-left
+          %ul.unstyled
+            %h3= link_to employee.name, user_path(employee.username)
+            %li= employee.email
+            %li= employee.full_address
+            %li= link_to 'Editar Informações', edit_user_path(employee.username), class: 'btn btn-inverse btn-mini'
+        .block-right
+          = link_to 'Veja mais', user_path(employee.username), class: 'btn btn-info btn-mini'
+  - else
+    .alert.alert-warning
+      #{@employee.name} ainda não fez nenhuma checagem

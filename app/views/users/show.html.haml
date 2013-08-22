@@ -11,15 +11,20 @@
       = link_to 'Deletar funcionário', user_path, method: :delete, data: { confirm: 'Você tem certeza de que deseja deletar esse funcionário?' }, class: 'btn btn-small btn-inverse'
 .page-header.clearfix
 
-%br
-
 - if @employee.checkings.present?
-  = form_for @employee, url: user_path(@employee.username) do |f|
-    %h4 Checkagens Desaprovadas / Não visualizadas
-    = render partial: 'show_table', locals: { f: f, group: @employee.checkings.not_approveds }
-    = f.submit 'Aprovar', class: 'btn btn-info pull-right'
+  .clearfix
+    = form_for @employee, url: user_path(@employee.username) do |f|
+      %h4 Checkagens Desaprovadas / Não visualizadas
+      = render partial: 'show_table', locals: { f: f, group: @employee.checkings.not_approveds }
+      = f.submit 'Aprovar', class: 'btn btn-info pull-right'
 
-  = form_for @employee, url: user_path(@employee.username) do |f|
-    %h4 Checkagens Aprovadas
-    = render partial: 'show_table', locals: { f: f, group: @employee.checkings.approveds }
-    = f.submit 'Desaprovar', class: 'btn btn-warning pull-right'
+  .clearfix
+    = form_for @employee, url: user_path(@employee.username) do |f|
+      %h4 Checkagens Aprovadas
+      = render partial: 'show_table', locals: { f: f, group: @employee.checkings.approveds }
+      = f.submit 'Desaprovar', class: 'btn btn-warning pull-right'
+- else
+  .alert.alert-warning
+    #{@employee.name} ainda não fez nenhuma checagem
+
+%br

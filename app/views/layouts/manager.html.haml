@@ -5,13 +5,14 @@
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
   %body
     #wrap
       .navbar.navbar-inverse.navbar-fixed-top
         .navbar-inner
           .container
+            = link_to 'Checker', root_path, class: "brand logo-font"
             %ul
-              = link_to 'Checker', root_path, class: "brand"
               .nav.pull-right
                 %li#accountmenu.dropdown
                   %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
@@ -31,5 +32,5 @@
 
     #footer
       .container
-        %p.muted.credits
+        %p.muted.credits.text-center
           Desenvolvido por Guilherme Teodoro no #{link_to 'ClickJogos', 'http://www.clickjogos.com.br'} Bootcamp
