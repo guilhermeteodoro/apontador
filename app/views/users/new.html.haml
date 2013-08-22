@@ -1,9 +1,9 @@
 .page-header
-  Novo Funcionário
+  %h1 Novo Funcionário
 
 %p#notice= notice
 
 = form_for @employee, url: users_path do |f|
-  = render partial: 'form', locals: { f: f, edit: false }
+  = render partial: 'form', locals: { f: f, pass: true }
 
 = link_to 'Voltar', manager_users_path

@@ -26,8 +26,11 @@ class UsersController < ApplicationController
     @employee = User.new(params[:user])
     @employee.manager = false
     @employee.company_id = @current_user.company_id
+    p ("#{@employee.first_name}#{@employee.last_name}").downcase
+    @employee.plain_password = ("#{@employee.first_name}#{@employee.last_name}").downcase
 
     if @employee.save
+      flash[:notice] = "Employee successfully created"
       redirect_to manager_users_path
     else
       flash[:notice] = @employee.errors.full_messages
@@ -38,6 +41,7 @@ class UsersController < ApplicationController
   def update
     if @employee.update_attributes(params[:user])
       if @employee.manager?
+        flash[:notice] = "Employee successfully updated"
         redirect_to user_path(@employee.username)
       else
         redirect_to check_in_path
