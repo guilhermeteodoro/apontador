@@ -1,7 +1,7 @@
 class Manager::UsersController < ApplicationController
-  before_filter :logged?, :current_user, :manager?, :current_company, except: [:new, :create]
-
   layout :resolve_layout
+
+  before_filter :logged?, :current_user, :manager?, :current_company, except: [:new, :create]
 
   def index
     @employees = User.employees(@current_user.company_id) if @current_user.company_id.present?
@@ -21,7 +21,7 @@ class Manager::UsersController < ApplicationController
       session[:manager] = @manager.manager?
       redirect_to action: :index
     else
-      flash[:notice] = @manager.errors.full_messages
+      flash[:error] = @manager.errors.full_messages
       redirect_to action: :new
     end
   end
@@ -35,7 +35,7 @@ class Manager::UsersController < ApplicationController
     if @manager.update_attributes(params[:user])
       redirect_to manager_user_path
     else
-      flash[:notice] = @manager.errors.full_messages
+      flash[:error] = @manager.errors.full_messages
       redirect_to action: :edit
     end
   end
@@ -45,7 +45,7 @@ class Manager::UsersController < ApplicationController
       @current_company.destroy
       redirect_to logout_path
     else
-      flash[:notice] = @current_user.errors.full_messages
+      flash[:error] = @current_user.errors.full_messages
       redirect_to action: :index
     end
   end

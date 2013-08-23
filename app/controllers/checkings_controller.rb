@@ -1,4 +1,6 @@
 class CheckingsController < ApplicationController
+  layout "employee"
+
   before_filter :logged?, :current_user, :not_a_checker?
 
   def new
@@ -21,7 +23,6 @@ class CheckingsController < ApplicationController
       @checking.approved = false
 
       if @checking.save
-        flash[:notice] = "Checked-in successfully"
         redirect_to action: :edit
       else
         flash[:error] = @checking.errors.full_messages
@@ -51,7 +52,6 @@ class CheckingsController < ApplicationController
       @checking.set_value #Refatorar para o value
 
       if @checking.save
-        flash[:notice] = "Checked-out successfully"
         return redirect_to action: :new
       else
         flash[:error] = @checking.errors.full_messages

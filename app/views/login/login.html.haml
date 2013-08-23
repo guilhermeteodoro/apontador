@@ -2,15 +2,15 @@
   %h1.logo-font.text-center Checker
   %legend Sign in
   = form_tag "/login" do
-    = flash_message
+    #message= flash_message
 
     %input#username.input-block-level{name: "username", type: "text", placeholder: "Username ou Email", imput_html: {size: 2}}/
     %input#password.input-block-level{name: "password", type: "password", placeholder: "Password"}/
 
     .span5.offset3
-      %input.btn.btn-info.btn-block{:type => "submit", :value => "Login"}/
+      %input.btn.btn-info.btn-large.btn-block{:type => "submit", :value => "Login"}/
     %p.clearfix
-      .visible-desktop
+      .hidden-phone.hidden-tablet
         .text-center
           or
           = link_to 'Sign up', signup_path

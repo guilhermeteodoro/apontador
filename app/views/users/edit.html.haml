@@ -3,7 +3,7 @@
 .page-header
   %h1 Editar #{presenter.edit_employee_title}
 
-%p#notice= notice
+#message= flash_message
 
 = form_for @employee, url: eval(presenter.edit_employee_form_url) do |f|
   = render partial: 'form', locals: { f: f, edit: true }

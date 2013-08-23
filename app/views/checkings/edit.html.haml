@@ -1,8 +1,8 @@
-.row-fluid
+.span5.offset3
   %h4.text-center #{@current_user.name},
-  %h5 você checou as #{@current_user.time(@current_user.checkings.last.checked_in_at)} em #{@current_user.date(@current_user.checkings.last.checked_in_at)}
+  %h5.text-center você checou as #{@current_user.checkings.last.time(@current_user.checkings.last.checked_in_at)} em #{@current_user.checkings.last.date(@current_user.checkings.last.checked_in_at)}
 
-  = flash_message
+  #message= flash_message
 
   %br
   #clock.clearfix

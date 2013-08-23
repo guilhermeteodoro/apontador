@@ -1,5 +1,6 @@
 class LoginController < ApplicationController
   layout 'login'
+
   def redirecter
     if session[:id].present?
       if session[:manager]

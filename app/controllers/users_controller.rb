@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
+
+  layout :resolve_layout
+
   before_filter :logged?, :current_user
   before_filter :manager?, except: [:edit, :update, :report]
   before_filter :user_found?, except: [:new, :create, :report]
   before_filter :employee?, only: [:edit, :update]
-
-  layout :resolve_layout
 
   def show
     @employee = User.find_by_username(params[:username])

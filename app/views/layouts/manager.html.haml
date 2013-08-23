@@ -14,6 +14,7 @@
             = link_to 'Checker', root_path, class: "brand logo-font"
             %ul
               .nav.pull-right
+                %li= link_to 'Início', root_path
                 %li#accountmenu.dropdown
                   %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
                     Configurações
@@ -30,7 +31,7 @@
 
       #push
 
-    #footer
+    #footer.hidden-phone
       .container
         %p.muted.credits.text-center
           Desenvolvido por Guilherme Teodoro no #{link_to 'ClickJogos', 'http://www.clickjogos.com.br'} Bootcamp
