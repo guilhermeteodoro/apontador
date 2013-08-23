@@ -17,6 +17,7 @@ class CheckingsController < ApplicationController
       @checking = Checking.new(params[:checking])
       @checking.user_id = @current_user.id
       @checking.checked_in_at = Time.now
+      @checking.approved = false
 
       if @checking.save
         flash[:notice] = "Checked-in successfully"

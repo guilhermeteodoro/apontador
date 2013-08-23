@@ -26,7 +26,6 @@ class UsersController < ApplicationController
     @employee = User.new(params[:user])
     @employee.manager = false
     @employee.company_id = @current_user.company_id
-    p ("#{@employee.first_name}#{@employee.last_name}").downcase
     @employee.plain_password = ("#{@employee.first_name}#{@employee.last_name}").downcase
 
     if @employee.save
