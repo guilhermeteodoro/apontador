@@ -1,7 +1,8 @@
 .row-fluid
   %h4.text-center #{@current_user.name}, bem-vindo!
-  - if notice.present?
-    #notice.alert.alert-danger= notice
+
+  = flash_message
+
   %br
   #clock.clearfix
   %br
@@ -9,9 +10,3 @@
   .text-center
     = form_for @checking do |f|
       - render partial: 'form', locals: { f: f, button_name: "Check-in" }
-
-/ = link_to 'Relatório', report_employee_path
-/ |
-/ = link_to 'Editar', edit_employee_user_path
-/ |
-/ = link_to 'Logout', logout_path

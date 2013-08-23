@@ -1,7 +1,7 @@
 class Manager::UsersController < ApplicationController
   before_filter :logged?, :current_user, :manager?, :current_company, except: [:new, :create]
 
-  layout "manager", except: [:new]
+  layout :resolve_layout
 
   def index
     @employees = User.employees(@current_user.company_id) if @current_user.company_id.present?
@@ -47,6 +47,15 @@ class Manager::UsersController < ApplicationController
     else
       flash[:notice] = @current_user.errors.full_messages
       redirect_to action: :index
+    end
+  end
+
+  private
+  def resolve_layout
+    if action_name == "new"
+      "login"
+    else
+      "manager"
     end
   end
 end

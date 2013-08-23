@@ -17,17 +17,18 @@ class CheckingsController < ApplicationController
       @checking = Checking.new(params[:checking])
       @checking.user_id = @current_user.id
       @checking.checked_in_at = Time.now
+      @checking.hour_value = @current_user.hour_value
       @checking.approved = false
 
       if @checking.save
         flash[:notice] = "Checked-in successfully"
         redirect_to action: :edit
       else
-        flash[:notice] = @checking.errors.full_messages
+        flash[:error] = @checking.errors.full_messages
         redirect_to action: :new
       end
     else
-      flash[:notice] = "You're out of the checking area"
+      flash[:error] = "You're out of the checking area"
       redirect_to action: :new
     end
   end
@@ -46,16 +47,18 @@ class CheckingsController < ApplicationController
 
     if @current_user.location_ok?(params[:checking][:lat].to_f, params[:checking][:lng].to_f)
       @checking = @current_user.checkings.last
+      @checking.checked_out_at = Time.now
+      @checking.set_value #Refatorar para o value
 
-      if @checking.update_attributes(checked_out_at: Time.now)
+      if @checking.save
         flash[:notice] = "Checked-out successfully"
         return redirect_to action: :new
       else
-        flash[:notice] = @checking.errors.full_messages
+        flash[:error] = @checking.errors.full_messages
         redirect_to action: :edit
       end
     else
-      flash[:notice] = "You're out of the checking area"
+      flash[:error] = "You're out of the checking area"
       redirect_to action: :edit
     end
 

@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_filter :user_found?, except: [:new, :create, :report]
   before_filter :employee?, only: [:edit, :update]
 
-  layout "manager"
+  layout :resolve_layout
 
   def show
     @employee = User.find_by_username(params[:username])
@@ -87,6 +87,19 @@ class UsersController < ApplicationController
     else
       @current_user
     end
+  end
+
+  def resolve_layout
+    case action_name
+      when "edit"
+        if @current_user.manager? == false
+          return "employee"
+        end
+      when "report"
+        return "employee"
+    end
+
+    "manager"
   end
 
 end

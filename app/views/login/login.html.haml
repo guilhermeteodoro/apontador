@@ -2,10 +2,7 @@
   %h1.logo-font.text-center Checker
   %legend Sign in
   = form_tag "/login" do
-    - if notice.present?
-      #notice.alert.alert-error
-        %a.close{"data-dismiss" => "alert", :href => "#"}> x
-        = notice
+    = flash_message
 
     %input#username.input-block-level{name: "username", type: "text", placeholder: "Username ou Email", imput_html: {size: 2}}/
     %input#password.input-block-level{name: "password", type: "password", placeholder: "Password"}/

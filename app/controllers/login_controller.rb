@@ -17,20 +17,20 @@ class LoginController < ApplicationController
       username = params[:username]
       password = params[:password]
       if username.blank? && password.blank?
-        flash[:notice] = "Invalid username/email or password"
+        flash[:error] = "Invalid username/email or password"
         return
       end
       if username.blank?
-        flash[:notice] = "Invalid username/email"
+        flash[:error] = "Invalid username/email"
         return
       end
       if password.blank?
-        flash[:notice] = "Invalid password"
+        flash[:error] = "Invalid password"
         return
       end
       user = User.authenticate(username: username, password: password)
       if user.nil?
-        flash[:notice] = "Invalid username/email or password"
+        flash[:error] = "Invalid username/email or password"
         return
       end
       session[:id] = user.id

@@ -1,16 +1,12 @@
-%h2 #{@current_user.name}
-%p#notice= notice
+.row-fluid
+  %h4.text-center #{@current_user.name},
+  %h5 você checou as #{@current_user.time(@current_user.checkings.last.checked_in_at)} em #{@current_user.date(@current_user.checkings.last.checked_in_at)}
 
--if @checking.checked_in_at.present?
-  %h4 Checked-in at: #{@checking.date @checking.checked_in_at} - #{@checking.time @checking.checked_in_at}
-  %h4 Latitude: #{@checking.lat} - Longitude: #{@checking.lng}
-%h1 00:00
+  = flash_message
 
-= form_for @checking, url: checking_path do |f|
-  - render partial: 'form', locals: { f: f, button_name: "Check-out" }
+  %br
+  #clock.clearfix
+  %br
 
-= link_to 'Relatório', report_employee_path
-|
-= link_to 'Editar', edit_employee_user_path
-|
-= link_to 'Logout', logout_path
+  = form_for @checking, url: checking_path do |f|
+    - render partial: 'form', locals: { f: f, button_name: "Check-out" }
