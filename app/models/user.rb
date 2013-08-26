@@ -23,9 +23,6 @@ class User < ActiveRecord::Base
 
   validates :username, uniqueness: true, format: { with: /^[a-z0-9_-]{3,25}$/ }
   validates :email, uniqueness: true, format: { with: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9_ -]+\.)+[a-zA-Z]{2,4}$/ }
-
-  validates_numericality_of :latitude, greater_than: -180.0, less_than_or_equal_to: 180.0
-  validates_numericality_of :longitude, greater_than: -180.0, less_than_or_equal_to: 180.0
   validates_numericality_of :hour_value, greater_than: 0.0
 
   #scopes

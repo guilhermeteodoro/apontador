@@ -74,23 +74,6 @@ describe User do
     end
   end
 
-  describe "coordinates" do
-    it "should have a valid latitude" do
-      FactoryGirl.build(:user, latitude: 180.0000001).should_not be_valid
-      FactoryGirl.build(:user, latitude: -180.0000000).should_not be_valid
-    end
-    # it "should not have a nil latitude" do
-    #   Factory.build(latitude: nil).should_not be_valid
-    # end
-    it "should have a valid longitude" do
-      FactoryGirl.build(:user, longitude: 180.0000001).should_not be_valid
-      FactoryGirl.build(:user, longitude: -180.0000000).should_not be_valid
-    end
-    # it "should not have a nil longitude" do
-    #   Factory.build(longitude: nil).should be_valid
-    # end
-  end
-
   it "should have an authentication method" do
     User.should respond_to :authenticate
   end
