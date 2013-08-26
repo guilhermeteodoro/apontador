@@ -8,6 +8,8 @@ class Checking < ActiveRecord::Base
 
   #validations
   validates :hour_value, presence: true, allow_blank: false
+  validates :checked_out_at, presence: true
+  validates :user_id, presence: true
 
   #scopes
   scope :approveds, conditions: { approved: true, paid: false }
@@ -59,7 +61,6 @@ class Checking < ActiveRecord::Base
     end
   end
 
-  #Refatorar de acordo com o controller
   def set_value(value=nil)
     if checked_in_at.present? && checked_out_at.present?
       if value.nil? || hour_value.present?

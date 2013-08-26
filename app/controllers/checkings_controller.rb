@@ -49,7 +49,7 @@ class CheckingsController < ApplicationController
     if @current_user.location_ok?(params[:checking][:lat].to_f, params[:checking][:lng].to_f)
       @checking = @current_user.checkings.last
       @checking.checked_out_at = Time.now
-      @checking.set_value #Refatorar para o value
+      @checking.set_value
 
       if @checking.update_attributes(checked_out_at: Time.now, value: @checking.value)
         return redirect_to action: :new
