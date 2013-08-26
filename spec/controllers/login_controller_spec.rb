@@ -9,23 +9,28 @@ describe LoginController do
     it "without username/email and password" do
       post :login
       flash[:error].should eql "Invalid username/email or password"
+      response.should render_template :login
     end
     it "without username/email" do
       post :login, { username: "", password: "pass" }
       flash[:error].should eql "Invalid username/email"
+      response.should render_template :login
     end
     it "without password" do
       post :login, { username: "email@email.com" }
       flash[:error].should eql "Invalid password"
+      response.should render_template :login
     end
     it "with invalid username/email" do
       post :login, { username: "email@e", password: "pass" }
       flash[:error].should eql "Invalid username/email or password"
+      response.should render_template :login
     end
     it "with invalid password" do
       user = FactoryGirl.build(:user)
       post :login, { username: user.email, password: "ois" }
       flash[:error].should eql "Invalid username/email or password"
+      response.should render_template :login
     end
   end
   describe "login" do
