@@ -11,18 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130820123449) do
+ActiveRecord::Schema.define(:version => 20130730170921) do
 
   create_table "checkings", :force => true do |t|
     t.datetime "checked_in_at"
     t.datetime "checked_out_at"
+    t.boolean  "approved",                                      :default => false
+    t.boolean  "paid",                                          :default => false
     t.decimal  "hour_value",     :precision => 10, :scale => 2
-    t.integer  "user_id"
+    t.decimal  "value",          :precision => 10, :scale => 2
     t.float    "lat"
     t.float    "lng"
-    t.decimal  "value",          :precision => 10, :scale => 2
-    t.boolean  "approved"
-    t.boolean  "paid",                                          :default => false
+    t.integer  "user_id"
   end
 
   create_table "companies", :force => true do |t|
@@ -47,21 +47,19 @@ ActiveRecord::Schema.define(:version => 20130820123449) do
   create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "username"
     t.string   "email"
     t.string   "password"
+    t.integer  "number"
     t.string   "street"
+    t.string   "city"
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "city"
-    t.string   "phone"
-    t.string   "type"
-    t.boolean  "manager"
-    t.integer  "company_id"
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
-    t.integer  "number"
-    t.string   "username"
     t.decimal  "hour_value", :precision => 10, :scale => 2
+    t.boolean  "manager",                                   :default => false
+    t.integer  "company_id"
+    t.datetime "created_at",                                                   :null => false
+    t.datetime "updated_at",                                                   :null => false
   end
 
   add_index "users", ["id"], :name => "index_users_on_id"

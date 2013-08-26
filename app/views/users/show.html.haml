@@ -15,14 +15,25 @@
   .clearfix
     = form_for @employee, url: user_path(@employee.username) do |f|
       %h4 Checkagens Desaprovadas / Não visualizadas
-      = render partial: 'show_table', locals: { f: f, group: @employee.checkings.not_approveds }
-      = f.submit 'Aprovar', class: 'btn btn-info pull-right'
+
+      - if @employee.checkings.not_approveds.present?
+        = render partial: 'show_table', locals: { f: f, group: @employee.checkings.not_approveds, inverted: false }
+        = f.submit 'Aprovar', class: 'btn btn-info pull-right'
+      - else
+        - flash[:info] = "Não existem checagens a serem aprovadas"
+        #message= flash_message
 
   .clearfix
     = form_for @employee, url: user_path(@employee.username) do |f|
       %h4 Checkagens Aprovadas
-      = render partial: 'show_table', locals: { f: f, group: @employee.checkings.approveds }
-      = f.submit 'Desaprovar', class: 'btn btn-warning pull-right'
+
+      - if @employee.checkings.approveds.present?
+        = render partial: 'show_table', locals: { f: f, group: @employee.checkings.approveds, inverted: true }
+        = f.submit 'Desaprovar', class: 'btn btn-warning pull-right'
+      - else
+        - flash[:info] = "Não existem checagens aprovadas"
+        #message= flash_message
+
 - else
   .alert.alert-warning
     #{@employee.name} ainda não fez nenhuma checagem
