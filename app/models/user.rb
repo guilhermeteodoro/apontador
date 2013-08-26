@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :checkings
 
   #attributes
-  attr_accessible :first_name, :last_name, :username, :hour_value, :email, :street, :city, :number, :latitude, :longitude, :company_id
+  attr_accessible :first_name, :last_name, :username, :hour_value, :email, :street, :city, :number, :latitude, :longitude, :manager, :company_id
   attr_protected :password
 
   #address geolocation
