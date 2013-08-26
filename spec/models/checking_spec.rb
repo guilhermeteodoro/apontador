@@ -51,4 +51,16 @@ describe Checking do
     hour.working_time.should be_kind_of String
   end
 
+  describe "scope" do
+    it "should return approveds checkings" do
+      Checking.should respond_to :approveds
+    end
+    it "should return not approved checkings" do
+      Checking.should respond_to :not_approveds
+    end
+    it "should return paid checkings" do
+      Checking.should respond_to :paids
+    end
+  end
+
 end
