@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :checkings
 
   #attributes
-  attr_accessible :street, :city, :email, :first_name, :last_name, :phone, :latitude, :longitude, :number, :company_id, :username, :hour_value
+  attr_accessible :first_name, :last_name, :username, :hour_value,  :email, :street, :city, :number, :latitude, :longitude, :company_id
   attr_protected :password
 
   #address geolocation
@@ -17,11 +17,10 @@ class User < ActiveRecord::Base
   after_validation :geocode
 
   #validations
-  validates :first_name, :last_name, :username, presence: true
+  validates_presence_of :first_name, :last_name, :username, :hour_value,  :email, :street, :city, :number
+  validates_length_of :first_name, :last_name, :username, :hour_value, :email, :street, :city, :number, minimum: 1
   validates :username, uniqueness: true, format: { with: /^[a-z0-9_-]{3,25}$/ }
-  validates :street, presence: true, allow_blank: false
-  validates :hour_value, presence: true, allow_blank: false
-  validates :email, presence: true, uniqueness: true, format: { with: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9_ -]+\.)+[a-zA-Z]{2,4}$/ }
+  validates :email, uniqueness: true, format: { with: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9_ -]+\.)+[a-zA-Z]{2,4}$/ }
   validates_numericality_of :latitude, greater_than: -180.0, less_than_or_equal_to: 180.0, allow_nil: true
   validates_numericality_of :longitude, greater_than: -180.0, less_than_or_equal_to: 180.0, allow_nil: true
   validates_numericality_of :hour_value, greater_than: 0.0

@@ -10,11 +10,13 @@
       = f.fields_for :checkings, group do |c|
         %tr
           %td
-            %b= c.object.time(c.object.checked_in_at)
-            (#{c.object.date(c.object.checked_in_at)})
+            - if c.object.checked_in_at.present?
+              %b= c.object.time(c.object.checked_in_at)
+              (#{c.object.date(c.object.checked_in_at)})
           %td
-            %b= c.object.time(c.object.checked_out_at)
-            (#{c.object.date(c.object.checked_out_at)})
+            - if c.object.checked_out_at.present?
+              %b= c.object.time(c.object.checked_out_at)
+              (#{c.object.date(c.object.checked_out_at)})
           %td= c.object.working_time
           %td= number_to_currency(c.object.value)
           %td= c.check_box :approved

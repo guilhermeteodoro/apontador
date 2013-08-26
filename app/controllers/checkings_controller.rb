@@ -51,7 +51,7 @@ class CheckingsController < ApplicationController
       @checking.checked_out_at = Time.now
       @checking.set_value #Refatorar para o value
 
-      if @checking.save
+      if @checking.update_attributes(checked_out_at: Time.now, value: @checking.value)
         return redirect_to action: :new
       else
         flash[:error] = @checking.errors.full_messages

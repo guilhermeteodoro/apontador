@@ -14,6 +14,7 @@ class Manager::UsersController < ApplicationController
   def create
     @manager = User.new(params[:user])
     @manager.manager = true
+    @manager.hour_value = 1
 
     if @manager.save
       session[:id] = @manager.id

@@ -1,4 +1,6 @@
 class CompaniesController < ApplicationController
+
+  layout "manager"
   before_filter :logged?, :current_user, :manager?
   after_filter :set_company_to_current_user, only: [:create]
 
