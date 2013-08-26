@@ -8,7 +8,7 @@ class Company < ActiveRecord::Base
 
   #validations
   validates :name, presence: true, allow_blank: false
-  validates :cnpj, presence: true
+  validates :cnpj, presence: true, allow_blank: false
   validates_length_of :cnpj, is: 11
 
 end

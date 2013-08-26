@@ -2,55 +2,62 @@
   .page-header
     %h2 Relatório
 
-  %h4 Checagens Não Aprovadas
   - if @employee.checkings.present?
-    %table.table.table-striped
-      %tr
-        %td Entrada
-        .hidden-phone
-          %td Saída
-        %td Tempo Trabalhado
-        %td Valor
 
-      - @employee.checkings.not_approveds.each do |c|
-        %tr
-          %td
-            = c.time(c.checked_in_at)
-            = c.date(c.checked_in_at)
-          .hidden-phone
-            %td
-              = c.time(c.checked_out_at)
-              = c.date(c.checked_out_at)
-          %td
-            = c.working_time
-          %td
-            = number_to_currency(c.value)
+    %h4 Checagens Não Aprovadas
 
-    %h4 Checagens Aprovadas
-    - if @employee.checkings.approveds.present?
+    - if @employee.checkings.not_approveds.present?
       %table.table.table-striped
         %tr
           %td Entrada
-          .hidden-phone
+          .visible-tablet
             %td Saída
-          %td Tempo Trabalhado
+          %td Tempo
           %td Valor
 
-        - @employee.checkings.approveds.each do |c|
+        - @employee.checkings.not_approveds.each do |c|
           %tr
             %td
-              = c.time(c.checked_in_at)
+              %b= c.time(c.checked_in_at)
               = c.date(c.checked_in_at)
-            .hidden-phone
+            .visible-tablet.visible-desktop
               %td
-                = c.time(c.checked_out_at)
+                %b= c.time(c.checked_out_at)
                 = c.date(c.checked_out_at)
             %td
               = c.working_time
             %td
               = number_to_currency(c.value)
     - else
-      - flash[:warning] = "Não existem checagens aprovadas"
+      - flash[:info] = "Não existem checagens a serem aprovadas"
+      #message= flash_message
+
+    %h4 Checagens Aprovadas
+
+    - if @employee.checkings.approveds.present?
+      %table.table.table-striped
+        %tr
+          %td Entrada
+          .visible-tablet
+            %td Saída
+          %td Tempo
+          %td Valor
+
+        - @employee.checkings.approveds.each do |c|
+          %tr
+            %td
+              %b= c.time(c.checked_in_at)
+              = c.date(c.checked_in_at)
+            .visible-tablet
+              %td
+                %b= c.time(c.checked_out_at)
+                = c.date(c.checked_out_at)
+            %td
+              = c.working_time
+            %td
+              = number_to_currency(c.value)
+    - else
+      - flash[:info] = "Não existem checagens aprovadas"
       #message= flash_message
 
   - else

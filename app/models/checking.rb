@@ -4,11 +4,10 @@ class Checking < ActiveRecord::Base
   belongs_to :user
 
   #attributes
-  attr_accessible :checked_in_at, :checked_out_at, :user_id, :hour_value, :lat, :lng, :value, :approved, :paid
+  attr_accessible :checked_in_at, :checked_out_at, :value, :lat, :hour_value, :lng, :approved, :paid, :user_id
 
   #validations
-  validates :user_id, presence: true
-  # validates :checked_in_at, :checked_out_at, :user_id, allow_blank: false
+  validates :hour_value, presence: true, allow_blank: false
 
   #scopes
   scope :approveds, conditions: { approved: true, paid: false }
