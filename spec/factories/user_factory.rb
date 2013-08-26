@@ -12,7 +12,7 @@ FactoryGirl.define do
     hour_value      { rand(100.0) }
     email           { Faker::Internet.email }
     plain_password  { Faker::Name.first_name }
-    street          { "#{Faker::Address.street_name}" }
+    street          { Faker::Address.street_name }
     city            { Faker::Address.city }
     number          { rand(99999) }
     latitude        { rand(-179.999999..180) }
