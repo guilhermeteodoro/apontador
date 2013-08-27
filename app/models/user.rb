@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
 
   #address geolocation
   geocoded_by :full_address
-  after_validation :geocode
+  before_save :geocode
 
   #validations
   [:first_name, :last_name, :password, :username, :hour_value,  :email, :street, :city, :number].each do |v|

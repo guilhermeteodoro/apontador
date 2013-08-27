@@ -42,6 +42,7 @@ class Manager::UsersController < ApplicationController
   end
 
   def destroy
+    p "Chegou no destroy"
     if @current_user.destroy
       @current_company.destroy
       redirect_to logout_path

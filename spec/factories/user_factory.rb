@@ -9,7 +9,7 @@ FactoryGirl.define do
     first_name      { Faker::Name.first_name }
     last_name       { Faker::Name.last_name }
     username        { Faker::Name.first_name.downcase }
-    hour_value      { rand(100.0) }
+    hour_value      { rand(1.0..200.0) }
     email           { Faker::Internet.email }
     plain_password  { Faker::Name.first_name }
     street          { Faker::Address.street_name }
