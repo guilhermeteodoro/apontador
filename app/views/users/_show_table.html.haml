@@ -18,7 +18,7 @@
               %b= c.object.time(c.object.checked_out_at)
               (#{c.object.date(c.object.checked_out_at)})
           %td= c.object.working_time
-          %td= number_to_currency(c.object.value)
+          %td= number_to_currency(c.object.value, format: "R$ %n")
           - if inverted
             %td= c.check_box :approved, {:checked => !c.object.approved?}, 0, 1
           - else

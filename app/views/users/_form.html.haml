@@ -16,12 +16,12 @@
   = f.label :username
   = f.text_field :username
 
-- if @current_user.manager?
-  = render partial: 'address', locals: { f: f }
-
 .field
   = f.label :email
   = f.text_field :email
+
+- if @current_user.manager?
+  = render partial: 'address', locals: { f: f }
 
 - if @current_user.manager? == false && edit == true
   .field

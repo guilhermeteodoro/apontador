@@ -1,7 +1,9 @@
+#encoding: UTF-8
 class CheckingsController < ApplicationController
   layout "employee"
 
   before_filter :logged?, :current_user, :not_a_checker?
+  before_filter :coordinates?, only: [:create, :update]
 
   def new
     if @current_user.checkings.present?
@@ -29,7 +31,7 @@ class CheckingsController < ApplicationController
         redirect_to action: :new
       end
     else
-      flash[:error] = "You're out of the checking area"
+      flash[:error] = "Você está fora da área de checagem ou possivelmente com o GPS desligado"
       redirect_to action: :new
     end
   end
@@ -58,13 +60,19 @@ class CheckingsController < ApplicationController
         redirect_to action: :edit
       end
     else
-      flash[:error] = "You're out of the checking area"
+      flash[:error] = "Você está fora da área de checagem ou possivelmente com o GPS desligado"
       redirect_to action: :edit
     end
 
   end
 
   private
+  def coordinates?
+    if @current_user.latitude.nil? || @current_user.longitude.nil?
+      flash[:error] = "Não foi possível geolocalizar, entre em contato com o seu gerente."
+      redirect_to check_in_path
+    end
+  end
   def not_a_checker?
     redirect_to manager_user_path if session[:manager] == true
   end

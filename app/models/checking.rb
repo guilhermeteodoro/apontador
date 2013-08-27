@@ -8,7 +8,7 @@ class Checking < ActiveRecord::Base
 
   #validations
   validates :hour_value, presence: true, allow_blank: false
-  validates :checked_out_at, presence: true
+  validates :checked_in_at, presence: true
   validates :user_id, presence: true
 
   #scopes
@@ -17,11 +17,11 @@ class Checking < ActiveRecord::Base
   scope :paids, conditions: { paid: true }
 
   def date(checked_at)
-    checked_at.strftime("%d/%m/%Y") if checked_at.present?
+    (checked_at-3.hour).strftime("%d/%m/%Y") if checked_at.present?
   end
 
   def time(checked_at)
-    checked_at.strftime("%H:%M") if checked_at.present?
+    (checked_at-3.hour).strftime("%H:%M") if checked_at.present?
   end
 
   def weekday(checked_at)
@@ -63,9 +63,14 @@ class Checking < ActiveRecord::Base
 
   def set_value(value=nil)
     if checked_in_at.present? && checked_out_at.present?
+      p '/'*200
+      p checked_out_at
+      p checked_in_at
       if value.nil? || hour_value.present?
+        p '='*200
         self.value = ((checked_out_at-checked_in_at)/1.hour*hour_value)
       else
+        p '-'*200
         self.value = ((checked_out_at-checked_in_at)/1.hour*value)
       end
     end
