@@ -14,4 +14,5 @@ class UserMailer < ActionMailer::Base
     @user = user
     @changes = changes
     mail(to: @user.email, subject: 'Alteração de Informações')
+  end
 end

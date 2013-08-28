@@ -41,11 +41,10 @@ class UsersController < ApplicationController
   end
 
   def update
-    @employee = User.new(params[:user])
-    changes = @employee.changes
     if @employee.update_attributes(params[:user])
-      if @employee.manager?
-        UserMailer.user_update_email(@employee, changes).deliver
+      if @current_user.manager?
+        p @employee.ch
+        UserMailer.user_update_email(@employee, @employee.ch).deliver
         flash[:notice] = "Employee successfully updated"
         redirect_to user_path(@employee.username)
       else

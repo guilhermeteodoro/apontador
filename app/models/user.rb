@@ -16,6 +16,8 @@ class User < ActiveRecord::Base
   geocoded_by :full_address
   before_save :geocode
 
+  before_update :check_changed_attributes
+
   #validations
   [:first_name, :last_name, :password, :username, :hour_value,  :email, :street, :city, :number].each do |v|
     validates v, presence: true, allow_blank: false
@@ -48,6 +50,18 @@ class User < ActiveRecord::Base
 
   def plain_password
     "blabla"
+  end
+
+  def check_changed_attributes
+    @ch = self.changes
+  end
+
+  def ch=(value)
+    @ch = value
+  end
+
+  def ch
+    @ch
   end
 
   def self.authenticate(options)

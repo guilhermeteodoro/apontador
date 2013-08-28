@@ -4,9 +4,17 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
   %body
     %h3
-      Seu cadastro foi alterado, #{@user.name}
+      Seu cadastro foi alterado pelo seu gerente, #{@user.name}.
+
     %p
-      / - @changes.each do |u|
-      /   u.
-      Muito Obrigado,
+      %b Alterações
+
+    - @changes.keys.each do |k|
+      %b #{k.capitalize}:
+      %p De "#{@changes[k.to_sym][0]}" para "#{@changes[k.to_sym][1]}"
+
+    %p Te manteremos informados sempre que suas informações forem atualizadas por outra pessoa.
+
+    %p
+      À disposição,
       Equipe Checker.
