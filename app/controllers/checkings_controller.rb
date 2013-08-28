@@ -3,7 +3,6 @@ class CheckingsController < ApplicationController
   layout "employee"
 
   before_filter :logged?, :current_user, :not_a_checker?
-  before_filter :manager?, except: [:edit, :update]
   before_filter :coordinates?, only: [:create, :update]
 
   def new

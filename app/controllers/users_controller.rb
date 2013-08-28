@@ -27,9 +27,11 @@ class UsersController < ApplicationController
     @employee = User.new(params[:user])
     @employee.manager = false
     @employee.company_id = @current_user.company_id
-    @employee.plain_password = ("#{@employee.first_name}#{@employee.last_name}").downcase
+    temp_pass = SecureRandom.hex(4)
+    @employee.plain_password = (temp_pass)
 
     if @employee.save
+      UserMailer.welcome_email(@employee, @current_user, temp_pass).deliver
       flash[:notice] = "Employee successfully created"
       redirect_to manager_users_path
     else
@@ -39,8 +41,11 @@ class UsersController < ApplicationController
   end
 
   def update
+    @employee = User.new(params[:user])
+    changes = @employee.changes
     if @employee.update_attributes(params[:user])
       if @employee.manager?
+        UserMailer.user_update_email(@employee, changes).deliver
         flash[:notice] = "Employee successfully updated"
         redirect_to user_path(@employee.username)
       else
