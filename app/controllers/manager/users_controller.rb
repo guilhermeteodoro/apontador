@@ -34,6 +34,7 @@ class Manager::UsersController < ApplicationController
   def update
     @manager = @current_user
     if @manager.update_attributes(params[:user])
+      flash[:notice] = "Dados alterados com sucesso"
       redirect_to manager_user_path
     else
       flash[:error] = @manager.errors.full_messages
@@ -42,7 +43,6 @@ class Manager::UsersController < ApplicationController
   end
 
   def destroy
-    p "Chegou no destroy"
     if @current_user.destroy
       @current_company.destroy
       redirect_to logout_path

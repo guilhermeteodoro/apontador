@@ -63,14 +63,9 @@ class Checking < ActiveRecord::Base
 
   def set_value(value=nil)
     if checked_in_at.present? && checked_out_at.present?
-      p '/'*200
-      p checked_out_at
-      p checked_in_at
       if value.nil? || hour_value.present?
-        p '='*200
         self.value = ((checked_out_at-checked_in_at)/1.hour*hour_value)
       else
-        p '-'*200
         self.value = ((checked_out_at-checked_in_at)/1.hour*value)
       end
     end

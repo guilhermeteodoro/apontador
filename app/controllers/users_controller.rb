@@ -1,3 +1,4 @@
+#encoding: UTF-8
 class UsersController < ApplicationController
 
   layout :resolve_layout
@@ -31,11 +32,12 @@ class UsersController < ApplicationController
     @employee.plain_password = (temp_pass)
 
     if @employee.save
+
       UserMailer.welcome_email(@employee, @current_user, temp_pass).deliver
-      flash[:notice] = "Employee successfully created"
+      flash[:notice] = "#{@employee.name} criado com sucesso"
       redirect_to manager_users_path
     else
-      flash[:notice] = @employee.errors.full_messages
+      flash[:error] = @employee.errors.full_messages
       redirect_to action: :new
     end
   end
@@ -43,15 +45,18 @@ class UsersController < ApplicationController
   def update
     if @employee.update_attributes(params[:user])
       if @current_user.manager?
-        p @employee.ch
-        UserMailer.user_update_email(@employee, @employee.ch).deliver
-        flash[:notice] = "Employee successfully updated"
+
+        if @employee.changed_to.present?
+          UserMailer.user_update_email(@employee, @employee.changed_to).deliver
+          flash[:notice] = "Informações do funcionário atualizadas com sucesso"
+        end
+
         redirect_to user_path(@employee.username)
       else
         redirect_to check_in_path
       end
     else
-      flash[:notice] = @employee.errors.full_messages
+      flash[:error] = @employee.errors.full_messages
       redirect_to action: :edit
     end
   end
@@ -59,10 +64,10 @@ class UsersController < ApplicationController
   def destroy
     @employee = User.find_by_username(params[:username])
     if @employee.destroy
-      flash[:notice] = "Employee successfully removed"
+      flash[:notice] = "Funcionário removido"
       redirect_to '/manager'
     else
-      flash[:notice] = @employee.errors.full_messages
+      flash[:error] = @employee.errors.full_messages
       redirect_to action: :show
     end
   end
@@ -76,7 +81,7 @@ class UsersController < ApplicationController
     end
 
     if user.nil? || not_same_company?(user)
-      redirect_to root_path, notice: "Sorry! User not found."
+      redirect_to root_path, error: "Ops! Usuário não encontrado"
     end
   end
 

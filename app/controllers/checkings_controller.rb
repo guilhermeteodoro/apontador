@@ -37,13 +37,19 @@ class CheckingsController < ApplicationController
   end
 
   def edit
-    if @current_user.checkings.last.checked_out_at.present?
-      redirect_to action: :new
-    else
+    if @current_user.checkings.present?
+
+      if @current_user.checkings.last.checked_out_at.present?
+        redirect_to action: :new
+      else
+        @checking = @current_user.checkings.last
+        render 'edit'
+      end
+
       @checking = @current_user.checkings.last
-      render 'edit'
+    else
+      redirect_to action: :new
     end
-    @checking = @current_user.checkings.last
   end
 
   def update
@@ -69,7 +75,7 @@ class CheckingsController < ApplicationController
   private
   def coordinates?
     if @current_user.latitude.nil? || @current_user.longitude.nil?
-      flash[:error] = "Não foi possível geolocalizar, entre em contato com o seu gerente."
+      flash[:error] = "Há um problema com o seu cadastro e não foi possível geolocalizar, entre em contato com o seu gerente."
       redirect_to check_in_path
     end
   end
