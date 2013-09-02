@@ -65,7 +65,7 @@ describe Manager::UsersController do
   end
 
   describe "PUT #update" do
-    it "be successful if logged and manager" do
+    it "is successful if logged and manager" do
       put :update, {user: {first_name: "Jonas"}}, {id: @manager.id, name: @manager.name, manager: true}
       @manager.first_name = ""
       assigns(:current_user).should eql @manager
@@ -88,6 +88,42 @@ describe Manager::UsersController do
         response.should redirect_to login_path
       end
     end
+  end
+
+  describe "DELETE #destroy" do
+
+    context "when logged and manager" do
+      it "redirects to logout" do
+        @manager = FactoryGirl.create(:user, manager: true)
+        delete :destroy, {}, {id: @manager.id, name: @manager.manager, manager: true}
+        response.should redirect_to logout_path
+      end
+      it "destroys current_user and curent_company" do
+        @company = FactoryGirl.create(:company)
+        @manager = FactoryGirl.create(:user, manager: true, company_id: @company.id)
+        c = Company.all.length
+        u = User.all.length
+        delete :destroy, {}, {id: @manager.id, name: @manager.manager, manager: true}
+        expect(User.all.length).to eql(u-1)
+        expect(Company.all.length).to eql(c-1)
+      end
+    end
+
+    context "when logged and not manager" do
+      it "is unsuccessful" do
+        @manager = FactoryGirl.create(:user, manager: false)
+        delete :destroy, {}, {id: @manager.id, name: @manager.manager, manager: false}
+        response.should redirect_to login_path
+      end
+    end
+
+    context "when not logged" do
+      it "is unsuccessful" do
+        delete :destroy, {}, {}
+        response.should redirect_to login_path
+      end
+    end
+
   end
 
   describe "resolves layout" do
