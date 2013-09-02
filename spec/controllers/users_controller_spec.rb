@@ -27,8 +27,8 @@ describe UsersController do
 
   describe "GET #edit" do
 
-    context "when employee" do
-      it "if logged" do
+    context "logged and employee" do
+      it "is successful" do
         @employee = FactoryGirl.create(:user, manager: false)
         get :edit, {}, {id: @employee.id, name: @employee.name, manager: @employee.manager?}
         response.should be_successful
