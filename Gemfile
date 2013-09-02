@@ -17,7 +17,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'capybara'
   gem 'factory_girl_rails', '~> 4.2.1'
-  gem 'ffaker'
+  gem 'ffaker', '~> 1.18.0'
   gem 'guard-rspec', '2.3.1'
   gem 'guard-bundler', '1.0.0'
   gem 'guard-spork', '1.4.0'

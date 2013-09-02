@@ -202,7 +202,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass
   factory_girl_rails (~> 4.2.1)
-  ffaker
+  ffaker (~> 1.18.0)
   geocoder
   guard-bundler (= 1.0.0)
   guard-rspec (= 2.3.1)

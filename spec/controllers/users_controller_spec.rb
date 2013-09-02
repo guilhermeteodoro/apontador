@@ -25,40 +25,47 @@ describe UsersController do
 
   end
 
-  # describe "GET #edit" do
+  describe "GET #edit" do
 
-  #   describe "when employee" do
-  #     it "if logged" do
-  #       get :edit, {}, {id: @employee.id, name: @employee.name, manager: @employee.manager?}
-  #       response.should be_successful
-  #     end
+    context "when employee" do
+      it "if logged" do
+        @employee = FactoryGirl.create(:user, manager: false)
+        get :edit, {}, {id: @employee.id, name: @employee.name, manager: @employee.manager?}
+        response.should be_successful
+      end
+    end
+
+    # context "when manager" do
+    #   it "if logged" do
+    #     @manager = FactoryGirl.create(:user, manager: true)
+    #     @employee = FactoryGirl.create(:user, manager: false)
+    #     p @manager
+    #     p "-"*150
+    #     p @employee
+    #     p "-"*150
+    #     get :edit, {username: @employee.username}, { id: @manager.id, name: @manager.name, manager: @manager.manager? }
+    #     response.should be_successful
+    #   end
+    # end
+
+    it "redirects if not logged" do
+      get :edit, {}, {}
+      response.should redirect_to login_path
+    end
+
+  end
+
+  describe "POST #create" do
+    it "gets manager index after save" do
+      post :create, {user: FactoryGirl.attributes_for(:user, manager: false)}, {id: @manager.id, name: @manager.name, manager: @manager.manager?}
+      response.should redirect_to manager_user_path
+    end
+
+  #   it "redirects if get error" do
+  #     post :create, user: FactoryGirl.attributes_for(:user, first_name: nil)
+  #     response.should redirect_to action: :new
   #   end
-
-  #   describe "when manager" do
-  #     it "if logged" do
-  #       get :edit, { username: @employee.username }, { id: @manager.id, name: @manager.name, manager: @manager.manager? }
-  #       response.should be_successful
-  #     end
-  #   end
-
-  #   it "redirects if not logged" do
-  #     get :edit, {}, {}
-  #     response.should redirect_to login_path
-  #   end
-
-  # end
-
-  # describe "POST #create" do
-  #   it "gets manager index after save" do
-  #     post :create, {user: FactoryGirl.attributes_for(:user)}, {id: @manager.id, name: @manager.name, manager: @manager.manager?}
-  #     response.should redirect_to manager_user_path
-  #   end
-
-  # #   it "redirects if get error" do
-  # #     post :create, user: FactoryGirl.attributes_for(:user, first_name: nil)
-  # #     response.should redirect_to action: :new
-  # #   end
-  # end
+  end
 
   # describe "PUT #update" do
   #   it "be successful if logged and manager" do
