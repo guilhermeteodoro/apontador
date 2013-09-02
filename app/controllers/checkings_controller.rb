@@ -60,6 +60,7 @@ class CheckingsController < ApplicationController
       @checking.set_value
 
       if @checking.update_attributes(checked_out_at: Time.now, value: @checking.value)
+        flash[:notice] = "Checagem finalizada com sucesso"
         return redirect_to action: :new
       else
         flash[:error] = @checking.errors.full_messages

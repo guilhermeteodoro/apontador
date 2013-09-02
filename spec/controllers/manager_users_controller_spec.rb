@@ -90,21 +90,6 @@ describe Manager::UsersController do
     end
   end
 
-  # describe "DELETE #destroy" do
-  #   # before :each do
-  #   #   @manager = FactoryGirl.create(:user)
-  #   #   request.session[:id] = @manager.id
-  #   #   request.session[:name] = @manager.first_name
-  #   #   request.session[:manager] = true
-  #   #   controller.stub(:current_user).and_return(@current_user)
-  #   # end
-  #   it "be successful and redirects if logged and manager" do
-  #     expect{
-  #       delete :destroy, {}, {id: @manager.id, name: @manager.name, manager: true}
-  #       }.to redirect_to logout_path
-  #   end
-  # end
-
   describe "resolves layout" do
     it "rendering 'login' on new action" do
       get :new

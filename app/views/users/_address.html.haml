@@ -1,11 +1,11 @@
 .field
-  = f.label "Valor da hora"
-  = f.text_field :hour_value
-%h5 Endereço do Trabalho
+  = f.label "Valor da hora*"
+  = f.text_field :hour_value, placeholder: "45.25"
+%h5 Endereço de Trabalho
 .field
-  = f.label :rua
-  = f.text_field :street
-  = f.label "Número"
-  = f.text_field :number
-  = f.label :cidade
-  = f.text_field :city
+  = f.label "Rua*"
+  = f.text_field :street, placeholder: "Rua Tal"
+  = f.label "Número*"
+  = f.text_field :number, placeholder: "87964"
+  = f.label "Cidade*"
+  = f.text_field :city, placeholder: "Cidade Tal"

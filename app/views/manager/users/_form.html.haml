@@ -7,33 +7,34 @@
       - @manager.errors.full_messages.each do |msg|
         %li= msg
 
-
+%small.muted
+  %p Campos obrigatórios *
 .field
-  = f.label :nome
-  = f.text_field :first_name
+  = f.label "Nome*"
+  = f.text_field :first_name, placeholder: "João"
 .field
-  = f.label :sobrenome
-  = f.text_field :last_name
+  = f.label "Sobrenome*"
+  = f.text_field :last_name, placeholder: "da Silva"
 .field
-  = f.label :email
-  = f.text_field :email
+  = f.label "Email*"
+  = f.text_field :email, placeholder: "joaodasilva@mailinator.com"
 .field
-  = f.label :username
-  = f.text_field :username
+  = f.label "Username"
+  = f.text_field :username, placeholder: "joaodasilva"
 .field
-  = f.label :password
+  = f.label "Password*"
   = f.password_field :plain_password
 %h4
   Address
 .field
-  = f.label :rua
-  = f.text_field :street
+  = f.label "Rua*"
+  = f.text_field :street, placeholder: "Rua Tal"
 .field
-  = f.label "Número"
-  = f.text_field :number
+  = f.label "Número*"
+  = f.text_field :number, placeholder: "98654"
 .field
-  = f.label :cidade
-  = f.text_field :city
+  = f.label "Cidade*"
+  = f.text_field :city, placeholder: "Cidade Tal"
 %br
 .button
   = f.submit :Salvar, class: "btn btn-info"

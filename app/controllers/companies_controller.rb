@@ -14,7 +14,7 @@ class CompaniesController < ApplicationController
     if @company.save
       redirect_to '/manager'
     else
-      flash[:notice] = @company.errors.full_messages
+      flash[:error] = @company.errors.full_messages
       redirect_to action: :new
     end
   end

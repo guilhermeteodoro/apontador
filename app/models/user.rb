@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
   end
 
   def plain_password=(password)
-    return if password.nil?
+    return if password.blank? || password.nil?
     self.password = self.class.encrypt_password(password)
   end
 
