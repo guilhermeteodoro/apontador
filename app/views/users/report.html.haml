@@ -27,7 +27,7 @@
             %td
               = c.working_time
             %td
-              = number_to_currency(c.value)
+              = number_to_currency(c.value, format: "R$ %n")
     - else
       - flash[:info] = "Não existem checagens a serem aprovadas"
       #message= flash_message
@@ -55,7 +55,7 @@
             %td
               = c.working_time
             %td
-              = number_to_currency(c.value)
+              = number_to_currency(c.value, format: "R$ %n")
     - else
       - flash[:info] = "Não existem checagens aprovadas"
       #message= flash_message

@@ -5,6 +5,7 @@ class CompaniesController < ApplicationController
   after_filter :set_company_to_current_user, only: [:create]
 
   def new
+    return redirect_to manager_users_path if @current_user.company_id.present?
     @company = Company.new
   end
 
@@ -14,7 +15,7 @@ class CompaniesController < ApplicationController
     if @company.save
       redirect_to '/manager'
     else
-      flash[:notice] = @company.errors.full_messages
+      flash[:error] = @company.errors.full_messages
       redirect_to action: :new
     end
   end

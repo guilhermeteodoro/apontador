@@ -11,6 +11,8 @@
       = link_to 'Deletar funcionário', user_path, method: :delete, data: { confirm: 'Você tem certeza de que deseja deletar esse funcionário?' }, class: 'btn btn-small btn-inverse'
 .page-header.clearfix
 
+#message= flash_message
+
 - if @employee.checkings.present?
   .clearfix
     = form_for @employee, url: user_path(@employee.username) do |f|
@@ -20,8 +22,8 @@
         = render partial: 'show_table', locals: { f: f, group: @employee.checkings.not_approveds, inverted: false }
         = f.submit 'Aprovar', class: 'btn btn-info pull-right'
       - else
-        - flash[:info] = "Não existem checagens a serem aprovadas"
-        #message= flash_message
+        .alert.alert-warning
+          Não existem checagens a serem aprovadas
 
   .clearfix
     = form_for @employee, url: user_path(@employee.username) do |f|
@@ -31,8 +33,9 @@
         = render partial: 'show_table', locals: { f: f, group: @employee.checkings.approveds, inverted: true }
         = f.submit 'Desaprovar', class: 'btn btn-warning pull-right'
       - else
-        - flash[:info] = "Não existem checagens aprovadas"
-        #message= flash_message
+        .alert.alert-warning
+          Não existem checagens aprovadas
+
 
 - else
   .alert.alert-warning

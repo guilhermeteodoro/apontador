@@ -4,8 +4,9 @@
       %th Entrada
       %th Saída
       %th Tempo Trabalhado
-      %th Valor
-      %th Status
+      %th Valor da Hora
+      %th Valor da Checagem
+      %th
     %tbody
       = f.fields_for :checkings, group do |c|
         %tr
@@ -18,8 +19,10 @@
               %b= c.object.time(c.object.checked_out_at)
               (#{c.object.date(c.object.checked_out_at)})
           %td= c.object.working_time
-          %td= number_to_currency(c.object.value)
-          - if inverted
-            %td= c.check_box :approved, {:checked => !c.object.approved?}, 0, 1
-          - else
-            %td= c.check_box :approved
+          %td= number_to_currency(c.object.hour_value, format: "R$ %n")
+          %td= number_to_currency(c.object.value, format: "R$ %n")
+          - if c.object.checked_in_at.present? && c.object.checked_out_at.present?
+            - if inverted
+              %td= c.check_box :approved, {:checked => !c.object.approved?}, 0, 1
+            - else
+              %td= c.check_box :approved

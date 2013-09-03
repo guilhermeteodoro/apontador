@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def flash_message
     messages = ""
     [:notice, :info, :warning, :error].each do |type|
@@ -11,7 +12,10 @@ module ApplicationHelper
           when :warning
             messages += '<p class="alert alert-danger">'"#{flash[type]}</p>"
           when :error
-            messages += '<p class="alert alert-error">'"#{flash[type]}</p>"
+            messages += '<div class="alert alert-error">'
+            messages += '<a class="close" data-dismiss="alert" href="#">x</a>'
+            flash[:error].each{|f| messages += "<p>#{f}</p>"}
+            messages += '</div>'
         end
       end
     end

@@ -1,1 +1,48 @@
-This is readme file
+Um problema que acontece quando se contrata um freelancer para uma determinada atividade é a falta de confiabilidade nas horas gastas para desenvolver determinada task. Por esta razão resolvi desenvolver um aplicativo que faça o apontamento do freelancer por geolocalização no local de trabalho que for determinado, dando assim mais confiabilidade ao contratante de que as horas foram gastas no local de trabalho.
+
+Link para wireframes: https://www.dropbox.com/sh/u6d4qv80mlns7sw/qytz0XJ3YM/click/wireframe
+
+Funcionário
+O papel do funcionário é apontar sua presença dentro do perímetro determinado, dentro de um horário determinado, garantindo sua presença e seu status de presente no local de trabalho. O aplicativo atualizará a posição do funcionário a cada um minuto. Se o funcionário sair da área de cobertura definida pelo gerente será forçado um check-out. O acesso do funcionário é feito por qualquer pelo browser de dispositivo que contenha um aparelho GPS conectado. Poderá ser acessado pelo browser de qualquer dispositivo que tenha um GPS conectado.
+
+Início: Pedirá o login do usuário, contendo os campos email, password, um botão de login.
+
+Início logado: Mostrará um mensagem de bem-vindo, a hora atual, um relógio e um botão “Check-in” para fazer o apontamento de entrada. Após feito o apontamento de entrada será redirecionado para uma página que contém as seguintes informações:
+- A hora que foi feito a entrada,
+- Quantidade de tempo que passou desde o check-in,
+- Horário,
+- Botão de “Check-out”.
+
+Report: Mostrará as horas, de acordo com o tempo definido no combobox, cumpridas numa tabela, dividindo-as em aprovadas ou não.
+
+Settings: Conterá os campos email, password e verification, para a alteração das informações de login.
+
+Gerente
+O papel do gerente é gerenciar os apontamento de presença que são feitos pelos funcionários. Tendo o privilégio de alterar o status do aluno caso seja necessário. O acesso do professor é feito por pelo browser de qualquer dispositivo que contenha um aparelho GPS conectado.
+
+Início: Pedirá o login do usuário, contendo os campos email, password, um botão de login. Conterá um botão de signup para cadastrar um gerente.
+
+
+Início logado: Mostrará um mensagem de bem-vindo, a instituição que representa, a lista de funcionários e um botão para criar um novo funcionário. Nesta página o usuário poderá:
+- Clicar em New Employee, sendo direcionado para o cadastro de funcionário.
+- Clicar em algum funcionário listado, sendo direcionado para a sua vizualização detalhada de horas cumpridas.
+- Clicar em edit info de algum funcionário, sendo direcionado à página de edição de dados.
+
+
+Employee: Conterá os campos de cadastro de funcionário:
+- Nome
+- CPF
+- Função
+- Valor da hora
+- Endereço
+- Latitude (do endereço) *podendo ser gerado automaticamente através do botão get coordinates
+- Longitude (do endereço) *podendo ser gerado automaticamente através do botão get coordinates
+- Email
+- Senha
+- Verificação
+
+Nesta tela é possível inserir um novo usuário ou editar um dependendo de quem o chama. É possível pegar as coordenadas de latitude e de longitude do endereço digitado.
+
+Worked hours: Mostrará as horas cumpridas pelo funcionário selecionado numa tabela, com os atributos: dia, hora de check-in, hora de check-out, horas, status. O gerente poderá então selecionar horas para aprovar. As horas aprovadas são inseridas numa outra tabela, podendo ser desaprovadas (seleciona>disaprove) ou podendo gerar uma invoice com elas.
+
+Settings: Mostrará as horas os campos do gerente possibilitando a alteração de suas informações.
