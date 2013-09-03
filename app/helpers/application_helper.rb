@@ -12,10 +12,14 @@ module ApplicationHelper
           when :warning
             messages += '<p class="alert alert-danger">'"#{flash[type]}</p>"
           when :error
-            messages += '<div class="alert alert-error">'
-            messages += '<a class="close" data-dismiss="alert" href="#">x</a>'
-            flash[:error].each{|f| messages += "<p>#{f}</p>"}
-            messages += '</div>'
+            if flash[type].kind_of? Array
+              messages += '<div class="alert alert-error">'
+              messages += '<a class="close" data-dismiss="alert" href="#">x</a>'
+              flash[:error].each{|f| messages += "<p>#{f}</p>"}
+              messages += '</div>'
+            else
+              messages += '<p class="alert alert-error">'"#{flash[type]}</p>"
+            end
         end
       end
     end
