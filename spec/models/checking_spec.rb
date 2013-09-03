@@ -9,17 +9,17 @@ describe Checking do
     it "should have a valid check-in" do
       FactoryGirl.build(:checking, checked_in_at: Time.now).should be_valid
     end
-    it "should have a nil check-in" do
-      FactoryGirl.build(:checking, checked_in_at: nil).should be_valid
+    it "should not have a nil check-in" do
+      FactoryGirl.build(:checking, checked_in_at: nil).should_not be_valid
+    end
+    it "should not have a blank check-in" do
+      FactoryGirl.build(:checking, checked_in_at: "").should_not be_valid
     end
     it "should have a valid check-out" do
       FactoryGirl.build(:checking, checked_out_at: Time.now).should be_valid
     end
-    it "should not have a nil check-out" do
-      FactoryGirl.build(:checking, checked_out_at: nil).should_not be_valid
-    end
-    it "should not have a blank check-out" do
-      FactoryGirl.build(:checking, checked_out_at: "").should_not be_valid
+    it "should have a nil check-out" do
+      FactoryGirl.build(:checking, checked_out_at: nil).should be_valid
     end
   end
 

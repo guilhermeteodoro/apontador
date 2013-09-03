@@ -1,5 +1,9 @@
 .span5.offset3
-  %h4.text-center #{@current_user.name}, bem-vindo!
+  %h4.text-center #{@current_user.name},
+  %p.text-center
+    %b
+      clique em check-in para iniciar a contagem
+
 
   #message= flash_message
 

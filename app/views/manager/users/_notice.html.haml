@@ -1,9 +1,0 @@
-- if notice.present?
-  #notice.alert.alert-error
-    %a.close{"data-dismiss" => "alert", :href => "#"}> x
-    %ul
-      - if notice.kind_of?(Array)
-        - notice.each do |n|
-          %li #{n}
-      - elsif !notice.blank?
-        - notice

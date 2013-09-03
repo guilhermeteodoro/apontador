@@ -3,12 +3,12 @@
   %p.lead= @current_user.company.name
 
 
-- if notice.present?
-  #notice.danger= notice
+#message= flash_message
 
 - if @current_user.company_id.nil?
-  %h3 Você ainda não possui uma empresa cadastrada
-  %h2 Por favor, crie uma
+  %br
+  %h3.alert.alert-info Você ainda não possui uma empresa cadastrada
+  %h4 Por favor, crie uma para prosseguir
   = button_to 'Nova Empresa', new_company_path, class: 'btn btn-success spacing btn-large'
 -else
   = link_to 'Novo Funcionário', new_user_path, class: 'btn btn-success spacing btn-medium'

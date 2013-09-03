@@ -18,9 +18,18 @@ module Checker
     config.active_record.whitelist_attributes = true
     config.assets.enabled = true
     config.assets.version = '1.0'
-    config.time_zone = 'Brasilia'
-    config.active_record.default_timezone = 'Brasilia'
 
+    #Gmail mailer configs
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+        :address                => "smtp.gmail.com",
+        :port                   => 587,
+        :domain                 => 'gmail.com',
+        :user_name              => 'checkerbootcamp',
+        :password               => '1A2b3c4d5e',
+        :authentication         => 'plain',
+        :enable_starttls_auto   => true
+    }
   end
 
 end

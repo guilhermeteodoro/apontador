@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h3
+      Bem-vindo ao Checker, #{@user.name}!
+    %p
+      Você foi cadastrado por #{@manager.name} no grupo de trabalho da empresa #{@manager.company.name}. Para entrar em contato com seu gerente, envie um email para #{@manager.email}.
+
+    %p
+      Seu username é:
+      %b= @user.username
+    %p
+      E sua primeira senha de acesso é:
+      %b= @temp_pass
+    %p
+      Recomendamos que você a troque no seu primeiro login.
+      %br
+
+    %p Lembre-se sempre de manter o seu GPS ligado para o correto funcionamento dos apontamentos.
+
+    %p
+      Muito Obrigado,
+      Equipe Checker.

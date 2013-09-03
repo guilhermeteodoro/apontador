@@ -13,8 +13,10 @@ class User < ActiveRecord::Base
   attr_protected :password
 
   #address geolocation
-  geocoded_by :full_address
-  after_validation :geocode
+  # geocoded_by :full_address
+  # before_save :geocode
+
+  before_update :check_changed_attributes
 
   #validations
   [:first_name, :last_name, :password, :username, :hour_value,  :email, :street, :city, :number].each do |v|
@@ -23,6 +25,7 @@ class User < ActiveRecord::Base
 
   validates :username, uniqueness: true, format: { with: /^[a-z0-9_-]{3,25}$/ }
   validates :email, uniqueness: true, format: { with: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9_ -]+\.)+[a-zA-Z]{2,4}$/ }
+  validates :plain_password, format: { with: /^[a-zA-Z0-9_-]{3,25}$/ }
   validates_numericality_of :hour_value, greater_than: 0.0
 
   #scopes
@@ -41,12 +44,24 @@ class User < ActiveRecord::Base
   end
 
   def plain_password=(password)
-    return if password.nil?
+    return if password.blank? || password.nil?
     self.password = self.class.encrypt_password(password)
   end
 
   def plain_password
-    ""
+    "blabla"
+  end
+
+  def check_changed_attributes
+    @changed_to = self.changes
+  end
+
+  def changed_to=(value)
+    @changed_to = value
+  end
+
+  def changed_to
+    @changed_to
   end
 
   def self.authenticate(options)
