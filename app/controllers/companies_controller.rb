@@ -5,6 +5,7 @@ class CompaniesController < ApplicationController
   after_filter :set_company_to_current_user, only: [:create]
 
   def new
+    return redirect_to manager_users_path if @current_user.company_id.present?
     @company = Company.new
   end
 

@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   before_filter :logged?, :current_user
   before_filter :manager?, except: [:edit, :update, :report]
-  before_filter :user_found?, except: [:new, :create, :report]
+  before_filter :user_found?, except: [:new, :create, :report, :destroy]
 
   def show
     @employee = @user
