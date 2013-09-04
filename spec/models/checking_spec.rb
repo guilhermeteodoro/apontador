@@ -47,12 +47,35 @@ describe Checking do
     hour = FactoryGirl.build(:checking)
     hour.date(hour.checked_in_at).should be_kind_of String
   end
-  it "should have a method to calculate worked hours" do
-    FactoryGirl.build(:checking).should respond_to :working_time
-  end
-  it "should have a string returning from 'working_time' method" do
-    hour = FactoryGirl.build(:checking)
-    hour.working_time.should be_kind_of String
+
+  describe "working time" do
+    it "should have a method to show (not calculate) worked hours" do
+      FactoryGirl.build(:checking).should respond_to :working_time
+    end
+
+    it "should have a string returning from 'working_time' method when not on clock style mode" do
+      checking.checked_in_at  = "2013-09-04 12:00:00"
+      checking.checked_out_at = "2013-09-04 14:41:10"
+      checking.working_time.should == "2h 41m"
+    end
+
+    it "should have a string returning from 'working_time' method when on clock style mode" do
+      checking.checked_in_at  = "2013-09-04 12:00:00"
+      checking.checked_out_at = "2013-09-04 14:41:10"
+      checking.working_time(true).should == "02:41"
+    end
+
+    it "should return just the hour" do
+      checking.checked_in_at  = "2013-09-04 12:00:00"
+      checking.checked_out_at = "2013-09-04 14:00:00"
+      checking.working_time.should == "2h"
+    end
+
+    it "should return just the minute" do
+      checking.checked_in_at  = "2013-09-04 12:00:00"
+      checking.checked_out_at = "2013-09-04 12:10:00"
+      checking.working_time.should == "10m"
+    end
   end
 
   describe "scope" do

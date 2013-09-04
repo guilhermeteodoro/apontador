@@ -40,7 +40,7 @@ class Checking < ActiveRecord::Base
     return "00:00" if !tokens
     format = clock_style ? "%02d:%02d" : "%dh %dm"
     str    = sprintf(format,tokens[:hour],tokens[:minute])
-    clock_style ? str.gsub(/(^0h | 0m)/,"") : str
+    clock_style ? str : str.gsub(/(^0h | 0m)/,"")
   end
 
   def set_value(value=nil)
