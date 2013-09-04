@@ -5,6 +5,10 @@ describe Checking do
     FactoryGirl.build(:checking)
   end
 
+  let :predefined_checking do 
+    FactoryGirl.build(:predefined_checking)
+  end
+
   it "should have a valid factory" do
     FactoryGirl.build(:checking).should be_valid
   end
@@ -54,27 +58,21 @@ describe Checking do
     end
 
     it "should have a string returning from 'working_time' method when not on clock style mode" do
-      checking.checked_in_at  = "2013-09-04 12:00:00"
-      checking.checked_out_at = "2013-09-04 14:41:10"
-      checking.working_time.should == "2h 41m"
+      predefined_checking.working_time.should == "2h 41m"
     end
 
     it "should have a string returning from 'working_time' method when on clock style mode" do
-      checking.checked_in_at  = "2013-09-04 12:00:00"
-      checking.checked_out_at = "2013-09-04 14:41:10"
-      checking.working_time(true).should == "02:41"
+      predefined_checking.working_time(true).should == "02:41"
     end
 
     it "should return just the hour" do
-      checking.checked_in_at  = "2013-09-04 12:00:00"
-      checking.checked_out_at = "2013-09-04 14:00:00"
-      checking.working_time.should == "2h"
+      predefined_checking.checked_out_at = "2013-09-04 14:00:00"
+      predefined_checking.working_time.should == "2h"
     end
 
     it "should return just the minute" do
-      checking.checked_in_at  = "2013-09-04 12:00:00"
-      checking.checked_out_at = "2013-09-04 12:10:00"
-      checking.working_time.should == "10m"
+      predefined_checking.checked_out_at = "2013-09-04 12:10:00"
+      predefined_checking.working_time.should == "10m"
     end
   end
 
@@ -106,9 +104,7 @@ describe Checking do
     end
 
     it "should return the correct values if filled" do
-      checking.checked_in_at  = "2013-09-04 12:00:00"
-      checking.checked_out_at = "2013-09-04 14:41:10"
-      tokens = checking.time_difference
+      tokens = predefined_checking.time_difference
       tokens.should_not be_nil
       tokens[:hour].should be_equal 2
       tokens[:minute].should be_equal 41
