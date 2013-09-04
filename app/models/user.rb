@@ -73,5 +73,4 @@ class User < ActiveRecord::Base
   def self.encrypt_password(password)
     Digest::SHA1.hexdigest("a1#{password}2b")
   end
-
 end
