@@ -29,35 +29,33 @@ class Checking < ActiveRecord::Base
   end
 
   def working_time(clock_style=false)
-    if checked_in_at.present? && checked_out_at.present?
-      h, m = ((checked_out_at - checked_in_at) / 1.hour).to_s.split('.')
-      m = ((m.to_f / (10 ** m.length.to_i)) * 60).round
+    return if !checked_in_at.present? || !checked_out_at.present?
+    h, m = ((checked_out_at - checked_in_at) / 1.hour).to_s.split('.')
+    m = ((m.to_f / (10 ** m.length.to_i)) * 60).round
 
-      if clock_style
-        hours = if h.to_s.length < 2
-          "0#{h}"
-        else
-          "#{h}"
-        end
-
-        minutes = if m.to_s.length < 2
-          "0#{m}"
-        else
-          "#{m}"
-        end
-
-        "#{hours}:#{minutes}"
-
+    if clock_style
+      hours = if h.to_s.length < 2
+        "0#{h}"
       else
-        if h.to_i < 1
-          "#{m}m"
-        elsif m < 1
-          "#{h}h"
-        else
-          "#{h}h #{m}m"
-        end
+        "#{h}"
       end
 
+      minutes = if m.to_s.length < 2
+        "0#{m}"
+      else
+        "#{m}"
+      end
+
+      "#{hours}:#{minutes}"
+
+    else
+      if h.to_i < 1
+        "#{m}m"
+      elsif m < 1
+        "#{h}h"
+      else
+        "#{h}h #{m}m"
+      end
     end
   end
 
