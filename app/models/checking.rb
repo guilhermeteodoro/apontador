@@ -44,13 +44,8 @@ class Checking < ActiveRecord::Base
   end
 
   def set_value(value=nil)
-    if checked_in_at.present? && checked_out_at.present?
-      if value.nil? || hour_value.present?
-        self.value = ((checked_out_at-checked_in_at)/1.hour*hour_value)
-      else
-        self.value = ((checked_out_at-checked_in_at)/1.hour*value)
-      end
-    end
+    tokens = time_difference
+    return if !tokens
+    self.value = tokens[:hour] * (value || hour_value || 0)
   end
-
 end

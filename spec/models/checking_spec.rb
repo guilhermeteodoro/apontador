@@ -110,4 +110,24 @@ describe Checking do
       tokens[:minute].should be_equal 41
     end
   end
+
+  describe "set value" do
+    it "should set the correct value when no value specified and hour value present" do
+      predefined_checking.hour_value = 10
+      predefined_checking.set_value
+      predefined_checking.value.to_s.should == "20.0"
+    end      
+
+    it "should set the correct value when value specified and no hour value present" do
+      predefined_checking.hour_value = nil
+      predefined_checking.set_value(20)
+      predefined_checking.value.to_s.should == "40.0"
+    end      
+
+    it "should set the correct value when no value specified and no hour value present" do
+      predefined_checking.hour_value = nil
+      predefined_checking.set_value
+      predefined_checking.value.to_s.should == "0.0"
+    end      
+  end
 end
