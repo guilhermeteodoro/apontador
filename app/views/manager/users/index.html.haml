@@ -18,9 +18,9 @@
         .block-left
           %ul.unstyled
             %h3= link_to employee.name, user_path(employee.username)
-            %li= employee.email
-            %li= employee.full_address
-            %li= link_to 'Editar Informações', edit_user_path(employee.username), class: 'btn btn-inverse btn-mini'
+            %li#email= employee.email
+            %li#address= employee.full_address
+            %li#edit= link_to 'Editar Informações', edit_user_path(employee.username), class: 'btn btn-inverse btn-mini'
         .block-right
           = link_to 'Veja mais', user_path(employee.username), class: 'btn btn-info btn-mini'
   - else
