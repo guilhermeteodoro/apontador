@@ -28,35 +28,19 @@ class Checking < ActiveRecord::Base
     checked_at.strftime("%A")
   end
 
+  def time_difference
+    return nil if checked_in_at.blank? || checked_out_at.blank?
+    hour, minute = ((checked_out_at - checked_in_at) / 1.hour).to_s.split('.')
+    minute       = ((minute.to_f / (10 ** minute.length.to_i)) * 60).round
+    {hour: hour.to_i, minute: minute.to_i}
+  end
+
   def working_time(clock_style=false)
-    return if !checked_in_at.present? || !checked_out_at.present?
-    h, m = ((checked_out_at - checked_in_at) / 1.hour).to_s.split('.')
-    m = ((m.to_f / (10 ** m.length.to_i)) * 60).round
-
-    if clock_style
-      hours = if h.to_s.length < 2
-        "0#{h}"
-      else
-        "#{h}"
-      end
-
-      minutes = if m.to_s.length < 2
-        "0#{m}"
-      else
-        "#{m}"
-      end
-
-      "#{hours}:#{minutes}"
-
-    else
-      if h.to_i < 1
-        "#{m}m"
-      elsif m < 1
-        "#{h}h"
-      else
-        "#{h}h #{m}m"
-      end
-    end
+    tokens = time_difference
+    return "00:00" if !tokens
+    format = clock_style ? "%02d:%02d" : "%dh %dm"
+    str    = sprintf(format,tokens[:hour],tokens[:minute])
+    clock_style ? str.gsub(/(^0h | 0m)/,"") : str
   end
 
   def set_value(value=nil)

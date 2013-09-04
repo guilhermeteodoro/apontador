@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe Checking do
+  let :checking do 
+    FactoryGirl.build(:checking)
+  end
+
   it "should have a valid factory" do
     FactoryGirl.build(:checking).should be_valid
   end
@@ -63,4 +67,28 @@ describe Checking do
     end
   end
 
+  describe "time tokens" do
+    it "should have a method to return them" do
+      checking.should respond_to :time_difference
+    end
+
+    it "should return nil if checked in is empty" do
+      checking.checked_in_at = nil
+      checking.time_difference.should be_nil
+    end
+
+    it "should return nil if checked out is empty" do
+      checking.checked_out_at = nil
+      checking.time_difference.should be_nil
+    end
+
+    it "should return the correct values if filled" do
+      checking.checked_in_at  = "2013-09-04 12:00:00"
+      checking.checked_out_at = "2013-09-04 14:41:10"
+      tokens = checking.time_difference
+      tokens.should_not be_nil
+      tokens[:hour].should be_equal 2
+      tokens[:minute].should be_equal 41
+    end
+  end
 end
