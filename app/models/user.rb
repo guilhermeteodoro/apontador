@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
 
   #validations
   [:first_name, :last_name, :password, :username, :hour_value,  :email, :street, :city, :number].each do |v|
-    validates v, presence: true, allow_blank: false
+    validates v, presence: true
   end
 
   validates :username, uniqueness: true, format: { with: /^[a-z0-9_-]{3,35}$/ }

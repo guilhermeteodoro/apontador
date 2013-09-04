@@ -7,7 +7,7 @@ class Checking < ActiveRecord::Base
   attr_accessible :checked_in_at, :checked_out_at, :value, :lat, :hour_value, :lng, :approved, :paid, :user_id
 
   #validations
-  validates :hour_value, presence: true, allow_blank: false
+  validates :hour_value, presence: true
   validates :checked_in_at, presence: true
   validates :user_id, presence: true
 
