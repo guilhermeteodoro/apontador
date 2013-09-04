@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
     validates v, presence: true, allow_blank: false
   end
 
-  validates :username, uniqueness: true, format: { with: /^[a-z0-9_-]{3,25}$/ }
+  validates :username, uniqueness: true, format: { with: /^[a-z0-9_-]{3,35}$/ }
   validates :email, uniqueness: true, format: { with: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9_ -]+\.)+[a-zA-Z]{2,4}$/ }
   validates :plain_password, format: { with: /^[a-zA-Z0-9_-]{3,25}$/ }
   validates_numericality_of :hour_value, greater_than: 0.0
