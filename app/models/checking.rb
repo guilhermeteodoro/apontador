@@ -37,7 +37,7 @@ class Checking < ActiveRecord::Base
 
   def working_time(clock_style=false)
     tokens = time_difference
-    return "00:00" if !tokens
+    return nil if !tokens
     format = clock_style ? "%02d:%02d" : "%dh %dm"
     str    = sprintf(format,tokens[:hour],tokens[:minute])
     clock_style ? str : str.gsub(/(^0h | 0m)/,"")

@@ -57,6 +57,16 @@ describe Checking do
       FactoryGirl.build(:checking).should respond_to :working_time
     end
 
+    it "should return nil if no valid check in informed" do
+      predefined_checking.checked_in_at = nil
+      predefined_checking.working_time.should be_nil
+    end
+
+    it "should return nil if no valid check out informed" do
+      predefined_checking.checked_out_at = nil
+      predefined_checking.working_time.should be_nil
+    end
+
     it "should have a string returning from 'working_time' method when not on clock style mode" do
       predefined_checking.working_time.should == "2h 41m"
     end
