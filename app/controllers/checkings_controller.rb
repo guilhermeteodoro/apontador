@@ -76,7 +76,8 @@ class CheckingsController < ApplicationController
   private
   def coordinates?
     if @current_user.latitude.nil? || @current_user.longitude.nil?
-      flash[:error] = "Há um problema com o seu cadastro e não foi possível geolocalizar, entre em contato com o seu gerente."
+      flash[:error] = "Há um problema com o seu cadastro e não foi possível geolocalizar sua posição, entre em contato com o seu gerente."
+      #enviar email com erro pro manager
       redirect_to check_in_path
     end
   end
