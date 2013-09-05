@@ -22,6 +22,11 @@ group :development, :test do
   gem 'guard-rspec', '2.3.1'
   gem 'guard-bundler', '1.0.0'
   gem 'guard-spork', '1.4.0'
+  gem 'sqlite3', '1.3.8'
+end
+
+group :production do
+  gem 'pg'
 end
 
 gem 'haml', '~> 4.0'
