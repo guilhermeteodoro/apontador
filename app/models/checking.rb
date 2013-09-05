@@ -7,7 +7,7 @@ class Checking < ActiveRecord::Base
   attr_accessible :checked_in_at, :checked_out_at, :value, :lat, :hour_value, :lng, :approved, :paid, :user_id
 
   #validations
-  validates :hour_value, presence: true, allow_blank: false
+  validates :hour_value, presence: true
   validates :checked_in_at, presence: true
   validates :user_id, presence: true
 
@@ -28,47 +28,24 @@ class Checking < ActiveRecord::Base
     checked_at.strftime("%A")
   end
 
+  def time_difference
+    return nil if checked_in_at.blank? || checked_out_at.blank?
+    hour, minute = ((checked_out_at - checked_in_at) / 1.hour).to_s.split('.')
+    minute       = ((minute.to_f / (10 ** minute.length.to_i)) * 60).round
+    {hour: hour.to_i, minute: minute.to_i}
+  end
+
   def working_time(clock_style=false)
-    if checked_in_at.present? && checked_out_at.present?
-      h, m = ((checked_out_at - checked_in_at) / 1.hour).to_s.split('.')
-      m = ((m.to_f / (10 ** m.length.to_i)) * 60).round
-
-      if clock_style
-        hours = if h.to_s.length < 2
-          "0#{h}"
-        else
-          "#{h}"
-        end
-
-        minutes = if m.to_s.length < 2
-          "0#{m}"
-        else
-          "#{m}"
-        end
-
-        "#{hours}:#{minutes}"
-
-      else
-        if h.to_i < 1
-          "#{m}m"
-        elsif m < 1
-          "#{h}h"
-        else
-          "#{h}h #{m}m"
-        end
-      end
-
-    end
+    tokens = time_difference
+    return nil if !tokens
+    format = clock_style ? "%02d:%02d" : "%dh %dm"
+    str    = sprintf(format,tokens[:hour],tokens[:minute])
+    clock_style ? str : str.gsub(/(^0h | 0m)/,"")
   end
 
   def set_value(value=nil)
-    if checked_in_at.present? && checked_out_at.present?
-      if value.nil? || hour_value.present?
-        self.value = ((checked_out_at-checked_in_at)/1.hour*hour_value)
-      else
-        self.value = ((checked_out_at-checked_in_at)/1.hour*value)
-      end
-    end
+    tokens = time_difference
+    return if !tokens
+    self.value = tokens[:hour] * (value || hour_value || 0)
   end
-
 end

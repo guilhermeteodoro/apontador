@@ -41,22 +41,23 @@ class UsersController < ApplicationController
 
   def update
     @employee = @user
-    if @employee.update_attributes(params[:user])
-      if @current_user.manager?
-
-        if @employee.changed_to.present?
-          Thread.new {UserMailer.user_update_email(@employee, @employee.changed_to).deliver}
-          flash[:notice] = "Informações do funcionário atualizadas com sucesso"
-        end
-
-        redirect_to user_path(@employee.username)
-      else
-        redirect_to check_in_path
-      end
-    else
+    
+    if !@employee.update_attributes(params[:user])
       flash[:error] = @employee.errors.full_messages
       redirect_to action: :edit
+      return
     end
+
+    if !@current_user.manager?
+      redirect_to check_in_path
+      return
+    end
+
+    if @employee.changed_to.present?
+      Thread.new {UserMailer.user_update_email(@employee, @employee.changed_to).deliver}
+      flash[:notice] = "Informações do funcionário atualizadas com sucesso"
+    end
+    redirect_to user_path(@employee.username)
   end
 
   def destroy
@@ -85,14 +86,7 @@ class UsersController < ApplicationController
 
   private
   def resolve_layout
-    case action_name
-      when "edit"
-        return "employee" if @current_user.manager? == false
-      when "report"
-        return "employee"
-    end
-
+    return "employee" if action_name=="report" || (action_name=="edit" && !@current_user.manager?)
     "manager"
   end
-
 end
