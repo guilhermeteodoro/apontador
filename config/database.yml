@@ -17,3 +17,4 @@ production:
   pool: 5
   username: checker
   password: checker
+  port: 5432
