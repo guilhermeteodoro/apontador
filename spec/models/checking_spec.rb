@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe Checking do
-  let! :checking do
+  let :checking do
     FactoryGirl.build(:checking)
   end
 
-  let! :predefined_checking do
+  let :predefined_checking do
     FactoryGirl.build(:predefined_checking)
   end
 

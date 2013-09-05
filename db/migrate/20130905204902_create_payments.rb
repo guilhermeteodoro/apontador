@@ -1,8 +1,8 @@
 class CreatePayments < ActiveRecord::Migration
   def change
     create_table :payments do |t|
-      t.integer :token
-      t.timestamp :date
+
+      t.string :token
       t.boolean :concluded, default: false
 
       t.integer :user_id

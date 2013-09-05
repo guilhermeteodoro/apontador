@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20130905204902) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
-    t.integer  "cnpj"
+    t.string   "cnpj"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -35,8 +35,7 @@ ActiveRecord::Schema.define(:version => 20130905204902) do
   add_index "companies", ["id"], :name => "index_companies_on_id"
 
   create_table "payments", :force => true do |t|
-    t.integer  "token"
-    t.datetime "date"
+    t.string   "token"
     t.boolean  "concluded",  :default => false
     t.integer  "user_id"
     t.datetime "created_at",                    :null => false
