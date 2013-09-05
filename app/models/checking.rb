@@ -46,6 +46,6 @@ class Checking < ActiveRecord::Base
   def set_value(value=nil)
     tokens = time_difference
     return if !tokens
-    self.value = (tokens[:hour] + tokens[:minute]/60) * (value || hour_value || 0)
+    self.value = (tokens[:hour].to_f + (tokens[:minute].to_f / 60)) * (value || hour_value || 0)
   end
 end
