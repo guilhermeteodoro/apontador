@@ -13,8 +13,8 @@ class User < ActiveRecord::Base
   attr_protected :password
 
   #address geolocation
-  # geocoded_by :full_address
-  # before_save :geocode
+  geocoded_by :full_address
+  before_save :geocode
 
   before_update :check_changed_attributes
 
