@@ -5,6 +5,8 @@ class CreatePayments < ActiveRecord::Migration
       t.timestamp :date
       t.boolean :concluded, default: false
 
+      t.integer :user_id
+
       t.timestamps
     end
   end

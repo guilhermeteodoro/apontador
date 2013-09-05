@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20130905204902) do
     t.integer  "token"
     t.datetime "date"
     t.boolean  "concluded",  :default => false
+    t.integer  "user_id"
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end

@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe Checking do
-  let :checking do 
+  let! :checking do
     FactoryGirl.build(:checking)
   end
 
-  let :predefined_checking do 
+  let! :predefined_checking do
     FactoryGirl.build(:predefined_checking)
   end
 
@@ -125,19 +125,19 @@ describe Checking do
     it "should set the correct value when no value specified and hour value present" do
       predefined_checking.hour_value = 10
       predefined_checking.set_value
-      predefined_checking.value.to_s.should == "20.0"
-    end      
+      predefined_checking.value.round.to_s.should == "27"
+    end
 
     it "should set the correct value when value specified and no hour value present" do
       predefined_checking.hour_value = nil
       predefined_checking.set_value(20)
-      predefined_checking.value.to_s.should == "40.0"
-    end      
+      predefined_checking.value.round.to_s.should == "54"
+    end
 
     it "should set the correct value when no value specified and no hour value present" do
       predefined_checking.hour_value = nil
       predefined_checking.set_value
       predefined_checking.value.to_s.should == "0.0"
-    end      
+    end
   end
 end
