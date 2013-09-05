@@ -71,4 +71,10 @@ class Checking < ActiveRecord::Base
     end
   end
 
+  def self.total_price(group)
+    total = 0
+    group.map {|c| p total += c.value}
+    total
+  end
+
 end

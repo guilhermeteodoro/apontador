@@ -26,3 +26,9 @@
               %td= c.check_box :approved, {:checked => !c.object.approved?}, 0, 1
             - else
               %td= c.check_box :approved
+      - if group.first.value.present?
+        %tr.total_price
+          %td{colspan: "4"}
+            %b TOTAL
+          %td{colspan: "2"}
+            %b= number_to_currency(Checking.total_price(group), format: "R$ %n")

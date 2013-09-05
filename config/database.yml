@@ -1,17 +1,17 @@
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  encoding: utf8
+  database: checker_development
   pool: 5
-  timeout: 5000
+  username: checker
+  password:
+  port: 5433
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: postgresql
+  encoding: utf8
+  database: checker_test
   pool: 5
-  timeout: 5000
-
-production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  username: checker
+  password:
+  port: 5433

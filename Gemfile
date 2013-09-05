@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'sqlite3', '1.3.8'
+gem 'pg'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'compass', '~> 0.12'
-  gem "therubyracer", '~> 0.12'
-  gem "less-rails", '~> 2.3'
-  gem "twitter-bootstrap-rails", '~> 2.2'
+  gem 'therubyracer', '~> 0.12'
+  gem 'less-rails', '~> 2.3'
+  gem 'twitter-bootstrap-rails', '~> 2.2'
 end
 
 group :development, :test do
@@ -27,3 +27,4 @@ end
 gem 'haml', '~> 4.0'
 gem 'jquery-rails', '~> 3.0.4'
 gem 'geocoder', '~> 1.1.8'
+gem 'payday', '~> 1.1'

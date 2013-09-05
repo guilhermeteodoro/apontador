@@ -35,10 +35,15 @@
       - else
         .alert.alert-warning
           Não existem checagens aprovadas
+  %br
 
+  .text-center= link_to "Gerar Pagamento", '#'
+
+  %br
 
 - else
   .alert.alert-warning
     #{@employee.name} ainda não fez nenhuma checagem
+
 
 %br
