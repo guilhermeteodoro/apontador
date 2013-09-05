@@ -31,3 +31,5 @@ end
 gem 'haml', '~> 4.0'
 gem 'jquery-rails', '~> 3.0.4'
 gem 'geocoder', '~> 1.1.8'
+
+ruby '2.0.0'
