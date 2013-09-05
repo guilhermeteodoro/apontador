@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730170921) do
+ActiveRecord::Schema.define(:version => 20130905204902) do
 
   create_table "checkings", :force => true do |t|
     t.datetime "checked_in_at"
@@ -33,6 +33,14 @@ ActiveRecord::Schema.define(:version => 20130730170921) do
   end
 
   add_index "companies", ["id"], :name => "index_companies_on_id"
+
+  create_table "payments", :force => true do |t|
+    t.integer  "token"
+    t.datetime "date"
+    t.boolean  "concluded",  :default => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false

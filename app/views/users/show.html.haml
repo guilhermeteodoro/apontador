@@ -32,10 +32,16 @@
       - if @employee.checkings.approveds.present?
         = render partial: 'show_table', locals: { f: f, group: @employee.checkings.approveds, inverted: true }
         = f.submit 'Desaprovar', class: 'btn btn-warning pull-right'
+
+        %br
+        .clearfix
+          .text-center
+            = link_to 'Gerar Pagamento', '#'
+        %br
+
       - else
         .alert.alert-warning
           Não existem checagens aprovadas
-
 
 - else
   .alert.alert-warning

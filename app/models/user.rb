@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   #associations
   belongs_to :company
   has_many :checkings, dependent: :destroy
+  has_many :payments, dependent: :destroy
   accepts_nested_attributes_for :checkings
 
   #attributes
@@ -16,6 +17,7 @@ class User < ActiveRecord::Base
   geocoded_by :full_address
   before_save :geocode
 
+  #callbacks
   before_update :check_changed_attributes
 
   #validations

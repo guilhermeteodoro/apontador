@@ -48,4 +48,10 @@ class Checking < ActiveRecord::Base
     return if !tokens
     self.value = (tokens[:hour].to_f + (tokens[:minute].to_f / 60)) * (value || hour_value || 0)
   end
+
+  def self.total_price(group)
+    total = 0
+    group.map {|c| p total += c.value}
+    total
+  end
 end
