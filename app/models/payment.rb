@@ -5,23 +5,24 @@ class Payment < ActiveRecord::Base
   has_many :checkings, through: :user
 
   #attributes
-  attr_accessible :concluded, :date, :token_generated
+  attr_accessible :concluded, :token, :user_id
 
   #validations
+  validates :token, uniqueness: true
+
+  #class variables
+  @@symbols_array = [('a'..'z'),('A'..'Z'),(0..9)].map{|i| i.to_a}.flatten
 
 
-  def initializer
-    symbols_array = [('a'..'z'),('A'..'Z'),(0..9)].map{|i| i.to_a}.flatten
-    token_generated = false
+  def token=(*value)
+    write_attribute(:token, self.class.token_generator) if read_attribute(:token).nil?
   end
 
-  def generate_token
-    self.token = (0...20).map{ symbols_array[rand(symbols_array.length)] }.join if token_generated
-    token_generated = true
-  end
-
-  def token
-    self.token
+  def self.token_generator
+    loop do
+      token = (0...20).map{ @@symbols_array[rand(@@symbols_array.length)] }.join
+      break token unless Payment.where(token: token).exists?
+    end
   end
 
 end

@@ -3,6 +3,7 @@
 FactoryGirl.define do
 
   factory :payment, class: Payment do
+    token       { nil }
     concluded   { [true, false].sample }
     user_id     { rand 1..10 }
   end

@@ -22,6 +22,7 @@ group :development, :test do
   gem 'guard-bundler', '1.0.0'
   gem 'guard-spork', '1.4.0'
   gem 'sqlite3', '1.3.8'
+  gem 'pry-rails'
 end
 
 group :production do
