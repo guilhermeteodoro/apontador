@@ -41,7 +41,7 @@ class UsersController < ApplicationController
 
   def update
     @employee = @user
-    
+
     if !@employee.update_attributes(params[:user])
       flash[:error] = @employee.errors.full_messages
       redirect_to action: :edit
@@ -74,7 +74,7 @@ class UsersController < ApplicationController
   protected
   def user_found?
     @user = if @current_user.manager?
-      User.find_by_username(params[:username])
+      User.includes(:checkings).find_by_username(params[:username])
     else
       @current_user
     end
