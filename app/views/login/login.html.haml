@@ -1,16 +1,24 @@
-.row-fluid
-  %h1.logo-font.text-center Checker
-  %legend Sign in
+%nav
+  %header
+    %h1 Checker
+
+%section
+  %header
+    %h2 Sign in
+
   = form_tag "/login" do
+
     #message= flash_message
 
-    %input#username.input-block-level{name: "username", type: "text", placeholder: "Username ou Email", imput_html: {size: 2}}/
-    %input#password.input-block-level{name: "password", type: "password", placeholder: "Password"}/
+    %fieldset
+      %input#username{name: "username", type: "text", placeholder: "Username ou Email", imput_html: {size: 2}}/
 
-    .span5.offset3
-      %input.btn.btn-info.btn-large.btn-block{:type => "submit", :value => "Login"}/
-    %p.clearfix
-      .hidden-phone.hidden-tablet
-        .text-center
-          or
-          = link_to 'Sign up', signup_path
+    %fieldset
+      %input#password{name: "password", type: "password", placeholder: "Password"}/
+
+    %fieldset
+      %input{:type => "submit", :value => "Login"}/
+
+    %p
+      or
+      = link_to 'Sign up', signup_path
