@@ -1,13 +1,10 @@
-%section#main-content
-  %section#right-content
-    %article
-      %header
-        %h1 An Strong App
-      %p Perfect to manage your freelancer in the confort of your home!
+%section#left-content
 
-  %aside#left-aside
-    %header
-      %h2 Sign in
+  .blocks
+
+    %section#login-landing
+    / %header
+    /   %h2 Sign in
 
     #message= flash_message
 
@@ -16,12 +13,29 @@
       %fieldset
         %input#username{name: "username", type: "text", placeholder: "Username ou Email", imput_html: {size: 2}}
 
-      %fieldset
         %input#password{name: "password", type: "password", placeholder: "Password"}
 
-      %fieldset
+
         %input.button{type: "submit", value: "Login"}
 
       %p
         or
         = link_to 'Sign up', signup_path
+
+    %article.item
+      %header
+        = image_tag ('setting.png')
+        %h2 Melhora nas tarefas
+      %p Com o Checker suas tarefas mais ágeis com horários mais bem definidos fazem o sucesso de um projeto.
+
+    %article.item
+      %header
+        = image_tag ('security.png')
+        %h2 Processo seguro
+      %p Todas as tarefas são sempre definidas com um valor que deve ser mantido até o final.
+
+    %article.item
+      %header
+        = image_tag ('desktop.png')
+        %h2 Checagem confiável
+      %p O Checker conta com um sistema de geolocalização que melhora confiabilidade de cada checagem do seu funcionário.

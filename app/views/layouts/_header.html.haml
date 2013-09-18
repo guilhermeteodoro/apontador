@@ -1,7 +1,21 @@
-%header#main
-  = image_tag("location.png")
-  %span.main-logo Checker
+-if session[:id]
+  %header#main
+    = image_tag("location.png")
+    %span.main-logo Checker
+    %nav#nav-header
 
-  / %nav
-  /   %ul
-  /     %li CONTATO
+      -if session[:manager]
+        %ul
+          %li
+            = link_to 'Editar Perfil', edit_manager_user_path
+            |
+          %li
+            = link_to 'Deletar Conta', manager_user_path, method: :delete, data: { confirm: "Essa ação irá deletar também seus funcionários e sua empresa. Você tem certeza que deseja fazer isso?" }
+            |
+          %li= link_to 'Logout', logout_path
+
+-else
+  %header#header-landing
+    #image
+      = image_tag('banner.png')
+    / %p.landing-logo Checker

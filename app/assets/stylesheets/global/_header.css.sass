@@ -1,17 +1,28 @@
 @import compass/css3
 
-header#main
+#main, #header-landing
   background-color: #FCFCFC
-  height: 2.5em
   padding: 3%
   width: 94%
   img
     height: 2em
-    widows: 2em
 
 .main-logo
   color: #193441
   font: 2.5em "bebas_neueregular"
-  margin: 0 5px
-  +text-shadow(1px, 1px, 1px, #fff)
+  letter-spacing: 0.05em
+  margin: 0 0.2%
+  +text-shadow(1px 1px 1px #fff)
   text-transform: uppercase
+
+#header-landing
+  text-align: center
+  #image
+    display: block
+    margin: 0 auto
+    width: 50%
+  img
+    height: 100%
+    width: 100%
+    max-width: 100%
+    max-height: 100%
