@@ -7,10 +7,9 @@
     = csrf_meta_tags
 
   %body
-
+    = render partial: 'layouts/header'
     #wrap
       = yield
       #push
 
-    #footer
-      %p Desenvolvido por Guilherme Teodoro no #{link_to 'ClickJogos', 'http://www.clickjogos.com.br'} Bootcamp
+    = render partial: 'layouts/footer'

@@ -1,24 +1,27 @@
-%nav
-  %header
-    %h1 Checker
+%section#main-content
+  %section#right-content
+    %article
+      %header
+        %h1 An Strong App
+      %p Perfect to manage your freelancer in the confort of your home!
 
-%section
-  %header
-    %h2 Sign in
-
-  = form_tag "/login" do
+  %aside#left-aside
+    %header
+      %h2 Sign in
 
     #message= flash_message
 
-    %fieldset
-      %input#username{name: "username", type: "text", placeholder: "Username ou Email", imput_html: {size: 2}}/
+    = form_tag "/login" do
 
-    %fieldset
-      %input#password{name: "password", type: "password", placeholder: "Password"}/
+      %fieldset
+        %input#username{name: "username", type: "text", placeholder: "Username ou Email", imput_html: {size: 2}}
 
-    %fieldset
-      %input{:type => "submit", :value => "Login"}/
+      %fieldset
+        %input#password{name: "password", type: "password", placeholder: "Password"}
 
-    %p
-      or
-      = link_to 'Sign up', signup_path
+      %fieldset
+        %input.button{type: "submit", value: "Login"}
+
+      %p
+        or
+        = link_to 'Sign up', signup_path
