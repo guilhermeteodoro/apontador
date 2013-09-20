@@ -3,24 +3,6 @@
   .blocks
 
     %section#login-landing
-    / %header
-    /   %h2 Sign in
-
-    #message= flash_message
-
-    = form_tag "/login" do
-
-      %fieldset
-        %input#username{name: "username", type: "text", placeholder: "Username ou Email", imput_html: {size: 2}}
-
-        %input#password{name: "password", type: "password", placeholder: "Password"}
-
-
-        %input.button{type: "submit", value: "Login"}
-
-      %p
-        or
-        = link_to 'Sign up', signup_path
 
     %article.item
       %header
@@ -39,3 +21,27 @@
         = image_tag ('desktop.png')
         %h2 Checagem confiável
       %p O Checker conta com um sistema de geolocalização que melhora confiabilidade de cada checagem do seu funcionário.
+
+
+//
+//
+//
+//
+//
+//
+//
+/ #message= flash_message
+
+/     = form_tag "/login" do
+
+/       %fieldset
+/         %input#username{name: "username", type: "text", placeholder: "Username ou Email", imput_html: {size: 2}}
+
+/         %input#password{name: "password", type: "password", placeholder: "Password"}
+
+
+/         %input.button{type: "submit", value: "Login"}
+
+/       %p
+/         or
+/         = link_to 'Sign up', signup_path
