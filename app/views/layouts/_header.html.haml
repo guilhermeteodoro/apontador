@@ -1,22 +1,11 @@
--if session[:id]
-  %header#main
-  //trocar no css
-    = image_tag("location.png")
-    %span.main-logo Checker
-    %nav#nav-header
+%header#main
+  .main-logo
+    %a{href: root_path}
+      %span checker
 
-      -if session[:manager]
-        %ul
-          %li
-            = link_to 'Editar Perfil', edit_manager_user_path
-            |
-          %li
-            = link_to 'Deletar Conta', manager_user_path, method: :delete, data: { confirm: "Essa ação irá deletar também seus funcionários e sua empresa. Você tem certeza que deseja fazer isso?" }
-            |
-          %li= link_to 'Logout', logout_path
-
--else
-  %header#header-landing
-    #image
-      = image_tag('banner.png')
-    / %p.landing-logo Checker
+  %nav.nav-header
+    -if session[:manager]
+      %ul
+        %li= link_to 'Editar', edit_manager_user_path
+        %li= link_to 'Excluir', manager_user_path, method: :delete, data: { confirm: "Essa ação irá deletar também seus funcionários e sua empresa. Você tem certeza que deseja fazer isso?" }
+        %li= link_to 'Logout', logout_path

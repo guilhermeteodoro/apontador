@@ -1,26 +1,26 @@
 %section#left-content
 
-  .blocks
+  / .blocks
 
-    %section#login-landing
+  /   %section#login-landing
 
-    %article.item
-      %header
-        = image_tag ('setting.png')
-        %h2 Melhora nas tarefas
-      %p Com o Checker suas tarefas mais ágeis com horários mais bem definidos fazem o sucesso de um projeto.
+  /   %article.item
+  /     %header
+  /       = image_tag ('setting.png')
+  /       %h2 Melhora nas tarefas
+  /     %p Com o Checker suas tarefas mais ágeis com horários mais bem definidos fazem o sucesso de um projeto.
 
-    %article.item
-      %header
-        = image_tag ('security.png')
-        %h2 Processo seguro
-      %p Todas as tarefas são sempre definidas com um valor que deve ser mantido até o final.
+  /   %article.item
+  /     %header
+  /       = image_tag ('security.png')
+  /       %h2 Processo seguro
+  /     %p Todas as tarefas são sempre definidas com um valor que deve ser mantido até o final.
 
-    %article.item
-      %header
-        = image_tag ('desktop.png')
-        %h2 Checagem confiável
-      %p O Checker conta com um sistema de geolocalização que melhora confiabilidade de cada checagem do seu funcionário.
+  /   %article.item
+  /     %header
+  /       = image_tag ('desktop.png')
+  /       %h2 Checagem confiável
+  /     %p O Checker conta com um sistema de geolocalização que melhora confiabilidade de cada checagem do seu funcionário.
 
 
 //
@@ -30,18 +30,22 @@
 //
 //
 //
-/ #message= flash_message
 
-/     = form_tag "/login" do
+.login
+  #message= flash_message
 
-/       %fieldset
-/         %input#username{name: "username", type: "text", placeholder: "Username ou Email", imput_html: {size: 2}}
+  %h2 Sign In
 
-/         %input#password{name: "password", type: "password", placeholder: "Password"}
+  = form_tag "/login" do
+    %fieldset
+      %input#username{name: "username", type: "text", placeholder: "Username ou Email", imput_html: {size: 2}}
 
+    %fieldset
+      %input#password{name: "password", type: "password", placeholder: "Password"}
 
-/         %input.button{type: "submit", value: "Login"}
+    %fieldset
+      %input.button{type: "submit", value: "Login"}
 
-/       %p
-/         or
-/         = link_to 'Sign up', signup_path
+    %p
+      or
+      = link_to 'Sign up', signup_path

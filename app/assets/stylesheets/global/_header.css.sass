@@ -1,28 +1,58 @@
 @import compass/css3
 
-#main, #header-landing
-  background-color: #FCFCFC
+// #main
+//   background-color: #FCFCFC
+//   padding: 3%
+//   width: 100%
+//   img
+//     height: 2em
+
+// .main-logo
+//   color: black
+//   font: 2.5em "Roboto Slab", serif
+//   margin: 0 0.2%
+//   +text-shadow(1px 1px 1px #fff)
+//   text-transform: lowercase
+
+#main
   padding: 3%
-  width: 94%
-  img
-    height: 2em
+  position: relative
+  width: 100%
 
 .main-logo
-  color: #193441
-  font: 2.5em "bebas_neueregular"
-  letter-spacing: 0.05em
-  margin: 0 0.2%
-  +text-shadow(1px 1px 1px #fff)
-  text-transform: uppercase
+  color: black
+  font: 2.5em "Patua One"
+  margin: 0 1%
+  text-transform: lowercase
+  +text-shadow(1px 2px 1px #fff)
+  span
+    background: url(compass_.png) no-repeat
+    background-size: 1.2em
+    padding-left: 1.3em
+    position: relative
+    width: 5em
+  a, a:hover, a:visited, a:active
+    color: black
+    text-decoration: none
 
-#header-landing
-  text-align: center
-  #image
-    display: block
-    margin: 0 auto
-    width: 50%
-  img
-    height: 100%
-    width: 100%
-    max-width: 100%
-    max-height: 100%
+
+.nav-header
+  float: right
+  top: 35%
+  right: 5%
+  position: absolute
+  li
+    float: left
+  a
+    color: black
+    font: 0.70em "Open Sans"
+    font-weight: 700
+    margin: 0 0.5em 0 0.5em
+    text-transform: uppercase
+    +text-shadow(1px 2px 1px #fff)
+    &:visited, &:hover
+      color: black
+      text-decoration: none
+    &:hover
+      opacity: 0.5
+

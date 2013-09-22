@@ -54,10 +54,6 @@ class Manager::UsersController < ApplicationController
 
   private
   def resolve_layout
-    if action_name == "new"
-      "login"
-    else
-      "manager"
-    end
+    "manager" unless action_name == "new"
   end
 end

@@ -1,6 +1,11 @@
+*
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
 body
-  background-color: #F7F7F7
-  font: 18px/20px "open_sansregular"
+  background: url(bg-noise.png)
+  font: 18px/20px "Open Sans"
 
 h1
   font: 2em/1.5em "Pathway Gothic One"
@@ -10,7 +15,7 @@ h3
   font: 1.2em/1.2em "Pathway Gothic One"
 
 p
-  font: 1em/1.5em "open_sansregular"
+  font: 1em/1.5em "Open Sans"
 
 article
   padding: 0
@@ -18,10 +23,11 @@ article
 
 a
   text-decoration: none
+  color: #4E6BE8
   &:hover
     text-decoration: underline
   &:visited
-    color: #249AA7
+    color: #4E6BE8
 
 .blocks
   margin: 0 auto
@@ -30,8 +36,8 @@ a
 
 .item
   float: left
-  width: 27%
-  padding: 0 3% 0 3%
+  width: 33.33333%
+  padding: 0 5% 0 5%
   p
     font-size: 0.75em
     margin-top: 0.75em
@@ -39,15 +45,111 @@ a
     height: 5em
     width: 5em
 
-#nav-header
-  float: right
-  li
-    float: left
-
 #main-content
-  padding: 2% 3% 5% 3%
+  padding: 2% 4% 5% 4%
 
-#landing-login
-  margin: 0 auto
-  width: 30%
+.menu
+  float: left
+  width: 20em
 
+.content
+  float: left
+  padding-left: 5%
+
+
+.btn, .btn:hover, .btn:active, .btn:visited
+  background: black
+  color: white
+  display: inline-block
+  font: 700 0.8em "Open Sans"
+  padding: 1em
+  opacity: 0.7
+  text-decoration: none
+  text-transform: uppercase
+  margin: 0.25em 0 0.25em 0
+  &:hover
+    opacity: 1
+
+.btn-mini, .btn-large:hover, .btn-large:active, .btn-large:visited
+  width: 80%
+
+.btn-mini, .btn-mini:hover, .btn-mini:active, .btn-mini:visited
+  padding: 0.5em 1em 0.5em 1em
+  width: 100%
+
+.btn-green, .btn-green:hover, .btn-green:active, .btn-green:visited
+  background: #3CCF27
+  border: solid 1px #32B120
+  text-shadow: 1px 1px 1px #32B120
+
+.btn-yellow, .btn-yellow:hover, .btn-yellow:active, .btn-yellow:visited
+  background: #F0BA0F
+  border: solid 1px #D3A209
+
+.btn-striped, .btn-striped:hover, .btn-striped:active, .btn-striped:visited
+  background: none
+  border: 0.5em solid black
+  color: black
+  width: 80%
+  &:hover
+    background: black
+    color: white
+    opacity: 0.8
+
+.v-divider, .h-divider
+  color: black
+  float: left
+  opacity: 0.3
+
+.v-divider
+  height: 20em
+  width: 1px
+
+.h-divider
+  width: 90%
+
+.center
+  text-align: center
+
+.error
+  color: red
+  display: block
+  text-transform: uppercase
+  width: 100%
+
+.item
+  background: rgb(235, 235, 235)
+  float: left
+  height: 15em
+  padding: 1em
+  position: relative
+  text-align: center
+  width: 13em
+  h3
+    display: block
+    width: 100%
+
+  a
+    font: 700 0.8em "Open Sans"
+  #email, #address
+    font-size: 0.75em
+    text
+  #address
+    font-weight: bold
+
+  .task
+    font: 700 0.8em "Open Sans"
+    text-transform: uppercase
+  .status
+    font: 300 3em "Open Sans"
+    margin-top: 0.1em
+    margin-bottom: 0.1em
+    display: block
+  .hours
+  &:hover
+    background: rgb(225, 225, 225)
+
+  footer
+    width: 85%
+    position: absolute
+    bottom: 0.5em
