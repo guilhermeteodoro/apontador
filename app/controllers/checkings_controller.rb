@@ -1,13 +1,12 @@
 #encoding: UTF-8
 class CheckingsController < ApplicationController
-  layout "employee"
 
   before_filter :logged?, :current_user, :not_a_checker?
   before_filter :coordinates?, only: [:create, :update]
 
   def new
     if @current_user.checkings.present? &&
-       @current_user.checkings.last.checked_in_at.present? && 
+       @current_user.checkings.last.checked_in_at.present? &&
        @current_user.checkings.last.checked_out_at.nil?
        return redirect_to action: :edit
     end

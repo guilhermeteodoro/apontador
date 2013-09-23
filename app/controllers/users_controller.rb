@@ -1,7 +1,7 @@
 #encoding: UTF-8
 class UsersController < ApplicationController
 
-  layout :resolve_layout
+  # layout :resolve_layout
 
   before_filter :logged?, :current_user
   before_filter :manager?, except: [:edit, :update, :report]

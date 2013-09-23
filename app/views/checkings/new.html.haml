@@ -1,16 +1,14 @@
-.span5.offset3
-  %h4.text-center #{@current_user.name},
-  %p.text-center
-    %b
-      clique em check-in para iniciar a contagem
+%h1.center #{@current_user.name}
+/ %p.muted.center
+/   %b clique em check-in para iniciar a contagem
 
 
-  #message= flash_message
+#message= flash_message
 
-  %br
-  #clock.clearfix
-  %br
+%br
+#clock
+%br
 
-  .text-center
-    = form_for @checking do |f|
-      - render partial: 'form', locals: { f: f, button_name: "Check-in" }
+.center
+  = form_for @checking do |f|
+    - render partial: 'form', locals: { f: f, button_name: "Check-in" }
