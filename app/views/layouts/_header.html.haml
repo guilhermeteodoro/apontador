@@ -6,6 +6,5 @@
   %nav.nav-header
     -if session[:manager]
       %ul
-        %li= link_to 'Editar', edit_manager_user_path
-        %li= link_to 'Excluir', manager_user_path, method: :delete, data: { confirm: "Essa ação irá deletar também seus funcionários e sua empresa. Você tem certeza que deseja fazer isso?" }
+        %li= link_to 'Perfil', edit_manager_user_path
         %li= link_to 'Logout', logout_path

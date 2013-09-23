@@ -6,29 +6,33 @@
     %ul
       - @employee.errors.full_messages.each do |msg|
         %li= msg
-%small.muted
-  %p Campos obrigatórios *
-.field
-  = f.label "Nome*"
-  = f.text_field :first_name, placeholder: "João"
-  = f.label "Sobrenome*"
-  = f.text_field :last_name, placeholder: "da Silva"
-.field
-  = f.label "Username*"
-  = f.text_field :username, placeholder: "joaodasilva"
 
-.field
-  = f.label "Email*"
-  = f.text_field :email, placeholder: "joaodasilva@mailinator.com"
+%p.muted * Campos Obrigatórios
+%br
+
+%fieldset
+  .field
+    = f.label "Nome*"
+    = f.text_field :first_name, placeholder: "João"
+  .field
+    = f.label "Sobrenome*"
+    = f.text_field :last_name, placeholder: "da Silva"
+%fieldset
+  .field
+    = f.label "Username*"
+    = f.text_field :username, placeholder: "joaodasilva"
+  .field
+    = f.label "Email*"
+    = f.text_field :email, placeholder: "joaodasilva@mailinator.com"
 
 - if @current_user.manager?
   = render partial: 'address', locals: { f: f }
 
 - if @current_user.manager? == false && edit == true
-  .field
+  %fieldset
     = f.label "Password*"
     = f.password_field :plain_password
 
-.button
-  = f.submit :Salvar, class: 'btn btn-info'
-  = link_to 'Voltar', root_path, class: 'btn btn-inverse'
+= f.submit :Salvar
+%br
+= link_to '<< Voltar', root_path

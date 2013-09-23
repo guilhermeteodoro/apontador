@@ -1,41 +1,39 @@
-- if @manager.errors.any?
-  #error_explanation
-    %h2
-      = pluralize(@manager.errors.count, "error")
-      prohibited this user from being saved:
-    %ul
-      - @manager.errors.full_messages.each do |msg|
-        %li= msg
 
-%small.muted
-  %p Campos obrigatórios *
-.field
-  = f.label "Nome*"
-  = f.text_field :first_name, placeholder: "João"
-.field
-  = f.label "Sobrenome*"
-  = f.text_field :last_name, placeholder: "da Silva"
-.field
-  = f.label "Email*"
-  = f.text_field :email, placeholder: "joaodasilva@mailinator.com"
-.field
-  = f.label "Username"
-  = f.text_field :username, placeholder: "joaodasilva"
-.field
-  = f.label "Password*"
-  = f.password_field :plain_password
-%h4
-  Address
-.field
-  = f.label "Rua*"
-  = f.text_field :street, placeholder: "Rua Tal"
-.field
-  = f.label "Número*"
-  = f.text_field :number, placeholder: "98654"
-.field
-  = f.label "Cidade*"
-  = f.text_field :city, placeholder: "Cidade Tal"
+%p.muted * Campos Obrigatórios
 %br
-.button
-  = f.submit :Salvar, class: "btn btn-info"
-  = link_to 'Voltar', root_path, class: 'btn btn-inverse'
+
+%fieldset
+  .field
+    = f.label "Nome*"
+    = f.text_field :first_name, placeholder: "João"
+  .field
+    = f.label "Sobrenome*"
+    = f.text_field :last_name, placeholder: "da Silva"
+%fieldset
+  .field
+    = f.label "Username*"
+    = f.text_field :username, placeholder: "joaodasilva"
+  .field
+    = f.label "Email*"
+    = f.text_field :email, placeholder: "joaodasilva@mailinator.com"
+
+%fieldset
+  .field
+    = f.label "Password*"
+    = f.password_field :plain_password, placeholder: "*****"
+
+%fieldset
+  .field
+    = f.label "Rua*"
+    = f.text_field :street, placeholder: "Rua Tal"
+  .field
+    = f.label "Número*"
+    = f.text_field :number, placeholder: "87964"
+  .field
+    = f.label "Cidade*"
+    = f.text_field :city, placeholder: "Cidade Tal"
+
+
+= f.submit :Salvar
+%br
+= link_to '<< Voltar', root_path

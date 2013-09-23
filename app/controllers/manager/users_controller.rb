@@ -1,5 +1,4 @@
 class Manager::UsersController < ApplicationController
-  layout :resolve_layout
 
   before_filter :logged?, :current_user, :manager?, :current_company, except: [:new, :create]
 
@@ -54,6 +53,6 @@ class Manager::UsersController < ApplicationController
 
   private
   def resolve_layout
-    "manager" unless action_name == "new"
+    "manager" if action_name == "new"
   end
 end

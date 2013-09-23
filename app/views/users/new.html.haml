@@ -1,7 +1,7 @@
-.page-header
-  %h1 Novo Funcionário
+%h1 Novo Funcionário
 
 #message= flash_message
 
-= form_for @employee, url: users_path do |f|
-  = render partial: 'form', locals: { f: f, pass: true }
+.base
+  = form_for @employee, url: users_path do |f|
+    = render partial: 'form', locals: { f: f, pass: true }

@@ -1,7 +1,7 @@
-%h1.logo-font.text-center Checker
+%h1 Cadastre-se!
 
 #message= flash_message
-.span5.offset1
-  %h4 Cadastre-se!
+
+.base
   = form_for [:manager, @manager], url: manager_user_path, html: {:class => "form-horizontal"} do |f|
     = render partial: 'form', locals: { f: f }

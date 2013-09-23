@@ -86,7 +86,7 @@ class UsersController < ApplicationController
 
   private
   def resolve_layout
-    return "employee" if action_name=="report" || (action_name=="edit" && !@current_user.manager?)
+    return "application" if action_name=="report" || (action_name=="edit" && !@current_user.manager?)
     "manager"
   end
 end
