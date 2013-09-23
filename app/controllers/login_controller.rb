@@ -1,19 +1,8 @@
 class LoginController < ApplicationController
 
-  def redirecter
-    if session[:id].present?
-      if session[:manager]
-        redirect_to '/manager'
-      else
-        redirect_to check_in_path
-      end
-    else
-      redirect_to action: :login
-    end
-  end
-
   def login
     if request.post?
+      reset_session
       username = params[:username]
       password = params[:password]
       if username.blank? && password.blank?
@@ -37,7 +26,7 @@ class LoginController < ApplicationController
       session[:name] = user.name
       session[:manager] = user.manager?
       if session[:manager]
-        redirect_to "/manager"
+        redirect_to manager_users_path
       else
         redirect_to check_in_path
       end
@@ -45,9 +34,7 @@ class LoginController < ApplicationController
   end
 
   def logout
-    session[:id] = nil
-    session[:name] = nil
-    session[:manager] = nil
+    reset_session
     redirect_to action: :login
   end
 end

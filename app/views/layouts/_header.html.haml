@@ -4,7 +4,11 @@
       %span checker
 
   %nav.nav-header
-    -if session[:manager]
+    - if session[:id]
+      - if session[:manager]
+        %ul
+          %li= link_to 'Perfil', edit_manager_user_path
+          %li= link_to 'Logout', logout_path
+    - else
       %ul
-        %li= link_to 'Perfil', edit_manager_user_path
-        %li= link_to 'Logout', logout_path
+        %li= link_to 'Login', login_path

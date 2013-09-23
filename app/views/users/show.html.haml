@@ -1,50 +1,46 @@
-.block
-  .pull-left
-    %h3= @employee.name
-    = @employee.full_address
-    %br
-    = @employee.email
-.block
-  .pull-right
-    .btn-toolbar
-      = link_to 'Editar', edit_user_path(@employee.username), class: 'btn btn-small btn-inverse'
-      = link_to 'Deletar funcionário', user_path, method: :delete, data: { confirm: 'Você tem certeza de que deseja deletar esse funcionário?' }, class: 'btn btn-small btn-inverse'
-.page-header.clearfix
+%section
+  %h1= @employee.name
+  = @employee.full_address
+  %br
+  = @employee.email
+
+  %aside.pull-right
+    = link_to 'Editar', edit_user_path(@employee.username)
+    / = link_to 'Deletar funcionário', user_path, method: :delete, data: { confirm: 'Você tem certeza de que deseja deletar esse funcionário?' }
 
 #message= flash_message
 
+%br
+
 - if @employee.checkings.present?
-  .clearfix
-    = form_for @employee, url: user_path(@employee.username) do |f|
-      %h4 Checkagens Desaprovadas / Não visualizadas
+  %section
+    .fixed-table
+      = form_for @employee, url: user_path(@employee.username) do |f|
+        %h3.table-title Checkagens Não Aprovadas
 
-      - if @employee.checkings.not_approveds.present?
-        = render partial: 'show_table', locals: { f: f, group: @employee.checkings.not_approveds, inverted: false }
-        = f.submit 'Aprovar', class: 'btn btn-info pull-right'
-      - else
-        .alert.alert-warning
-          Não existem checagens a serem aprovadas
+        - if @employee.checkings.not_approveds.present?
+          = render partial: 'show_table', locals: { f: f, group: @employee.checkings.not_approveds, inverted: false, button_name: "Aprovar", button_class: 'btn btn-green'  }
+          / = f.submit 'Aprovar', class: 'btn btn-green btn-large'
+        - else
+          .no-checking-warning
+            %p Não existem checagens a serem aprovadas
 
-  .clearfix
-    = form_for @employee, url: user_path(@employee.username) do |f|
-      %h4 Checkagens Aprovadas
+  %section
+    .fixed-table
+      = form_for @employee, url: user_path(@employee.username) do |f|
+        %h3.table-title Checkagens Aprovadas
 
-      - if @employee.checkings.approveds.present?
-        = render partial: 'show_table', locals: { f: f, group: @employee.checkings.approveds, inverted: true }
-        = f.submit 'Desaprovar', class: 'btn btn-warning pull-right'
+        - if @employee.checkings.approveds.present?
+          = render partial: 'show_table', locals: { f: f, group: @employee.checkings.approveds, inverted: true, button_name: "Desaprovar", button_class: 'btn btn-yellow' }
+          %br
 
-        %br
-        .clearfix
-          .text-center
-            = link_to 'Gerar Pagamento', '#'
-        %br
-
-      - else
-        .alert.alert-warning
-          Não existem checagens aprovadas
+        - else
+          .no-checking-warning
+            %p Não existem checagens aprovadas
 
 - else
-  .alert.alert-warning
-    #{@employee.name} ainda não fez nenhuma checagem
+  #{@employee.name} ainda não fez nenhuma checagem
 
 %br
+%section.clear
+  = link_to '<< Voltar', root_path

@@ -75,18 +75,24 @@ a
 .bold
   font-weight: bold
 
+.clear
+  clear: both
+
 .muted
   color: grey
   font-size: 0.70em
 
 .item
-  background: rgb(235, 235, 235)
+  border: 0.3em solid #E0E0E0
   float: left
   height: 15em
   padding: 1em
   position: relative
   text-align: center
   width: 13em
+  &:hover
+    background: #EBEBEB
+    border: 0.3em solid #EBEBEB
   h3
     display: block
     width: 100%
@@ -108,8 +114,6 @@ a
     margin-bottom: 0.1em
     display: block
   .hours
-  &:hover
-    background: rgb(225, 225, 225)
 
   footer
     width: 85%

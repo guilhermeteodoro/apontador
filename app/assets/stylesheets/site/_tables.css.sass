@@ -1,0 +1,67 @@
+.table-title
+  color: #222
+  font: 700 1.2em 'Open Sans'
+  margin: 0.3em 0
+  text-transform: uppercase
+
+.no-checking-warning
+  border: dashed 2px #B2B2B2
+  padding: 2em 0
+  text-transform: uppercase
+  text-align: center
+  p
+    color: #A2A2A2
+    font: 700 0.75em 'Open Sans'
+
+
+
+.fixed-table
+  float: left
+  padding-right: 1em
+  width: 34em
+
+  table
+    border-collapse: collapse
+    width: 100%
+
+    tr :last-child
+      border-right: none
+
+    thead
+      background: #222
+      color: grey
+      th
+        border-right: dotted 1px #4D4D4D
+        text-transform: uppercase
+        padding: 1em
+        & :first-child
+          color: white
+          font: normal 1.2em "Patua One"
+          text-transform: none
+        p
+          font-family: 'Cantarell', sans-serif
+          font-size: 0.55em
+          font-weight: 700
+
+    tbody
+      background: #E3E3E3
+      font: 700 0.9em 'Roboto Slab'
+      padding-top: 1em
+      td
+        border-right: dotted 1px #222
+        padding: 0.5em
+      .date
+        font-size: 0.8em
+
+    tfoot
+      background: #D3D3D3
+      font: 700 0.9em 'Roboto Slab'
+      td
+        padding: 0.5em
+      .button
+        padding: 0
+        background: none
+        input[type="submit"]
+          width: 100%
+
+
