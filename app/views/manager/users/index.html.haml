@@ -14,8 +14,7 @@
   #message= flash_message
   -if @current_user.company_id.nil?
     %br
-    %h4.error Você ainda não possui uma empresa cadastrada
-    %h4 Por favor, crie uma para prosseguir
+    %h4.error Você ainda não possui uma empresa cadastrada. Por favor, crie uma para prosseguir
   -else
     - if @employees
       - @employees.each do |employee|

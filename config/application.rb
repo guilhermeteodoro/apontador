@@ -19,6 +19,8 @@ module Checker
     config.assets.initialize_on_precompile = false
     config.assets.enabled = true
     config.assets.version = '1.0'
+    config.i18n.load_path += Dir[Rails.root.join("config/locales/**/*.yml").to_s]
+    config.i18n.default_locale = :"pt-BR"
 
     #Gmail mailer configs
     config.action_mailer.delivery_method = :smtp

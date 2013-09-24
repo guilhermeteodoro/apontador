@@ -30,6 +30,7 @@ group :production do
   gem 'pg'
 end
 
+gem 'jquery-rails', '~> 3.0.4'
 gem 'haml', '~> 4.0'
 
 ruby '2.0.0'

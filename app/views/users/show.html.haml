@@ -13,33 +13,35 @@
 %br
 
 - if @employee.checkings.present?
-  %section
-    .fixed-table
-      = form_for @employee, url: user_path(@employee.username) do |f|
-        %h3.table-title Checkagens Não Aprovadas
+  %section.table
+    %section
+      .base-table
+        = form_for @employee, url: user_path(@employee.username) do |f|
+          %h3.table-title Checkagens Não Aprovadas
 
-        - if @employee.checkings.not_approveds.present?
-          = render partial: 'show_table', locals: { f: f, group: @employee.checkings.not_approveds, inverted: false, button_name: "Aprovar", button_class: 'btn btn-green'  }
-          / = f.submit 'Aprovar', class: 'btn btn-green btn-large'
-        - else
-          .no-checking-warning
-            %p Não existem checagens a serem aprovadas
+          - if @employee.checkings.not_approveds.present?
+            = render partial: 'show_table', locals: { f: f, group: @employee.checkings.not_approveds, inverted: false, button_name: "Aprovar", button_class: 'btn btn-green'  }
+            / = f.submit 'Aprovar', class: 'btn btn-green btn-large'
+          - else
+            .no-checking-warning
+              %p Não existem checagens a serem aprovadas
 
-  %section
-    .fixed-table
-      = form_for @employee, url: user_path(@employee.username) do |f|
-        %h3.table-title Checkagens Aprovadas
+    %section
+      .base-table
+        = form_for @employee, url: user_path(@employee.username) do |f|
+          %h3.table-title Checkagens Aprovadas
 
-        - if @employee.checkings.approveds.present?
-          = render partial: 'show_table', locals: { f: f, group: @employee.checkings.approveds, inverted: true, button_name: "Desaprovar", button_class: 'btn btn-yellow' }
-          %br
+          - if @employee.checkings.approveds.present?
+            = render partial: 'show_table', locals: { f: f, group: @employee.checkings.approveds, inverted: true, button_name: "Desaprovar", button_class: 'btn btn-yellow' }
+            %br
 
-        - else
-          .no-checking-warning
-            %p Não existem checagens aprovadas
+          - else
+            .no-checking-warning
+              %p Não existem checagens aprovadas
 
 - else
-  #{@employee.name} ainda não fez nenhuma checagem
+  .no-checking-warning
+    %p #{@employee.name} ainda não fez nenhuma checagem
 
 %br
 %section.clear

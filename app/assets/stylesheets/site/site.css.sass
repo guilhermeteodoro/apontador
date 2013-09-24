@@ -1,3 +1,5 @@
+// Box Model
+//----------
 *
   -moz-box-sizing: border-box
   -webkit-box-sizing: border-box
@@ -29,58 +31,39 @@ a
   &:visited
     color: #4E6BE8
 
-.blocks
-  margin: 0 auto
-  text-align: center
-  width: 90%
+input[type="button"]
+  -webkit-appearance: none
+  border-radius: 0
 
 #main-content
   padding: 2% 4% 5% 4%
 
-#clock
-  font: 200 4em "Open Sans"
-  padding: 0
-  margin: 0
-  text-align: center
 
+//-------------------------
+//    For fixed layout    |
+//-------------------------
+
+// Divs
 .menu
   float: left
   width: 20em
 
 .content
   float: left
+  left: 23em
   padding-left: 5%
+  position: absolute
 
-
-.v-divider, .h-divider
-  color: black
-  float: left
-  opacity: 0.3
-
-.v-divider
-  height: 20em
-  width: 1px
-
-.h-divider
-  width: 90%
-
-.center
+.blocks
+  margin: 0 auto
   text-align: center
-
-.bold
-  font-weight: bold
-
-.clear
-  clear: both
-
-.muted
-  color: grey
-  font-size: 0.70em
+  width: 90%
 
 .item
   border: 0.3em solid #E0E0E0
   float: left
   height: 15em
+  margin-right: 0.6em
   padding: 1em
   position: relative
   text-align: center
@@ -115,6 +98,20 @@ a
     position: absolute
     bottom: 0.5em
 
+
+// Decorative
+.v-divider, .h-divider
+  color: black
+  float: left
+  opacity: 0.3
+
+.v-divider
+  height: 20em
+  width: 1px
+
+.h-divider
+  width: 90%
+
 .delete-account
   background: #EEEEEE
   border: dashed 2px #e6e6e6
@@ -125,3 +122,39 @@ a
   width: 100%
   a
     color: grey
+
+
+//-------------------------
+//    For fluid layout    |
+//-------------------------
+
+
+.fluid-content
+  width: 50%
+  margin: 0 auto
+  .btn-fluid, .btn-fluid:hover
+    width: 90%
+
+#clock
+  font: 200 4em "Open Sans"
+  padding: 0
+  margin: 0
+  text-align: center
+
+
+//-------------------------
+//    General Styling     |
+//-------------------------
+
+.center
+  text-align: center
+
+.bold
+  font-weight: bold
+
+.clear
+  clear: both
+
+.muted
+  color: grey
+  font-size: 0.70em

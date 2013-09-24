@@ -13,8 +13,8 @@ module ApplicationHelper
             messages += '<p class="alert alert-danger">'"#{flash[type]}</p>"
           when :error
             if flash[type].kind_of? Array
-              messages += '<div class="alert alert-error">'
-              messages += '<a class="close" data-dismiss="alert" href="#">x</a>'
+              messages += '<div class="error">'
+              messages += '<p class="close"></p>'
               flash[:error].each{|f| messages += "<p>#{f}</p>"}
               messages += '</div>'
             else

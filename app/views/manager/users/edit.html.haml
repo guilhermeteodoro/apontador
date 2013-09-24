@@ -2,7 +2,7 @@
 
 #message= flash_message
 
-.base
+.base-form
   = form_for [:manager, @manager], url: manager_user_path(@manager) do |f|
     = render partial: 'form', locals: { f: f }
 %br

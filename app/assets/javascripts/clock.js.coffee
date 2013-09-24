@@ -1,4 +1,4 @@
-window.show = () ->
+window.startClock = () ->
   clockobj = (if document.getElementById then document.getElementById("clock") else document.all.digitalclock)  unless standardbrowser
   Digital = new Date()
   hours = Digital.getHours()
@@ -20,8 +20,8 @@ window.show = () ->
     else
       clockobj.innerHTML = hours + ":" + minutes
   alternate = (if (alternate is 0) then 1 else 0)
-  setTimeout "show()", 1000
+  setTimeout "startClock()", 1000
 alternate = 0
 standardbrowser = not document.all and not document.getElementById
 document.write ""  if standardbrowser
-window.onload = show
+window.onload = startClock()
