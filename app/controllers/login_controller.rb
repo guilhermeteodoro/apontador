@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class LoginController < ApplicationController
 
   def login
@@ -6,20 +7,20 @@ class LoginController < ApplicationController
       username = params[:username]
       password = params[:password]
       if username.blank? && password.blank?
-        flash[:error] = "Invalid username/email or password"
+        flash[:error] = "Username/email ou senha inválida"
         return
       end
       if username.blank?
-        flash[:error] = "Invalid username/email"
+        flash[:error] = "Username/email inválido"
         return
       end
       if password.blank?
-        flash[:error] = "Invalid password"
+        flash[:error] = "Senha inválida"
         return
       end
       user = User.authenticate(username: username, password: password)
       if user.nil?
-        flash[:error] = "Invalid username/email or password"
+        flash[:error] = "Username/email ou senha inválida"
         return
       end
       session[:id] = user.id

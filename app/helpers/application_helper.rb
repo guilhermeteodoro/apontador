@@ -3,7 +3,8 @@ module ApplicationHelper
 
   def error_for(record, attribute)
     message = record.errors[attribute].first
-    content_tag :span, message.capitalize, class: "form-error" if message
+    name = t("activerecord.attributes.#{record.class.to_s.downcase}.#{attribute}").capitalize
+    content_tag :span, "#{name} #{message}", class: "form-error" if message
   end
 
   def flash_message
@@ -18,14 +19,7 @@ module ApplicationHelper
           when :warning
             messages += '<p class="alert alert-danger">'"#{flash[type]}</p>"
           when :error
-            if flash[type].kind_of? Array
-              messages += '<div class="error">'
-              messages += '<p class="close"></p>'
-              flash[:error].each{|f| messages += "<p>#{f}</p>"}
-              messages += '</div>'
-            else
-              messages += '<p class="alert alert-error">'"#{flash[type]}</p>"
-            end
+            messages += '<p class="error">'"#{flash[type]}</p>"
         end
       end
     end

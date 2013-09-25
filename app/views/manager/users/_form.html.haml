@@ -1,5 +1,4 @@
-
-%p.muted * Campos Obrigatórios
+%p.muted Todos os campos são obrigatórios
 %br
 
 %fieldset
@@ -44,4 +43,8 @@
 
 = f.submit :Salvar
 %br
-= link_to '<< Voltar', root_path
+.link-bottom
+  - if session[:id]
+    = link_to '<< Voltar', root_path
+  - else
+    = link_to '<< Voltar', login_path
