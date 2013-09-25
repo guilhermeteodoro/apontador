@@ -1,37 +1,33 @@
-- if @employee.errors.any?
-  #error_explanation
-    %h2
-      = pluralize(@employee.errors.count, "error")
-      prohibited this user from being saved:
-    %ul
-      - @employee.errors.full_messages.each do |msg|
-        %li= msg
-
 %p.muted * Campos Obrigatórios
 %br
-
+-p user
 %fieldset
   .field
-    = f.label "Nome*"
+    = f.label :first_name
     = f.text_field :first_name, placeholder: "João"
+    = error_for user, :first_name
   .field
-    = f.label "Sobrenome*"
+    = f.label :last_name
     = f.text_field :last_name, placeholder: "da Silva"
+    = error_for user, :last_name
 %fieldset
   .field
-    = f.label "Username*"
+    = f.label :username
     = f.text_field :username, placeholder: "joaodasilva"
+    = error_for user, :username
   .field
-    = f.label "Email*"
+    = f.label :email
     = f.text_field :email, placeholder: "joaodasilva@mailinator.com"
+    = error_for user, :email
 
 - if @current_user.manager?
-  = render partial: 'address', locals: { f: f }
+  = render partial: 'address', locals: { f: f, user: user }
 
-- if @current_user.manager? == false && edit == true
+- unless @current_user.manager?
   %fieldset
-    = f.label "Password*"
+    = f.label :password
     = f.password_field :plain_password
+    = error_for user, :plain_password
 
 = f.submit :Salvar
 

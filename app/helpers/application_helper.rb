@@ -1,5 +1,11 @@
 module ApplicationHelper
 
+
+  def error_for(record, attribute)
+    message = record.errors[attribute].first
+    content_tag :span, message.capitalize, class: "form-error" if message
+  end
+
   def flash_message
     messages = ""
     [:notice, :info, :warning, :error].each do |type|

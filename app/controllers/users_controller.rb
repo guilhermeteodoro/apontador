@@ -34,8 +34,8 @@ class UsersController < ApplicationController
       flash[:notice] = "Funcionário criado com sucesso"
       redirect_to manager_users_path
     else
-      flash[:error] = @employee.errors.full_messages
-      redirect_to action: :new
+      # flash[:error] = @employee.errors.full_messages
+      render :new
     end
   end
 
@@ -43,8 +43,9 @@ class UsersController < ApplicationController
     @employee = @user
 
     if !@employee.update_attributes(params[:user])
-      flash[:error] = @employee.errors.full_messages
-      redirect_to action: :edit
+      # flash[:error] = @employee.errors.full_messages
+      # redirect_to action: :edit
+      render :new
       return
     end
 

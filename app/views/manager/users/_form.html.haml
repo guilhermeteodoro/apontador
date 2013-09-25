@@ -4,34 +4,42 @@
 
 %fieldset
   .field
-    = f.label "Nome*"
+    = f.label :first_name
     = f.text_field :first_name, placeholder: "João"
+    = error_for user, :first_name
   .field
-    = f.label "Sobrenome*"
+    = f.label :last_name
     = f.text_field :last_name, placeholder: "da Silva"
+    = error_for user, :last_name
 %fieldset
   .field
-    = f.label "Username*"
+    = f.label :username
     = f.text_field :username, placeholder: "joaodasilva"
+    = error_for user, :username
   .field
-    = f.label "Email*"
+    = f.label :email
     = f.text_field :email, placeholder: "joaodasilva@mailinator.com"
+    = error_for user, :email
 
 %fieldset
   .field
-    = f.label "Password*"
+    = f.label :password
     = f.password_field :plain_password, placeholder: "*****"
+    = error_for user, :plain_password
 
 %fieldset
   .field
-    = f.label "Rua*"
+    = f.label :street
     = f.text_field :street, placeholder: "Rua Tal"
+    = error_for user, :street
   .field
-    = f.label "Número*"
+    = f.label :number
     = f.text_field :number, placeholder: "87964"
+    = error_for user, :number
   .field
-    = f.label "Cidade*"
+    = f.label :city
     = f.text_field :city, placeholder: "Cidade Tal"
+    = error_for user, :city
 
 
 = f.submit :Salvar

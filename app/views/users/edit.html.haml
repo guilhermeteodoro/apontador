@@ -7,7 +7,7 @@
 
 .base-form
   = form_for @employee, url: eval(presenter.edit_employee_form_url) do |f|
-    = render partial: 'form', locals: { f: f, edit: true }
+    = render partial: 'form', locals: { f: f, user: @employee}
 
 - if @current_user.manager?
   .delete-account

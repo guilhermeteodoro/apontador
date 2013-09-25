@@ -1,7 +1,7 @@
 %h1 Novo Funcionário
 
-#message= flash_message
+/ #message= flash_message
 
 .base-form
   = form_for @employee, url: users_path do |f|
-    = render partial: 'form', locals: { f: f, pass: true }
+    = render partial: 'form', locals: { f: f, user: @employee }
