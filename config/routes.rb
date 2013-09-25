@@ -31,7 +31,9 @@ Checker::Application.routes.draw do
   match 'login'  => 'login#login', as: 'login'
   match 'logout' => 'login#logout', as: 'logout'
 
-  match '/' => 'login#redirecter'
-  root to: 'login#redirecter'
+  match 'index' => 'public#index'
+
+  match '/' => 'public#redirecter'
+  root to: 'public#redirecter'
 
 end

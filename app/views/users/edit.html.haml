@@ -1,10 +1,15 @@
 - presenter = UserPresenter.new(manager: @current_user, employee: @employee)
 
-.page-header
-  %h1 Editar #{presenter.edit_employee_title}
+%h1 Editar #{presenter.edit_employee_title}
+%h2= @employee.name
 
 #message= flash_message
 
-= form_for @employee, url: eval(presenter.edit_employee_form_url) do |f|
-  = render partial: 'form', locals: { f: f, edit: true }
+.base-form
+  = form_for @employee, url: eval(presenter.edit_employee_form_url) do |f|
+    = render partial: 'form', locals: { f: f, user: @employee}
+
+- if @current_user.manager?
+  .delete-account
+    = link_to 'Deletar funcionário', user_path, method: :delete, data: { confirm: 'Você tem certeza de que deseja deletar esse funcionário?' }
 

@@ -1,0 +1,160 @@
+// Box Model
+//----------
+*
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  background: url(bg-noise.png)
+  font: 18px/20px "Open Sans"
+
+h1
+  font: 2em/1.5em "Pathway Gothic One"
+h2
+  font: 1.5em/1.5em "Pathway Gothic One"
+h3
+  font: 1.2em/1.2em "Pathway Gothic One"
+
+p
+  font: 1em/1.5em "Open Sans"
+
+article
+  padding: 0
+  margin-bottom: 0.7em
+
+a
+  text-decoration: none
+  color: #4E6BE8
+  &:hover
+    text-decoration: underline
+  &:visited
+    color: #4E6BE8
+
+input[type="button"]
+  -webkit-appearance: none
+  border-radius: 0
+
+#main-content
+  padding: 2% 4% 5% 4%
+
+
+//-------------------------
+//    For fixed layout    |
+//-------------------------
+
+// Divs
+.menu
+  float: left
+  width: 20em
+
+.content
+  float: left
+  left: 23em
+  padding-left: 5%
+  position: absolute
+
+.blocks
+  margin: 0 auto
+  text-align: center
+  width: 90%
+
+.item
+  border: 0.3em solid #E0E0E0
+  float: left
+  height: 15em
+  margin-right: 0.6em
+  padding: 1em
+  position: relative
+  text-align: center
+  width: 13em
+  &:hover
+    background: #EBEBEB
+    border: 0.3em solid #EBEBEB
+  h3
+    display: block
+    width: 100%
+
+  a
+    font: 700 0.8em "Open Sans"
+  #email, #address
+    font-size: 0.75em
+    text
+  #address
+    font-weight: bold
+
+  .task
+    font: 700 0.8em "Open Sans"
+    text-transform: uppercase
+  .status
+    font: 300 3em "Open Sans"
+    margin-top: 0.1em
+    margin-bottom: 0.1em
+    display: block
+  .hours
+
+  footer
+    width: 85%
+    position: absolute
+    bottom: 0.5em
+
+
+// Decorative
+.v-divider, .h-divider
+  color: black
+  float: left
+  opacity: 0.3
+
+.v-divider
+  height: 20em
+  width: 1px
+
+.h-divider
+  width: 90%
+
+.delete-account
+  background: #EEEEEE
+  border: dashed 2px #e6e6e6
+  font: 700 0.75em "Open Sans"
+  padding: 1em
+  text-align: center
+  text-transform: uppercase
+  width: 100%
+  a
+    color: grey
+
+
+//-------------------------
+//    For fluid layout    |
+//-------------------------
+
+
+.fluid-content
+  width: 50%
+  margin: 0 auto
+  .btn-fluid, .btn-fluid:hover
+    width: 90%
+
+#clock
+  font: 200 4em "Open Sans"
+  padding: 0
+  margin: 0
+  text-align: center
+
+
+//-------------------------
+//    General Styling     |
+//-------------------------
+
+.center
+  text-align: center
+
+.bold
+  font-weight: bold
+
+.clear
+  clear: both
+
+.muted
+  color: grey
+  font-size: 0.70em

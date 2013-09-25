@@ -1,0 +1,75 @@
+@media screen and (max-width: 490px)
+  body
+    font: 16px/18px "open_sansregular"
+  .fluid-content
+    width: 100%
+    .btn-fluid, .btn-fluid:hover
+      width: 100%
+
+
+  .base-table
+    padding: 0
+    table
+      thead
+        th
+          padding: 0.5em
+        & :first-child
+          font: normal 0.9em "Patua One"
+
+  .login-form
+    width: 100%
+
+  .base-form
+    form
+      input[type="text"], input[type="submit"], input[type="password"]
+        width: 100%
+      .field
+        float: none
+        margin-right: 0
+
+  .link-bottom
+    text-align: center
+
+  footer
+    padding: 0 3%
+
+  //----------------------
+  //  Menu (header)
+  //----------------------
+
+  .nav-header
+    float: none
+    font: 1.3em "Open Sans"
+    margin: 0 0.3em 1.2em 0
+    position: relative
+    width: 100%
+    ul :first-child
+      position: absolute
+      left: 5%
+    ul :nth-child(2)
+      position: absolute
+      left: 48%
+    ul :last-child
+      position: absolute
+      left: 80%
+      &.fix
+        top: -1.4em
+        left: 85%
+    a
+      color: black
+      margin: 0
+      padding: 0.3em
+      +text-shadow(none)
+      &:visited, &:hover, &:active
+        color: black
+        text-decoration: none
+      &:hover
+        opacity: 0.5
+
+  .main-logo
+    font: 2em "Patua One"
+    margin: 0 1%
+    span
+      background-size: 1.2em
+      padding-left: 1.3em
+      width: 5em

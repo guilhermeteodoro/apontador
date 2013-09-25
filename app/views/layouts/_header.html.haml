@@ -1,0 +1,19 @@
+%header#main
+  .main-logo
+    %a{href: root_path}
+      %span checker
+
+  %nav.nav-header.nav-opened
+    - if session[:id]
+      %ul
+        - if session[:manager]
+          %li= link_to 'Perfil', edit_manager_user_path
+          %li= link_to 'Logout', logout_path
+
+        - else
+          %li= link_to 'Relatório', report_employee_path
+          %li= link_to 'Perfil', edit_employee_user_path
+          %li= link_to 'Logout', logout_path
+    - else
+      %ul
+        %li.fix= link_to 'Login', login_path

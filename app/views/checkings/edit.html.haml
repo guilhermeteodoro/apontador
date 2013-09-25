@@ -1,12 +1,14 @@
-.span5.offset3
-  %h4.text-center #{@current_user.name},
+.fluid-content
+  #message= flash_message
+  %h1.text-center #{@current_user.name},
   %h5.text-center você checou as #{@current_user.checkings.last.time(@current_user.checkings.last.checked_in_at)} em #{@current_user.checkings.last.date(@current_user.checkings.last.checked_in_at)}
 
-  #message= flash_message
-
   %br
-  #clock.clearfix
+  #clock
   %br
 
   = form_for @checking, url: checking_path do |f|
     - render partial: 'form', locals: { f: f, button_name: "Check-out" }
+
+:javascript
+  startClock();

@@ -1,34 +1,34 @@
-!!! html5
-%html
-  %head
-    %title Checker
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
-    = csrf_meta_tags
-    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
-  %body{onload: "show()"}
-    #wrap
-      .navbar.navbar-inverse.navbar-fixed-top
-        .navbar-inner
-          .container
-            %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", type: "button"}
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
-            = link_to 'Checker', root_path, class: "brand logo-font"
-            .nav-collapse.collapse
-              %ul.nav.pull-right
-                %li= link_to 'Início', root_path
-                %li= link_to 'Relatórios', report_employee_path
-                %li= link_to 'Editar Perfil', edit_employee_user_path
-                %li= link_to 'Logout', logout_path
-      .container
-        = yield
+/ !!! html5
+/ %html
+/   %head
+/     %title Checker
+/     = stylesheet_link_tag    "application", :media => "all"
+/     = javascript_include_tag "application"
+/     = csrf_meta_tags
+/     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
+/   %body{onload: "show()"}
+/     #wrap
+/       .navbar.navbar-inverse.navbar-fixed-top
+/         .navbar-inner
+/           .container
+/             %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", type: "button"}
+/               %span.icon-bar
+/               %span.icon-bar
+/               %span.icon-bar
+/             = link_to 'Checker', root_path, class: "brand logo-font"
+/             .nav-collapse.collapse
+/               %ul.nav.pull-right
+/                 %li= link_to 'Início', root_path
+/                 %li= link_to 'Relatórios', report_employee_path
+/                 %li= link_to 'Editar Perfil', edit_employee_user_path
+/                 %li= link_to 'Logout', logout_path
+/       .container
+/         = yield
 
-      #push
+/       #push
 
-    #footer.hidden-phone
-      .container
-        .row-fluid
-          %p.muted.credits.text-center
-            Desenvolvido por Guilherme Teodoro no #{link_to 'ClickJogos', 'http://www.clickjogos.com.br'} Bootcamp
+/     #footer.hidden-phone
+/       .container
+/         .row-fluid
+/           %p.muted.credits.text-center
+/             Desenvolvido por Guilherme Teodoro no #{link_to 'ClickJogos', 'http://www.clickjogos.com.br'} Bootcamp

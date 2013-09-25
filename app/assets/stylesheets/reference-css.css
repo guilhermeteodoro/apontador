@@ -1,0 +1,379 @@
+  
+  /*
+  ================================================
+  Handcrafted by Elliot Jay Stocks
+  Last updated on 06.08.2013
+  ================================================
+  Contents:
+    01 Sensible Defaults
+    02 Typography
+       - Rendering
+       - Ligatures
+       - Families
+       - Headings
+       - Links
+       - Paragraphs, Lists, and More
+    03 Forms & Buttons
+    04 Basic Layout
+    05 Header
+    06 Ads
+    07 Blog Posts
+    08 Blog Archives
+    09 Speaking
+    10 About
+    11 Media Queries
+       - 600 up
+       - 900 up
+       - 1200 up
+       - 1400 up
+       - 1500 up
+       - 1800 up
+       - 2000 up
+       - 2400 up
+  ================================================
+  */
+
+  /* ---------------------------------------------------------------------------------------------------------- 
+  01 Sensible Defaults ----------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------- */
+
+  @import "reset.css";
+  
+  *                           { -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; } /* Apply a natural box layout model to all elements — see http://paulirish.com/2012/box-sizing-border-box-ftw */
+  div,
+  article,
+  section,
+  header,
+  footer,
+  nav,
+  figure,
+  li                          { position:relative; } /* For absolutely positioning elements within containers  */
+  .group:after                { display:block; height:0; clear:both; content:"."; visibility:hidden; } /* For clearing */
+  body                        { background:#fff; }
+  ::-moz-selection            { background:#333; color:#fff; }
+  ::selection                 { background:#333; color:#fff; }
+  
+  /* ---------------------------------------------------------------------------------------------------------- 
+  02 Typography -----------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------- */
+
+  /*
+  14 / 16 =     0.875em     (14px equivalent)
+  16 / 16 =     1em         (16px equivalent)
+  18 / 16 =     1.125em     (18px equivalent)
+  21 / 16 =     1.3125em    (21px equivalent)
+  24 / 16 =     1.5em       (24px equivalent)
+  30 / 16 =     1.875em     (30px equivalent)
+  72 / 16 =     4.5em       (72px equivalent)
+  */
+
+  /* 02a - Rendering */
+  html,
+  input,
+  textarea                    { -webkit-font-smoothing:antialiased; }
+
+  /* 02b - Ligatures */
+  body                        { text-rendering:optimizeLegibility; /* Turns on ligatures and kerning */-moz-font-feature-settings:"liga=1, dlig=1"; -ms-font-feature-settings:"liga", "dlig"; -o-font-feature-settings:"liga", "dlig"; -webkit-font-feature-settings:"liga", "dlig"; font-feature-settings:"liga", "dlig"; /* For more refined (but less supported) ligature control */ }
+
+  /* 02c - Families */
+  body,
+  input,
+  textarea,
+  figcaption em               { color:#333; font:400 90%/1.875em "skolar-1","skolar-2", "Georgia", "Times New Roman", serif; }
+  strong,
+  h1 a,
+  h3,
+  h4,
+  div.primary h2,
+  li cite,
+  h3 cite                     { font-weight:bold; }
+  em,
+  em strong,
+  strong em 
+  h1,
+  label,
+  figcaption,
+  article.single p:first-child,
+  p.note,
+  p.small-print,
+  blockquote + cite,
+  li.yearly-archive p span,
+  div#comments ol li article header h3 + p { font-style:italic; }
+
+  /* 02d - Headings */
+  h1                          { color:rgba(0,0,0,0.3); }
+  h1 a                        { color:#333; }
+  h1 a:hover                  { color:#9c6; }
+  h2                          { font-size:1.875em; letter-spacing:-0.025em; line-height:1.3125em; padding-top:1em; }
+  h3,
+  h4                          { font-size:1.125em; padding:2em 0 0.5em 0; }
+  h3 + h4                     { padding-top:0; } /* Only an h4 that follows an h3 */
+  p + h3,
+  li + h3                     { padding-top:1.5em; } /* Only an h3 that follows a p or an li */
+
+  /* 02e - Links */
+  a                           { color:#9c6; text-decoration:none; -webkit-transition:color 0.2s ease-in-out; -moz-transition:color 0.2s ease-in-out; -o-transition:color 0.2s ease-in-out; transition:color 0.2s ease-in-out; }
+  @-moz-document url-prefix() {
+    a { display:inline-block; /* For weird Firefox strikethrough-like bug */ }
+  }
+  h2 a                        { color:#333; }
+  h3 a,
+  p a,
+  li a,
+  figcaption a                { border-bottom:1px solid #9c6; color:#333; }
+  h2 + p a,
+  figcaption a,
+  p.note a,
+  p.small-print a             { color:rgba(0,0,0,0.3); }
+  h3 a:hover,
+  p a:hover,
+  h2 + p a:hover,
+  figcaption a:hover,
+  p.note a:hover,
+  p.small-print a:hover,
+  li a:hover,
+  figcaption a:hover          { color:#9c6; }
+
+  /* 02f - Paragraphs, Lists, and More */
+  p,
+  li                          { padding:0.5em 0; }
+  li                          { list-style:none; }
+  article ul li               { list-style-type:disc; margin-left:1em; }
+  article ol li               { list-style-type:upper-roman; margin-left:1em; }
+  blockquote p                { border-left:10px solid rgba(0,0,0,0.05); font-size:1.5em; line-height:1.3125em; margin:0.5em 0; padding-left:1em; }
+  blockquote + p cite         { display:block; margin-top:-1em; padding-bottom:1em; text-align:right; }
+  article.single p:first-child + p { font-size:1.875em; line-height:1.5em; }
+  code, 
+  pre                         { background:rgba(0,0,0,0.1); font-size:0.875em; }
+  pre                         { margin:0.5em 0; padding-left:1em; }
+  pre code                    { background:none; }
+  h2 + p                      { color:rgba(0,0,0,0.3); padding:1.5em 0; }
+  p.note                      { color:rgba(0,0,0,0.3); }
+  figcaption,
+  p.small-print,
+  div.primary h2,
+  div.primary p               { color:rgba(0,0,0,0.3); }
+  div.primary h2              { font-size:1em; }
+  p.note                      { padding-bottom:1em; }
+  p.continue                  { padding-top:2em; }
+  p.small-print               { padding:8em 0 1em 0; }
+  cite                        { font-style:normal; }
+  
+  /* ---------------------------------------------------------------------------------------------------------- 
+  03 Forms & Buttons ------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------- */
+  
+  form input,
+  form textarea                  { background:#fff; border:1px solid rgba(0,0,0,0.1); border-radius:4px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; color:#333; font-size:1em; margin-bottom:1em; padding:0.5em 1em; -webkit-transition:all 0.25s ease-in-out; -moz-transition:all 0.25s ease-in-out; -o-transition:all 0.25s ease-in-out; transition:all 0.25s ease-in-out; -webkit-appearance:none; width:100%; }
+  form textarea                  { min-height:10em; }
+  form input:focus,
+  form textarea:focus            { border-color:#333; outline:none; }
+  form input.submit              { background:#9c6; border-color:rgba(0,0,0,0.1); color:#fff; font-weight:700; text-align:center; text-transform:uppercase; }
+  form input.submit:hover        { background:#333; }
+
+  a.btn                          { background:#9c6; border:1px solid rgba(0,0,0,0.1); border-radius:4px; margin:0 auto; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; color:#fff; display:inline-block; letter-spacing:0.125em; padding:0.5em 1em; text-align:center; text-transform:uppercase; width:100%; -webkit-transition:all 0.25s ease-in-out; -moz-transition:all 0.25s ease-in-out; -o-transition:all 0.25s ease-in-out; transition:all 0.25s ease-in-out; }
+  a.btn:hover                    { background:#333; color:#fff; }  
+    
+  /* ---------------------------------------------------------------------------------------------------------- 
+  04 Basic Layout ---------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------- */
+  
+  div.primary                 { background:#f6f6f6; padding:5%; /*outline:1px solid red;*/ }
+  div.content                 { padding:5%; /*outline:1px solid blue;*/ }
+  div.ads                     { display:none; }
+  
+  /* Most layout declared in media queries, below */
+    
+  /* ---------------------------------------------------------------------------------------------------------- 
+  05 Header ---------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------- */
+  
+  header nav ul               { padding:1em 0 0 0; }
+  header nav ul li            { display:inline; padding:0 1em 0 0; }
+  header nav ul li a          { color:#9c6; border:none; }
+  header nav ul li a:hover,
+  body.home header nav ul li a.home,
+  body.blog header nav ul li a.blog,
+  body.speaking header nav ul li a.speaking,
+  body.about header nav ul li a.about { color:#333; }
+  div.content img             { margin:1em 0; width:100%; }
+  article figure figcaption   { padding:0 5% 2em 0; }
+
+  /* ---------------------------------------------------------------------------------------------------------- 
+  06 Ads ------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------- */
+
+  div.ads a.ad-image img                      { margin:1em 0; }
+  div.ads div.authenticjobs a.ad-image img    { float:left; margin:0.5em 1em 0.5em 0; }
+  div.ads p a                                 { border:none; color:rgba(0,0,0,0.3); }
+  div.ads p.ad-link a                         { font-style:italic; }
+  
+  /*
+  div.primary-ad a,
+  div.authenticjobs p a       { border:none; color:rgba(0,0,0,0.3); }
+  div.primary-ad p            { padding-top:1em; }
+  div.primary-ad img          { margin:1em 0; }
+  div.authenticjobs img       { float:left; margin:0.5em 1em 1em 0; }
+  */
+   
+  /* ---------------------------------------------------------------------------------------------------------- 
+  07 Blog Posts -----------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------- */
+    
+  div#comments                                { padding-top:2em; }
+  div#comments ol li                          { border-bottom:1px solid rgba(0,0,0,0.1); /*font-size:0.875em; line-height:2em;*/ list-style:none; margin:0; padding:2em 0; }
+  div#comments ol li:last-child               { border:none; }
+  div#comments ol li article header div.gravatar-container { left:0; max-width:80px; position:absolute; top:-0.5em; width:10%; }
+  div#comments ol li article header div.gravatar-container img { width:100%; }
+  div#comments ol li article header h3,
+  div#comments ol li article header h3 + p    { padding:0 0 0 15%; }
+  div#comments ol li article header h3 + p,
+  div#comments ol li article header h3 + p a  { color:rgba(0,0,0,0.3); }
+  div#comments ol li article li               { border:none; list-style:circle; }
+  
+  div.video-wrapper                           { margin-bottom:1em; }
+  /* p iframe { margin-left:-40%; width:140%; } */
+
+  /* ---------------------------------------------------------------------------------------------------------- 
+  08 Blog Archive ---------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------- */
+  
+  body.blog div.content > ol li:first-child   { padding-top:0; }
+  li.yearly-archive p span                    { color:rgba(0,0,0,0.3); display:block; }
+  li.yearly-archive h2 + p                    { padding-bottom:0.5em; }
+  li.yearly-archive h2 + p a                  { color:#333; }
+  li.yearly-archive h2 + p a:hover            { color:#9c6; }
+  
+  /* ---------------------------------------------------------------------------------------------------------- 
+  09 Speaking  ------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------- */
+  
+  figure#map_canvas                            { height:30em; }
+  figure#map_canvas h2                         { padding:0; }
+  
+  body.speaking div.content                    { padding-top:0; }
+  body.speaking div.content ol.future-events   { border-bottom:1px solid rgba(0,0,0,0.1); padding-bottom:3em; }
+  body.speaking div.content li                 { margin-left:0; list-style:none; }
+  body.speaking div.content li h3 + p          { padding-bottom:0; padding-top:0; }
+  body.speaking div.content li h3 + p + p      { color:rgba(0,0,0,0.3); padding-top:0; }
+  body.speaking div.content span.url-website + span.url-lanyrd:before { content:"/ "; }
+  body.speaking div.content span.url-website + span.url-map:before { content:"/ "; }
+  body.speaking div.content span.url-lanyrd + span.url-map:before { content:"/ "; }
+  
+  span.country                                 { background:yellow; display:block; height:11px; position:absolute; right:0; top:3.4em; width:16px; }
+  span.country.australia                       { background:url(/theme/4e7bd343dabe9d306900b42a/stylesheets/images/flag_au.png); }
+  span.country.belgium                         { background:url(/theme/4e7bd343dabe9d306900b42a/stylesheets/images/flag_be.png); }
+  span.country.canada                          { background:url(/theme/4e7bd343dabe9d306900b42a/stylesheets/images/flag_ca.png); }
+  span.country.germany                         { background:url(/theme/4e7bd343dabe9d306900b42a/stylesheets/images/flag_de.png); }
+  span.country.norway                          { background:url(/theme/4e7bd343dabe9d306900b42a/stylesheets/images/flag_no.png); }
+  span.country.slovenia                        { background:url(/theme/4e7bd343dabe9d306900b42a/stylesheets/images/flag_sl.png); }
+  span.country.uk                              { background:url(/theme/4e7bd343dabe9d306900b42a/stylesheets/images/flag_gb.png); }
+  span.country.usa                             { background:url(/theme/4e7bd343dabe9d306900b42a/stylesheets/images/flag_us.png); }
+  
+  /* ---------------------------------------------------------------------------------------------------------- 
+  10 About ----------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------- */
+  
+  body.about h2 + img           { margin-top:2em; }
+  body.about h2 span            { display:block; padding-top:0.5em; }
+  
+  /* ---------------------------------------------------------------------------------------------------------- 
+  11 Media Queries (using a mobile-first approach) ------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------- */
+  
+  /* 11a - 600 up */
+  @media screen and (min-width:600px) {
+  
+    html                        { padding:0 8%; }
+    body                        { margin:0 auto; }
+    div.fauxcolumn              { bottom:0; left:0; position:fixed; top:0; width:34.755%; background:#f6f6f6; }
+    
+    div.primary                 { background:none; float:left; padding:8em 0; width:32%; }
+    div.primary div div         { border-top:1px solid rgba(0,0,0,0.05); padding:1em 0 3em 0; }
+    div.content                 { float:left; padding:3.65em 0 8em 0; width:68%; }
+    div.ads                     { display:block; }
+    h1,
+    div.ads h2,
+    div.ads p,
+    div.ads span                { line-height:1.875em; width:90%; }
+    div.ads span                { display:block; }
+    
+    header nav ul               { padding:2em 0 3em 0; }
+    header nav ul li            { display:block; padding:0; }
+        
+    h2                          { padding-top:2em; }
+    div.content h2,
+    div.content h3,
+    div.content h4,
+    div.content p,
+    article ul,
+    article ol,
+    pre,
+    blockquote                  { padding-left:5%; }
+    form input,
+    form textarea               { margin-left:5%; }
+    div.content blockquote p    { padding-left:1em; }
+    
+    article figure figcaption   { padding-left:5%; }
+    
+    div#comments ol li article header div.gravatar-container { left:5%; }
+    div#comments ol li article header h3,
+    div#comments ol li article header h3 + p { padding:0 0 0 20%; }
+    
+  }
+  
+  /* 11b - 900 up */
+  @media screen and (min-width:900px) {
+    
+    h2#art-direction            { padding-left:15%; }
+
+    div.content h2,
+    div.content h3,
+    div.content h4,
+    div.content p,
+    article ul,
+    article ol,
+    pre,
+    blockquote                  { padding-left:28.787%; /* 190 / 660 = 0.28787 */ }
+    form input,
+    form textarea               { margin-left:28.787%; /* 190 / 660 = 0.28787 */ width:71%; }
+    
+    article figure figcaption   { left:0; padding:0.5em 0 0 5%; position:absolute; width:25%; }
+    
+    div#comments ol li article header div.gravatar-container { left:15%; }
+    div#comments ol li article header h3,
+    div#comments ol li article header h3 + p { padding:0 0 0 28.787%; }
+    
+  }
+  
+  /* 11c - 1200 up (increase base font size) */
+  @media screen and (min-width:1200px) {
+    body                        { font-size:100%; }
+ }
+  
+  /* 11d - 1400 up (increase margins) */
+  @media screen and (min-width:1400px) {
+    html                        { padding:0 16%; }
+    div.fauxcolumn              { width:37.75%; }
+  }
+
+  /* 11e - 1500 up */
+  @media screen and (min-width:1500px) {
+    div.ads div.primary-ad a.ad-image img { float:left; margin:1em 1em 0.5em 0; }
+  }
+  
+  /* 11f - 1800 up (increase base font size) */
+  @media screen and (min-width:1800px) {
+    body                        { font-size:110%; }
+  }
+
+  /* 11g - 2000 up (increase base font size) */
+  @media screen and (min-width:2000px) {
+    body                        { font-size:115%; }
+  }
+  
+  /* 11h - 2400 up (increase margins) */
+  @media screen and (min-width:2400px) {
+    html                        { padding:0 23%; }
+    div.fauxcolumn              { width:40.25%; }
+  }

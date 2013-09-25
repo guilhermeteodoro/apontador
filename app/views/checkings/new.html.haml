@@ -1,16 +1,16 @@
-.span5.offset3
-  %h4.text-center #{@current_user.name},
-  %p.text-center
-    %b
-      clique em check-in para iniciar a contagem
-
-
+.fluid-content
   #message= flash_message
+  %h1.center #{@current_user.name}
+  / %p.muted.center
+  /   %b clique em check-in para iniciar a contagem
 
   %br
-  #clock.clearfix
+  #clock
   %br
 
-  .text-center
+  .center
     = form_for @checking do |f|
       - render partial: 'form', locals: { f: f, button_name: "Check-in" }
+
+:javascript
+  startClock();

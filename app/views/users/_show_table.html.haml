@@ -1,23 +1,34 @@
-%table.table.table-striped
+%table
+
   %thead
     %tr
-      %th Entrada
-      %th Saída
-      %th Tempo Trabalhado
-      %th Valor da Hora
-      %th Valor da Checagem
       %th
+        %p Entrada
+        %p Checada
+      %th
+        %p Saída
+        %p Checada
+      %th
+        %p Tempo
+        %p Trabalhado
+      %th
+        %p Valor
+        %p hora
+      %th{colspan: "2"}
+        %p Checagem
+        %p Valor
+
     %tbody
       = f.fields_for :checkings, group do |c|
         %tr
           %td
             - if c.object.checked_in_at.present?
-              %b= c.object.time(c.object.checked_in_at)
-              (#{c.object.date(c.object.checked_in_at)})
+              %span= c.object.time(c.object.checked_in_at)
+              %span.date (#{c.object.date(c.object.checked_in_at)})
           %td
             - if c.object.checked_out_at.present?
-              %b= c.object.time(c.object.checked_out_at)
-              (#{c.object.date(c.object.checked_out_at)})
+              %span= c.object.time(c.object.checked_out_at)
+              %span.date (#{c.object.date(c.object.checked_out_at)})
           %td= c.object.working_time
           %td= number_to_currency(c.object.hour_value, format: "R$ %n")
           %td= number_to_currency(c.object.value, format: "R$ %n")
@@ -27,9 +38,13 @@
             - else
               %td= c.check_box :approved
 
-      - if group.first.value.present?
+    - if group.first.value.present?
+      %tfoot
         %tr
           %td{colspan: "4"}
             %b TOTAL
           %td{colspan: "2"}
             %b= number_to_currency(Checking.total_price(group), format: "R$ %n")
+        %tr
+          %td{colspan: "6", class: "button"}
+            = f.submit button_name, class: button_class

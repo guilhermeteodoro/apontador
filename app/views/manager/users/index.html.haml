@@ -1,28 +1,34 @@
-%h1 #{@current_user.name}, bem-vindo!
-- if @current_user.company.present?
-  %p.lead= @current_user.company.name
+%section.menu
+  %h1 #{@current_user.name}
+  - if @current_user.company.present?
+    %h4= @current_user.company.name
+    %br
+    = link_to 'Novo Funcionário', new_user_path, class: 'btn btn-large btn-striped'
+    = link_to 'Criar Tarefa', root_path, class: "btn btn-large btn-striped"
+  - else
+    %br
+    = link_to 'Criar Uma Empresa', new_company_path, class: 'btn btn-large btn-green'
 
-
-#message= flash_message
-
-- if @current_user.company_id.nil?
-  %br
-  %h3.alert.alert-info Você ainda não possui uma empresa cadastrada
-  %h4 Por favor, crie uma para prosseguir
-  = button_to 'Nova Empresa', new_company_path, class: 'btn btn-success spacing btn-large'
--else
-  = link_to 'Novo Funcionário', new_user_path, class: 'btn btn-success spacing btn-medium'
-  - if @employees.present?
-    - @employees.each do |employee|
-      .well.clearfix
-        .block-left
-          %ul.unstyled
+%hr.v-divider
+%section.content
+  #message= flash_message
+  -if @current_user.company_id.nil?
+    %br
+    %h4.error Você ainda não possui uma empresa cadastrada. Por favor, crie uma para prosseguir
+  -else
+    - if @employees
+      - @employees.each do |employee|
+        %article.item
+          %ul
             %h3= link_to employee.name, user_path(employee.username)
             %li#email= employee.email
             %li#address= employee.full_address
-            %li#edit= link_to 'Editar Informações', edit_user_path(employee.username), class: 'btn btn-inverse btn-mini'
-        .block-right
-          = link_to 'Veja mais', user_path(employee.username), class: 'btn btn-info btn-mini'
-  - else
-    .alert.alert-warning
-      Você ainda não possui funcionários
+            / %li#edit= link_to 'Editar Informações', edit_user_path(employee.username), class: ''
+            / %li= link_to 'Veja mais', user_path(employee.username), class: ''
+          %hr.h-divider
+          %p.task design de website
+          %span.status 95%
+          %footer
+            %p.hours 5h / 6h cumpridas
+    - else
+      Você ainda não possui funcionários.

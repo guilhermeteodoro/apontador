@@ -1,7 +1,7 @@
 #encoding: UTF-8
 class UsersController < ApplicationController
 
-  layout :resolve_layout
+  # layout :resolve_layout
 
   before_filter :logged?, :current_user
   before_filter :manager?, except: [:edit, :update, :report]
@@ -34,8 +34,8 @@ class UsersController < ApplicationController
       flash[:notice] = "Funcionário criado com sucesso"
       redirect_to manager_users_path
     else
-      flash[:error] = @employee.errors.full_messages
-      redirect_to action: :new
+      # flash[:error] = @employee.errors.full_messages
+      render :new
     end
   end
 
@@ -43,8 +43,9 @@ class UsersController < ApplicationController
     @employee = @user
 
     if !@employee.update_attributes(params[:user])
-      flash[:error] = @employee.errors.full_messages
-      redirect_to action: :edit
+      # flash[:error] = @employee.errors.full_messages
+      # redirect_to action: :edit
+      render :new
       return
     end
 
@@ -86,7 +87,7 @@ class UsersController < ApplicationController
 
   private
   def resolve_layout
-    return "employee" if action_name=="report" || (action_name=="edit" && !@current_user.manager?)
+    return "application" if action_name=="report" || (action_name=="edit" && !@current_user.manager?)
     "manager"
   end
 end

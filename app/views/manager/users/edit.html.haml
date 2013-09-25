@@ -1,7 +1,11 @@
-.page-header
-  %h1 Editar Informações
+%h1 Editar Informações
 
 #message= flash_message
 
-= form_for [:manager, @manager], url: manager_user_path(@manager) do |f|
-  = render partial: 'form', locals: { f: f }
+.base-form
+  = form_for [:manager, @manager], url: manager_user_path(@manager) do |f|
+    = render partial: 'form', locals: { f: f, user: @manager }
+%br
+%br
+.delete-account
+  = link_to 'Excluir esta conta', manager_user_path, method: :delete, data: { confirm: "Essa ação irá deletar também seus funcionários e sua empresa. Você tem certeza que deseja fazer isso?" }

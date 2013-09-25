@@ -1,11 +1,22 @@
-.field
-  = f.label "Valor da hora*"
-  = f.text_field :hour_value, placeholder: "45.25"
+%fieldset
+  .field
+    = f.label :hour_value
+    = f.text_field :hour_value, placeholder: "45.25"
+    = error_for user, :hour_value
+
+%br
 %h5 Endereço de Trabalho
-.field
-  = f.label "Rua*"
-  = f.text_field :street, placeholder: "Rua Tal"
-  = f.label "Número*"
-  = f.text_field :number, placeholder: "87964"
-  = f.label "Cidade*"
-  = f.text_field :city, placeholder: "Cidade Tal"
+
+%fieldset
+  .field
+    = f.label :street
+    = f.text_field :street, placeholder: "Rua Tal"
+    = error_for user, :street
+  .field
+    = f.label :number
+    = f.text_field :number, placeholder: "87964"
+    = error_for user, :number
+  .field
+    = f.label :city
+    = f.text_field :city, placeholder: "Cidade Tal"
+    = error_for user, :city

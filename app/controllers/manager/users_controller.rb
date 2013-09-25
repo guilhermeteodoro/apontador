@@ -1,5 +1,4 @@
 class Manager::UsersController < ApplicationController
-  layout :resolve_layout
 
   before_filter :logged?, :current_user, :manager?, :current_company, except: [:new, :create]
 
@@ -22,8 +21,9 @@ class Manager::UsersController < ApplicationController
       session[:manager] = @manager.manager?
       redirect_to action: :index
     else
-      flash[:error] = @manager.errors.full_messages
-      redirect_to action: :new
+      # flash[:error] = @manager.errors.full_messages
+      # redirect_to action: :new
+      render :new
     end
   end
 
@@ -37,8 +37,9 @@ class Manager::UsersController < ApplicationController
       flash[:notice] = "Dados alterados com sucesso"
       redirect_to manager_user_path
     else
-      flash[:error] = @manager.errors.full_messages
-      redirect_to action: :edit
+      # flash[:error] = @manager.errors.full_messages
+      # redirect_to action: :edit
+      render :edit
     end
   end
 
@@ -54,10 +55,6 @@ class Manager::UsersController < ApplicationController
 
   private
   def resolve_layout
-    if action_name == "new"
-      "login"
-    else
-      "manager"
-    end
+    "manager" if action_name == "new"
   end
 end

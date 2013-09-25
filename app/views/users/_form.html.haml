@@ -1,34 +1,36 @@
-- if @employee.errors.any?
-  #error_explanation
-    %h2
-      = pluralize(@employee.errors.count, "error")
-      prohibited this user from being saved:
-    %ul
-      - @employee.errors.full_messages.each do |msg|
-        %li= msg
-%small.muted
-  %p Campos obrigatórios *
-.field
-  = f.label "Nome*"
-  = f.text_field :first_name, placeholder: "João"
-  = f.label "Sobrenome*"
-  = f.text_field :last_name, placeholder: "da Silva"
-.field
-  = f.label "Username*"
-  = f.text_field :username, placeholder: "joaodasilva"
-
-.field
-  = f.label "Email*"
-  = f.text_field :email, placeholder: "joaodasilva@mailinator.com"
+%p.muted Todos os campos são obrigatórios
+%br
+%fieldset
+  .field
+    = f.label :first_name
+    = f.text_field :first_name, placeholder: "João"
+    = error_for user, :first_name
+  .field
+    = f.label :last_name
+    = f.text_field :last_name, placeholder: "da Silva"
+    = error_for user, :last_name
+%fieldset
+  .field
+    = f.label :username
+    = f.text_field :username, placeholder: "joaodasilva"
+    = error_for user, :username
+  .field
+    = f.label :email
+    = f.text_field :email, placeholder: "joaodasilva@mailinator.com"
+    = error_for user, :email
 
 - if @current_user.manager?
-  = render partial: 'address', locals: { f: f }
+  = render partial: 'address', locals: { f: f, user: user }
 
-- if @current_user.manager? == false && edit == true
-  .field
-    = f.label "Password*"
-    = f.password_field :plain_password
+- unless @current_user.manager?
+  %fieldset
+    = f.label :password
+    = f.password_field :plain_password, placeholder: "******"
+    = error_for user, :plain_password
 
-.button
-  = f.submit :Salvar, class: 'btn btn-info'
-  = link_to 'Voltar', root_path, class: 'btn btn-inverse'
+= f.submit :Salvar
+
+%br
+
+.link-bottom
+  = link_to '<< Voltar', root_path
