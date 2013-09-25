@@ -5,7 +5,7 @@ FactoryGirl.define do
     approved        { [true, false].sample }
     paid            { [true, false].sample }
     hour_value      { rand(10.0..70.0) }
-    user_id         { rand(0..1) }
+    task_id         { rand(0..1) }
   end
 
   factory :predefined_checking, class: Checking do
@@ -14,6 +14,6 @@ FactoryGirl.define do
     approved        { [true, false].sample }
     paid            { [true, false].sample }
     hour_value      { rand(10.0..70.0) }
-    user_id         { rand(0..1) }
+    taks_id         { rand(0..1) }
   end
 end

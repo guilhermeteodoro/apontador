@@ -1,0 +1,17 @@
+%fieldset
+  .field
+    = f.label :name
+    = f.text_field :name
+    = error_for task, :name
+  .field
+    = f.label :user_id
+    / = f.collection_select :user_id
+    = error_for task, :user_id
+
+%fieldset
+  .field
+    = f.label :description
+    = f.text_area :description
+    = error_for task, :description
+
+= f.submit :Salvar

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130905204902) do
+ActiveRecord::Schema.define(:version => 20130925185323) do
 
   create_table "checkings", :force => true do |t|
     t.datetime "checked_in_at"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20130905204902) do
     t.decimal  "value",          :precision => 10, :scale => 2
     t.float    "lat"
     t.float    "lng"
-    t.integer  "user_id"
+    t.integer  "task_id"
   end
 
   create_table "companies", :force => true do |t|
@@ -34,14 +34,6 @@ ActiveRecord::Schema.define(:version => 20130905204902) do
 
   add_index "companies", ["id"], :name => "index_companies_on_id"
 
-  create_table "payments", :force => true do |t|
-    t.string   "token"
-    t.boolean  "concluded",  :default => false
-    t.integer  "user_id"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-  end
-
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
     t.text     "data"
@@ -51,6 +43,14 @@ ActiveRecord::Schema.define(:version => 20130905204902) do
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "tasks", :force => true do |t|
+    t.string   "name",        :null => false
+    t.text     "description", :null => false
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "first_name"

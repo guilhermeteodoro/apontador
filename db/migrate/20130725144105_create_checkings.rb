@@ -9,7 +9,8 @@ class CreateCheckings < ActiveRecord::Migration
       t.decimal :value, precision: 10, scale: 2
       t.float :lat
       t.float :lng
-      t.integer :user_id
+
+      t.integer :task_id
     end
   end
 end

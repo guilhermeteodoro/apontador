@@ -20,4 +20,9 @@ pt-BR:
         name: "Empresa"
         cnpj: "CNPJ"
 
-
+      task:
+        name: "Título"
+        description: "Descrição"
+        duration: "Duração"
+        hour_value: "Valor da hora"
+        user_id: "Funcionário"

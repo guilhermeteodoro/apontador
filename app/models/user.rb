@@ -5,13 +5,13 @@ class User < ActiveRecord::Base
 
   #associations
   belongs_to :company
-  has_many :checkings, dependent: :destroy
-  has_many :payments, dependent: :destroy
+  has_many :tasks, dependent: :destroy
+  has_many :checkings, through: :tasks
+
   accepts_nested_attributes_for :checkings
 
   #attributes
   attr_accessible :first_name, :last_name, :username, :hour_value, :email, :street, :city, :number, :latitude, :longitude, :manager, :company_id
-  attr_protected :password
 
   #address geolocation
   # geocoded_by :full_address

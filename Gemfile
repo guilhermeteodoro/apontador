@@ -12,8 +12,8 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
+  gem 'shoulda-matchers'
   gem 'capybara', '~> 2.1'
-  gem 'selenium-webdriver', '~> 2.35'
   gem 'factory_girl_rails', '~> 4.2.1'
   gem 'ffaker', '~> 1.18.0'
   gem 'guard-rspec', '2.3.1'

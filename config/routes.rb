@@ -28,6 +28,11 @@ Checker::Application.routes.draw do
   match 'manager/company'     => 'companies#update', via: :put, as: 'company'
   match 'manager/company'     => 'companies#destroy', via: :delete, as: 'company'
 
+  match 'manager/task/new'    => 'tasks#new', via: :get, as: 'new_task'
+  match 'manager/task/new'    => 'tasks#create', via: :post, as: 'task'
+  # match 'manager/task/:id'    => 'tasks#update', via: :put, as: 'task'
+  match 'manager/task/edit/:id' => 'tasks#edit', as: 'edit_task'
+
   match 'login'  => 'login#login', as: 'login'
   match 'logout' => 'login#logout', as: 'logout'
 
