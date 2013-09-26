@@ -1,6 +1,9 @@
 class TasksController < LoggedController
   before_filter :manager?, except: [:no_task, :task_in_negotiation]
 
+  def show
+  end
+
   def new
     @task = Task.new
     @employees = User.employees(@current_user.company_id) if @current_user.company_id.present?

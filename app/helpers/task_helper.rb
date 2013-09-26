@@ -12,7 +12,7 @@ module TaskHelper
   private
   def task_name(task)
     if task
-      content_tag :p, task.name, class: "task-name"
+      content_tag(:a, href: task_path(task.id)) {content_tag :p, task.name, class: "task-name"}
     else
       content_tag(:br) + content_tag(:p, "Sem tarefa", class: "striped-warning")
     end
