@@ -23,7 +23,7 @@
             = render partial: 'show_table', locals: { f: f, group: @employee.checkings.not_approveds, inverted: false, button_name: "Aprovar", button_class: 'btn btn-green'  }
             / = f.submit 'Aprovar', class: 'btn btn-green btn-large'
           - else
-            .no-checking-warning
+            .striped-warning
               %p Não existem checagens a serem aprovadas
 
     %section
@@ -36,11 +36,11 @@
             %br
 
           - else
-            .no-checking-warning
+            .striped-warning
               %p Não existem checagens aprovadas
 
 - else
-  .no-checking-warning
+  .striped-warning
     %p #{@employee.name} ainda não fez nenhuma checagem
 
 .clear

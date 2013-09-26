@@ -4,31 +4,27 @@
     %h4= @current_user.company.name
     %br
     = link_to 'Novo Funcionário', new_user_path, class: 'btn btn-large btn-striped'
-    = link_to 'Criar Tarefa', root_path, class: "btn btn-large btn-striped"
+    - if !@employees.empty?
+      = link_to 'Criar Tarefa', new_task_path, class: "btn btn-large btn-striped"
   - else
     %br
-    = link_to 'Criar Uma Empresa', new_company_path, class: 'btn btn-large btn-green'
+    = link_to 'Criar Uma Empresa', new_company_path, class: 'btn btn-large btn-striped'
 
 %hr.v-divider
+
 %section.content
+  %br
   #message= flash_message
+
   -if @current_user.company_id.nil?
-    %br
-    %h4.error Você ainda não possui uma empresa cadastrada. Por favor, crie uma para prosseguir
+    .striped-warning
+      %p
+        Você ainda não possui uma empresa cadastrada.
+        Por favor, crie uma para prosseguir
   -else
-    - if @employees
+    - if !@employees.empty?
       - @employees.each do |employee|
-        %article.item
-          %ul
-            %h3= link_to employee.name, user_path(employee.username)
-            %li#email= employee.email
-            %li#address= employee.full_address
-            / %li#edit= link_to 'Editar Informações', edit_user_path(employee.username), class: ''
-            / %li= link_to 'Veja mais', user_path(employee.username), class: ''
-          %hr.h-divider
-          %p.task design de website
-          %span.status 95%
-          %footer
-            %p.hours 5h / 6h cumpridas
+        = render partial: 'manager/users/employee', locals: { employee: employee }
     - else
-      Você ainda não possui funcionários.
+      .striped-warning
+        %p Você ainda não possui funcionários.

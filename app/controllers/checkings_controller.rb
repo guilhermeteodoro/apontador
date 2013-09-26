@@ -1,7 +1,7 @@
 #encoding: UTF-8
-class CheckingsController < ApplicationController
+class CheckingsController < LoggedController
 
-  before_filter :logged?, :current_user, :not_a_checker?
+  before_filter :on_going_task?, :employee?, except: [:no_task]
   before_filter :coordinates?, only: [:create, :update]
 
   def new
@@ -24,7 +24,7 @@ class CheckingsController < ApplicationController
     @checking = Checking.new(params[:checking])
     @checking.user_id       = @current_user.id
     @checking.checked_in_at = Time.now
-    @checking.hour_value    = @current_user.hour_value
+    @checking.hour_value    = @current_user.task.hour_value
     @checking.approved      = false
 
     if @checking.save
@@ -65,6 +65,12 @@ class CheckingsController < ApplicationController
     end
   end
 
+
+# REDIRECTING FILTERS
+#   -If there's no problem with coordinations
+#   -If the current user is employee, otherwise redirects to login
+#   -If there's any task to negotiate before checking
+
   private
   def coordinates?
     if @current_user.latitude.nil? || @current_user.longitude.nil?
@@ -72,7 +78,12 @@ class CheckingsController < ApplicationController
       redirect_to check_in_path
     end
   end
-  def not_a_checker?
-    redirect_to manager_user_path if session[:manager] == true
+  def employee?
+    redirect_to manager_user_path if session[:manager]
   end
+  def on_going_task?
+    return redirect_to no_task_path unless @current_user.task
+    redirect_to task_in_negotiation_path unless @current_user.task.approved?
+  end
+
 end

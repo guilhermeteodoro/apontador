@@ -13,13 +13,13 @@ module ApplicationHelper
       if flash[type]
         case type
           when :notice
-            messages += '<p class="alert alert-success">'"#{flash[type]}</p>"
+            messages += '<span class="success">'"#{flash[type]}</span><br>"
           when :info
-            messages += '<p class="alert alert-info">'"#{flash[type]}</p>"
+            messages += '<span class="alert alert-info">'"#{flash[type]}</span>"
           when :warning
-            messages += '<p class="alert alert-danger">'"#{flash[type]}</p>"
+            messages += '<span class="alert alert-danger">'"#{flash[type]}</span>"
           when :error
-            messages += '<p class="error">'"#{flash[type]}</p>"
+            messages += '<span class="error">'"#{flash[type]}</span>"
         end
       end
     end

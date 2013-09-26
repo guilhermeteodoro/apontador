@@ -11,7 +11,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :city
       t.float :latitude
       t.float :longitude
-      t.decimal :hour_value, precision: 10, scale: 2
+      # t.decimal :hour_value, precision: 10, scale: 2
       t.boolean :manager, default: false
       t.integer :company_id
 

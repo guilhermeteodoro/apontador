@@ -1,9 +1,8 @@
 #encoding: UTF-8
-class UsersController < ApplicationController
+class UsersController < LoggedController
 
   # layout :resolve_layout
 
-  before_filter :logged?, :current_user
   before_filter :manager?, except: [:edit, :update, :report]
   before_filter :user_found?, except: [:new, :create, :report, :destroy]
 
@@ -34,7 +33,6 @@ class UsersController < ApplicationController
       flash[:notice] = "Funcionário criado com sucesso"
       redirect_to manager_users_path
     else
-      # flash[:error] = @employee.errors.full_messages
       render :new
     end
   end
@@ -42,14 +40,12 @@ class UsersController < ApplicationController
   def update
     @employee = @user
 
-    if !@employee.update_attributes(params[:user])
-      # flash[:error] = @employee.errors.full_messages
-      # redirect_to action: :edit
+    unless @employee.update_attributes(params[:user])
       render :new
       return
     end
 
-    if !@current_user.manager?
+    unless @current_user.manager?
       redirect_to check_in_path
       return
     end
@@ -64,7 +60,7 @@ class UsersController < ApplicationController
   def destroy
     @employee = User.find_by_username(params[:username])
     if @employee.destroy
-      flash[:notice] = "Funcionário removido"
+      flash[:notice] = "Funcionário removido com sucesso"
       redirect_to '/manager'
     else
       flash[:error] = @employee.errors.full_messages
@@ -75,7 +71,7 @@ class UsersController < ApplicationController
   protected
   def user_found?
     @user = if @current_user.manager?
-      User.includes(:checkings).find_by_username(params[:username])
+      User.find_by_username(params[:username])
     else
       @current_user
     end

@@ -1,0 +1,7 @@
+.fluid-content
+  %h1.center #{@current_user.name}
+  %br
+  %h3.center Seu gerente te inscreveu numa tarefa
+
+  //Make form here
+  / = form_for @task, url: task(@task) do |f|

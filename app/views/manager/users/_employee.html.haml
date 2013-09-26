@@ -1,0 +1,10 @@
+%article.item
+  %ul
+    %h3= link_to employee.name, user_path(employee.username)
+    %li#email= employee.email
+    %li#address= employee.full_address
+    / %li#edit= link_to 'Editar Informações', edit_user_path(employee.username), class: ''
+    / %li= link_to 'Veja mais', user_path(employee.username), class: ''
+  %hr.h-divider
+
+  = task employee

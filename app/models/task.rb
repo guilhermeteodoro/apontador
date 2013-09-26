@@ -2,7 +2,8 @@ class Task < ActiveRecord::Base
   belongs_to :user
   has_many :checkings
 
-  attr_accessible :description, :name
-  validates_presence_of :name, :description
+  readonly :user_id
+  attr_accessible :description, :name, :user_id
+  validates_presence_of :name, :description, :user_id
 
 end

@@ -1,6 +1,6 @@
-class Manager::UsersController < ApplicationController
+class Manager::UsersController < LoggedController
 
-  before_filter :logged?, :current_user, :manager?, :current_company, except: [:new, :create]
+  before_filter :manager?, :current_company, except: [:new, :create]
 
   def index
     @employees = User.employees(@current_user.company_id) if @current_user.company_id.present?
@@ -13,7 +13,6 @@ class Manager::UsersController < ApplicationController
   def create
     @manager = User.new(params[:user])
     @manager.manager = true
-    @manager.hour_value = 1
 
     if @manager.save
       session[:id] = @manager.id
@@ -21,8 +20,6 @@ class Manager::UsersController < ApplicationController
       session[:manager] = @manager.manager?
       redirect_to action: :index
     else
-      # flash[:error] = @manager.errors.full_messages
-      # redirect_to action: :new
       render :new
     end
   end
@@ -37,8 +34,6 @@ class Manager::UsersController < ApplicationController
       flash[:notice] = "Dados alterados com sucesso"
       redirect_to manager_user_path
     else
-      # flash[:error] = @manager.errors.full_messages
-      # redirect_to action: :edit
       render :edit
     end
   end

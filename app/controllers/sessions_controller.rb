@@ -1,5 +1,5 @@
 # encoding: UTF-8
-class LoginController < ApplicationController
+class SessionsController < ApplicationController
 
   def login
     if request.post?

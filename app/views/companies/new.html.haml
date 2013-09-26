@@ -1,14 +1,18 @@
 %h1 Criar Empresa
+
 #message= flash_message
 
-= form_for @company, url: company_path do |f|
-  %small.muted
-    %p Campos obrigatórios *
-  .field
-    =f.label "Nome*"
-    =f.text_field :name
-  .field
-    =f.label "CNPJ*"
-    =f.text_field :cnpj
-  .button
-    =f.submit :Salvar, class: "btn btn-success btn-large"
+.base-form
+  %p.muted Todos os campos são obrigatórios
+  %br
+  = form_for @company, url: company_path do |f|
+    %fieldset
+      .field
+        =f.label "Nome*"
+        =f.text_field :name
+    %fieldset
+      .field
+        =f.label "CNPJ*"
+        =f.text_field :cnpj
+    .button
+      =f.submit :Salvar

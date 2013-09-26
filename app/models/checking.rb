@@ -1,7 +1,7 @@
 class Checking < ActiveRecord::Base
 
   #associations
-  belongs_to :user
+  belongs_to :task
 
   #attributes
   attr_accessible :checked_in_at, :checked_out_at, :value, :lat, :hour_value, :lng, :approved, :paid, :user_id
