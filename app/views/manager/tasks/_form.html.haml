@@ -5,8 +5,11 @@
     = error_for task, :name
   .field
     = f.label :user_id
-    = f.collection_select :user_id, User.with_no_task(@current_user.company_id), :id, :name, include_blank: true
-    = error_for task, :user_id
+    - if @task.new_record?
+      = f.collection_select :user_id, User.with_no_task(@current_user.company_id), :id, :name, include_blank: true
+      = error_for task, :user_id
+    - else
+      %p= @task.user.name
 
 %fieldset
   .field

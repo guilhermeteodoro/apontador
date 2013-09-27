@@ -5,7 +5,7 @@ class CreateTask < ActiveRecord::Migration
       t.text :description, null: false
       t.decimal :hour_value, precision: 10, scale: 2
       t.string :duration
-      t.boolean :approved, default: false, null: false
+      t.string :status, default: false, null: false
 
       t.integer :company_id, null: false
       t.integer :user_id, null: false

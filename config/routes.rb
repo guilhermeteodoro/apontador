@@ -38,15 +38,17 @@ Checker::Application.routes.draw do
     delete  "manager/company"     => "companies#destroy", as: "company"
   end
 
-  controller :tasks do
-    put   "manager/tasks/:id"     => "tasks#update", as: "task"
-    get   "manager/tasks/:id"     => "tasks#show", as: "tasks"
-    get   "manager/task/new"      => "tasks#new", as: "new_task"
-    post  "manager/task/new"      => "tasks#create", as: "task"
-    get   "manager/task/edit/:id" => "tasks#edit", as: "edit_task"
+  controller "manager::tasks" do
+    put   "manager/tasks/:id"     => "manager/tasks#update", as: "task_update"
+    get   "manager/tasks/:id"     => "manager/tasks#show", as: "tasks"
+    get   "manager/task/new"      => "manager/tasks#new", as: "new_task"
+    post  "manager/task/new"      => "manager/tasks#create", as: "task"
+    get   "manager/task/edit/:id" => "manager/tasks#edit", as: "manager_edit_task"
+  end
 
+  controller :tasks do
     get "no-task"             => "tasks#no_task", as: "no_task"
-    get "task-in-negotiation" => "tasks#task_in_negotiation", as: "task_in_negotiation"
+    get "task-in-negotiation" => "tasks#edit", as: "edit_task"
   end
 
   controller :sessions do

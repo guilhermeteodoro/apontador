@@ -21,12 +21,15 @@ class CheckingsController < LoggedController
       return
     end
 
+    p params[:checking]
+
     @checking = Checking.new(params[:checking])
-    @checking.user_id       = @current_user.id
+    @checking.task_id       = @current_user.task.id
     @checking.checked_in_at = Time.now
     @checking.hour_value    = @current_user.task.hour_value
     @checking.approved      = false
-
+    p @checking
+    p @current_user.task.hour_value
     if @checking.save
       redirect_to action: :edit
     else
@@ -36,12 +39,12 @@ class CheckingsController < LoggedController
   end
 
   def edit
-    if !@current_user.checkings.present? ||
-        @current_user.checkings.last.checked_out_at.present?
+    if !@current_user.task.checkings ||
+        @current_user.task.checkings.last.checked_out_at.present?
       redirect_to action: :new
       return
     end
-    @checking = @current_user.checkings.last
+    @checking = @current_user.task.checkings.last
     render 'edit'
   end
 
@@ -52,7 +55,7 @@ class CheckingsController < LoggedController
       return
     end
 
-    @checking = @current_user.checkings.last
+    @checking = @current_user.task.checkings.last
     @checking.checked_out_at = Time.now
     @checking.set_value
 
@@ -83,7 +86,7 @@ class CheckingsController < LoggedController
   end
   def on_going_task?
     return redirect_to no_task_path unless @current_user.task
-    redirect_to task_in_negotiation_path unless @current_user.task.approved?
+    redirect_to edit_task_path unless @current_user.task.approved?
   end
 
 end

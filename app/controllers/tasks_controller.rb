@@ -1,29 +1,7 @@
 class TasksController < LoggedController
-  before_filter :manager?, except: [:no_task, :task_in_negotiation]
-  before_filter :all_with_tasks?, :has_company?, only: :new
-
-  def show
-    @task = Task.find(params[:id])
-  end
-
-  def new
-    @task = Task.new
-  end
-
-  def create
-    @task = Task.new(params[:task])
-    @task.company = @current_user.company
-
-    if @task.save
-      redirect_to root_path, notice: "Tarefa criada com sucesso!"
-    else
-      flash[:error] = @task.errors.full_messages
-      render :new
-    end
-  end
 
   def edit
-    @task = Task.find(params[:task])
+    @task = @current_user.task
   end
 
   def update
@@ -42,20 +20,6 @@ class TasksController < LoggedController
   end
 
   def no_task
-  end
-
-  def task_in_negotiation
-    #criar o redirecter dos steps aqui. Se o funcionario ja enviou uma resposta
-    #deve ser redirecionado pra uma pagina de "aguarde"
-  end
-
-  private
-  def all_with_tasks?
-    return if User.with_no_task(@current_user.company_id).size > 0
-    redirect_to root_path, error: "Todos os funcionários tem uma tarefa."
-  end
-  def has_company?
-    redirect_to root_path, error: "Crie uma empresa antes." unless @current_user.company
   end
 
 end

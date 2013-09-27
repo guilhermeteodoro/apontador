@@ -9,7 +9,7 @@ class Checking < ActiveRecord::Base
   #validations
   validates :hour_value, presence: true
   validates :checked_in_at, presence: true
-  validates :user_id, presence: true
+  validates :task_id, presence: true
 
   #scopes
   scope :approveds, conditions: { approved: true, paid: false }
