@@ -75,4 +75,12 @@ class User < ActiveRecord::Base
   def self.encrypt_password(password)
     Digest::SHA1.hexdigest("a1#{password}2b")
   end
+
+  def self.with_no_task(company_id)
+    array = Array.new
+    self.employees(company_id).each do |u|
+      array << u unless u.task
+    end
+    array
+  end
 end

@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20130925185323) do
     t.decimal  "hour_value",  :precision => 10, :scale => 2
     t.string   "duration"
     t.boolean  "approved",                                   :default => false, :null => false
+    t.integer  "company_id",                                                    :null => false
     t.integer  "user_id",                                                       :null => false
     t.datetime "created_at",                                                    :null => false
     t.datetime "updated_at",                                                    :null => false

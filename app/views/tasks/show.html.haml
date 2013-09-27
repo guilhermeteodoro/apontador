@@ -1,1 +1,6 @@
 %h1= @task.name
+%p= @task.description
+%br
+%p
+  Funcionário encarregado:
+  = link_to @task.user.name, edit_user_path(@task.user.username)

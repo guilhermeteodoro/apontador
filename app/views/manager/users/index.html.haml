@@ -4,7 +4,7 @@
     %h4= @current_user.company.name
     %br
     = link_to 'Novo Funcionário', new_user_path, class: 'btn btn-large btn-striped'
-    - if !@employees.empty?
+    - if @employees && (User.with_no_task(@current_user.company_id).size > 0)
       = link_to 'Criar Tarefa', new_task_path, class: "btn btn-large btn-striped"
   - else
     %br
@@ -22,7 +22,7 @@
         Você ainda não possui uma empresa cadastrada.
         Por favor, crie uma para prosseguir
   -else
-    - if !@employees.empty?
+    - if @employees
       - @employees.each do |employee|
         = render partial: 'manager/users/employee', locals: { employee: employee }
     - else

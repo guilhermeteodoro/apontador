@@ -1,5 +1,5 @@
 %h1 Nova Tarefa
-
+#message= flash_message
 .base-form
   = form_for @task, url: task_path do |f|
     = render partial: 'tasks/form', locals: { f: f, task: @task }

@@ -1,6 +1,6 @@
 class Manager::UsersController < LoggedController
-
   before_filter :manager?, :current_company, except: [:new, :create]
+  skip_before_filter :manager?, :logged?, :current_user, only: [:new, :create]
 
   def index
     @employees = User.employees(@current_user.company_id) if @current_user.company_id.present?

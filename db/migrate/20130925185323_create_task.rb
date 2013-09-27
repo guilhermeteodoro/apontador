@@ -7,6 +7,7 @@ class CreateTask < ActiveRecord::Migration
       t.string :duration
       t.boolean :approved, default: false, null: false
 
+      t.integer :company_id, null: false
       t.integer :user_id, null: false
 
       t.timestamps
