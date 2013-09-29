@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(:version => 20130925185323) do
     t.datetime "checked_in_at"
     t.datetime "checked_out_at"
     t.boolean  "approved",                                      :default => false
-    t.boolean  "paid",                                          :default => false
     t.decimal  "hour_value",     :precision => 10, :scale => 2
     t.decimal  "value",          :precision => 10, :scale => 2
     t.float    "lat"
@@ -45,15 +44,15 @@ ActiveRecord::Schema.define(:version => 20130925185323) do
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "tasks", :force => true do |t|
-    t.string   "name",                                                          :null => false
-    t.text     "description",                                                   :null => false
+    t.string   "name",                                                              :null => false
+    t.text     "description",                                                       :null => false
     t.decimal  "hour_value",  :precision => 10, :scale => 2
     t.string   "duration"
-    t.boolean  "approved",                                   :default => false, :null => false
-    t.integer  "company_id",                                                    :null => false
-    t.integer  "user_id",                                                       :null => false
-    t.datetime "created_at",                                                    :null => false
-    t.datetime "updated_at",                                                    :null => false
+    t.string   "status",                                     :default => "pending", :null => false
+    t.integer  "company_id",                                                        :null => false
+    t.integer  "user_id",                                                           :null => false
+    t.datetime "created_at",                                                        :null => false
+    t.datetime "updated_at",                                                        :null => false
   end
 
   create_table "users", :force => true do |t|

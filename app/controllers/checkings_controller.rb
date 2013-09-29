@@ -86,7 +86,7 @@ class CheckingsController < LoggedController
   end
   def on_going_task?
     return redirect_to no_task_path unless @current_user.task
-    redirect_to edit_task_path unless @current_user.task.approved?
+    redirect_to edit_task_path unless @current_user.task.status == "accepted"
   end
 
 end
