@@ -39,16 +39,23 @@ Checker::Application.routes.draw do
   end
 
   controller "manager::tasks" do
-    put   "manager/tasks/:id"     => "manager/tasks#update", as: "task_update"
+    put   "manager/tasks/:id"     => "manager/tasks#update", as: "manager_task_update"
     get   "manager/tasks/:id"     => "manager/tasks#show", as: "tasks"
     get   "manager/task/new"      => "manager/tasks#new", as: "new_task"
     post  "manager/task/new"      => "manager/tasks#create", as: "task"
-    get   "manager/task/edit/:id" => "manager/tasks#edit", as: "manager_edit_task"
+    get   "manager/task/:id/edit" => "manager/tasks#edit", as: "manager_edit_task"
+    # put   "manager/tasks/:id/accept"      => "manager/tasks#accept", as: "manager_task_accept"
+    # put   "manager/tasks/:id/renegotiate" => "manager/tasks#renegotiate", as: "manager_task_renegotiate"
   end
 
   controller :tasks do
+    get "redirecter"          => "tasks#redirecter", as: "tasks_redirecter"
     get "no-task"             => "tasks#no_task", as: "no_task"
     get "task-in-negotiation" => "tasks#edit", as: "edit_task"
+    put "task-in-negotiation/:id" => "tasks#update", as: "task_update"
+    put "task-in-negotiation/refuse/:id" => "tasks#refuse", as: "refuse_task"
+    get "waiting-confirmation" => "tasks#waiting", as: "waiting"
+
   end
 
   controller :sessions do

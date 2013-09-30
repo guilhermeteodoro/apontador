@@ -5,3 +5,14 @@
 %p
   Funcionário encarregado:
   = link_to @task.user.name, edit_user_path(@task.user.username)
+%br
+
+-if @task.status == "waiting"
+  %table
+    %tr
+      %td duração: #{@task.duration}
+      %td R$ #{@task.hour_value}/h
+    %tr
+      / %td= link_to 'Aceitar Proposta', manager_task_accept(@task.to_param), method: :put
+      / %td= link_to 'Renegociar', manager_task_renegotiate(@task.to_param), method: :put
+

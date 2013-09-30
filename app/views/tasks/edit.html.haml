@@ -23,3 +23,5 @@
           = error_for @task, :hour_value
 
         = f.submit "Aceito com as condições acima"
+
+    = link_to "Recusar esta tarefa", refuse_task_path(@task.to_param), method: :put

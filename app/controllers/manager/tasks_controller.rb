@@ -1,5 +1,5 @@
 class Manager::TasksController < LoggedController
-  before_filter :manager?, except: [:no_task, :task_in_negotiation, :update]
+  before_filter :manager?
   before_filter :all_with_tasks?, :has_company?, only: :new
 
   def show
@@ -30,14 +30,34 @@ class Manager::TasksController < LoggedController
     @task = Task.find(params[:id])
 
     if @task.update_attributes(params[:task])
-      flash[:notice] = if @current_user.manager
-        "Tarefa alterada com sucesso!"
-      else
-        "Valor enviado, aguardando confirmação"
-      end
+      flash[:notice] = "Tarefa alterada com sucesso!"
       redirect_to root_path
     else
       render :edit
+    end
+  end
+
+  def accept
+    @task = Task.find(params[:id])
+
+    @task.status = "accepted"
+    if @task.save
+      # Mailer Aqui!
+      redirect_to root_path
+    else
+      render :accept
+    end
+  end
+
+  def renegotiate
+    @task = Task.find(params[:id])
+
+    @task.status = "pending"
+    if @task.save
+      # Mailer Aqui!
+      redirect_to root_path
+    else
+      render :accept
     end
   end
 

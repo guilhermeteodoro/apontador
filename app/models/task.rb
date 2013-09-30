@@ -6,7 +6,8 @@ class Task < ActiveRecord::Base
   # readonly :user_id
   attr_accessible :description, :name, :hour_value, :duration, :user_id
   validates_presence_of :name, :description, :user_id, :company_id
-  validates_format_of :duration, with: /([01]?[0-9]|2[0-3]):[0-5][0-9]/, allow_nil: true
+  validates_format_of :duration, with: /([01]?[0-9]|2[0-3]):[0-5][0-9]/
+  validates :hour_value, :duration, presence: true, :if => Proc.new { self.user.manager == false }
 
   def to_param
     "#{id}-#{name.parameterize}"

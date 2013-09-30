@@ -21,8 +21,10 @@ module TaskHelper
   def task_status(task)
     case task.status
       when "pending"
-        content_tag(:div, "Aguardando Negociação", id: "warning", class: "striped-warning")
+        content_tag(:div, "Aguardando Resposta", id: "warning", class: "striped-warning")
       when "refused"
+      when "waiting"
+        content_tag(:br) + content_tag(:a, href: tasks_path(task.to_param)) {content_tag :span, "Responder Negociação", class: "btn btn-green"}
       when "accepted"
         content_tag(:span, "? %", class: "status") + content_tag(:p, "duração aqui", class: "hours")
     end
