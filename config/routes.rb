@@ -44,8 +44,8 @@ Checker::Application.routes.draw do
     get   "manager/task/new"      => "manager/tasks#new", as: "new_task"
     post  "manager/task/new"      => "manager/tasks#create", as: "task"
     get   "manager/task/:id/edit" => "manager/tasks#edit", as: "manager_edit_task"
-    # put   "manager/tasks/:id/accept"      => "manager/tasks#accept", as: "manager_task_accept"
-    # put   "manager/tasks/:id/renegotiate" => "manager/tasks#renegotiate", as: "manager_task_renegotiate"
+    put   "manager/tasks/:id/accept"      => "manager/tasks#accept", as: "manager_task_accept"
+    put   "manager/tasks/:id/renegotiate" => "manager/tasks#renegotiate", as: "manager_task_renegotiate"
   end
 
   controller :tasks do

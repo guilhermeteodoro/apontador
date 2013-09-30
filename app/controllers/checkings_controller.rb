@@ -28,8 +28,7 @@ class CheckingsController < LoggedController
     @checking.checked_in_at = Time.now
     @checking.hour_value    = @current_user.task.hour_value
     @checking.approved      = false
-    p @checking
-    p @current_user.task.hour_value
+
     if @checking.save
       redirect_to action: :edit
     else
