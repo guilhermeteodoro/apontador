@@ -18,3 +18,8 @@
       %td
         %p= link_to 'Renegociar', manager_task_renegotiate_path(@task.to_param), method: :put
 
+- if @task.status == "accepted"
+  %table
+    %tr
+      %td #{@task.completed_hours}/#{@task.working_time}
+      %td #{@task.percentage}%

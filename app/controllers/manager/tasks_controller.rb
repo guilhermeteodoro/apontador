@@ -13,8 +13,11 @@ class Manager::TasksController < LoggedController
   def create
     @task = Task.new(params[:task])
     @task.company = @current_user.company
+    @task.manager_account = true
 
     if @task.save
+      @task.update_attribute :hour_value, nil
+      @task.update_attribute :duration, nil
       redirect_to root_path, notice: "Tarefa criada com sucesso!"
     else
       flash[:error] = @task.errors.full_messages
@@ -28,6 +31,7 @@ class Manager::TasksController < LoggedController
 
   def update
     @task = Task.find(params[:id])
+    @task.manager_account = true
 
     if @task.update_attributes(params[:task])
       flash[:notice] = "Tarefa alterada com sucesso!"

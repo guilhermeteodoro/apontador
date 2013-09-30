@@ -26,7 +26,7 @@ module TaskHelper
       when "waiting"
         content_tag(:br) + content_tag(:a, href: tasks_path(task.to_param)) {content_tag :span, "Responder Negociação", class: "btn btn-green"}
       when "accepted"
-        content_tag(:span, "? %", class: "status") + content_tag(:p, "duração aqui", class: "hours")
+        content_tag(:span, "#{task.percentage}%", class: "status") + content_tag(:p, "#{task.completed_hours}h/#{task.working_time}", class: "hours")
     end
   end
 

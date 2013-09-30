@@ -21,8 +21,6 @@ class CheckingsController < LoggedController
       return
     end
 
-    p params[:checking]
-
     @checking = Checking.new(params[:checking])
     @checking.task_id       = @current_user.task.id
     @checking.checked_in_at = Time.now
@@ -54,11 +52,21 @@ class CheckingsController < LoggedController
       return
     end
 
+    task =  @current_user.task
     @checking = @current_user.task.checkings.last
     @checking.checked_out_at = Time.now
+
+    if task.completed_hours < (task.formated_duration[:hour] + (task.formated_duration[:minute] / 100))
+      diff = (task.formated_duration[:hour] + (task.formated_duration[:minute] / 100)) - task.completed_hours
+      h, m = diff.to_s.split(".")
+      @checking.checked_out_at = @checking.checked_out_at - h.to_i.hours
+      @checking.checked_out_at = @checking.checked_out_at - (m.to_f / 100).minutes
+      task.update_attribute :status, "done"
+    end
+
     @checking.set_value
 
-    if @checking.update_attributes(checked_out_at: Time.now, value: @checking.value)
+    if @checking.update_attributes(@checking)
       flash[:notice] = "Checagem finalizada com sucesso"
       return redirect_to action: :new
     else

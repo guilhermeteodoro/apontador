@@ -1,6 +1,6 @@
 class TasksController < LoggedController
-  before_filter {
-    return redirect_to tasks_redirecter_path unless @current_user.task
+  before_filter(except: :no_task) {
+    return redirect_to no_task_path unless @current_user.task
   }
 
   def redirecter
@@ -52,7 +52,9 @@ class TasksController < LoggedController
   end
 
   def no_task
-    return redirect_to tasks_redirecter_path if @current_user.task.status == "pending"
+    if @current_user.task
+      return redirect_to tasks_redirecter_path if @current_user.task.status == "pending"
+    end
   end
 
   def waiting
