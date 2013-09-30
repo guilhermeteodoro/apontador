@@ -12,8 +12,8 @@ class Checking < ActiveRecord::Base
   validates :task_id, presence: true
 
   #scopes
-  scope :approveds, conditions: { approved: true, paid: false }
-  scope :not_approveds, conditions: { approved: false, paid: false }
+  scope :approveds, conditions: { approved: true }
+  scope :not_approveds, conditions: { approved: false }
   scope :paids, conditions: { paid: true }
 
   def date(checked_at)

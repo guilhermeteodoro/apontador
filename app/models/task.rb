@@ -16,25 +16,33 @@ class Task < ActiveRecord::Base
 
   def completed_hours
     total_hours = 0
-    checkings.each do |c|
-      return if c.checked_in_at.nil? || c.checked_out_at.nil?
-      total_hours += (c.time_difference[:hour].to_f + c.time_difference[:minute].to_f/100)
+    if checkings.size > 1
+      checkings[0...-1].each do |c|
+        total_hours += (c.time_difference[:hour].to_i + c.time_difference[:minute].to_f/100)
+      end
+    else
+      total_hours = Time.now - checkings.first.checked_in_at
     end
     total_hours
   end
 
-  def percentage
-    total_hours = completed_hours
-    ((total_hours * 100) / (formated_duration[:hour] + (formated_duration[:minute] / 100))).round(2)
+  def hashed_completed_hours
+    h, m = completed_hours.to_s.split(".")
+    {hour: h.to_i, minute: m.to_i}
   end
 
-  def formated_duration
+  def percentage
+    total_hours = completed_hours
+    ((total_hours * 100) / (hashed_duration[:hour] + (hashed_duration[:minute].to_f / 100))).round(2)
+  end
+
+  def hashed_duration
     h, m = read_attribute(:duration).split(":")
     {hour: h.to_f, minute: m.to_f}
   end
 
-  def working_time(clock_style=false)
-    tokens = formated_duration
+  def self.hour_formater(clock_style=false, hash)
+    tokens = hash
     return nil if !tokens
     format = clock_style ? "%02d:%02d" : "%dh %dm"
     str    = sprintf(format,tokens[:hour],tokens[:minute])

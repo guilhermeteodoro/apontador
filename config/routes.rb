@@ -55,7 +55,7 @@ Checker::Application.routes.draw do
     put "task-in-negotiation/:id" => "tasks#update", as: "task_update"
     put "task-in-negotiation/refuse/:id" => "tasks#refuse", as: "refuse_task"
     get "waiting-confirmation" => "tasks#waiting", as: "waiting"
-
+    get "done"                 => "tasks#done", as: "done"
   end
 
   controller :sessions do

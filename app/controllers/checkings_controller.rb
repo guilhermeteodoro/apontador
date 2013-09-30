@@ -15,11 +15,11 @@ class CheckingsController < LoggedController
   end
 
   def create
-    if !@current_user.location_ok?(params[:checking][:lat].to_f, params[:checking][:lng].to_f)
-      flash[:error] = "Você está fora da área de checagem ou possivelmente com o GPS desligado"
-      redirect_to action: :new
-      return
-    end
+    # if !@current_user.location_ok?(params[:checking][:lat].to_f, params[:checking][:lng].to_f)
+    #   flash[:error] = "Você está fora da área de checagem ou possivelmente com o GPS desligado"
+    #   redirect_to action: :new
+    #   return
+    # end
 
     @checking = Checking.new(params[:checking])
     @checking.task_id       = @current_user.task.id
@@ -46,27 +46,22 @@ class CheckingsController < LoggedController
   end
 
   def update
-    if !@current_user.location_ok?(params[:checking][:lat].to_f, params[:checking][:lng].to_f)
-      flash[:error] = "Você está fora da área de checagem ou possivelmente com o GPS desligado"
-      redirect_to action: :edit
-      return
-    end
+    # if !@current_user.location_ok?(params[:checking][:lat].to_f, params[:checking][:lng].to_f)
+    #   flash[:error] = "Você está fora da área de checagem ou possivelmente com o GPS desligado"
+    #   redirect_to action: :edit
+    #   return
+    # end
+    p "update"
 
-    task =  @current_user.task
     @checking = @current_user.task.checkings.last
     @checking.checked_out_at = Time.now
 
-    if task.completed_hours < (task.formated_duration[:hour] + (task.formated_duration[:minute] / 100))
-      diff = (task.formated_duration[:hour] + (task.formated_duration[:minute] / 100)) - task.completed_hours
-      h, m = diff.to_s.split(".")
-      @checking.checked_out_at = @checking.checked_out_at - h.to_i.hours
-      @checking.checked_out_at = @checking.checked_out_at - (m.to_f / 100).minutes
-      task.update_attribute :status, "done"
-    end
+    task = @checking.task
 
+    # if task.
     @checking.set_value
 
-    if @checking.update_attributes(@checking)
+    if @checking.save
       flash[:notice] = "Checagem finalizada com sucesso"
       return redirect_to action: :new
     else

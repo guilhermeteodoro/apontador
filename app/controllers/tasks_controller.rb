@@ -11,8 +11,8 @@ class TasksController < LoggedController
         redirect_to no_task_path
       when "waiting"
         redirect_to waiting_path
-      else
-        redirect_to root_path
+      when "done"
+        redirect_to done_path
     end
   end
 
@@ -58,6 +58,9 @@ class TasksController < LoggedController
   end
 
   def waiting
+  end
+
+  def done
   end
 
 end
