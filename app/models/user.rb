@@ -12,7 +12,8 @@ class User < ActiveRecord::Base
 
   #attributes
   attr_accessor :plain_password, :password_confirmation
-  attr_accessible :first_name, :last_name, :username, :email, :street, :city, :number, :latitude, :longitude, :manager, :company_id, :plain_password, :plain_password_confirmation
+  attr_accessible :first_name, :last_name, :username, :email, :street, :city, :number, :latitude, :longitude, :manager
+  attr_accessible :company_id, :plain_password, :plain_password_confirmation
   attr_protected :password
 
   #address geolocation

@@ -1,6 +1,6 @@
 class CompaniesController < LoggedController
 
-  layout :manager
+  layout "manager"
   before_filter :manager?
   after_filter :set_company_to_current_user, only: [:create]
 
@@ -21,7 +21,7 @@ class CompaniesController < LoggedController
 
   private
   def set_company_to_current_user
-    @current_user.update_attributes(company_id: @company.id)
+    @current_user.update_attribute(:company_id, @company.id)
     current_company
   end
 end

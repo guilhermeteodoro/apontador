@@ -27,6 +27,7 @@ class UsersController < LoggedController
     @employee.company_id = @current_user.company_id
     temp_pass = SecureRandom.hex(4)
     @employee.plain_password = (temp_pass)
+    @employee.plain_password_confirmation = (temp_pass)
 
     if @employee.save
       Thread.new {UserMailer.welcome_email(@employee, @current_user, temp_pass).deliver}

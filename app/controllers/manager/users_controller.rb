@@ -30,6 +30,7 @@ class Manager::UsersController < LoggedController
 
   def update
     @manager = @current_user
+    params[:user].delete(:password) if params[:user][:plain_password].blank?
     if @manager.update_attributes(params[:user])
       flash[:notice] = "Dados alterados com sucesso"
       redirect_to manager_user_path
