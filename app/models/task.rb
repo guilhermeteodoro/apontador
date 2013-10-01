@@ -18,11 +18,13 @@ class Task < ActiveRecord::Base
     total_hours = 0
     if checkings.size > 1
       checkings[0...-1].each do |c|
-        total_hours += (c.time_difference[:hour].to_i + c.time_difference[:minute].to_f/100)
+        total_hours += (c.time_difference[:hour] + (c.time_difference[:minute].to_f/100))
       end
+      total_hours += ((Time.now - checkings.last.checked_in_at) / 1.hour)
     else
-      total_hours = Time.now - checkings.first.checked_in_at
+      total_hours = ((Time.now - checkings.first.checked_in_at) / 1.hour)
     end
+
     total_hours
   end
 
@@ -41,6 +43,12 @@ class Task < ActiveRecord::Base
     {hour: h.to_f, minute: m.to_f}
   end
 
+  def duration_to_float
+    hour, minute = read_attribute(:duration).split(":")
+    total = (hour.to_i.hours + minute.to_i.minutes).from_now - Time.now
+    total / 1.hour
+  end
+
   def self.hour_formater(clock_style=false, hash)
     tokens = hash
     return nil if !tokens
@@ -48,4 +56,5 @@ class Task < ActiveRecord::Base
     str    = sprintf(format,tokens[:hour],tokens[:minute])
     clock_style ? str : str.gsub(/(^0h | 0m)/,"")
   end
+
 end

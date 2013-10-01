@@ -15,11 +15,11 @@ class CheckingsController < LoggedController
   end
 
   def create
-    # if !@current_user.location_ok?(params[:checking][:lat].to_f, params[:checking][:lng].to_f)
-    #   flash[:error] = "Você está fora da área de checagem ou possivelmente com o GPS desligado"
-    #   redirect_to action: :new
-    #   return
-    # end
+    if !@current_user.location_ok?(params[:checking][:lat].to_f, params[:checking][:lng].to_f)
+      flash[:error] = "Você está fora da área de checagem ou possivelmente com o GPS desligado"
+      redirect_to action: :new
+      return
+    end
 
     @checking = Checking.new(params[:checking])
     @checking.task_id       = @current_user.task.id
@@ -46,19 +46,24 @@ class CheckingsController < LoggedController
   end
 
   def update
-    # if !@current_user.location_ok?(params[:checking][:lat].to_f, params[:checking][:lng].to_f)
-    #   flash[:error] = "Você está fora da área de checagem ou possivelmente com o GPS desligado"
-    #   redirect_to action: :edit
-    #   return
-    # end
-    p "update"
+    if !@current_user.location_ok?(params[:checking][:lat].to_f, params[:checking][:lng].to_f)
+      flash[:error] = "Você está fora da área de checagem ou possivelmente com o GPS desligado"
+      redirect_to action: :edit
+      return
+    end
 
     @checking = @current_user.task.checkings.last
     @checking.checked_out_at = Time.now
 
     task = @checking.task
 
-    # if task.
+    if task.completed_hours > task.duration_to_float
+      diff = task.completed_hours - task.duration_to_float
+      @checking.checked_out_at = Time.now - diff.hours
+      task.status = "done"
+      task.save
+    end
+
     @checking.set_value
 
     if @checking.save
