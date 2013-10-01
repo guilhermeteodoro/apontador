@@ -11,7 +11,8 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :checkings
 
   #attributes
-  attr_accessible :first_name, :last_name, :username, :email, :street, :city, :number, :latitude, :longitude, :manager, :company_id
+  attr_accessor :plain_password, :password_confirmation
+  attr_accessible :first_name, :last_name, :username, :email, :street, :city, :number, :latitude, :longitude, :manager, :company_id, :plain_password, :plain_password_confirmation
   attr_protected :password
 
   #address geolocation
@@ -28,7 +29,8 @@ class User < ActiveRecord::Base
 
   validates :username, uniqueness: true, format: { with: /^[a-z0-9_-]{3,35}$/ }
   validates :email, uniqueness: true, format: { with: /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9_ -]+\.)+[a-zA-Z]{2,4}$/ }
-  validates :plain_password, format: { with: /^[a-zA-Z0-9_-]{3,25}$/ }
+  validates :plain_password, format: { with: /^[a-zA-Z0-9_-]{3,25}$/ }, confirmation: true
+  validates :plain_password_confirmation, presence: true
 
   #scopes
   scope :employees, ->(company_id) { where(["manager=? and company_id=?", false, company_id]) }
@@ -48,10 +50,11 @@ class User < ActiveRecord::Base
   def plain_password=(password)
     return if password.blank? || password.nil?
     self.password = self.class.encrypt_password(password)
+    write_attribute :plain_password, password
   end
 
   def plain_password
-    "blabla"
+    read_attribute :plain_password
   end
 
   def check_changed_attributes

@@ -6,6 +6,8 @@ pt-BR:
         first_name: "Nome"
         last_name: "Sobrenome"
         password: "Senha"
+        plain_password: "Senha"
+        plain_password_confirmation: "Confirmação de senha"
         username: "Username"
         hour_value: "Valor da hora"
         email: "E-mail"

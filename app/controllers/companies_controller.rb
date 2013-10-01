@@ -1,6 +1,6 @@
 class CompaniesController < LoggedController
 
-  layout "manager"
+  layout :manager
   before_filter :manager?
   after_filter :set_company_to_current_user, only: [:create]
 
@@ -15,8 +15,7 @@ class CompaniesController < LoggedController
     if @company.save
       redirect_to '/manager'
     else
-      flash[:error] = @company.errors.full_messages
-      redirect_to action: :new
+      render :new
     end
   end
 
