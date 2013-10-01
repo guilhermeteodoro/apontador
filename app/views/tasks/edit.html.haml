@@ -3,14 +3,14 @@
   %br
   %h2.center Seu gerente te inscreveu numa tarefa:
   %br
-  %p.center Título: #{@task.name}
+  %p.center.underline #{@task.name}
   %br
-  %p.center Descrição: #{@task.description}
+  %p.center #{@task.description}
   %br
   %h3.center Se deseja aceitar preencha os campos abaixo:
   %br
 
-  .base-form.login-form
+  .base-form
     = form_for @task, url: task_update_path(@task.to_param) do |f|
       %fieldset
         .field
@@ -22,6 +22,6 @@
           = f.text_field :hour_value, placeholder: "22.50"
           = error_for @task, :hour_value
 
-        = f.submit "Aceito com as condições acima"
+        = f.submit "Aceito com estas condições"
 
-    = link_to "Recusar esta tarefa", refuse_task_path(@task.to_param), method: :put
+    / = link_to "Recusar esta tarefa", refuse_task_path(@task.to_param), method: :put
