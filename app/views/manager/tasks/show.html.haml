@@ -1,5 +1,6 @@
-%h1= @task.name
-%span= link_to 'Editar', manager_edit_task_path(@task.to_param)
+%h1 Tarefa:
+%h2 #{@task.name}
+/ %span= link_to 'Editar', manager_edit_task_path(@task.to_param)
 %p= @task.description
 %br
 %p
@@ -18,7 +19,7 @@
       %td
         %p= link_to 'Renegociar', manager_task_renegotiate_path(@task.to_param), method: :put
 
-- if @task.status == "accepted"
+- if @task.status == "accepted" && @task.checkings.present?
   %table
     %tr
       %td #{@task.completed_hours}/#{@task.working_time}

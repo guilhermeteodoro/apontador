@@ -15,7 +15,9 @@ class Task < ActiveRecord::Base
   end
 
   def completed_hours
-    total_hours = 0
+    total_hours = 0.0
+    return total_hours unless checkings.present?
+
     if checkings.size > 1
       checkings[0...-1].each do |c|
         total_hours += (c.time_difference[:hour] + (c.time_difference[:minute].to_f/100))

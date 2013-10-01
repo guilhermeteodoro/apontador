@@ -49,7 +49,7 @@ class Manager::TasksController < LoggedController
       # Mailer Aqui!
       redirect_to root_path
     else
-      render :accept
+      render :show
     end
   end
 
@@ -57,11 +57,14 @@ class Manager::TasksController < LoggedController
     @task = Task.find(params[:id])
 
     @task.status = "pending"
+    @task.hour_value = nil
+    @task.duration = nil
+
     if @task.save
       # Mailer Aqui!
       redirect_to root_path
     else
-      render :accept
+      render :show
     end
   end
 
