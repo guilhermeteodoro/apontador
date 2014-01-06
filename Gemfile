@@ -21,16 +21,11 @@ group :development, :test do
   gem 'guard-rspec', '2.3.1'
   gem 'guard-bundler', '1.0.0'
   gem 'guard-spork', '1.4.0'
-  gem 'sqlite3', '1.3.8'
   gem 'pry-rails'
 end
 
-group :production do
-  gem 'pg'
-end
-
+gem 'sqlite3', '1.3.8'
 gem 'haml', '~> 4.0'
 gem 'jquery-rails', '~> 3.0.4'
 gem 'geocoder', '~> 1.1.8'
-
-ruby '2.0.0'
+gem 'puma'
