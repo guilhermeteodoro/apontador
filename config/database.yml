@@ -11,9 +11,8 @@ test:
   timeout: 5000
 
 production:
-  adapter: postgresql
+  adapter: mysql
   encoding: utf8
   database: checker_production
   pool: 5
-  username: checker
-  password: checker
+  username: root

@@ -11,7 +11,7 @@ require 'mina/rvm'    # for rvm support. (http://rvm.io)
 
 set :domain, '162.243.247.36'
 set :deploy_to, '/var/www/checker'
-set :repository, 'git@github.com:guilhermeteodoro/checker.git'
+set :repository, 'http://github.com/guilhermeteodoro/checker.git'
 set :branch, 'master'
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.

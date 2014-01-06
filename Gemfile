@@ -24,7 +24,7 @@ group :development, :test do
   gem 'pry-rails'
 end
 
-gem 'sqlite3', '1.3.8'
+gem 'mysql'
 gem 'haml', '~> 4.0'
 gem 'jquery-rails', '~> 3.0.4'
 gem 'geocoder', '~> 1.1.8'
