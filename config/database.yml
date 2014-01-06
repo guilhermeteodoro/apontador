@@ -14,5 +14,5 @@ production:
   adapter: mysql2
   encoding: utf8
   database: checker
-  username: checker
-  password: ""
+  username: guilherme
+  password: pass
