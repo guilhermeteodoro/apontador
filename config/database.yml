@@ -15,4 +15,4 @@ production:
   encoding: utf8
   database: checker_production
   username: root
-  password: ""
+  password: password
