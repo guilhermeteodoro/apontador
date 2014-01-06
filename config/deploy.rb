@@ -10,7 +10,7 @@ require 'mina/rvm'    # for rvm support. (http://rvm.io)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
 set :domain, '162.243.247.36'
-set :deploy_to, '/var/www/checker'
+set :deploy_to, '/var/www/checker.com'
 set :repository, 'http://github.com/guilhermeteodoro/checker.git'
 set :branch, 'master'
 
